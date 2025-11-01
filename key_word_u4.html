@@ -176,6 +176,14 @@
             align-items: center;
         }
 
+        .transformation span:first-child {
+             padding-right: 5px; /* Abstand vor dem Input */
+        }
+        
+        .transformation span:last-child {
+             padding-left: 5px; /* Abstand nach dem Input */
+        }
+
         .gap-input {
             width: 350px; 
             padding: 8px 12px;
@@ -183,7 +191,8 @@
             border-radius: 8px;
             font-size: 16px;
             transition: all 0.2s;
-            margin-right: 15px;
+            margin-right: 5px;
+            margin-left: 5px;
             text-align: center;
         }
         .gap-input:focus {
@@ -322,47 +331,48 @@
     <script>
         // #######################################################
         // 1. ÜBUNGSDATEN (10 Tasks à 5 Sätze = 50 Transformationen für Unit 4)
+        // KORRIGIERTE STRUKTUR
         // #######################################################
         const allTasks = {
             // --- BEGINNER TASKS (1-4) ---
             1: {
                 level: "Beginner",
                 exercises: [
-                    { id: 1, sentence: "The doctor examined the patient's knee very carefully.", key_word: "EXAMINATION", answer: "out a careful examination of" }, // 5 words
-                    { id: 2, sentence: "They decided not to participate in the local election.", key_word: "PART", answer: "not to take part in" }, // 4 words
-                    { id: 3, sentence: "The manager intends to transform the office space soon.", key_word: "IS", answer: "is intending to transform" }, // 4 words
-                    { id: 4, sentence: "The amount of toxic waste was more than we had anticipated.", key_word: "GREATER", answer: "was greater than we" }, // 4 words
-                    { id: 5, sentence: "The company will reduce the number of employees next month.", key_word: "DOWN", answer: "will cut down on" } // 4 words
+                    { id: 1, sentence1: "The doctor examined the patient's knee very carefully.", sentence2_part1: "The doctor carried", sentence2_part2: "the patient's knee.", key_word: "EXAMINATION", answer: "out a careful examination of" }, // 5 words
+                    { id: 2, sentence1: "They decided not to participate in the local election.", sentence2_part1: "They decided", sentence2_part2: "the local election.", key_word: "PART", answer: "not to take part in" }, // 5 words
+                    { id: 3, sentence1: "The manager intends to transform the office space soon.", sentence2_part1: "The manager", sentence2_part2: "to transform the office space soon.", key_word: "IS", answer: "is intending" }, // 2 words
+                    { id: 4, sentence1: "The amount of toxic waste was more than we had anticipated.", sentence2_part1: "The amount of toxic waste", sentence2_part2: "anticipated.", key_word: "GREATER", answer: "was greater than" }, // 3 words
+                    { id: 5, sentence1: "The company will reduce the number of employees next month.", sentence2_part1: "The company will", sentence2_part2: "the number of employees next month.", key_word: "DOWN", answer: "cut down on" } // 3 words
                 ]
             },
             2: {
                 level: "Beginner",
                 exercises: [
-                    { id: 1, sentence: "The military leader said he would not surrender his command easily.", key_word: "DOWN", answer: "would not back down" }, // 4 words
-                    { id: 2, sentence: "We must unite now, otherwise we will lose the battle.", key_word: "UNLESS", answer: "we will lose unless" }, // 4 words
-                    { id: 3, sentence: "They don't often show such enthusiasm for a new project.", key_word: "RARELY", answer: "rarely do they show" }, // 4 words
-                    { id: 4, sentence: "I wish I had been more active in the climate movement.", key_word: "PART", answer: "had taken part in" }, // 4 words
-                    { id: 5, sentence: "The environmental damage was very intense and required immediate action.", key_word: "MAJOR", answer: "was a major environmental" } // 4 words
+                    { id: 1, sentence1: "The military leader said he would not surrender his command easily.", sentence2_part1: "The military leader said he would not", sentence2_part2: "his command easily.", key_word: "DOWN", answer: "back down" }, // 2 words
+                    { id: 2, sentence1: "We must unite now, otherwise we will lose the battle.", sentence2_part1: "We will lose the battle", sentence2_part2: "we unite now.", key_word: "UNLESS", answer: "unless" }, // 1 word
+                    { id: 3, sentence1: "They don't often show such enthusiasm for a new project.", sentence2_part1: "", sentence2_part2: "they show such enthusiasm for a new project.", key_word: "RARELY", answer: "Rarely do" }, // 2 words
+                    { id: 4, sentence1: "I wish I had been more active in the climate movement.", sentence2_part1: "I wish I", sentence2_part2: "the climate movement.", key_word: "PART", answer: "had taken part in" }, // 4 words
+                    { id: 5, sentence1: "The environmental damage was very intense and required immediate action.", sentence2_part1: "The environmental damage was a", sentence2_part2: "and required immediate action.", key_word: "MAJOR", answer: "major issue" } // 2 words
                 ]
             },
             3: {
                 level: "Beginner",
                 exercises: [
-                    { id: 1, sentence: "She has the ability to organize everything systematically and logically.", key_word: "SYSTEMATIC", answer: "can organize everything systematically" }, // 3 words
-                    { id: 2, sentence: "The mayor promised to take action immediately to tackle the problem.", key_word: "MEASURES", answer: "to take immediate measures" }, // 4 words
-                    { id: 3, sentence: "The old warehouse is believed to have been renovated last year.", key_word: "IS", answer: "is believed to have" }, // 4 words
-                    { id: 4, sentence: "It's obvious that the project manager exaggerates the difficulties.", key_word: "CLEAR", answer: "is clear that the" }, // 4 words
-                    { id: 5, sentence: "I regret not having invested in solar power years ago.", key_word: "WISH", answer: "wish I had invested" } // 4 words
+                    { id: 1, sentence1: "She has the ability to organize everything systematically and logically.", sentence2_part1: "She can", sentence2_part2: "everything systematically and logically.", key_word: "SYSTEMATIC", answer: "organize" }, // 1 word
+                    { id: 2, sentence1: "The mayor promised to take action immediately to tackle the problem.", sentence2_part1: "The mayor promised to", sentence2_part2: "immediately to tackle the problem.", key_word: "MEASURES", answer: "take measures" }, // 2 words
+                    { id: 3, sentence1: "The old warehouse is believed to have been renovated last year.", sentence2_part1: "It", sentence2_part2: "the old warehouse was renovated last year.", key_word: "IS", answer: "is believed that" }, // 3 words
+                    { id: 4, sentence1: "It's obvious that the project manager exaggerates the difficulties.", sentence2_part1: "It", sentence2_part2: "that the project manager exaggerates the difficulties.", key_word: "CLEAR", answer: "is clear" }, // 2 words
+                    { id: 5, sentence1: "I regret not having invested in solar power years ago.", sentence2_part1: "", sentence2_part2: "I had invested in solar power years ago.", key_word: "WISH", answer: "I wish" } // 2 words
                 ]
             },
             4: {
                 level: "Beginner",
                 exercises: [
-                    { id: 1, sentence: "The police searched the entire area to find evidence of the crime.", key_word: "INVESTIGATE", answer: "to investigate the crime" }, // 4 words
-                    { id: 2, sentence: "He said the final decision was his own and was not open to question.", key_word: "FINAL", answer: "was his final decision" }, // 4 words
-                    { id: 3, sentence: "She has been a loyal member of the general assembly for five years.", key_word: "MEMBER", answer: "has been a member of" }, // 5 words
-                    { id: 4, sentence: "He always tries to get involved in the discussion about green energy.", key_word: "PART", answer: "tries to take part" }, // 4 words
-                    { id: 5, sentence: "The two organizations worked together to achieve a great outcome.", key_word: "COOPERATION", answer: "in cooperation with" } // 3 words
+                    { id: 1, sentence1: "The police searched the entire area to find evidence of the crime.", sentence2_part1: "The police searched the entire area to", sentence2_part2: "the crime.", key_word: "INVESTIGATE", answer: "investigate" }, // 1 word
+                    { id: 2, sentence1: "He said the final decision was his own and was not open to question.", sentence2_part1: "He said the decision was", sentence2_part2: "and was not open to question.", key_word: "FINAL", answer: "final" }, // 1 word
+                    { id: 3, sentence1: "She has been a loyal member of the general assembly for five years.", sentence2_part1: "She has", sentence2_part2: "the general assembly for five years.", key_word: "MEMBER", answer: "been a member of" }, // 4 words
+                    { id: 4, sentence1: "He always tries to get involved in the discussion about green energy.", sentence2_part1: "He always tries to", sentence2_part2: "in the discussion about green energy.", key_word: "PART", answer: "take part" }, // 2 words
+                    { id: 5, sentence1: "The two organizations worked together to achieve a great outcome.", sentence2_part1: "The two organizations worked", sentence2_part2: "to achieve a great outcome.", key_word: "COOPERATION", answer: "in cooperation" } // 2 words
                 ]
             },
             
@@ -370,41 +380,41 @@
             5: {
                 level: "Intermediate",
                 exercises: [
-                    { id: 1, sentence: "The lawyer was able to prove the client's innocence.", key_word: "EVIDENCE", answer: "able to find evidence" }, // 4 words
-                    { id: 2, sentence: "The amount of carbon dioxide in the air has steadily increased.", key_word: "RISE", answer: "has given rise to" }, // 4 words
-                    { id: 3, sentence: "Only after the negotiations did they approve the budget.", key_word: "NOT", answer: "did they not approve" }, // 4 words
-                    { id: 4, sentence: "I wish I could have witnessed the transition to democracy.", key_word: "COULD", answer: "If only I could have" }, // 5 words
-                    { id: 5, sentence: "The construction team was able to navigate the difficult terrain without any problems.", key_word: "DIFFICULTY", answer: "had no difficulty navigating" } // 4 words
+                    { id: 1, sentence1: "The lawyer was able to prove the client's innocence.", sentence2_part1: "The lawyer was", sentence2_part2: "to prove the client's innocence.", key_word: "EVIDENCE", answer: "able to find evidence" }, // 4 words
+                    { id: 2, sentence1: "The amount of carbon dioxide in the air has steadily increased.", sentence2_part1: "There has been a steady", sentence2_part2: "the amount of carbon dioxide in the air.", key_word: "RISE", answer: "rise in" }, // 2 words
+                    { id: 3, sentence1: "Only after the negotiations did they approve the budget.", sentence2_part1: "They", sentence2_part2: "approve the budget until after the negotiations.", key_word: "NOT", answer: "did not" }, // 2 words
+                    { id: 4, sentence1: "I wish I could have witnessed the transition to democracy.", sentence2_part1: "", sentence2_part2: "I could have witnessed the transition to democracy.", key_word: "COULD", answer: "If only" }, // 2 words
+                    { id: 5, sentence1: "The construction team was able to navigate the difficult terrain without any problems.", sentence2_part1: "The construction team", sentence2_part2: "navigating the difficult terrain.", key_word: "DIFFICULTY", answer: "had no difficulty" } // 3 words
                 ]
             },
             6: {
                 level: "Intermediate",
                 exercises: [
-                    { id: 1, sentence: "The old man was too weak to lift the heavy shoebox.", key_word: "STRENGTH", answer: "did not have the strength" }, // 5 words
-                    { id: 2, sentence: "The manager's intention was to transform the office into an open space.", key_word: "AIMED", answer: "was aimed at transforming" }, // 4 words
-                    { id: 3, sentence: "We must accept that the old process is now irrelevant.", key_word: "TERMS", answer: "come to terms with" }, // 4 words
-                    { id: 4, sentence: "The news of the scandal came as a great shock to all the activists.", key_word: "TAKEN", answer: "were taken aback by" }, // 4 words
-                    { id: 5, sentence: "They finally made a compromise on the details of the agreement.", key_word: "TRADE", answer: "made a final trade-off" } // 4 words
+                    { id: 1, sentence1: "The old man was too weak to lift the heavy shoebox.", sentence2_part1: "The old man", sentence2_part2: "to lift the heavy shoebox.", key_word: "STRENGTH", answer: "did not have the strength" }, // 5 words
+                    { id: 2, sentence1: "The manager's intention was to transform the office into an open space.", sentence2_part1: "The manager's plan", sentence2_part2: "transforming the office into an open space.", key_word: "AIMED", answer: "was aimed at" }, // 3 words
+                    { id: 3, sentence1: "We must accept that the old process is now irrelevant.", sentence2_part1: "We must", sentence2_part2: "the irrelevance of the old process.", key_word: "TERMS", answer: "come to terms with" }, // 4 words
+                    { id: 4, sentence1: "The news of the scandal came as a great shock to all the activists.", sentence2_part1: "All the activists", sentence2_part2: "by the news of the scandal.", key_word: "TAKEN", answer: "were taken aback" }, // 3 words
+                    { id: 5, sentence1: "They finally made a compromise on the details of the agreement.", sentence2_part1: "They finally made a", sentence2_part2: "on the details of the agreement.", key_word: "TRADE", answer: "trade-off" } // 2 words
                 ]
             },
             7: {
                 level: "Intermediate",
                 exercises: [
-                    { id: 1, sentence: "I regret not having been open-minded about her proposal.", key_word: "ONLY", answer: "If only I had been" }, // 5 words
-                    { id: 2, sentence: "He rarely makes a mistake when transcribing data.", key_word: "SELDOM", answer: "he seldom makes a" }, // 4 words
-                    { id: 3, sentence: "I think you should reconsider your intention to quit the job.", key_word: "BETTER", answer: "you had better reconsider" }, // 3 words
-                    { id: 4, sentence: "He said the sheer volume of toxic waste was hard to tackle.", key_word: "TACKLING", answer: "was hard work tackling" }, // 4 words
-                    { id: 5, sentence: "They will not approve the funds unless all the candidates are examined.", key_word: "IF", answer: "will not approve the funds if" } // 5 words
+                    { id: 1, sentence1: "I regret not having been open-minded about her proposal.", sentence2_part1: "", sentence2_part2: "I had been open-minded about her proposal.", key_word: "ONLY", answer: "If only" }, // 2 words
+                    { id: 2, sentence1: "He rarely makes a mistake when transcribing data.", sentence2_part1: "It is", sentence2_part2: "that he makes a mistake when transcribing data.", key_word: "SELDOM", answer: "seldom" }, // 1 word
+                    { id: 3, sentence1: "I think you should reconsider your intention to quit the job.", sentence2_part1: "I think", sentence2_part2: "reconsider your intention to quit the job.", key_word: "BETTER", answer: "you had better" }, // 3 words
+                    { id: 4, sentence1: "He said the sheer volume of toxic waste was hard to tackle.", sentence2_part1: "He said it was hard work", sentence2_part2: "the sheer volume of toxic waste.", key_word: "TACKLING", answer: "tackling" }, // 1 word
+                    { id: 5, sentence1: "They will not approve the funds unless all the candidates are examined.", sentence2_part1: "They will not approve the funds", sentence2_part2: "all the candidates are examined.", key_word: "IF", answer: "if" } // 1 word
                 ]
             },
             8: {
                 level: "Intermediate",
                 exercises: [
-                    { id: 1, sentence: "It's possible that the colony will be successful, but it's doubtful.", key_word: "LIKELIHOOD", answer: "there is little likelihood of" }, // 4 words
-                    { id: 2, sentence: "They said the new measure was effective, and what's more, eco-friendly.", key_word: "AND", answer: "and more, it was" }, // 5 words
-                    { id: 3, sentence: "The team's manager is the person who will lead the transformation.", key_word: "IN", answer: "is the person in" }, // 4 words
-                    { id: 4, sentence: "We must preserve all the information from the initial examination.", key_word: "MUST", answer: "must be preserved from" }, // 4 words
-                    { id: 5, sentence: "The scientist was accused of exaggerating the amount of damage.", key_word: "ACCUSATION", answer: "faced the accusation of" } // 4 words
+                    { id: 1, sentence1: "It's possible that the colony will be successful, but it's doubtful.", sentence2_part1: "There", sentence2_part2: "of the colony's success, but it's doubtful.", key_word: "LIKELIHOOD", answer: "is little likelihood" }, // 3 words
+                    { id: 2, sentence1: "They said the new measure was effective, and what's more, eco-friendly.", sentence2_part1: "The new measure was effective,", sentence2_part2: "eco-friendly.", key_word: "AND", answer: "and also" }, // 2 words
+                    { id: 3, sentence1: "The team's manager is the person who will lead the transformation.", sentence2_part1: "The team's manager is the person", sentence2_part2: "charge of the transformation.", key_word: "IN", answer: "in" }, // 1 word
+                    { id: 4, sentence1: "We must preserve all the information from the initial examination.", sentence2_part1: "All the information from the initial examination", sentence2_part2: "preserved.", key_word: "MUST", answer: "must be" }, // 2 words
+                    { id: 5, sentence1: "The scientist was accused of exaggerating the amount of damage.", sentence2_part1: "The scientist faced the", sentence2_part2: "of exaggerating the amount of damage.", key_word: "ACCUSATION", answer: "accusation" } // 1 word
                 ]
             },
 
@@ -412,21 +422,21 @@
             9: {
                 level: "Expert",
                 exercises: [
-                    { id: 1, sentence: "The politician failed to accept that the project was completely meaningless.", key_word: "MEANING", answer: "accept the lack of" }, // 4 words
-                    { id: 2, sentence: "I regret not having been able to visit the research laboratory earlier.", key_word: "ONLY", answer: "If only I could have" }, // 5 words
-                    { id: 3, sentence: "They had no choice but to accept the unjust conditions of the contract.", key_word: "HAD", answer: "they had no other" }, // 4 words
-                    { id: 4, sentence: "The new eco-friendly policy is now being systematically implemented.", key_word: "CARRIED", answer: "is now being carried out" }, // 5 words
-                    { id: 5, sentence: "The only thing he was able to recover was the small hard hat.", key_word: "BUT", answer: "was able to recover but" } // 5 words
+                    { id: 1, sentence1: "The politician failed to accept that the project was completely meaningless.", sentence2_part1: "The politician failed to accept the", sentence2_part2: "of the project.", key_word: "MEANING", answer: "lack of meaning" }, // 3 words
+                    { id: 2, sentence1: "I regret not having been able to visit the research laboratory earlier.", sentence2_part1: "", sentence2_part2: "I could have visited the research laboratory earlier.", key_word: "ONLY", answer: "If only" }, // 2 words
+                    { id: 3, sentence1: "They had no choice but to accept the unjust conditions of the contract.", sentence2_part1: "They", sentence2_part2: "to accept the unjust conditions of the contract.", key_word: "HAD", answer: "had no option but" }, // 4 words
+                    { id: 4, sentence1: "The new eco-friendly policy is now being systematically implemented.", sentence2_part1: "The new eco-friendly policy", sentence2_part2: "out systematically.", key_word: "CARRIED", answer: "is now being carried" }, // 4 words
+                    { id: 5, sentence1: "The only thing he was able to recover was the small hard hat.", sentence2_part1: "He was able to recover", sentence2_part2: "the small hard hat.", key_word: "BUT", answer: "nothing but" } // 2 words
                 ]
             },
             10: {
                 level: "Expert",
                 exercises: [
-                    { id: 1, sentence: "The sheer volume of floodwater was greater than anyone had prepared for.", key_word: "ACCOUNT", answer: "was greater on account of" }, // 4 words
-                    { id: 2, sentence: "The team will probably not succeed without additional funding.", key_word: "UNLESS", answer: "will not succeed unless" }, // 4 words
-                    { id: 3, sentence: "His new role involves leading the entire logistics department.", key_word: "IN", answer: "involves him in leading" }, // 4 words
-                    { id: 4, sentence: "It's possible that the new measure will be approved next week.", key_word: "POSSIBILITY", answer: "there is a possibility of" }, // 5 words
-                    { id: 5, sentence: "The old man was too weak to manoeuvre the heavy machinery.", key_word: "STRENGTH", answer: "did not have the strength" } // 5 words
+                    { id: 1, sentence1: "The sheer volume of floodwater was greater than anyone had prepared for.", sentence2_part1: "The sheer volume of floodwater was greater", sentence2_part2: "anyone had prepared for.", key_word: "ACCOUNT", answer: "on account of" }, // 3 words
+                    { id: 2, sentence1: "The team will probably not succeed without additional funding.", sentence2_part1: "The team will not succeed", sentence2_part2: "they receive additional funding.", key_word: "UNLESS", answer: "unless" }, // 1 word
+                    { id: 3, sentence1: "His new role involves leading the entire logistics department.", sentence2_part1: "His new role involves him", sentence2_part2: "the entire logistics department.", key_word: "IN", answer: "in leading" }, // 2 words
+                    { id: 4, sentence1: "It's possible that the new measure will be approved next week.", sentence2_part1: "There", sentence2_part2: "the new measure being approved next week.", key_word: "POSSIBILITY", answer: "is a possibility of" }, // 4 words
+                    { id: 5, sentence1: "The old man was too weak to manoeuvre the heavy machinery.", sentence2_part1: "The old man did", sentence2_part2: "to manoeuvre the heavy machinery.", key_word: "STRENGTH", answer: "not have the strength" } // 4 words
                 ]
             }
         };
@@ -463,17 +473,16 @@
 
             currentTaskTitle.textContent = `Task ${taskID} - ${level}`;
             
-            // Rendering
+            // RENDERING MIT NEUER DREI-TEILIGER SATZSTRUKTUR
             exerciseList.innerHTML = currentTaskData.map(ex => {
-                const originalEnd = ex.sentence.split(' ').slice(ex.sentence.split(' ').length - ex.answer.split(' ').length).join(' ');
-                
                 return `
                     <li class="exercise-item">
                         <span class="number">${ex.id}.</span>
-                        <span class="original-sentence">${ex.sentence}</span>
+                        <span class="original-sentence">${ex.sentence1}</span>
                         <div class="transformation">
-                            <span>${ex.sentence.replace(originalEnd, '')}</span>
+                            <span>${ex.sentence2_part1}</span>
                             <input type="text" id="input-${ex.id}" class="gap-input" data-id="${ex.id}" placeholder="${ex.key_word} muss enthalten sein">
+                            <span>${ex.sentence2_part2}</span>
                             <span class="hint">(${ex.key_word})</span>
                         </div>
                         <span id="solution-${ex.id}" class="correct-answer">Lösung: ${ex.answer.split(' ').length} Wörter, inkl. KEY WORD. Korrekt: ${ex.answer}</span>
