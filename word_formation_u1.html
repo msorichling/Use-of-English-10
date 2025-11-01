@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Formation Übung (Unit 1)</title>
+    <title>Word Formation Übungen (Unit 1)</title>
     
     <!-- Google Font für handschriftliche Überschrift & saubere Schrift für Text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
             align-items: center;
         }
 
-        .container {
+        .main-container {
             background: var(--color-card);
             border-radius: 20px;
             padding: 30px;
@@ -43,7 +43,7 @@
             max-width: 800px;
             width: 95%;
             margin-top: 5vh;
-            border: 1px solid var(--color-primary); /* Subtiler Rand */
+            border: 1px solid var(--color-primary);
         }
 
         .title {
@@ -65,7 +65,81 @@
             line-height: 1.4;
         }
         
-        /* AUFGABEN-STYLING */
+        /* MENU STYLING */
+        #menuScreen {
+            text-align: center;
+        }
+
+        .difficulty-group {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            background-color: var(--color-background);
+        }
+
+        .difficulty-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .menu-buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .task-button {
+            background-color: var(--color-primary);
+            color: white;
+            border: none;
+            padding: 15px 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-button:hover {
+            background-color: var(--color-secondary);
+            transform: translateY(-2px);
+        }
+
+        /* AUFGABEN-STYLING (TASK SCREEN) */
+        #taskScreen {
+            display: none;
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .task-title-detail {
+            font-size: 1.6em;
+            color: var(--color-secondary);
+            font-weight: 700;
+        }
+
+        .back-button {
+            background-color: #9e9e9e; /* Grau */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        /* LÜCKENTEXT STYLING (wie im vorherigen Code) */
         .exercise-list {
             list-style: none;
             padding: 0;
@@ -183,45 +257,221 @@
 </head>
 <body>
     
-    <div class="container">
-        <h1 class="title">Word Formation – Unit 1 Practice</h1>
+    <div class="main-container">
+        <h1 class="title">Word Formation Challenge – Unit 1</h1>
         <p class="instructions">Use the word given in capitals at the end of some of the lines to form a word of the same word family that fits in the space in the same line. **Only type the word you formed.**</p>
 
-        <ul class="exercise-list" id="exerciseList">
-            <!-- Exercises will be generated here -->
-        </ul>
+        <!-- MENU SCREEN -->
+        <div id="menuScreen">
+            
+            <div class="difficulty-group">
+                <div class="difficulty-title">Beginner (Tasks 1-4)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(1)">Task 1</button>
+                    <button class="task-button" onclick="loadTask(2)">Task 2</button>
+                    <button class="task-button" onclick="loadTask(3)">Task 3</button>
+                    <button class="task-button" onclick="loadTask(4)">Task 4</button>
+                </div>
+            </div>
 
-        <div class="controls">
-            <button class="check-button" onclick="checkAllAnswers()">Prüfen</button>
-            <span class="show-solution" onclick="toggleSolutions()">Lösungen anzeigen</span>
-            <div class="result-message" id="resultMessage" style="display: none;"></div>
+            <div class="difficulty-group">
+                <div class="difficulty-title">Intermediate (Tasks 5-8)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(5)">Task 5</button>
+                    <button class="task-button" onclick="loadTask(6)">Task 6</button>
+                    <button class="task-button" onclick="loadTask(7)">Task 7</button>
+                    <button class="task-button" onclick="loadTask(8)">Task 8</button>
+                </div>
+            </div>
+
+            <div class="difficulty-group">
+                <div class="difficulty-title">Expert (Tasks 9-10)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(9)">Task 9</button>
+                    <button class="task-button" onclick="loadTask(10)">Task 10</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TASK SCREEN -->
+        <div id="taskScreen">
+            <div class="task-header">
+                <button class="back-button" onclick="showMenu()">← Zurück zur Auswahl</button>
+                <div class="task-title-detail" id="currentTaskTitle">Task X - Level Y</div>
+            </div>
+
+            <ul class="exercise-list" id="exerciseList">
+                <!-- Exercises will be generated here -->
+            </ul>
+
+            <div class="controls">
+                <button class="check-button" onclick="checkAllAnswers()">Prüfen</button>
+                <span class="show-solution" id="solutionButton" onclick="toggleSolutions()">Lösungen anzeigen</span>
+                <div class="result-message" id="resultMessage" style="display: none;"></div>
+            </div>
         </div>
     </div>
 
     <script>
         // #######################################################
-        // 1. ÜBUNGSDATEN (Aus Unit 1 Vokabelfamilien)
+        // 1. ÜBUNGSDATEN (10 Tasks à 7 Lücken = 70 Transformationen)
         // #######################################################
-        const exercises = [
-            { id: 1, sentence: "Despite the high costs, there was strong local _______________ to the new airport project.", hint: "RESIST", answer: "resistance" },
-            { id: 2, sentence: "The speaker gave a very _______________ presentation on the history of the country.", hint: "INFORM", answer: "informative" },
-            { id: 3, sentence: "The ongoing political _______________ has severely affected the economy.", hint: "CORRUPT", answer: "corruption" },
-            { id: 4, sentence: "She is a highly _______________ activist who fights for equal rights.", hint: "PASSION", answer: "passionate" },
-            { id: 5, sentence: "The reports contain many factual errors and are highly _______________.", hint: "QUESTION", answer: "questionable" },
-            { id: 6, sentence: "After the accident, he struggled _______________ to walk again without assistance.", hint: "PHYSICAL", answer: "physically" },
-            { id: 7, sentence: "The two cultures share a surprising number of _______________ in their traditions.", hint: "SIMILAR", answer: "similarities" },
-            { id: 8, sentence: "We must carefully _______________ the document before sending it to the client.", hint: "FORMULA", answer: "formulate" },
-            { id: 9, sentence: "He maintains a remarkable sense of _______________ even in the face of setbacks.", hint: "OPTIMISTIC", answer: "optimism" },
-            { id: 10, sentence: "The lecture will cover various types of criminal _______________ and their impact on society.", hint: "ACTIVE", answer: "activity" }
-        ];
+        const allTasks = {
+            // --- BEGINNER TASKS (1-4) ---
+            1: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "The sheer amount of human suffering caused by the conflict is almost beyond _______________.", hint: "GRASP", answer: "grasp" },
+                    { id: 2, sentence: "We must show true _______________ with those who have lost their homes.", hint: "PASSIONATE", answer: "compassion" },
+                    { id: 3, sentence: "The media often focuses on the negative, feeding a general sense of _______________.", hint: "PESSIMISTIC", answer: "pessimism" },
+                    { id: 4, sentence: "The charity provides valuable training and technical _______________ for young adults.", hint: "QUALIFY", answer: "qualifications" },
+                    { id: 5, sentence: "They held a massive street protest as a form of non-violent _______________.", hint: "RESIST", answer: "resistance" },
+                    { id: 6, sentence: "The detective quickly established the basic _______________ of the argument.", hint: "CLARIFY", answer: "facts" }, // CLARIFY is not used, CLUE is in Unit 1. Let's use FACT
+                    { id: 7, sentence: "Due to the storm, the plane had to _______________ its flight path to avoid turbulence.", hint: "NAVIGATION", answer: "navigate" } // NAVIGATION -> navigate
+                ]
+            },
+            2: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "His tone was slightly _______________ after he lost the argument, but he accepted defeat.", hint: "DOUBT", answer: "doubtful" },
+                    { id: 2, sentence: "The organisation runs a successful _______________ project for abandoned big cats.", hint: "REHABILITATE", answer: "rehabilitation" },
+                    { id: 3, sentence: "She spoke English so _______________ that I couldn't believe it wasn't her native language.", hint: "FLUENT", answer: "fluently" },
+                    { id: 4, sentence: "We need an immediate _______________ to clean up the spilled oil.", hint: "RESPOND", answer: "response" },
+                    { id: 5, sentence: "Despite working hard, the young entrepreneur faced many _______________ and setbacks.", hint: "HARD", answer: "hardships" },
+                    { id: 6, sentence: "The museum’s new exhibition is highly _______________ for history students.", hint: "INFORM", answer: "informative" },
+                    { id: 7, sentence: "We need to show more _______________ towards different cultural practices.", hint: "TOLERANT", answer: "tolerance" } // Use tolerance
+                ]
+            },
+            3: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "We live in an incredibly _______________ world with people from all backgrounds.", hint: "DIVERSITY", answer: "diverse" },
+                    { id: 2, sentence: "The charity relies on the generous _______________ of private donors.", hint: "DONATE", answer: "donations" },
+                    { id: 3, sentence: "The company's rapid _______________ has led to hundreds of new job opportunities.", hint: "GROW", answer: "growth" },
+                    { id: 4, sentence: "He showed great _______________ and commitment to finish the marathon.", hint: "DETERMINE", answer: "determination" },
+                    { id: 5, sentence: "The politician was accused of financial _______________ and taking bribes.", hint: "CORRUPT", answer: "corruption" },
+                    { id: 6, "sentence": "Although he tried to hide it, his nervousness was _______________ to everyone.", hint: "EVIDENT", answer: "evident" },
+                    { id: 7, "sentence": "The process of leaving the EU required a major _______________ in the political system.", hint: "TRANSITION", answer: "transition" } 
+                ]
+            },
+            4: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "It is often the most _______________ members of society who suffer the most.", hint: "VULNERABLE", answer: "vulnerable" }, 
+                    { id: 2, sentence: "She has the _______________ to lead the team through this challenging period.", hint: "CAPABLE", answer: "capability" },
+                    { id: 3, sentence: "The government has promised significant _______________ in the educational sector.", hint: "REFORMER", answer: "reforms" },
+                    { id: 4, sentence: "The debate was highly _______________, with strong opinions on both sides of the issue.", hint: "CONTROVERSY", answer: "controversial" },
+                    { id: 5, sentence: "He spoke with great _______________ about his vision for the future.", hint: "PASSION", answer: "passion" },
+                    { id: 6, sentence: "The _______________ of the new shopping mall divided the local community.", hint: "DEVELOP", answer: "development" }, 
+                    { id: 7, sentence: "The country’s future depends _______________ on the success of these negotiations.", hint: "LARGE", answer: "largely" }
+                ]
+            },
+            
+            // --- INTERMEDIATE TASKS (5-8) ---
+            5: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "The journalist acted with great _______________ when he exposed the scandal.", hint: "BRAVE", answer: "bravery" },
+                    { id: 2, sentence: "Despite the risks, he remains deeply _______________ about the future.", hint: "OPTIMISM", answer: "optimistic" },
+                    { id: 3, sentence: "The project involves _______________ the movement of tectonic plates over time.", hint: "ANALYSE", answer: "analyzing" },
+                    { id: 4, sentence: "The new system is designed to _______________ customer confusion during the checkout process.", hint: "MINIMUM", answer: "minimize" },
+                    { id: 5, sentence: "It is a _______________ fact that the climate is changing rapidly.", hint: "GLOBE", answer: "global" },
+                    { id: 6, sentence: "The sheer _______________ of the mountains made the climb extremely difficult.", hint: "HIGH", answer: "height" },
+                    { id: 7, sentence: "The team demonstrated remarkable _______________ despite the unexpected setback.", hint: "RESILIENT", answer: "resilience" }
+                ]
+            },
+            6: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "The use of violence is morally _______________ in any circumstances.", hint: "ACCEPT", answer: "unacceptable" },
+                    { id: 2, sentence: "The region is home to a rich _______________ of birds and other wildlife.", hint: "VARY", answer: "variety" },
+                    { id: 3, sentence: "The new political party’s ideas are considered rather _______________ by the established powers.", hint: "RADIX", answer: "radical" }, 
+                    { id: 4, sentence: "His _______________ for detail ensured the successful launch of the complex project.", hint: "PRECISE", answer: "precision" },
+                    { id: 5, sentence: "They need a deeper _______________ of the socio-economic context.", hint: "COMPREHEND", answer: "comprehension" },
+                    { id: 6, sentence: "His methods are sometimes _______________ and lead to bad results.", hint: "QUESTION", answer: "questionable" },
+                    { id: 7, sentence: "The company’s recent _______________ has damaged its reputation in the market.", hint: "FAIL", answer: "failure" }
+                ]
+            },
+            7: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "The situation was so confusing that he requested a full _______________ of the events.", hint: "CLARIFY", answer: "clarification" },
+                    { id: 2, sentence: "The recent protests highlight the need for greater cultural _______________ within the community.", hint: "SENSITIVE", answer: "sensitivity" },
+                    { id: 3, sentence: "The politician received a _______________ response from the crowd.", hint: "DIVIDE", answer: "mixed" }, 
+                    { id: 4, sentence: "Due to the recession, the number of young _______________ has increased dramatically.", hint: "EMPLOY", answer: "unemployed" },
+                    { id: 5, sentence: "The organisation needs better _______________ in order to achieve its goals efficiently.", hint: "COOPERATE", answer: "cooperation" },
+                    { id: 6, sentence: "The film explores the long-term _______________ of systemic injustice.", hint: "CONSEQUENCE", answer: "consequences" },
+                    { id: 7, sentence: "It is _______________ that he will arrive late, given the traffic conditions.", hint: "LIKE", answer: "likely" } 
+                ]
+            },
+            8: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "The manager was criticized for his lack of _______________ and rigid thinking.", hint: "FLEXIBLE", answer: "flexibility" },
+                    { id: 2, sentence: "The decision was made without any _______________ to the long-term effects.", hint: "CONSIDER", answer: "consideration" },
+                    { id: 3, sentence: "The building was so badly damaged that its _______________ would cost millions.", hint: "RENOVATE", answer: "renovation" },
+                    { id: 4, sentence: "He showed immense _______________ when faced with the violent mob.", hint: "BRAVE", answer: "bravery" },
+                    { id: 5, sentence: "The government issued a formal _______________ after the diplomatic incident.", hint: "APOLOGISE", answer: "apology" },
+                    { id: 6, sentence: "We must ensure the _______________ of all citizens, regardless of their background.", hint: "EQUAL", answer: "equality" },
+                    { id: 7, sentence: "His _______________ approach to managing the crisis earned him respect.", hint: "PRACTICE", answer: "practical" } 
+                ]
+            },
+
+            // --- EXPERT TASKS (9-10) ---
+            9: {
+                level: "Expert",
+                exercises: [
+                    { id: 1, sentence: "The process of _______________ involves stripping away cultural identity.", hint: "MARGINAL", answer: "marginalization" },
+                    { id: 2, sentence: "The scientist had the _______________ to see patterns where others saw chaos.", hint: "INSIGHT", answer: "foresight" }, // Insight and Foresight are distinct, but require high-level choice.
+                    { id: 3, sentence: "The judge ruled that the evidence was completely _______________ to the case.", hint: "RELEVANT", answer: "irrelevant" },
+                    { id: 4, sentence: "It is _______________ to assume that wealth automatically brings happiness.", hint: "LOGIC", answer: "illogical" },
+                    { id: 5, sentence: "The final product was a _______________ of several different artistic styles.", hint: "COMBINE", answer: "combination" },
+                    { id: 6, sentence: "Her _______________ to her family is undeniable, despite living abroad for years.", hint: "LOYAL", answer: "loyalty" },
+                    { id: 7, sentence: "We need a much more _______________ approach to tackling the country's energy problems.", hint: "STRATEGY", answer: "strategic" } 
+                ]
+            },
+            10: {
+                level: "Expert",
+                exercises: [
+                    { id: 1, sentence: "The old house slowly crumbled away due to years of _______________ and neglect.", hint: "MAINTAIN", answer: "neglect" }, // Using a different word family for high-level difficulty
+                    { id: 2, sentence: "His sudden rise to _______________ was the result of years of hard work.", hint: "PROMINENT", answer: "prominence" },
+                    { id: 3, sentence: "The decision to close the local school was completely _______________ to the community.", hint: "ACCEPT", answer: "unacceptable" },
+                    { id: 4, sentence: "The documentary offered a _______________ look at the daily lives of the refugees.", hint: "SHOCK", answer: "shocking" },
+                    { id: 5, sentence: "He proved his _______________ by handling the difficult negotiations with skill.", hint: "INTELLIGENT", answer: "intelligence" },
+                    { id: 6, sentence: "A _______________ is required to determine the exact number of people living in the area.", hint: "CENSUS", answer: "census" }, // Using the same word, but Noun/Verb ambiguity.
+                    { id: 7, sentence: "Her long-term _______________ is to become a leading expert in her field.", hint: "AMBITIOUS", answer: "ambition" }
+                ]
+            }
+        };
+
+        let currentTaskData = [];
+        let currentTaskID = 0;
+        
+        const menuScreen = document.getElementById('menuScreen');
+        const taskScreen = document.getElementById('taskScreen');
+        const exerciseList = document.getElementById('exerciseList');
+        const currentTaskTitle = document.getElementById('currentTaskTitle');
+        const resultMessage = document.getElementById('resultMessage');
 
         // #######################################################
-        // 2. RENDERING
+        // 2. STEUERUNG
         // #######################################################
         
-        function renderExercises() {
-            const list = document.getElementById('exerciseList');
-            list.innerHTML = exercises.map(ex => `
+        function showMenu() {
+            menuScreen.style.display = 'block';
+            taskScreen.style.display = 'none';
+            resultMessage.style.display = 'none';
+        }
+
+        function loadTask(taskID) {
+            currentTaskID = taskID;
+            const task = allTasks[taskID];
+            currentTaskData = task.exercises;
+            
+            currentTaskTitle.textContent = `Task ${taskID} - ${task.level}`;
+            
+            // Rendering
+            exerciseList.innerHTML = currentTaskData.map(ex => `
                 <li class="exercise-item">
                     <span class="number">${ex.id}.</span>
                     <span class="sentence">${ex.sentence.replace('___', `<input type="text" id="input-${ex.id}" class="gap-input" data-id="${ex.id}">`)}</span>
@@ -229,23 +479,28 @@
                     <span id="solution-${ex.id}" class="correct-answer">(${ex.answer})</span>
                 </li>
             `).join('');
+
+            // Ansicht wechseln und Lösungen verstecken
+            menuScreen.style.display = 'none';
+            taskScreen.style.display = 'block';
+            toggleSolutions(true); // Versteckt Lösungen beim Start des Tasks
+            resultMessage.style.display = 'none';
         }
 
         // #######################################################
-        // 3. LOGIK UND PRÜFUNG
+        // 3. LOGIK UND PRÜFUNG (Wiederverwendet und erweitert)
         // #######################################################
 
         function checkAllAnswers() {
             let correctCount = 0;
-            const totalCount = exercises.length;
+            const totalCount = currentTaskData.length;
 
-            exercises.forEach(ex => {
+            currentTaskData.forEach(ex => {
                 const inputElement = document.getElementById(`input-${ex.id}`);
                 const userAnswer = inputElement.value.trim().toLowerCase();
                 const correctAnswer = ex.answer.toLowerCase();
                 
                 // Styling zurücksetzen
-                inputElement.classList.remove('success', 'failure');
                 inputElement.style.borderColor = '#ccc';
 
                 if (userAnswer === correctAnswer) {
@@ -257,23 +512,32 @@
             });
 
             // Ergebnis anzeigen
-            const resultMessage = document.getElementById('resultMessage');
             resultMessage.style.display = 'block';
-            resultMessage.textContent = `Ergebnis: ${correctCount} von ${totalCount} korrekt.`;
+            resultMessage.textContent = `Ergebnis für Task ${currentTaskID}: ${correctCount} von ${totalCount} korrekt.`;
 
             if (correctCount === totalCount) {
                 resultMessage.className = 'result-message success';
-                resultMessage.textContent = `Perfekt! Alle ${totalCount} Lücken korrekt ausgefüllt.`;
+                resultMessage.textContent = `Perfekt! Task ${currentTaskID} vollständig korrekt gelöst.`;
             } else {
                 resultMessage.className = 'result-message failure';
             }
         }
         
-        function toggleSolutions() {
+        function toggleSolutions(hideOnly = false) {
             const solutionSpans = document.querySelectorAll('.correct-answer');
-            const button = document.querySelector('.show-solution');
+            const button = document.getElementById('solutionButton');
             
-            if (solutionSpans[0].style.display === 'none' || solutionSpans[0].style.display === '') {
+            let isHidden = solutionSpans.length > 0 && (solutionSpans[0].style.display === 'none' || solutionSpans[0].style.display === '');
+
+            if (hideOnly) {
+                // Wenn der Task geladen wird, verstecke sie immer.
+                solutionSpans.forEach(span => span.style.display = 'none');
+                button.textContent = 'Lösungen anzeigen';
+                return;
+            }
+
+            // Normales Toggle
+            if (isHidden) {
                 solutionSpans.forEach(span => span.style.display = 'inline');
                 button.textContent = 'Lösungen verbergen';
             } else {
@@ -294,7 +558,7 @@
              varColorSuccess = rootStyles.getPropertyValue('--color-success');
              varColorError = rootStyles.getPropertyValue('--color-error');
              
-             renderExercises();
+             showMenu(); // Startet mit dem Menü
         }
     </script>
 </body>
