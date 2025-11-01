@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Formation Übungen (Unit 4)</title>
+    
+    <!-- Google Font für handschriftliche Überschrift & saubere Schrift für Text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Futuristische/Stylische Rosa-Palette (#FF6B7C) */
+        :root {
+            --color-primary: #FF6B7C; /* Leuchtendes Koralle-Pink (Vom Nutzer gewünscht) */
+            --color-secondary: #C43D53; /* Dunklere Akzentfarbe */
+            --color-background: #fffafa; /* Sehr helles Weiß-Rosa */
+            --color-text: #263238; /* Dunkelgrau */
+            --color-success: #43a047; /* Grün für Korrekt */
+            --color-error: #e53935; /* Rot für Fehler */
+            --color-card: #ffffff; /* Weiße Kartenbasis */
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--color-background) 0%, var(--color-primary) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-container {
+            background: var(--color-card);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            width: 95%;
+            margin-top: 5vh;
+            border: 1px solid var(--color-secondary);
+        }
+
+        .title {
+            font-family: 'Caveat', cursive;
+            font-size: 38px;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-bottom: 10px;
+            text-align: center; 
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 10px;
+        }
+
+        .instructions {
+            text-align: center;
+            font-size: 14px;
+            color: var(--color-text);
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        
+        /* MENU STYLING */
+        #menuScreen {
+            text-align: center;
+        }
+
+        .difficulty-group {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            background-color: var(--color-background);
+        }
+
+        .difficulty-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .menu-buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .task-button {
+            background-color: var(--color-secondary);
+            color: white;
+            border: none;
+            padding: 15px 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-button:hover {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        /* AUFGABEN-STYLING (TASK SCREEN) */
+        #taskScreen {
+            display: none;
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .task-title-detail {
+            font-size: 1.6em;
+            color: var(--color-secondary);
+            font-weight: 700;
+        }
+
+        .back-button {
+            background-color: #9e9e9e; /* Grau */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        /* LÜCKENTEXT STYLING */
+        .exercise-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exercise-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .exercise-item:last-child {
+            border-bottom: none;
+        }
+
+        .number {
+            font-weight: bold;
+            color: var(--color-secondary);
+            font-size: 1.2em;
+            width: 30px;
+            flex-shrink: 0;
+        }
+
+        .sentence {
+            flex-grow: 1;
+            padding-right: 10px;
+            line-height: 1.6;
+        }
+
+        .gap-input {
+            width: 150px;
+            padding: 8px 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+            transition: all 0.2s;
+            margin-right: 15px;
+        }
+
+        .gap-input:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            box-shadow: 0 0 5px rgba(255, 107, 124, 0.5);
+        }
+        
+        .hint {
+            font-weight: bold;
+            color: #777;
+            font-size: 1.1em;
+            width: 120px;
+            flex-shrink: 0;
+            text-align: right;
+        }
+
+        /* CHECK BUTTON & FEEDBACK */
+        .controls {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .check-button {
+            background-color: var(--color-secondary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .check-button:hover {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        .result-message {
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: 700;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .result-message.success {
+            background-color: #e8f5e9; 
+            color: var(--color-success);
+        }
+
+        .result-message.failure {
+            background-color: #fbe9e7;
+            color: var(--color-error);
+        }
+
+        /* LÖSUNGSANZEIGE */
+        .show-solution {
+            text-decoration: underline;
+            color: var(--color-secondary);
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        
+        .correct-answer {
+            color: var(--color-success);
+            font-weight: bold;
+            margin-left: 10px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="main-container">
+        <h1 class="title">Word Formation Challenge – Unit 4</h1>
+        <p class="instructions">Use the word given in capitals at the end of some of the lines to form a word of the same word family that fits in the space in the same line. **Only type the word you formed.**</p>
+
+        <!-- MENU SCREEN -->
+        <div id="menuScreen">
+            
+            <div class="difficulty-group">
+                <div class="difficulty-title">Beginner (Tasks 1-4)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(1)">Task 1</button>
+                    <button class="task-button" onclick="loadTask(2)">Task 2</button>
+                    <button class="task-button" onclick="loadTask(3)">Task 3</button>
+                    <button class="task-button" onclick="loadTask(4)">Task 4</button>
+                </div>
+            </div>
+
+            <div class="difficulty-group">
+                <div class="difficulty-title">Intermediate (Tasks 5-8)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(5)">Task 5</button>
+                    <button class="task-button" onclick="loadTask(6)">Task 6</button>
+                    <button class="task-button" onclick="loadTask(7)">Task 7</button>
+                    <button class="task-button" onclick="loadTask(8)">Task 8</button>
+                </div>
+            </div>
+
+            <div class="difficulty-group">
+                <div class="difficulty-title">Expert (Tasks 9-10)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(9)">Task 9</button>
+                    <button class="task-button" onclick="loadTask(10)">Task 10</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TASK SCREEN -->
+        <div id="taskScreen">
+            <div class="task-header">
+                <button class="back-button" onclick="showMenu()">← Zurück zur Auswahl</button>
+                <div class="task-title-detail" id="currentTaskTitle">Task X - Level Y</div>
+            </div>
+
+            <ul class="exercise-list" id="exerciseList">
+                <!-- Exercises will be generated here -->
+            </ul>
+
+            <div class="controls">
+                <button class="check-button" onclick="checkAllAnswers()">Prüfen</button>
+                <span class="show-solution" id="solutionButton" onclick="toggleSolutions()">Lösungen anzeigen</span>
+                <div class="result-message" id="resultMessage" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // #######################################################
+        // 1. ÜBUNGSDATEN (10 Tasks à 7 Lücken = 70 Transformationen für Unit 4)
+        // #######################################################
+        const allTasks = {
+            // --- BEGINNER TASKS (1-4) ---
+            1: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "The doctor performed a thorough _______________ of the patient before the surgery.", hint: "EXAMINE", answer: "examination" },
+                    { id: 2, sentence: "The local council received a generous _______________ from an anonymous donor.", hint: "DONATE", answer: "donation" },
+                    { id: 3, sentence: "We must protect the forest to prevent the _______________ of several species.", hint: "EXTINCT", answer: "extinction" },
+                    { id: 4, sentence: "The new report provided a clear _______________ into the cause of the crisis.", hint: "ANALYST", answer: "analysis" },
+                    { id: 5, sentence: "She is known for her hands-on _______________ and practical problem-solving skills.", hint: "PRACTICE", answer: "practicality" },
+                    { id: 6, sentence: "The judge demanded that the witness provide factual _______________ to support the claim.", hint: "EVIDENT", answer: "evidence" },
+                    { id: 7, sentence: "The new project is an exciting _______________ of modern art and traditional design.", hint: "COMBINE", answer: "combination" }
+                ]
+            },
+            2: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "The recent protests highlight the growing problem of modern _______________.", hint: "CONSUME", answer: "consumerism" },
+                    { id: 2, sentence: "The team's success was due to the _______________ of all its members.", hint: "PARTICIPATE", answer: "participation" },
+                    { id: 3, sentence: "The area was completely cut off by _______________ following the heavy rain.", hint: "FLOOD", answer: "floodwater" },
+                    { id: 4, sentence: "She spoke very _______________ about the need for immediate action.", hint: "PASSION", answer: "passionately" },
+                    { id: 5, sentence: "The organization supports _______________ from all walks of life.", hint: "INDIVIDUAL", answer: "individuals" },
+                    { id: 6, sentence: "The politician was accused of being _______________ to the needs of the working class.", hint: "SENSITIVE", answer: "insensitive" },
+                    { id: 7, sentence: "The factory has started the _______________ of biodegradable packaging materials.", hint: "MANUFACTURE", answer: "manufacturing" }
+                ]
+            },
+            3: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "The report provided an _______________ overview of the political situation.", hint: "IMPRESS", answer: "impressive" },
+                    { id: 2, sentence: "The new law will _______________ reduce the amount of plastic waste produced.", hint: "SIGNIFICANT", answer: "significantly" },
+                    { id: 3, sentence: "His _______________ for detail ensured that the final report was error-free.", hint: "PRECISE", answer: "precision" },
+                    { id: 4, sentence: "The film offers a chilling _______________ into the life of a spy.", hint: "INSIGHT", answer: "insight" },
+                    { id: 5, sentence: "The company's focus on _______________ led to many revolutionary products.", hint: "INNOVATE", answer: "innovation" },
+                    { id: 6, sentence: "The _______________ of the old city center into a modern hub took ten years.", hint: "TRANSFORM", answer: "transformation" },
+                    { id: 7, sentence: "The decision was made with little or no _______________ for the long-term consequences.", hint: "CONSIDER", answer: "consideration" }
+                ]
+            },
+            4: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "The local _______________ has been very active in organizing community events.", hint: "ACT", answer: "activist" },
+                    { id: 2, sentence: "The damage caused by the storm was so _______________ that repair efforts took months.", hint: "MAJOR", answer: "major" },
+                    { id: 3, sentence: "The two countries need to find a way to live in _______________ despite their differences.", hint: "HARMONIC", answer: "harmony" },
+                    { id: 4, sentence: "It is _______________ to assume that all politicians are corrupt.", hint: "LOGIC", answer: "illogical" },
+                    { id: 5, sentence: "The sudden _______________ of the crisis took the government by surprise.", hint: "APPEAR", answer: "appearance" },
+                    { id: 6, sentence: "The old man was often consulted because of his first-hand _______________ of the war.", hint: "EXPERIENCE", answer: "experience" },
+                    { id: 7, sentence: "The company has a strong _______________ to environmental protection.", hint: "COMMIT", answer: "commitment" }
+                ]
+            },
+            
+            // --- INTERMEDIATE TASKS (5-8) ---
+            5: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "The use of _______________ weapons poses a threat to global security.", hint: "TOXICITY", answer: "toxic" },
+                    { id: 2, sentence: "He worked as a _______________ for the local paper, reporting on community events.", hint: "JOURNAL", answer: "journalist" },
+                    { id: 3, sentence: "The manager's _______________ was critical for navigating the company through the crisis.", hint: "LEADER", answer: "leadership" },
+                    { id: 4, sentence: "The new law aims to eliminate the _______________ of older employees in the workplace.", hint: "MARGINAL", answer: "marginalization" },
+                    { id: 5, sentence: "The problem is so severe that it requires a _______________ effort to solve it.", hint: "GLOBE", answer: "global" },
+                    { id: 6, sentence: "The government promised to take immediate _______________ to reduce air pollution.", hint: "MEASURE", answer: "measures" },
+                    { id: 7, sentence: "The children were taught the _______________ of reusing materials.", hint: "IMPORTANT", answer: "importance" }
+                ]
+            },
+            6: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "The court found him guilty of several _______________ acts against the state.", hint: "CRIME", answer: "criminal" },
+                    { id: 2, sentence: "The new machine is fully _______________ and can be used immediately.", hint: "OPERATE", answer: "operational" },
+                    { id: 3, sentence: "The council's long-term _______________ includes building a new hospital.", hint: "INTEND", answer: "intention" },
+                    { id: 4, sentence: "The new evidence was completely _______________ to the original investigation.", hint: "RELEVANCE", answer: "irrelevant" },
+                    { id: 5, sentence: "He was considered a powerful _______________ in the negotiation process.", hint: "REPRESENT", answer: "representative" },
+                    { id: 6, sentence: "The company's _______________ for safety is clearly stated in its annual report.", hint: "PRIOR", answer: "priority" },
+                    { id: 7, sentence: "The building was ruled _______________ due to the severe structural damage.", hint: "HABITAT", answer: "uninhabitable" }
+                ]
+            },
+            7: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "His _______________ on the issue was so biased that the editor refused to publish it.", hint: "COMMENT", answer: "commentary" },
+                    { id: 2, sentence: "The two organizations work in close _______________ to achieve their shared goals.", hint: "COOPERATE", answer: "cooperation" },
+                    { id: 3, sentence: "The scientist's _______________ approach led to the breakthrough discovery.", hint: "SYSTEM", answer: "systematic" },
+                    { id: 4, sentence: "We need a more _______________ way to address the increasing poverty rates.", hint: "STRATEGY", answer: "strategic" },
+                    { id: 5, sentence: "The documentary provided a shocking _______________ of the company's unethical practices.", hint: "EXPOSE", answer: "exposure" },
+                    { id: 6, sentence: "The financial _______________ in 2008 had a lasting impact on the global economy.", hint: "CRISIS", answer: "crisis" },
+                    { id: 7, sentence: "She remained _______________ despite the difficult working conditions.", hint: "ENTHUSIASTIC", answer: "enthusiastic" }
+                ]
+            },
+            8: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "The new report confirms the _______________ of the local water source.", hint: "CONTAMINATE", answer: "contamination" },
+                    { id: 2, sentence: "The team demonstrated great _______________ in dealing with the unexpected problems.", hint: "RESILIENT", answer: "resilience" },
+                    { id: 3, sentence: "The old factory was completely _______________ into a modern apartment building.", hint: "RENOVATE", answer: "renovated" },
+                    { id: 4, sentence: "The judge issued a formal _______________ to the defendant's behavior.", hint: "OBJECT", answer: "objection" },
+                    { id: 5, sentence: "He was severely _______________ for his unethical actions in the company.", hint: "PUNISH", answer: "punished" },
+                    { id: 6, sentence: "The process requires the _______________ of specialists from various fields.", hint: "INVOLVE", answer: "involvement" },
+                    { id: 7, sentence: "The committee is calling for greater _______________ in the use of public funds.", hint: "TRANSPARENT", answer: "transparency" }
+                ]
+            },
+
+            // --- EXPERT TASKS (9-10) ---
+            9: {
+                level: "Expert",
+                exercises: [
+                    { id: 1, sentence: "The ability to _______________ oneself to a new culture is crucial for expatriates.", hint: "ADAPTIVE", answer: "adapt" },
+                    { id: 2, sentence: "The sheer _______________ of the material required me to skip the introduction.", hint: "LENGTHY", answer: "length" },
+                    { id: 3, sentence: "The decision was highly _______________ as it went against all economic advice.", hint: "QUESTION", answer: "questionable" },
+                    { id: 4, sentence: "The report gives a full _______________ of the events leading up to the disaster.", hint: "ANALYZE", answer: "analysis" },
+                    { id: 5, sentence: "The government needs to tackle the problem of _______________ and waste in the public sector.", hint: "INEFFICIENT", answer: "inefficiency" },
+                    { id: 6, sentence: "The final agreement was seen as a fair _______________ between the two opposing sides.", hint: "COMPARE", answer: "compromise" },
+                    { id: 7, sentence: "The _______________ of the project will depend on the final budget approval.", hint: "SUCCEED", answer: "success" }
+                ]
+            },
+            10: {
+                level: "Expert",
+                exercises: [
+                    { id: 1, sentence: "The scientist's long-term _______________ is the complete eradication of the disease.", hint: "AMBITIOUS", answer: "ambition" },
+                    { id: 2, sentence: "The government has the clear _______________ to transform the nation's energy supply.", hint: "INTEND", answer: "intention" },
+                    { id: 3, sentence: "The process of _______________ oneself into a completely new environment is challenging.", hint: "IMMERSION", answer: "immersing" },
+                    { id: 4, sentence: "The court case exposed the _______________ of the organization's financial dealings.", hint: "CRIMINAL", answer: "criminality" },
+                    { id: 5, sentence: "The new system is designed to provide maximum _______________ in stressful situations.", hint: "FLEXIBLE", answer: "flexibility" },
+                    { id: 6, sentence: "The committee was impressed by her _______________ to lead the complex project.", hint: "CAPABLE", answer: "capability" },
+                    { id: 7, sentence: "The documents were initially deemed _______________ but were later revealed to be true.", hint: "VALID", answer: "invalid" }
+                ]
+            }
+        };
+
+        let currentTaskData = [];
+        let currentTaskID = 0;
+        
+        const menuScreen = document.getElementById('menuScreen');
+        const taskScreen = document.getElementById('taskScreen');
+        const exerciseList = document.getElementById('exerciseList');
+        const currentTaskTitle = document.getElementById('currentTaskTitle');
+        const resultMessage = document.getElementById('resultMessage');
+
+        // #######################################################
+        // 2. STEUERUNG
+        // #######################################################
+        
+        function showMenu() {
+            menuScreen.style.display = 'block';
+            taskScreen.style.display = 'none';
+            resultMessage.style.display = 'none';
+        }
+
+        function loadTask(taskID) {
+            currentTaskID = taskID;
+            const task = allTasks[taskID];
+            currentTaskData = task.exercises;
+            
+            // Bestimmt das Level für die Anzeige
+            let level;
+            if (taskID >= 1 && taskID <= 4) level = "Beginner";
+            else if (taskID >= 5 && taskID <= 8) level = "Intermediate";
+            else level = "Expert";
+
+            currentTaskTitle.textContent = `Task ${taskID} - ${level}`;
+            
+            // Rendering
+            exerciseList.innerHTML = currentTaskData.map(ex => `
+                <li class="exercise-item">
+                    <span class="number">${ex.id}.</span>
+                    <span class="sentence">${ex.sentence.replace('___', `<input type="text" id="input-${ex.id}" class="gap-input" data-id="${ex.id}">`)}</span>
+                    <span class="hint">${ex.hint}</span>
+                    <span id="solution-${ex.id}" class="correct-answer">(${ex.answer})</span>
+                </li>
+            `).join('');
+
+            // Ansicht wechseln und Lösungen verstecken
+            menuScreen.style.display = 'none';
+            taskScreen.style.display = 'block';
+            toggleSolutions(true); // Versteckt Lösungen beim Start des Tasks
+            resultMessage.style.display = 'none';
+        }
+
+        // #######################################################
+        // 3. LOGIK UND PRÜFUNG (Wiederverwendet und erweitert)
+        // #######################################################
+
+        function checkAllAnswers() {
+            let correctCount = 0;
+            const totalCount = currentTaskData.length;
+            const rootStyles = getComputedStyle(document.documentElement);
+            const varColorSuccess = rootStyles.getPropertyValue('--color-success');
+            const varColorError = rootStyles.getPropertyValue('--color-error');
+
+            currentTaskData.forEach(ex => {
+                const inputElement = document.getElementById(`input-${ex.id}`);
+                // Normalisiert die Eingabe (erlaubt z.B. das Weglassen von Großbuchstaben)
+                const userAnswer = inputElement.value.trim().toLowerCase().replace('ü', 'ue').replace('ä', 'ae').replace('ö', 'oe');
+                const correctAnswer = ex.answer.toLowerCase();
+                
+                // Styling zurücksetzen
+                inputElement.style.borderColor = '#ccc';
+
+                if (userAnswer === correctAnswer) {
+                    correctCount++;
+                    inputElement.style.borderColor = varColorSuccess;
+                } else if (userAnswer.length > 0) {
+                    inputElement.style.borderColor = varColorError;
+                }
+            });
+
+            // Ergebnis anzeigen
+            resultMessage.style.display = 'block';
+            resultMessage.textContent = `Ergebnis für Task ${currentTaskID}: ${correctCount} von ${totalCount} korrekt.`;
+
+            if (correctCount === totalCount) {
+                resultMessage.className = 'result-message success';
+                resultMessage.textContent = `Perfekt! Task ${currentTaskID} vollständig korrekt gelöst.`;
+            } else {
+                resultMessage.className = 'result-message failure';
+            }
+        }
+        
+        function toggleSolutions(hideOnly = false) {
+            const solutionSpans = document.querySelectorAll('.correct-answer');
+            const button = document.getElementById('solutionButton');
+            
+            let isHidden = solutionSpans.length > 0 && (solutionSpans[0].style.display === 'none' || solutionSpans[0].style.display === '');
+
+            if (hideOnly) {
+                // Wenn der Task geladen wird, verstecke sie immer.
+                solutionSpans.forEach(span => span.style.display = 'none');
+                button.textContent = 'Lösungen anzeigen';
+                return;
+            }
+
+            // Normales Toggle
+            if (isHidden) {
+                solutionSpans.forEach(span => span.style.display = 'inline');
+                button.textContent = 'Lösungen verbergen';
+            } else {
+                solutionSpans.forEach(span => span.style.display = 'none');
+                button.textContent = 'Lösungen anzeigen';
+            }
+        }
+
+        // #######################################################
+        // 4. INITIALISIERUNG
+        // #######################################################
+        
+        window.onload = () => {
+             // Stellt sicher, dass das Menü beim Start angezeigt wird
+             showMenu();
+        }
+    </script>
+</body>
+</html>
