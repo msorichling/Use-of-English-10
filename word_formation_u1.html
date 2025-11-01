@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Formation Übung (Unit 1)</title>
+    
+    <!-- Google Font für handschriftliche Überschrift & saubere Schrift für Text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Futuristische/Stylische Hellblau-Palette */
+        :root {
+            --color-primary: #00bcd4; /* Bright Cyan */
+            --color-secondary: #00838f; /* Dark Teal */
+            --color-background: #e0f7fa; /* Very Light Cyan */
+            --color-text: #263238; /* Dunkelgrau */
+            --color-success: #43a047; /* Grün für Korrekt */
+            --color-error: #e53935; /* Rot für Fehler */
+            --color-card: #ffffff; /* Weiße Kartenbasis */
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--color-background) 0%, var(--color-primary) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background: var(--color-card);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            width: 95%;
+            margin-top: 5vh;
+            border: 1px solid var(--color-primary); /* Subtiler Rand */
+        }
+
+        .title {
+            font-family: 'Caveat', cursive;
+            font-size: 38px;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-bottom: 10px;
+            text-align: center; 
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 10px;
+        }
+
+        .instructions {
+            text-align: center;
+            font-size: 14px;
+            color: var(--color-text);
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        
+        /* AUFGABEN-STYLING */
+        .exercise-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exercise-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .exercise-item:last-child {
+            border-bottom: none;
+        }
+
+        .number {
+            font-weight: bold;
+            color: var(--color-secondary);
+            font-size: 1.2em;
+            width: 30px;
+            flex-shrink: 0;
+        }
+
+        .sentence {
+            flex-grow: 1;
+            padding-right: 10px;
+            line-height: 1.6;
+        }
+
+        .gap-input {
+            width: 150px;
+            padding: 8px 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            text-align: center;
+            transition: all 0.2s;
+            margin-right: 15px;
+        }
+
+        .gap-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+        }
+        
+        .hint {
+            font-weight: bold;
+            color: #777;
+            font-size: 1.1em;
+            width: 120px;
+            flex-shrink: 0;
+            text-align: right;
+        }
+
+        /* CHECK BUTTON & FEEDBACK */
+        .controls {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .check-button {
+            background-color: var(--color-secondary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .check-button:hover {
+            background-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        .result-message {
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: 700;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .result-message.success {
+            background-color: #e8f5e9; 
+            color: var(--color-success);
+        }
+
+        .result-message.failure {
+            background-color: #fbe9e7;
+            color: var(--color-error);
+        }
+
+        /* LÖSUNGSANZEIGE */
+        .show-solution {
+            text-decoration: underline;
+            color: var(--color-primary);
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        
+        .correct-answer {
+            color: var(--color-success);
+            font-weight: bold;
+            margin-left: 10px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="title">Word Formation – Unit 1 Practice</h1>
+        <p class="instructions">Use the word given in capitals at the end of some of the lines to form a word of the same word family that fits in the space in the same line. **Only type the word you formed.**</p>
+
+        <ul class="exercise-list" id="exerciseList">
+            <!-- Exercises will be generated here -->
+        </ul>
+
+        <div class="controls">
+            <button class="check-button" onclick="checkAllAnswers()">Prüfen</button>
+            <span class="show-solution" onclick="toggleSolutions()">Lösungen anzeigen</span>
+            <div class="result-message" id="resultMessage" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        // #######################################################
+        // 1. ÜBUNGSDATEN (Aus Unit 1 Vokabelfamilien)
+        // #######################################################
+        const exercises = [
+            { id: 1, sentence: "Despite the high costs, there was strong local _______________ to the new airport project.", hint: "RESIST", answer: "resistance" },
+            { id: 2, sentence: "The speaker gave a very _______________ presentation on the history of the country.", hint: "INFORM", answer: "informative" },
+            { id: 3, sentence: "The ongoing political _______________ has severely affected the economy.", hint: "CORRUPT", answer: "corruption" },
+            { id: 4, sentence: "She is a highly _______________ activist who fights for equal rights.", hint: "PASSION", answer: "passionate" },
+            { id: 5, sentence: "The reports contain many factual errors and are highly _______________.", hint: "QUESTION", answer: "questionable" },
+            { id: 6, sentence: "After the accident, he struggled _______________ to walk again without assistance.", hint: "PHYSICAL", answer: "physically" },
+            { id: 7, sentence: "The two cultures share a surprising number of _______________ in their traditions.", hint: "SIMILAR", answer: "similarities" },
+            { id: 8, sentence: "We must carefully _______________ the document before sending it to the client.", hint: "FORMULA", answer: "formulate" },
+            { id: 9, sentence: "He maintains a remarkable sense of _______________ even in the face of setbacks.", hint: "OPTIMISTIC", answer: "optimism" },
+            { id: 10, sentence: "The lecture will cover various types of criminal _______________ and their impact on society.", hint: "ACTIVE", answer: "activity" }
+        ];
+
+        // #######################################################
+        // 2. RENDERING
+        // #######################################################
+        
+        function renderExercises() {
+            const list = document.getElementById('exerciseList');
+            list.innerHTML = exercises.map(ex => `
+                <li class="exercise-item">
+                    <span class="number">${ex.id}.</span>
+                    <span class="sentence">${ex.sentence.replace('___', `<input type="text" id="input-${ex.id}" class="gap-input" data-id="${ex.id}">`)}</span>
+                    <span class="hint">${ex.hint}</span>
+                    <span id="solution-${ex.id}" class="correct-answer">(${ex.answer})</span>
+                </li>
+            `).join('');
+        }
+
+        // #######################################################
+        // 3. LOGIK UND PRÜFUNG
+        // #######################################################
+
+        function checkAllAnswers() {
+            let correctCount = 0;
+            const totalCount = exercises.length;
+
+            exercises.forEach(ex => {
+                const inputElement = document.getElementById(`input-${ex.id}`);
+                const userAnswer = inputElement.value.trim().toLowerCase();
+                const correctAnswer = ex.answer.toLowerCase();
+                
+                // Styling zurücksetzen
+                inputElement.classList.remove('success', 'failure');
+                inputElement.style.borderColor = '#ccc';
+
+                if (userAnswer === correctAnswer) {
+                    correctCount++;
+                    inputElement.style.borderColor = varColorSuccess;
+                } else if (userAnswer.length > 0) {
+                    inputElement.style.borderColor = varColorError;
+                }
+            });
+
+            // Ergebnis anzeigen
+            const resultMessage = document.getElementById('resultMessage');
+            resultMessage.style.display = 'block';
+            resultMessage.textContent = `Ergebnis: ${correctCount} von ${totalCount} korrekt.`;
+
+            if (correctCount === totalCount) {
+                resultMessage.className = 'result-message success';
+                resultMessage.textContent = `Perfekt! Alle ${totalCount} Lücken korrekt ausgefüllt.`;
+            } else {
+                resultMessage.className = 'result-message failure';
+            }
+        }
+        
+        function toggleSolutions() {
+            const solutionSpans = document.querySelectorAll('.correct-answer');
+            const button = document.querySelector('.show-solution');
+            
+            if (solutionSpans[0].style.display === 'none' || solutionSpans[0].style.display === '') {
+                solutionSpans.forEach(span => span.style.display = 'inline');
+                button.textContent = 'Lösungen verbergen';
+            } else {
+                solutionSpans.forEach(span => span.style.display = 'none');
+                button.textContent = 'Lösungen anzeigen';
+            }
+        }
+
+        // #######################################################
+        // 4. INITIALISIERUNG
+        // #######################################################
+        
+        let varColorSuccess, varColorError;
+
+        window.onload = () => {
+             // Lädt die CSS-Variablen für die JavaScript-Logik
+             const rootStyles = getComputedStyle(document.documentElement);
+             varColorSuccess = rootStyles.getPropertyValue('--color-success');
+             varColorError = rootStyles.getPropertyValue('--color-error');
+             
+             renderExercises();
+        }
+    </script>
+</body>
+</html>
