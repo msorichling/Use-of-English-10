@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key-Word Transformation (Unit 1)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Futuristische/Stylische Hellblau-Palette (Unit 1) */
+        :root {
+            --color-primary: #00bcd4; /* Bright Cyan */
+            --color-secondary: #00838f; /* Dark Teal */
+            --color-background: #e0f7fa; /* Very Light Cyan */
+            --color-text: #263238; /* Dunkelgrau */
+            --color-success: #43a047; /* Grün für Korrekt */
+            --color-error: #e53935; /* Rot für Fehler */
+            --color-card: #ffffff; /* Weiße Kartenbasis */
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--color-background) 0%, var(--color-primary) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-container {
+            background: var(--color-card);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            width: 95%;
+            margin-top: 5vh;
+            border: 1px solid var(--color-primary);
+        }
+
+        .title {
+            font-family: 'Caveat', cursive;
+            font-size: 38px;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-bottom: 10px;
+            text-align: center; 
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 10px;
+        }
+
+        .instructions {
+            text-align: center;
+            font-size: 14px;
+            color: var(--color-text);
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        
+        /* MENU STYLING */
+        #menuScreen {
+            text-align: center;
+        }
+
+        .difficulty-group {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            background-color: var(--color-background);
+        }
+
+        .difficulty-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .menu-buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .task-button {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            border: none;
+            padding: 15px 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-button:hover {
+            background-color: var(--color-secondary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* AUFGABEN-STYLING (TASK SCREEN) */
+        #taskScreen {
+            display: none;
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .task-title-detail {
+            font-size: 1.6em;
+            color: var(--color-secondary);
+            font-weight: 700;
+        }
+
+        .back-button {
+            background-color: #9e9e9e; /* Grau */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        /* LÜCKENTEXT STYLING */
+        .exercise-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exercise-item {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 0;
+            border-bottom: 1px dashed #ccc;
+            text-align: left;
+        }
+        
+        .exercise-item:last-child {
+            border-bottom: none;
+        }
+
+        .number {
+            font-weight: bold;
+            color: var(--color-secondary);
+            font-size: 1.2em;
+            width: 30px;
+            flex-shrink: 0;
+            margin-bottom: 10px;
+        }
+
+        .original-sentence {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .transformation {
+            display: flex;
+            align-items: center;
+        }
+
+        .gap-input {
+            width: 350px; /* Breiter für die Phrasen */
+            padding: 8px 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.2s;
+            margin-right: 15px;
+            text-align: center;
+        }
+        .gap-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+        }
+        
+        .hint {
+            font-weight: bold;
+            color: var(--color-secondary);
+            font-size: 1.1em;
+            width: 120px;
+            flex-shrink: 0;
+            text-align: right;
+            margin-left: 10px;
+        }
+
+        /* CHECK BUTTON & FEEDBACK */
+        .controls {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .check-button {
+            background-color: var(--color-secondary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .check-button:hover {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        .result-message {
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: 700;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .result-message.success {
+            background-color: #e8f5e9; 
+            color: var(--color-success);
+        }
+
+        .result-message.failure {
+            background-color: #fbe9e7;
+            color: var(--color-error);
+        }
+
+        /* LÖSUNGSANZEIGE */
+        .show-solution {
+            text-decoration: underline;
+            color: var(--color-primary);
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        
+        .correct-answer {
+            color: var(--color-success);
+            font-weight: bold;
+            margin-left: 10px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="main-container">
+        <h1 class="title">Key-Word Transformation Challenge – Unit 1</h1>
+        <p class="instructions">Complete the second sentence so that it has a similar meaning to the first, using the KEY WORD given. Use between **two and five words** including the key word. The key word must **not** be changed.</p>
+
+        <!-- MENU SCREEN -->
+        <div id="menuScreen">
+            
+            <div class="difficulty-group">
+                <div class="difficulty-title">Beginner (Tasks 1-4)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(1)">Task 1</button>
+                    <button class="task-button" onclick="loadTask(2)">Task 2</button>
+                    <button class="task-button" onclick="loadTask(3)">Task 3</button>
+                    <button class="task-button" onclick="loadTask(4)">Task 4</button>
+                </div>
+            </div>
+
+            <div class="difficulty-group">
+                <div class="difficulty-title">Intermediate (Tasks 5-8)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(5)">Task 5</button>
+                    <button class="task-button" onclick="loadTask(6)">Task 6</button>
+                    <button class="task-button" onclick="loadTask(7)">Task 7</button>
+                    <button class="task-button" onclick="loadTask(8)">Task 8</button>
+                </div>
+            </div>
+
+            <div class="difficulty-group">
+                <div class="difficulty-title">Expert (Tasks 9-10)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(9)">Task 9</button>
+                    <button class="task-button" onclick="loadTask(10)">Task 10</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TASK SCREEN -->
+        <div id="taskScreen">
+            <div class="task-header">
+                <button class="back-button" onclick="showMenu()">← Zurück zur Auswahl</button>
+                <div class="task-title-detail" id="currentTaskTitle">Task X - Level Y</div>
+            </div>
+
+            <ul class="exercise-list" id="exerciseList">
+                <!-- Exercises will be generated here -->
+            </ul>
+
+            <div class="controls">
+                <button class="check-button" onclick="checkAllAnswers()">Prüfen</button>
+                <span class="show-solution" id="solutionButton" onclick="toggleSolutions()">Lösungen anzeigen</span>
+                <div class="result-message" id="resultMessage" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // #######################################################
+        // 1. ÜBUNGSDATEN (10 Tasks à 5 Sätze = 50 Transformationen für Unit 1)
+        // #######################################################
+        const allTasks = {
+            // --- BEGINNER TASKS (1-4) ---
+            1: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "He finds it difficult to trust strangers.", key_word: "LITTLE", answer: "has little trust in" }, // 3 words
+                    { id: 2, sentence: "It is certain that the cost of the project will rise next year.", key_word: "BOUND", answer: "is bound to rise" }, // 3 words
+                    { id: 3, sentence: "I regret not having worked harder for my final exam.", key_word: "ONLY", answer: "If only I had" }, // 4 words
+                    { id: 4, sentence: "I wish I hadn't accepted the job offer, it was a mistake.", key_word: "DOWN", answer: "I hadn't turned down" }, // 4 words
+                    { id: 5, sentence: "The politician was accused of corruption in his dealings.", key_word: "INVOLVEMENT", answer: "of involvement in" } // 4 words
+                ]
+            },
+            2: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "She is not interested in reading any long novels.", key_word: "KEEN", answer: "is not keen on" }, // 4 words
+                    { id: 2, sentence: "The only reason they won was because of the late goal.", key_word: "BUT", answer: "won but for" }, // 3 words
+                    { id: 3, sentence: "The manager's absence was noticed immediately by everyone.", key_word: "FAIL", answer: "didn't fail to" }, // 4 words
+                    { id: 4, sentence: "It looks as if it's going to rain any minute now.", key_word: "ABOUT", answer: "is about to rain" }, // 4 words
+                    { id: 5, sentence: "The team could not manage to win the final game.", key_word: "SUCCEED", answer: "didn't succeed in" } // 3 words
+                ]
+            },
+            3: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "He rarely shows any feeling or emotion when he speaks.", key_word: "SELDOM", answer: "seldom shows emotion" }, // 3 words
+                    { id: 2, sentence: "I regret spending so much money on unnecessary gadgets.", key_word: "SPENT", answer: "wish I hadn't spent" }, // 4 words
+                    { id: 3, sentence: "The students were unable to grasp the complexity of the subject.", key_word: "BEYOND", answer: "was beyond the students'" }, // 4 words
+                    { id: 4, sentence: "He has never questioned the validity of the contract.", key_word: "INTO", answer: "has never looked into" }, // 4 words
+                    { id: 5, sentence: "It wasn't necessary for you to wait for me after the meeting.", key_word: "HAVE", answer: "needn't have waited" } // 3 words
+                ]
+            },
+            4: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence: "I don't think they will resist the pressure from the media.", key_word: "STAND", answer: "won't stand up to" }, // 4 words
+                    { id: 2, sentence: "I have never seen such a stunningly diverse landscape before.", key_word: "MOST", answer: "the most diverse" }, // 3 words
+                    { id: 3, sentence: "It took them a week to analyse all the data from the experiment.", key_word: "ANALYSIS", answer: "an analysis of" }, // 3 words
+                    { id: 4, sentence: "The committee has already decided on the date of the next meeting.", key_word: "MADE", answer: "has already made" }, // 3 words
+                    { id: 5, sentence: "The economic downturn seems unlikely to end soon.", key_word: "SIGN", answer: "there is no sign" } // 4 words
+                ]
+            },
+            
+            // --- INTERMEDIATE TASKS (5-8) ---
+            5: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "Everyone thinks he is going to resign because of the scandal.", key_word: "EXPECTED", answer: "is expected to resign" }, // 4 words
+                    { id: 2, sentence: "It's a good idea to research the topic thoroughly before writing the essay.", key_word: "WOULD", answer: "I would research" }, // 3 words
+                    { id: 3, sentence: "The two sides failed to reach an agreement despite long negotiations.", key_word: "BREAK", answer: "failed to break the" }, // 4 words
+                    { id: 4, sentence: "I wish I had been more passionate about my studies at school.", key_word: "PASSION", answer: "had had more passion" }, // 4 words
+                    { id: 5, sentence: "You must not forget to lock the main door before you leave.", key_word: "FAIL", answer: "must not fail to" } // 4 words
+                ]
+            },
+            6: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "We must ensure there is no chance of the experiment going wrong.", key_word: "CHANCE", answer: "must leave no chance" }, // 4 words
+                    { id: 2, sentence: "His new car is much bigger than his old one.", key_word: "NEARLY", answer: "is nowhere near as" }, // 4 words
+                    { id: 3, sentence: "He was able to tolerate the harsh working conditions.", key_word: "PUT", answer: "was able to put up" }, // 5 words
+                    { id: 4, sentence: "They started working on the development of the city centre immediately.", key_word: "SET", answer: "set about the development" }, // 4 words
+                    { id: 5, sentence: "The weather was so bad that we couldn't see anything.", key_word: "IMPOSSIBLE", answer: "made it impossible to" } // 4 words
+                ]
+            },
+            7: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "The manager gave the impression that he was about to quit.", key_word: "SEEMED", answer: "seemed as if he" }, // 4 words
+                    { id: 2, sentence: "He succeeded in getting the necessary qualifications by studying hard.", key_word: "MANAGED", answer: "managed to get the" }, // 4 words
+                    { id: 3, sentence: "There is absolutely no doubt that the story is completely false.", key_word: "BEYOND", answer: "is beyond a shadow" }, // 4 words
+                    { id: 4, sentence: "The only thing he did was complain about the temperature.", key_word: "DID", answer: "did nothing but" }, // 3 words
+                    { id: 5, sentence: "The local residents strongly objected to the closure of the park.", key_word: "OPPOSED", answer: "were strongly opposed to" } // 4 words
+                ]
+            },
+            8: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence: "We can only solve this problem if we cooperate fully.", key_word: "UNLESS", answer: "cannot solve this unless" }, // 4 words
+                    { id: 2, sentence: "The old church is believed to have been built 500 years ago.", key_word: "BEEN", answer: "is believed to have been" }, // 5 words
+                    { id: 3, sentence: "I wish I had been informed about the decision earlier.", key_word: "WOULD", answer: "I would have been" }, // 4 words
+                    { id: 4, sentence: "It would be an injustice if he didn't get the promotion.", key_word: "DESERVE", answer: "deserves to get the" }, // 4 words
+                    { id: 5, sentence: "You must drive carefully because the roads are icy.", key_word: "ACCOUNT", answer: "on account of the" } // 4 words
+                ]
+            },
+
+            // --- EXPERT TASKS (9-10) ---
+            9: {
+                level: "Expert",
+                exercises: [
+                    { id: 1, sentence: "It's difficult to accept that the company is failing after so many years.", key_word: "COME", answer: "it's difficult to come" }, // 4 words
+                    { id: 2, sentence: "They established the foundation with the aim of helping the poor.", key_word: "PURPOSE", answer: "purpose of helping" }, // 3 words
+                    { id: 3, sentence: "I don't think it is likely that he will change his mind now.", key_word: "DOUBT", answer: "I doubt whether he" }, // 4 words
+                    { id: 4, sentence: "Only after two hours did we finally manage to negotiate the deal.", key_word: "NEGOTIATED", answer: "was finally negotiated after" }, // 4 words
+                    { id: 5, sentence: "The children were very enthusiastic about the school trip.", key_word: "ENTHUSIASM", answer: "showed great enthusiasm for" } // 4 words
+                ]
+            },
+            10: {
+                level: "Expert",
+                exercises: [
+                    { id: 1, sentence: "I really want you to take this opportunity for a leadership role.", key_word: "WISH", answer: "I wish you would" }, // 4 words
+                    { id: 2, sentence: "The politician managed to escape any serious consequences for his corruption.", key_word: "AWAY", answer: "got away with his" }, // 4 words
+                    { id: 3, sentence: "The scientist explained that the results were not completely unexpected.", key_word: "LINE", answer: "were in line with" }, // 4 words
+                    { id: 4, sentence: "The committee said that the decision was final and could not be reversed.", key_word: "NO", answer: "said there was no" }, // 4 words
+                    { id: 5, sentence: "I was extremely surprised when he won the award.", key_word: "CAME", answer: "came as a great" } // 4 words
+                ]
+            }
+        };
+
+        let currentTaskData = [];
+        let currentTaskID = 0;
+        
+        const menuScreen = document.getElementById('menuScreen');
+        const taskScreen = document.getElementById('taskScreen');
+        const exerciseList = document.getElementById('exerciseList');
+        const currentTaskTitle = document.getElementById('currentTaskTitle');
+        const resultMessage = document.getElementById('resultMessage');
+
+        // #######################################################
+        // 2. STEUERUNG
+        // #######################################################
+        
+        function showMenu() {
+            menuScreen.style.display = 'block';
+            taskScreen.style.display = 'none';
+            resultMessage.style.display = 'none';
+        }
+
+        function loadTask(taskID) {
+            currentTaskID = taskID;
+            const task = allTasks[taskID];
+            currentTaskData = task.exercises;
+            
+            // Bestimmt das Level für die Anzeige
+            let level;
+            if (taskID >= 1 && taskID <= 4) level = "Beginner";
+            else if (taskID >= 5 && taskID <= 8) level = "Intermediate";
+            else level = "Expert";
+
+            currentTaskTitle.textContent = `Task ${taskID} - ${level}`;
+            
+            // Rendering
+            exerciseList.innerHTML = currentTaskData.map(ex => `
+                <li class="exercise-item">
+                    <span class="number">${ex.id}.</span>
+                    <span class="original-sentence">${ex.sentence}</span>
+                    <div class="transformation">
+                        <span>${ex.sentence.split(' ').slice(0, ex.sentence.split(' ').length - ex.answer.split(' ').length).join(' ')}</span>
+                        <input type="text" id="input-${ex.id}" class="gap-input" data-id="${ex.id}" placeholder="${ex.key_word} muss enthalten sein">
+                        <span class="hint">(${ex.key_word})</span>
+                    </div>
+                    <span id="solution-${ex.id}" class="correct-answer">Lösung: ${ex.answer.split(' ').length} Wörter, inkl. KEY WORD. Korrekt: ${ex.answer}</span>
+                </li>
+            `).join('');
+
+            // Ansicht wechseln und Lösungen verstecken
+            menuScreen.style.display = 'none';
+            taskScreen.style.display = 'block';
+            toggleSolutions(true); // Versteckt Lösungen beim Start des Tasks
+            resultMessage.style.display = 'none';
+        }
+
+        // #######################################################
+        // 3. LOGIK UND PRÜFUNG
+        // #######################################################
+
+        function checkAllAnswers() {
+            let correctCount = 0;
+            const totalCount = currentTaskData.length;
+            const rootStyles = getComputedStyle(document.documentElement);
+            const varColorSuccess = rootStyles.getPropertyValue('--color-success');
+            const varColorError = rootStyles.getPropertyValue('--color-error');
+
+            currentTaskData.forEach(ex => {
+                const inputElement = document.getElementById(`input-${ex.id}`);
+                const userAnswer = inputElement.value.trim().toLowerCase();
+                const correctAnswer = ex.answer.toLowerCase();
+                const userWordCount = userAnswer.split(/\s+/).filter(word => word.length > 0).length;
+                
+                // Styling zurücksetzen
+                inputElement.style.borderColor = '#ccc';
+
+                // CHECK: Antwort muss exakt übereinstimmen UND Wortanzahl muss stimmen (Sekundärprüfung)
+                const isCorrect = (userAnswer === correctAnswer); 
+                // Zwar wird die Wortanzahl hier nicht streng durchgesetzt, aber für die Anzeige bleibt sie wichtig.
+
+                if (isCorrect) {
+                    correctCount++;
+                    inputElement.style.borderColor = varColorSuccess;
+                } else if (userAnswer.length > 0) {
+                    inputElement.style.borderColor = varColorError;
+                }
+            });
+
+            // Ergebnis anzeigen
+            resultMessage.style.display = 'block';
+            resultMessage.textContent = `Ergebnis für Task ${currentTaskID}: ${correctCount} von ${totalCount} korrekt.`;
+
+            if (correctCount === totalCount) {
+                resultMessage.className = 'result-message success';
+                resultMessage.textContent = `Perfekt! Task ${currentTaskID} vollständig korrekt gelöst.`;
+            } else {
+                resultMessage.className = 'result-message failure';
+            }
+        }
+        
+        function toggleSolutions(hideOnly = false) {
+            const solutionSpans = document.querySelectorAll('.correct-answer');
+            const button = document.getElementById('solutionButton');
+            
+            let isHidden = solutionSpans.length > 0 && (solutionSpans[0].style.display === 'none' || solutionSpans[0].style.display === '');
+
+            if (hideOnly) {
+                solutionSpans.forEach(span => span.style.display = 'none');
+                button.textContent = 'Lösungen anzeigen';
+                return;
+            }
+
+            if (isHidden) {
+                solutionSpans.forEach(span => span.style.display = 'block');
+                button.textContent = 'Lösungen verbergen';
+            } else {
+                solutionSpans.forEach(span => span.style.display = 'none');
+                button.textContent = 'Lösungen anzeigen';
+            }
+        }
+
+        // #######################################################
+        // 4. INITIALISIERUNG
+        // #######################################################
+        
+        window.onload = () => {
+             showMenu();
+        }
+    </script>
+</body>
+</html>
