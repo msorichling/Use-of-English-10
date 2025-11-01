@@ -176,6 +176,14 @@
             align-items: center;
         }
 
+        .transformation span:first-child {
+             padding-right: 5px; /* Abstand vor dem Input */
+        }
+        
+        .transformation span:last-child {
+             padding-left: 5px; /* Abstand nach dem Input */
+        }
+
         .gap-input {
             width: 350px; 
             padding: 8px 12px;
@@ -183,7 +191,8 @@
             border-radius: 8px;
             font-size: 16px;
             transition: all 0.2s;
-            margin-right: 15px;
+            margin-right: 5px;
+            margin-left: 5px;
             text-align: center;
         }
         .gap-input:focus {
@@ -322,47 +331,48 @@
     <script>
         // #######################################################
         // 1. ÜBUNGSDATEN (10 Tasks à 5 Sätze = 50 Transformationen für Unit 2)
+        // KORRIGIERTE STRUKTUR
         // #######################################################
         const allTasks = {
             // --- BEGINNER TASKS (1-4) ---
             1: {
                 level: "Beginner",
                 exercises: [
-                    { id: 1, sentence: "The management refused to consider the new proposal.", key_word: "DOWN", answer: "was turned down by" }, // 4 words
-                    { id: 2, sentence: "His dedication to his work is something I greatly admire.", key_word: "LOOK", answer: "look up to him" }, // 4 words
-                    { id: 3, sentence: "It's highly unlikely that she will change her mind now.", key_word: "LIKELIHOOD", answer: "is little likelihood of" }, // 4 words
-                    { id: 4, sentence: "The storm was so violent that the damage was completely unexpected.", key_word: "TAKEN", answer: "were taken aback by" }, // 4 words
-                    { id: 5, sentence: "You must contact me immediately if you have any trouble.", key_word: "TOUCH", answer: "get in touch with" } // 4 words
+                    { id: 1, sentence1: "The management refused to consider the new proposal.", sentence2_part1: "The new proposal", sentence2_part2: "the management.", key_word: "DOWN", answer: "was turned down by" }, // 4 words
+                    { id: 2, sentence1: "His dedication to his work is something I greatly admire.", sentence2_part1: "I really", sentence2_part2: "for his work ethic.", key_word: "LOOK", answer: "look up to him" }, // 4 words
+                    { id: 3, sentence1: "It's highly unlikely that she will change her mind now.", sentence2_part1: "There", sentence2_part2: "her changing her mind now.", key_word: "LIKELIHOOD", answer: "is little likelihood of" }, // 4 words
+                    { id: 4, sentence1: "The storm was so violent that the damage was completely unexpected.", sentence2_part1: "We", sentence2_part2: "the violence of the storm.", key_word: "TAKEN", answer: "were taken aback by" }, // 4 words
+                    { id: 5, sentence1: "You must contact me immediately if you have any trouble.", sentence2_part1: "You must", sentence2_part2: "me immediately if you have any trouble.", key_word: "TOUCH", answer: "get in touch with" } // 4 words
                 ]
             },
             2: {
                 level: "Beginner",
                 exercises: [
-                    { id: 1, sentence: "I hate it when people are late for important meetings.", key_word: "STAND", answer: "can't stand people being" }, // 4 words
-                    { id: 2, sentence: "It's important that you sign the form before leaving the office.", key_word: "MUST", answer: "you must remember to" }, // 4 words
-                    { id: 3, sentence: "She has been involved in the reform project since the beginning.", key_word: "PART", answer: "has been taking part" }, // 4 words
-                    { id: 4, sentence: "They offered him the job despite his lack of experience in the field.", key_word: "SPITE", answer: "in spite of his" }, // 4 words
-                    { id: 5, sentence: "The impressive nature of the discovery was recognized globally.", key_word: "IMPRESSIVE", answer: "was an impressive discovery" } // 4 words
+                    { id: 1, sentence1: "I hate it when people are late for important meetings.", sentence2_part1: "I", sentence2_part2: "late for important meetings.", key_word: "STAND", answer: "can't stand people being" }, // 4 words
+                    { id: 2, sentence1: "It's important that you sign the form before leaving the office.", sentence2_part1: "You", sentence2_part2: "to sign the form before leaving the office.", key_word: "MUST", answer: "must remember" }, // 3 words
+                    { id: 3, sentence1: "She has been involved in the reform project since the beginning.", sentence2_part1: "She", sentence2_part2: "in the reform project since the beginning.", key_word: "PART", answer: "has been taking part" }, // 4 words
+                    { id: 4, sentence1: "They offered him the job despite his lack of experience in the field.", sentence2_part1: "They offered him the job", sentence2_part2: "in the field.", key_word: "SPITE", answer: "in spite of his" }, // 4 words
+                    { id: 5, sentence1: "The impressive nature of the discovery was recognized globally.", sentence2_part1: "The discovery", sentence2_part2: "that was recognized globally.", key_word: "IMPRESSIVE", answer: "was an impressive" } // 3 words
                 ]
             },
             3: {
                 level: "Beginner",
                 exercises: [
-                    { id: 1, sentence: "We haven't received any impressive news from the capital yet.", key_word: "LITTLE", answer: "has been little impressive" }, // 3 words
-                    { id: 2, sentence: "We might visit the exhibition, depending on the opening hours.", key_word: "UP", answer: "will go, if the" }, // 4 words
-                    { id: 3, sentence: "She is dedicated to her job, which everyone notices.", key_word: "DEDICATION", answer: "her dedication to her" }, // 4 words
-                    { id: 4, sentence: "The construction of the new school should be finished by next spring.", key_word: "HAVE", answer: "should have been finished" }, // 4 words
-                    { id: 5, sentence: "It was a mistake for me to trust his commitment to the project.", key_word: "SHOULD", answer: "I shouldn't have trusted" } // 4 words
+                    { id: 1, sentence1: "We haven't received any impressive news from the capital yet.", sentence2_part1: "There", sentence2_part2: "news from the capital yet.", key_word: "LITTLE", answer: "has been little" }, // 3 words
+                    { id: 2, sentence1: "We might visit the exhibition, depending on the opening hours.", sentence2_part1: "Whether we visit the exhibition", sentence2_part2: "the opening hours.", key_word: "UP", answer: "is up to" }, // 3 words
+                    { id: 3, sentence1: "She is dedicated to her job, which everyone notices.", sentence2_part1: "Everyone notices", sentence2_part2: "job.", key_word: "DEDICATION", answer: "her dedication to her" }, // 4 words
+                    { id: 4, sentence1: "The construction of the new school should be finished by next spring.", sentence2_part1: "The new school construction", sentence2_part2: "by next spring.", key_word: "HAVE", answer: "should have finished" }, // 3 words
+                    { id: 5, sentence1: "It was a mistake for me to trust his commitment to the project.", sentence2_part1: "", sentence2_part2: "his commitment to the project.", key_word: "SHOULD", answer: "I shouldn't have trusted" } // 4 words
                 ]
             },
             4: {
                 level: "Beginner",
                 exercises: [
-                    { id: 1, sentence: "The final decision will be made by the committee next week.", key_word: "MAKE", answer: "the committee will make" }, // 4 words
-                    { id: 2, sentence: "We were completely unaware of the extent of his involvement.", key_word: "KNEW", answer: "knew nothing about" }, // 3 words
-                    { id: 3, sentence: "They will probably accept your idea without any argument.", key_word: "LIKELY", answer: "are likely to accept" }, // 4 words
-                    { id: 4, sentence: "He rarely makes a promise that he doesn't keep.", key_word: "SELDOM", answer: "seldom makes a promise" }, // 4 words
-                    { id: 5, sentence: "Could you please explain this concept to me more clearly?", key_word: "CLARIFICATION", answer: "give me clarification on" } // 4 words
+                    { id: 1, sentence1: "The final decision will be made by the committee next week.", sentence2_part1: "The committee will", sentence2_part2: "the final decision next week.", key_word: "MAKE", answer: "make" }, // 1 word
+                    { id: 2, sentence1: "We were completely unaware of the extent of his involvement.", sentence2_part1: "We", sentence2_part2: "his involvement.", key_word: "KNEW", answer: "knew nothing about" }, // 3 words
+                    { id: 3, sentence1: "They will probably accept your idea without any argument.", sentence2_part1: "They", sentence2_part2: "accept your idea without any argument.", key_word: "LIKELY", answer: "are likely to" }, // 3 words
+                    { id: 4, sentence1: "He rarely makes a promise that he doesn't keep.", sentence2_part1: "It", sentence2_part2: "that he makes a promise he doesn't keep.", key_word: "SELDOM", answer: "is seldom" }, // 2 words
+                    { id: 5, sentence1: "Could you please explain this concept to me more clearly?", sentence2_part1: "Could you", sentence2_part2: "this concept?", key_word: "CLARIFICATION", answer: "give me clarification on" } // 4 words
                 ]
             },
             
@@ -370,41 +380,41 @@
             5: {
                 level: "Intermediate",
                 exercises: [
-                    { id: 1, sentence: "His confidence meant he never hesitated when speaking in public.", key_word: "LACK", answer: "did not lack confidence" }, // 4 words
-                    { id: 2, sentence: "I had to read the whole report to get an insight into the company's problems.", key_word: "ONLY", answer: "only by reading the" }, // 4 words
-                    { id: 3, sentence: "I found the way he spoke rather impressive.", key_word: "IMPRESSED", answer: "was impressed by the" }, // 4 words
-                    { id: 4, sentence: "The success of the experiment depends on the weather conditions.", key_word: "UP", answer: "is up to the" }, // 4 words
-                    { id: 5, sentence: "I have no idea why she decided to give up her involvement in the group.", key_word: "BEHIND", answer: "reason behind her decision" } // 4 words
+                    { id: 1, sentence1: "His confidence meant he never hesitated when speaking in public.", sentence2_part1: "He", sentence2_part2: "confidence when speaking in public.", key_word: "LACK", answer: "did not lack" }, // 3 words
+                    { id: 2, sentence1: "I had to read the whole report to get an insight into the company's problems.", sentence2_part1: "It was", sentence2_part2: "did I get an insight into the company's problems.", key_word: "ONLY", answer: "only by reading" }, // 3 words
+                    { id: 3, sentence1: "I found the way he spoke rather impressive.", sentence2_part1: "I", sentence2_part2: "the way he spoke.", key_word: "IMPRESSED", answer: "was impressed by" }, // 3 words
+                    { id: 4, sentence1: "The success of the experiment depends on the weather conditions.", sentence2_part1: "The success of the experiment", sentence2_part2: "the weather conditions.", key_word: "UP", answer: "is up to" }, // 3 words
+                    { id: 5, sentence1: "I have no idea why she decided to give up her involvement in the group.", sentence2_part1: "The", sentence2_part2: "her decision to give up her involvement in the group is unknown.", key_word: "BEHIND", answer: "reason behind" } // 2 words
                 ]
             },
             6: {
                 level: "Intermediate",
                 exercises: [
-                    { id: 1, sentence: "It's been a long time since I last talked to her about the reform.", key_word: "TOUCH", answer: "have not been in touch" }, // 5 words
-                    { id: 2, sentence: "They have postponed the meeting until next month.", key_word: "OFF", answer: "has been put off" }, // 4 words
-                    { id: 3, sentence: "She started working on the construction project immediately after graduating.", key_word: "SET", answer: "set out to work" }, // 4 words
-                    { id: 4, sentence: "The only thing he committed to was writing the introduction.", key_word: "NOTHING", answer: "committed to nothing but" }, // 4 words
-                    { id: 5, sentence: "You must accept the fact that your plans are unpredictable.", key_word: "COME", answer: "come to terms with" } // 4 words
+                    { id: 1, sentence1: "It's been a long time since I last talked to her about the reform.", sentence2_part1: "I", sentence2_part2: "about the reform for a long time.", key_word: "TOUCH", answer: "have not been in touch" }, // 5 words
+                    { id: 2, sentence1: "They have postponed the meeting until next month.", sentence2_part1: "The meeting", sentence2_part2: "until next month.", key_word: "OFF", answer: "has been put off" }, // 4 words
+                    { id: 3, sentence1: "She started working on the construction project immediately after graduating.", sentence2_part1: "She", sentence2_part2: "the construction project immediately after graduating.", key_word: "SET", answer: "set out on" }, // 3 words
+                    { id: 4, sentence1: "The only thing he committed to was writing the introduction.", sentence2_part1: "He committed to", sentence2_part2: "writing the introduction.", key_word: "NOTHING", answer: "nothing but" }, // 2 words
+                    { id: 5, sentence1: "You must accept the fact that your plans are unpredictable.", sentence2_part1: "You must", sentence2_part2: "the unpredictability of your plans.", key_word: "COME", answer: "come to terms with" } // 4 words
                 ]
             },
             7: {
                 level: "Intermediate",
                 exercises: [
-                    { id: 1, sentence: "It is necessary for us to understand the gravity of the situation.", key_word: "MUST", answer: "we must understand the" }, // 4 words
-                    { id: 2, sentence: "I didn't expect the exhibition to be so full of impressive artwork.", key_word: "MORE", answer: "was more impressive than" }, // 4 words
-                    { id: 3, sentence: "She wasn't able to achieve her goals without his commitment.", key_word: "IT", answer: "without it she was" }, // 4 words
-                    { id: 4, sentence: "The manager insisted on all employees arriving on time for the meeting.", key_word: "INSISTED", answer: "insisted on all employees" }, // 4 words
-                    { id: 5, sentence: "I find it easy to accept that I was wrong about the timetable.", key_word: "TERMS", answer: "come to terms with" } // 4 words
+                    { id: 1, sentence1: "It is necessary for us to understand the gravity of the situation.", sentence2_part1: "We", sentence2_part2: "the gravity of the situation.", key_word: "MUST", answer: "must understand" }, // 2 words
+                    { id: 2, sentence1: "I didn't expect the exhibition to be so full of impressive artwork.", sentence2_part1: "The exhibition", sentence2_part2: "I had expected.", key_word: "MORE", answer: "was more impressive than" }, // 4 words
+                    { id: 3, sentence1: "She wasn't able to achieve her goals without his commitment.", sentence2_part1: "It was his commitment that", sentence2_part2: "achieve her goals.", key_word: "IT", answer: "made it possible to" }, // 4 words
+                    { id: 4, sentence1: "The manager insisted on all employees arriving on time for the meeting.", sentence2_part1: "The manager", sentence2_part2: "that all employees arrived on time for the meeting.", key_word: "INSISTED", answer: "insisted" }, // 1 word
+                    { id: 5, sentence1: "I find it easy to accept that I was wrong about the timetable.", sentence2_part1: "I have", sentence2_part2: "being wrong about the timetable.", key_word: "TERMS", answer: "come to terms with" } // 4 words
                 ]
             },
             8: {
                 level: "Intermediate",
                 exercises: [
-                    { id: 1, sentence: "They are currently building a new commercial development near the harbour.", key_word: "BEING", answer: "is being built near" }, // 4 words
-                    { id: 2, sentence: "They have officially accepted the invitation to the ceremony.", key_word: "ACCEPTANCE", answer: "given their official acceptance" }, // 4 words
-                    { id: 3, sentence: "He said that he was unaware of the new safety regulations.", key_word: "KNEW", answer: "said he knew nothing" }, // 4 words
-                    { id: 4, sentence: "I felt like I was being watched the whole time during the interview.", key_word: "SENSE", answer: "had a sense of" }, // 4 words
-                    { id: 5, sentence: "The unexpected snowfall meant we had to cancel the trip.", key_word: "OF", answer: "on account of the" } // 4 words
+                    { id: 1, sentence1: "They are currently building a new commercial development near the harbour.", sentence2_part1: "A new commercial development", sentence2_part2: "near the harbour.", key_word: "BEING", answer: "is being built" }, // 3 words
+                    { id: 2, sentence1: "They have officially accepted the invitation to the ceremony.", sentence2_part1: "They have", sentence2_part2: "the invitation to the ceremony.", key_word: "ACCEPTANCE", answer: "given their acceptance of" }, // 4 words
+                    { id: 3, sentence1: "He said that he was unaware of the new safety regulations.", sentence2_part1: "He said he", sentence2_part2: "the new safety regulations.", key_word: "KNEW", answer: "knew nothing about" }, // 3 words
+                    { id: 4, sentence1: "I felt like I was being watched the whole time during the interview.", sentence2_part1: "I", sentence2_part2: "of being watched the whole time during the interview.", key_word: "SENSE", answer: "had a sense" }, // 3 words
+                    { id: 5, sentence1: "The unexpected snowfall meant we had to cancel the trip.", sentence2_part1: "The trip was cancelled", sentence2_part2: "the unexpected snowfall.", key_word: "OF", answer: "on account of" } // 3 words
                 ]
             },
 
@@ -412,21 +422,21 @@
             9: {
                 level: "Expert",
                 exercises: [
-                    { id: 1, sentence: "We must ensure that the equipment is functional before the presentation.", key_word: "MAKE", answer: "must make sure that" }, // 4 words
-                    { id: 2, sentence: "He said the company would not accept the reform under any circumstances.", key_word: "TERMS", answer: "on no terms would" }, // 4 words
-                    { id: 3, sentence: "The sudden failure of the power supply caused immediate chaos.", key_word: "IN", answer: "resulted in immediate" }, // 3 words
-                    { id: 4, sentence: "I think you should reconsider your involvement in the commercial project.", key_word: "BETTER", answer: "you had better reconsider" }, // 3 words
-                    { id: 5, sentence: "It seems that they didn't know about the cancellation until the last minute.", key_word: "UNWARE", answer: "seemed to be unaware" } // 4 words
+                    { id: 1, sentence1: "We must ensure that the equipment is functional before the presentation.", sentence2_part1: "We", sentence2_part2: "the equipment is functional before the presentation.", key_word: "MAKE", answer: "must make sure" }, // 3 words
+                    { id: 2, sentence1: "He said the company would not accept the reform under any circumstances.", sentence2_part1: "He said", sentence2_part2: "would the company accept the reform.", key_word: "TERMS", answer: "on no terms" }, // 3 words
+                    { id: 3, sentence1: "The sudden failure of the power supply caused immediate chaos.", sentence2_part1: "The sudden failure of the power supply", sentence2_part2: "immediate chaos.", key_word: "IN", answer: "resulted in" }, // 2 words
+                    { id: 4, sentence1: "I think you should reconsider your involvement in the commercial project.", sentence2_part1: "I think", sentence2_part2: "reconsider your involvement in the commercial project.", key_word: "BETTER", answer: "you had better" }, // 3 words
+                    { id: 5, sentence1: "It seems that they didn't know about the cancellation until the last minute.", sentence2_part1: "They", sentence2_part2: "about the cancellation until the last minute.", key_word: "UNAWARE", answer: "seemed to be unaware" } // 4 words
                 ]
             },
             10: {
                 level: "Expert",
                 exercises: [
-                    { id: 1, sentence: "The sheer size of the construction project took us completely by surprise.", key_word: "TAKEN", answer: "were completely taken aback" }, // 4 words
-                    { id: 2, sentence: "The politician managed to escape the interview without giving clarification.", key_word: "AWAY", answer: "got away without giving" }, // 4 words
-                    { id: 3, sentence: "I only managed to fix the problem because of your advice.", key_word: "IT", answer: "I couldn't have fixed it" }, // 5 words
-                    { id: 4, sentence: "She is determined to get the job, no matter what.", key_word: "HEART", answer: "has her heart set" }, // 4 words
-                    { id: 5, sentence: "We found the amount of effort required to be unpredictable.", key_word: "UP", answer: "found the effort involved" } // 4 words
+                    { id: 1, sentence1: "The sheer size of the construction project took us completely by surprise.", sentence2_part1: "We", sentence2_part2: "by the sheer size of the construction project.", key_word: "TAKEN", answer: "were completely taken aback" }, // 4 words
+                    { id: 2, sentence1: "The politician managed to escape the interview without giving clarification.", sentence2_part1: "The politician", sentence2_part2: "giving clarification in the interview.", key_word: "AWAY", answer: "got away without" }, // 3 words
+                    { id: 3, sentence1: "I only managed to fix the problem because of your advice.", sentence2_part1: "I", sentence2_part2: "the problem without your advice.", key_word: "IT", answer: "couldn't have fixed it" }, // 4 words
+                    { id: 4, sentence1: "She is determined to get the job, no matter what.", sentence2_part1: "She", sentence2_part2: "on getting the job, no matter what.", key_word: "HEART", answer: "has her heart set" }, // 4 words
+                    { id: 5, sentence1: "We found the amount of effort required to be unpredictable.", sentence2_part1: "The amount of effort required", sentence2_part2: "to be unpredictable.", key_word: "UP", answer: "turned up" } // 2 words
                 ]
             }
         };
@@ -463,17 +473,16 @@
 
             currentTaskTitle.textContent = `Task ${taskID} - ${level}`;
             
-            // Rendering
+            // RENDERING MIT NEUER DREI-TEILIGER SATZSTRUKTUR
             exerciseList.innerHTML = currentTaskData.map(ex => {
-                const originalEnd = ex.sentence.split(' ').slice(ex.sentence.split(' ').length - ex.answer.split(' ').length).join(' ');
-                
                 return `
                     <li class="exercise-item">
                         <span class="number">${ex.id}.</span>
-                        <span class="original-sentence">${ex.sentence}</span>
+                        <span class="original-sentence">${ex.sentence1}</span>
                         <div class="transformation">
-                            <span>${ex.sentence.replace(originalEnd, '')}</span>
+                            <span>${ex.sentence2_part1}</span>
                             <input type="text" id="input-${ex.id}" class="gap-input" data-id="${ex.id}" placeholder="${ex.key_word} muss enthalten sein">
+                            <span>${ex.sentence2_part2}</span>
                             <span class="hint">(${ex.key_word})</span>
                         </div>
                         <span id="solution-${ex.id}" class="correct-answer">Lösung: ${ex.answer.split(' ').length} Wörter, inkl. KEY WORD. Korrekt: ${ex.answer}</span>
