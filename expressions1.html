@@ -63,12 +63,13 @@
         /* TEXT AREA STYLING */
         .text-section {
             border: 1px solid var(--color-secondary);
-            padding: 20px;
             border-radius: 8px;
             margin-bottom: 30px;
             line-height: 1.6;
             font-size: 15px;
             background-color: #333;
+            padding: 20px 20px 20px 50px; /* Mehr Platz links für Marker */
+            position: relative; /* Wichtig für die absoluten Marker */
         }
         
         .text-section p {
@@ -79,13 +80,16 @@
             position: relative;
         }
         
+        /* Der Marker steht nun im Padding des .text-section Containers */
         .section-marker {
             position: absolute;
-            left: -30px;
+            left: -35px; /* Position außerhalb des Absatzes, aber innerhalb des Container-Paddings */
             top: 5px;
             font-family: var(--font-display);
             color: var(--color-primary);
             font-size: 1.1em;
+            width: 40px;
+            text-align: right;
         }
 
         .task-title {
@@ -207,7 +211,7 @@
         .target-word {
             font-weight: bold;
             color: var(--color-primary);
-            width: 300px; /* Breiter, um den Kontext zu fassen */
+            width: 300px; 
             flex-shrink: 0;
         }
         
@@ -261,6 +265,7 @@
             padding: 15px;
             border-radius: 8px;
             border: 1px solid;
+            min-height: 60px; /* Für bessere Ästhetik */
         }
 
         .result-message.success {
@@ -339,26 +344,32 @@
                 <div class="matching-row">
                     <span class="matching-label">A. astonishing few:</span>
                     <select id="match-A" class="matching-select"></select>
+                    <span id="solution-A" class="correct-answer">Korrekte Nummer: 3</span>
                 </div>
                 <div class="matching-row">
                     <span class="matching-label">B. gain recognition:</span>
                     <select id="match-B" class="matching-select"></select>
+                    <span id="solution-B" class="correct-answer">Korrekte Nummer: 1</span>
                 </div>
                 <div class="matching-row">
                     <span class="matching-label">C. make my knowledge stick:</span>
                     <select id="match-C" class="matching-select"></select>
+                    <span id="solution-C" class="correct-answer">Korrekte Nummer: 2</span>
                 </div>
                 <div class="matching-row">
                     <span class="matching-label">D. brain tick:</span>
                     <select id="match-D" class="matching-select"></select>
+                    <span id="solution-D" class="correct-answer">Korrekte Nummer: 5</span>
                 </div>
                 <div class="matching-row">
                     <span class="matching-label">E. on a permanent basis:</span>
                     <select id="match-E" class="matching-select"></select>
+                    <span id="solution-E" class="correct-answer">Korrekte Nummer: 6</span>
                 </div>
                 <div class="matching-row">
                     <span class="matching-label">F. shut-eye:</span>
                     <select id="match-F" class="matching-select"></select>
+                    <span id="solution-F" class="correct-answer">Korrekte Nummer: 4</span>
                 </div>
             </div>
         </div>
@@ -387,15 +398,15 @@
         
         // Task 1: Matching (Expression ID: Correct Definition Number)
         const matchingData = {
-            'A': 3, // astonishing few -> 3. a surprisingly small number of people
-            'B': 1, // gain recognition -> 1. to become publicly acknowledged for an achievement
-            'C': 2, // make my knowledge stick -> 2. to be understood or retained in memory
-            'D': 5, // brain tick -> 5. to understand how the brain functions
-            'E': 6, // on a permanent basis -> 6. continually or constantly
-            'F': 4  // shut-eye -> 4. sleep
+            'A': 3, 
+            'B': 1, 
+            'C': 2, 
+            'D': 5, 
+            'E': 6, 
+            'F': 4  
         };
         
-        // Task 2: Synonym Finding (Target Word: Correct Synonym from text)
+        // Task 2: Synonym Finding (Target Word: Correct Synonym from text, Answer is stored in data attribute)
         const synonymData = [
             { id: 1, target: "remembering (noun)", context: "[Section 1]", answer: "recall" },
             { id: 2, target: "understand how it functions (verb)", context: "[Section 2]", answer: "tick" }, 
@@ -421,22 +432,39 @@
 
         function renderSynonyms() {
             const list = document.getElementById('synonymList');
+            // NEU: Die Lösung wird im data-attribute gespeichert, nicht im sichtbaren span.
             list.innerHTML = synonymData.map(item => `
                 <li class="synonym-item">
                     <span class="target-word">${item.id}. ${item.target} ${item.context}:</span>
-                    <input type="text" id="synonym-input-${item.id}" class="synonym-input" data-id="${item.id}">
-                    <span id="synonym-solution-${item.id}" class="correct-answer">(${item.answer})</span>
+                    <input type="text" id="synonym-input-${item.id}" class="synonym-input" data-id="${item.id}" data-answer="${item.answer}">
+                    <span id="synonym-solution-${item.id}" class="correct-answer"></span>
                 </li>
             `).join('');
         }
-
+        
         // #######################################################
         // 3. LOGIK UND PRÜFUNG
         // #######################################################
         
         function normalizeInput(input) {
-            // Trim, lower case, remove non-alphanumeric/whitespace
+            // Trim, lower case, remove punctuation
             return input.trim().toLowerCase().replace(/[.,!?'"]/g, '');
+        }
+
+        function generateFeedback(percentage) {
+            const totalTasks = synonymData.length + Object.keys(matchingData).length;
+
+            if (percentage === 100) {
+                return `Fantastisch! Alle ${totalTasks} Antworten sind korrekt! Deine Beherrschung des Wortschatzes ist beeindruckend.`;
+            } else if (percentage >= 80) {
+                return "Sehr gut! Du hast einen Großteil der Aufgaben richtig gelöst. Nur noch kleine Details müssen gefestigt werden.";
+            } else if (percentage >= 60) {
+                return "Gut gemacht! Du bist auf dem richtigen Weg. Gehe die fehlerhaften Aufgaben noch einmal durch und schaue dir die Lösungen an.";
+            } else if (percentage >= 40) {
+                return "Motivierendes Ergebnis. Die Grundlagen sind da, aber konzentriere dich jetzt auf die spezifischen Vokabeln im Text. Nutze die Lösungen zum Lernen!";
+            } else {
+                return "Gib nicht auf! Das ist eine schwierige Aufgabe. Nutze die Lösungen, um zu lernen, und versuche es dann erneut. Jeder fängt klein an.";
+            }
         }
 
         function checkTask1() {
@@ -449,7 +477,6 @@
                 const userAnswer = parseInt(selectElement.value);
                 const correctAnswer = matchingData[expression];
                 
-                // Styling zurücksetzen
                 selectElement.style.border = `2px solid var(--color-secondary)`;
 
                 if (userAnswer === correctAnswer) {
@@ -471,7 +498,6 @@
                 const userAnswer = normalizeInput(inputElement.value);
                 const correctAnswer = normalizeInput(item.answer);
                 
-                // Styling zurücksetzen
                 inputElement.style.border = `2px solid #555`;
 
                 if (userAnswer === correctAnswer) {
@@ -491,36 +517,55 @@
             
             const totalCorrect = result1.correct + result2.correct;
             const totalTasks = result1.total + result2.total;
+            const scorePercentage = (totalCorrect / totalTasks) * 100;
             
             const resultMessage = document.getElementById('resultMessage');
             resultMessage.style.display = 'block';
 
             let messageContent = `
-                Ergebnis: ${totalCorrect} von ${totalTasks} korrekt.<br>
-                ${result1.name}: ${result1.correct}/${result1.total}<br>
-                ${result2.name}: ${result2.correct}/${result2.total}
+                ${generateFeedback(scorePercentage)}<br><br>
+                **Detailergebnis:** ${totalCorrect} von ${totalTasks} (${scorePercentage.toFixed(0)}%) korrekt.<br>
+                ${result1.name}: ${result1.correct}/${result1.total} | ${result2.name}: ${result2.correct}/${result2.total}
             `;
-
+            
+            // Setzt das passende CSS für Erfolg oder Misserfolg
             if (totalCorrect === totalTasks) {
                 resultMessage.className = 'result-message success';
-                resultMessage.innerHTML = `<strong>Fantastisch! Alle ${totalTasks} Antworten sind korrekt!</strong>`;
             } else {
                 resultMessage.className = 'result-message failure';
-                resultMessage.innerHTML = `<strong>Ergebnis: Fehler gefunden.</strong><br>${messageContent}`;
             }
+            
+            resultMessage.innerHTML = messageContent.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); // Markdown für Fettdruck
+
         }
         
         function toggleSolutions() {
-            const solutionSpans = document.querySelectorAll('.correct-answer');
+            // Task 1 Lösungen
+            const solutionSpansT1 = document.querySelectorAll('.matching-area .correct-answer');
+            // Task 2 Lösungen
+            const inputElementsT2 = document.querySelectorAll('.synonym-input');
+            const solutionSpansT2 = document.querySelectorAll('#task2 .correct-answer');
+            
             const button = document.getElementById('solutionButton');
             
-            let isHidden = solutionSpans.length > 0 && (solutionSpans[0].style.display === 'none' || solutionSpans[0].style.display === '');
+            // Prüft, ob Lösungen aktuell versteckt sind
+            let isHidden = solutionSpansT1.length > 0 && (solutionSpansT1[0].style.display === 'none' || solutionSpansT1[0].style.display === '');
 
             if (isHidden) {
-                solutionSpans.forEach(span => span.style.display = 'inline-block');
+                // Anzeigen der Lösungen
+                solutionSpansT1.forEach(span => span.style.display = 'inline-block');
+                
+                inputElementsT2.forEach((input, index) => {
+                    const answer = input.getAttribute('data-answer');
+                    solutionSpansT2[index].textContent = `(Korrekte Antwort: ${answer})`;
+                    solutionSpansT2[index].style.display = 'inline-block';
+                });
+                
                 button.textContent = 'Lösungen verbergen';
             } else {
-                solutionSpans.forEach(span => span.style.display = 'none');
+                // Verstecken der Lösungen
+                solutionSpansT1.forEach(span => span.style.display = 'none');
+                solutionSpansT2.forEach(span => span.style.display = 'none');
                 button.textContent = 'Lösungen anzeigen';
             }
         }
@@ -533,7 +578,10 @@
         window.onload = () => {
              renderMatching();
              renderSynonyms();
-             toggleSolutions(true); // Versteckt Lösungen beim Start
+             // Beim Start sicherstellen, dass die Lösungen verborgen sind
+             // (Obwohl sie jetzt nicht mehr in der HTML-Struktur sichtbar sind, falls CSS nicht geladen wurde)
+             // Wir rufen toggleSolutions() auf, um den Button-Text korrekt zu setzen.
+             toggleSolutions(); 
         }
     </script>
 </body>
