@@ -50,7 +50,7 @@
 
         .title {
             font-family: var(--font-display);
-            font-size: 32px;
+            font-size: 38px;
             font-weight: 700;
             color: var(--color-primary);
             margin-bottom: 20px;
@@ -71,6 +71,23 @@
             background-color: #333;
         }
         
+        .text-section p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            padding: 5px 0;
+            border-bottom: 1px dotted #555;
+            position: relative;
+        }
+        
+        .section-marker {
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            font-family: var(--font-display);
+            color: var(--color-primary);
+            font-size: 1.1em;
+        }
+
         .task-title {
             font-family: var(--font-display);
             color: var(--color-primary);
@@ -80,36 +97,85 @@
             border-left: 5px solid var(--color-primary);
             padding-left: 10px;
         }
+        
+        .instructions {
+            margin-bottom: 20px;
+            line-height: 1.4;
+            padding: 5px;
+            border-left: 2px solid var(--color-secondary);
+            font-size: 0.9em;
+        }
 
         /* --- TASK 1: MATCHING STYLING --- */
-        .matching-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px 40px;
-            margin-bottom: 20px;
-        }
-
-        .matching-pair {
+        .expressions-list {
             display: flex;
-            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
             padding: 10px;
-            border: 1px dashed #555;
+            background-color: #3a3a3a;
             border-radius: 5px;
         }
-
-        .expression, .definition {
+        
+        .expression-item {
+            padding: 5px 10px;
+            margin: 5px;
+            border: 1px solid var(--color-primary);
+            border-radius: 5px;
             font-weight: bold;
             color: var(--color-primary);
-            width: 40px;
+        }
+        
+        .definitions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 15px 30px;
+            margin-bottom: 30px;
+        }
+        
+        .definition-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px;
+            background-color: #222;
+            border-radius: 5px;
+        }
+        
+        .def-number {
+            font-weight: bold;
+            color: var(--color-primary);
+            width: 30px;
             flex-shrink: 0;
             margin-right: 15px;
             text-align: center;
         }
         
-        .definition-text {
-            color: var(--color-text);
+        .matching-area {
+            background-color: #3a3a3a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
+        .matching-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed #555;
+        }
+        
+        .matching-row:last-child {
+            border-bottom: none;
+        }
+
+        .matching-label {
+            font-weight: bold;
+            color: var(--color-text);
+            display: flex;
+            align-items: center;
+        }
+        
         .matching-select {
             padding: 5px;
             border-radius: 5px;
@@ -117,7 +183,7 @@
             background-color: var(--color-card);
             color: var(--color-text);
             font-size: 1em;
-            width: 100px;
+            width: 80px;
             text-align: center;
         }
         
@@ -141,7 +207,7 @@
         .target-word {
             font-weight: bold;
             color: var(--color-primary);
-            width: 150px;
+            width: 300px; /* Breiter, um den Kontext zu fassen */
             flex-shrink: 0;
         }
         
@@ -230,59 +296,68 @@
 <body>
     
     <div class="main-container">
-        <h1 class="title">Memory Games: Reading Comprehension</h1>
+        <h1 class="title">Memory Games</h1>
 
         <div class="text-section">
-            <h3>Text: Memory Games</h3>
-            <p>Most people have trouble remembering where they put their car keys, or if they turned their oven off. And yet an **astonishing few** can memorize entire decks of cards and long strings of random numbers. The documentary <em>Memory Games</em> offers a fascinating glimpse into the lives of these mind athletes as they compete for the title of World Memory Champion. [1] The Post spoke with Nelson Cowan, a cognitive psychologist at the University of Missouri and two competitors profiled in the film – International Grandmaster of Memory Yanjaa Wintersoul, 30, and four-time USA Champion Nathan Dellis, 39 – for tips on how regular folks can improve their daily **recall**.</p>
-            <p>In high school Yanjaa Wintersoul would never have imagined that she would one day **gain recognition** for having one of the best memories in the world. She explains: “I almost didn’t graduate because I didn’t know how to **make my knowledge stick**. [2] The moment when everything changed for me was several years later when I happened to pick up Joshua Foer’s bestseller on brain techniques. It delves into the science of what makes the human **brain tick** and helps ordinary people strengthen their memories. It was a revelation for me. I began using memorization rules while studying for my business degree in Stockholm and I finished in just two years.”</p>
-            <p>Nelson Cowan, who does research on how the brain works, says: “It’s not like each memory takes a neuron and then that cell is used up. Imagine you experience a situation or get some information. Your brain first keeps them short-term in a system known as ‘working memory’. [3] Later, if the information stays relevant, our brain encodes it in specific combinations of neurons; the memory becomes long-term.” Our brain can do that an infinite amount of times. From a scientific point of view, the number of facts stored in those patterns is also endless. “If you fill up your 128-gigabyte phone with images, you run out of storage capacity. Our brain doesn’t work like that. [4] The more ‘pictures you take’ and the more you try to remember, the more you will remember,” Cowan adds.</p>
-            <p>While Yanjaa Wintersoul began competing when barely out of her teens, Nathan Dellis came to the sport a little later in life. [5] “I started listening to people more actively when they were talking about things,” he explains. “Being mindful and paying attention are key to processing the information effectively. There’s plenty of useful daily information worth remembering, which many forget. Every person you meet, try to memorize their name,” advises Dellis. Challenging your brain **on a permanent basis** will likely **yield** amazing results. For instance, he has made a habit of memorizing license plate numbers when stuck in the rush hour. Enough **shut-eye** is also essential. [6] Dellis, for example, attempts to get at least eight hours per night.</p>
-            <p>When Wintersoul began making a name for herself in the world of competitions, reality shows also began calling. One day, a furniture giant wanted to hire her for an advertisement. They originally asked if she could remember their dining room collection in a week. “I said, ‘I think it would be fun if I learned your entire catalogue by heart.’ And I did, committing 328 pages to memory. Although I can’t recall every **single item** a year later, I do remember a good deal of it, particularly the pages featuring picture-perfect family scenes. [7] Such emotions stick best with me. I think that’s the key to everybody’s memory, you have to make things truly matter to yourself.”</p>
-            <p>Cowan confirms that memories depend on specific contexts. In a renowned study, participants who learned lists while scuba diving had better recall when they were underwater than when they were on land. Underwater or not – want to stop the did-I-remember-to-turn-off-the-oven paranoia, or at least **get a better handle on** peoples’ names? Keep at it! Even if you aren’t born with **remarkable talent**, with the right strategies, you can become a memory champion too.</p>
+            <p><span class="section-marker">[1]</span> Most people have trouble remembering where they put their car keys, or if they turned their oven off. And yet an astonishing few can memorize entire decks of cards and long strings of random numbers. The documentary <em>Memory Games</em> offers a fascinating glimpse into the lives of these mind athletes as they compete for the title of World Memory Champion. The Post spoke with Nelson Cowan, a cognitive psychologist at the University of Missouri and two competitors profiled in the film – International Grandmaster of Memory Yanjaa Wintersoul, 30, and four-time USA Champion Nathan Dellis, 39 – for tips on how regular folks can improve their daily recall.</p>
+            <p><span class="section-marker">[2]</span> In high school Yanjaa Wintersoul would never have imagined that she would one day gain recognition for having one of the best memories in the world. She explains: “I almost didn’t graduate because I didn’t know how to make my knowledge of physics and chemistry stick. The moment when everything changed for me was several years later when I happened to pick up Joshua Foer’s bestseller on brain techniques. It delves into the science of what makes the human brain tick and helps ordinary people strengthen their memories. It was a revelation for me. I began using memorization rules while studying for my business degree in Stockholm and I finished in just two years.”</p>
+            <p><span class="section-marker">[3]</span> Nelson Cowan, who does research on how the brain works, says: “It’s not like each memory takes a neuron and then that cell is used up. Imagine you experience a situation or get some information. Your brain first keeps them short-term in a system known as ‘working memory’. Later, if the information stays relevant, our brain encodes it in specific combinations of neurons; the memory becomes long-term.” Our brain can do that an infinite amount of times. From a scientific point of view, the number of facts stored in those patterns is also endless. “If you fill up your 128-gigabyte phone with images, you run out of storage capacity. Our brain doesn’t work like that. The more ‘pictures you take’ and the more you try to remember, the more you will remember,” Cowan adds.</p>
+            <p><span class="section-marker">[4]</span> While Yanjaa Wintersoul began competing when barely out of her teens, Nathan Dellis came to the sport a little later in life. “I started listening to people more actively when they were talking about things,” he explains. “Being mindful and paying attention are key to processing the information effectively. There’s plenty of useful daily information worth remembering, which many forget. Every person you meet, try to memorize their name,” advises Dellis. Challenging your brain on a permanent basis will likely yield amazing results. For instance, he has made a habit of memorizing license plate numbers when stuck in the rush hour. Enough shut-eye is also essential.</p>
+            <p><span class="section-marker">[5]</span> Dellis, for example, attempts to get at least eight hours per night. When Wintersoul began making a name for herself in the world of competitions, reality shows also began calling. One day, a furniture giant wanted to hire her for an advertisement. They originally asked if she could remember their dining room collection in a week. “I said, ‘I think it would be fun if I learned your entire catalogue by heart.’ And I did, committing 328 pages to memory. Although I can’t recall every single item a year later, I do remember a good deal of it, particularly the pages featuring picture-perfect family scenes.</p>
+            <p><span class="section-marker">[6]</span> Such emotions stick best with me. I think that’s the key to everybody’s memory, you have to make things truly matter to yourself.” Cowan confirms that memories depend on specific contexts. In a renowned study, participants who learned lists while scuba diving had better recall when they were underwater than when they were on land. Underwater or not – want to stop the did-I-remember-to-turn-off-the-oven paranoia, or at least get a better handle on peoples’ names? Keep at it! Even if you aren’t born with remarkable talent, with the right strategies, you can become a memory champion too.</p>
         </div>
 
         <!-- TASK 1: MATCHING -->
         <div id="task1">
             <h2 class="task-title">Task 1: Matching Expressions (A-F with 0-7)</h2>
-            <p class="instructions">Match the expressions (A – F) as used in the text with their corresponding definitions (0 – 7). Write the correct numbers in the grid below. Be careful: There are two definitions that you do not need.</p>
+            <p class="instructions">Match the expressions (A – F) as used in the text with their corresponding definitions (0 – 7). Write the correct numbers in the grid below. Be careful: There are two definitions that you do not need. One definition (0) has already been matched correctly.</p>
             
-            <div class="matching-grid" id="matchingGrid">
-                <!-- Definitions (0-7) -->
-                <div class="definition"><span class="number">0</span>.</div> <div class="definition-text">to find an object after a long search. (Distractor)</div>
-                <div class="definition"><span class="number">1</span>.</div> <div class="definition-text">to become publicly acknowledged for an achievement. (B)</div>
-                <div class="definition"><span class="number">2</span>.</div> <div class="definition-text">to be understood or retained in memory. (C)</div>
-                <div class="definition"><span class="number">3</span>.</div> <div class="definition-text">a surprisingly small number of people. (A)</div>
-                <div class="definition"><span class="number">4</span>.</div> <div class="definition-text">sleep. (F)</div>
-                <div class="definition"><span class="number">5</span>.</div> <div class="definition-text">to understand how the brain functions. (D)</div>
-                <div class="definition"><span class="number">6</span>.</div> <div class="definition-text">continually or constantly. (E)</div>
-                <div class="definition"><span class="number">7</span>.</div> <div class="definition-text">to remember something perfectly. (Distractor)</div>
+            <!-- Expressions for Overview -->
+            <div class="expressions-list">
+                <span class="expression-item">A. astonishing few [Sec 1]</span>
+                <span class="expression-item">B. gain recognition [Sec 2]</span>
+                <span class="expression-item">C. make my knowledge stick [Sec 2]</span>
+                <span class="expression-item">D. brain tick [Sec 2]</span>
+                <span class="expression-item">E. on a permanent basis [Sec 4]</span>
+                <span class="expression-item">F. shut-eye [Sec 4]</span>
+            </div>
+
+            <!-- Definitions -->
+            <div class="definitions-grid">
+                <div class="definition-item"><span class="def-number">0</span> to find an object after a long search. (Do not need)</div>
+                <div class="definition-item"><span class="def-number">1</span> to become publicly acknowledged for an achievement. (B)</div>
+                <div class="definition-item"><span class="def-number">2</span> to be understood or retained in memory. (C)</div>
+                <div class="definition-item"><span class="def-number">3</span> a surprisingly small number of people. (A)</div>
+                <div class="definition-item"><span class="def-number">4</span> sleep. (F)</div>
+                <div class="definition-item"><span class="def-number">5</span> to understand how the brain functions. (D)</div>
+                <div class="definition-item"><span class="def-number">6</span> continually or constantly. (E)</div>
+                <div class="definition-item"><span class="def-number">7</span> to remember something perfectly. (Do not need)</div>
             </div>
             
-            <div class="matching-grid">
-                <!-- Expressions (A-F) with Selects -->
-                <div class="matching-pair">
-                    <span class="expression">A. astonishing few:</span>
+            <!-- Matching Area -->
+            <div class="matching-area">
+                <div class="matching-row">
+                    <span class="matching-label">A. astonishing few:</span>
                     <select id="match-A" class="matching-select"></select>
                 </div>
-                <div class="matching-pair">
-                    <span class="expression">B. gain recognition:</span>
+                <div class="matching-row">
+                    <span class="matching-label">B. gain recognition:</span>
                     <select id="match-B" class="matching-select"></select>
                 </div>
-                <div class="matching-pair">
-                    <span class="expression">C. make my knowledge stick:</span>
+                <div class="matching-row">
+                    <span class="matching-label">C. make my knowledge stick:</span>
                     <select id="match-C" class="matching-select"></select>
                 </div>
-                <div class="matching-pair">
-                    <span class="expression">D. brain tick:</span>
+                <div class="matching-row">
+                    <span class="matching-label">D. brain tick:</span>
                     <select id="match-D" class="matching-select"></select>
                 </div>
-                <div class="matching-pair">
-                    <span class="expression">E. on a permanent basis:</span>
+                <div class="matching-row">
+                    <span class="matching-label">E. on a permanent basis:</span>
                     <select id="match-E" class="matching-select"></select>
                 </div>
-                <div class="matching-pair">
-                    <span class="expression">F. shut-eye:</span>
+                <div class="matching-row">
+                    <span class="matching-label">F. shut-eye:</span>
                     <select id="match-F" class="matching-select"></select>
                 </div>
             </div>
@@ -291,7 +366,7 @@
         <!-- TASK 2: SYNONYM FINDING -->
         <div id="task2">
             <h2 class="task-title">Task 2: Find a Word or Expression</h2>
-            <p class="instructions">Find a word or expression in the text that means the same as each of the following words (1 – 5).</p>
+            <p class="instructions">Find a word or expression in the text that means the same as each of the following words (1 – 5). The section where the word is located is indicated.</p>
             
             <ul class="synonym-list" id="synonymList">
                 <!-- List items generated by JS -->
@@ -312,21 +387,21 @@
         
         // Task 1: Matching (Expression ID: Correct Definition Number)
         const matchingData = {
-            'A': 3, // astonishing few -> a surprisingly small number of people
-            'B': 1, // gain recognition -> to be publicly acknowledged for an achievement
-            'C': 2, // make my knowledge stick -> to be understood or retained in memory
-            'D': 5, // brain tick -> to understand how the brain functions
-            'E': 6, // on a permanent basis -> continually or constantly
-            'F': 4  // shut-eye -> sleep
+            'A': 3, // astonishing few -> 3. a surprisingly small number of people
+            'B': 1, // gain recognition -> 1. to become publicly acknowledged for an achievement
+            'C': 2, // make my knowledge stick -> 2. to be understood or retained in memory
+            'D': 5, // brain tick -> 5. to understand how the brain functions
+            'E': 6, // on a permanent basis -> 6. continually or constantly
+            'F': 4  // shut-eye -> 4. sleep
         };
         
         // Task 2: Synonym Finding (Target Word: Correct Synonym from text)
         const synonymData = [
-            { id: 1, target: "to remember", answer: "recall" },
-            { id: 2, target: "yield (results)", answer: "result" }, // Simplified for yield
-            { id: 3, target: "very impressive", answer: "astonishing" },
-            { id: 4, target: "single item", answer: "single item" }, // Phrase used
-            { id: 5, target: "to understand / control", answer: "get a better handle on" } // Phrase used
+            { id: 1, target: "remembering (noun)", context: "[Section 1]", answer: "recall" },
+            { id: 2, target: "understand how it functions (verb)", context: "[Section 2]", answer: "tick" }, 
+            { id: 3, target: "limitless (adj)", context: "[Section 3]", answer: "infinite" },
+            { id: 4, target: "very good, talented (adj)", context: "[Section 6]", answer: "remarkable" },
+            { id: 5, target: "to be committed to (verb gerund form)", context: "[Section 5]", answer: "committing" } 
         ];
 
         const definitionNumbers = [0, 1, 2, 3, 4, 5, 6, 7];
@@ -338,7 +413,8 @@
         function renderMatching() {
             const selects = document.querySelectorAll('.matching-select');
             selects.forEach(select => {
-                select.innerHTML = '<option value="">- Wählen -</option>' + 
+                // Füllt die Dropdowns von 0 bis 7
+                select.innerHTML = '<option value="">- Wahl -</option>' + 
                     definitionNumbers.map(num => `<option value="${num}">${num}</option>`).join('');
             });
         }
@@ -347,7 +423,7 @@
             const list = document.getElementById('synonymList');
             list.innerHTML = synonymData.map(item => `
                 <li class="synonym-item">
-                    <span class="target-word">${item.id}. ${item.target}:</span>
+                    <span class="target-word">${item.id}. ${item.target} ${item.context}:</span>
                     <input type="text" id="synonym-input-${item.id}" class="synonym-input" data-id="${item.id}">
                     <span id="synonym-solution-${item.id}" class="correct-answer">(${item.answer})</span>
                 </li>
@@ -360,7 +436,7 @@
         
         function normalizeInput(input) {
             // Trim, lower case, remove non-alphanumeric/whitespace
-            return input.trim().toLowerCase().replace(/[^a-z0-9\s-]/g, '');
+            return input.trim().toLowerCase().replace(/[.,!?'"]/g, '');
         }
 
         function checkTask1() {
@@ -373,7 +449,8 @@
                 const userAnswer = parseInt(selectElement.value);
                 const correctAnswer = matchingData[expression];
                 
-                selectElement.style.border = `2px solid ${selectElement.value ? '#555' : 'red'}`;
+                // Styling zurücksetzen
+                selectElement.style.border = `2px solid var(--color-secondary)`;
 
                 if (userAnswer === correctAnswer) {
                     correctCount++;
@@ -394,6 +471,7 @@
                 const userAnswer = normalizeInput(inputElement.value);
                 const correctAnswer = normalizeInput(item.answer);
                 
+                // Styling zurücksetzen
                 inputElement.style.border = `2px solid #555`;
 
                 if (userAnswer === correctAnswer) {
@@ -455,7 +533,7 @@
         window.onload = () => {
              renderMatching();
              renderSynonyms();
-             toggleSolutions(); // Versteckt Lösungen beim Start
+             toggleSolutions(true); // Versteckt Lösungen beim Start
         }
     </script>
 </body>
