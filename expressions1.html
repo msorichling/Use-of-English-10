@@ -42,7 +42,7 @@
             border-radius: 15px;
             padding: 40px;
             box-shadow: var(--shadow);
-            max-width: 900px;
+            max-width: 1000px; /* GEÄNDERT: Etwas breiter für bessere Lesbarkeit auf großen Bildschirmen */
             width: 95%;
             margin-top: 5vh;
             border: 2px solid var(--color-primary);
@@ -68,22 +68,22 @@
             line-height: 1.6;
             font-size: 15px;
             background-color: #333;
-            padding: 20px 20px 20px 50px; /* Mehr Platz links für Marker */
-            position: relative; /* Wichtig für die absoluten Marker */
+            padding: 20px; 
+            position: relative; 
         }
         
         .text-section p {
             margin-top: 1em;
             margin-bottom: 1em;
-            padding: 5px 0;
+            padding: 5px 0 5px 40px; /* GEÄNDERT: Linkes Padding für Marker-Platz */
             border-bottom: 1px dotted #555;
             position: relative;
         }
         
-        /* Der Marker steht nun im Padding des .text-section Containers */
+        /* Der Marker wird jetzt in den Freiraum links positioniert */
         .section-marker {
             position: absolute;
-            left: -35px; /* Position außerhalb des Absatzes, aber innerhalb des Container-Paddings */
+            left: 0; /* GEÄNDERT: Positioniert links im Padding-Bereich des P-Elements */
             top: 5px;
             font-family: var(--font-display);
             color: var(--color-primary);
@@ -265,7 +265,7 @@
             padding: 15px;
             border-radius: 8px;
             border: 1px solid;
-            min-height: 60px; /* Für bessere Ästhetik */
+            min-height: 60px; 
         }
 
         .result-message.success {
@@ -280,12 +280,12 @@
             border-color: var(--color-error);
         }
 
-        /* LÖSUNGSANZEIGE */
+        /* LÖSUNGSANZEIGE - STANDARDMÄSSIG VERSTECKT */
         .correct-answer {
             color: var(--color-success);
             font-weight: bold;
             margin-left: 10px;
-            display: none;
+            display: none; /* GEÄNDERT: Standardmäßig versteckt */
         }
         
         .show-solution {
@@ -304,6 +304,7 @@
         <h1 class="title">Memory Games</h1>
 
         <div class="text-section">
+            <!-- HINWEIS: Die span-Elemente für die Marker MÜSSEN direkt am Anfang des p-Tags stehen -->
             <p><span class="section-marker">[1]</span> Most people have trouble remembering where they put their car keys, or if they turned their oven off. And yet an astonishing few can memorize entire decks of cards and long strings of random numbers. The documentary <em>Memory Games</em> offers a fascinating glimpse into the lives of these mind athletes as they compete for the title of World Memory Champion. The Post spoke with Nelson Cowan, a cognitive psychologist at the University of Missouri and two competitors profiled in the film – International Grandmaster of Memory Yanjaa Wintersoul, 30, and four-time USA Champion Nathan Dellis, 39 – for tips on how regular folks can improve their daily recall.</p>
             <p><span class="section-marker">[2]</span> In high school Yanjaa Wintersoul would never have imagined that she would one day gain recognition for having one of the best memories in the world. She explains: “I almost didn’t graduate because I didn’t know how to make my knowledge of physics and chemistry stick. The moment when everything changed for me was several years later when I happened to pick up Joshua Foer’s bestseller on brain techniques. It delves into the science of what makes the human brain tick and helps ordinary people strengthen their memories. It was a revelation for me. I began using memorization rules while studying for my business degree in Stockholm and I finished in just two years.”</p>
             <p><span class="section-marker">[3]</span> Nelson Cowan, who does research on how the brain works, says: “It’s not like each memory takes a neuron and then that cell is used up. Imagine you experience a situation or get some information. Your brain first keeps them short-term in a system known as ‘working memory’. Later, if the information stays relevant, our brain encodes it in specific combinations of neurons; the memory becomes long-term.” Our brain can do that an infinite amount of times. From a scientific point of view, the number of facts stored in those patterns is also endless. “If you fill up your 128-gigabyte phone with images, you run out of storage capacity. Our brain doesn’t work like that. The more ‘pictures you take’ and the more you try to remember, the more you will remember,” Cowan adds.</p>
@@ -432,7 +433,7 @@
 
         function renderSynonyms() {
             const list = document.getElementById('synonymList');
-            // NEU: Die Lösung wird im data-attribute gespeichert, nicht im sichtbaren span.
+            // Die Lösung wird im data-attribute gespeichert.
             list.innerHTML = synonymData.map(item => `
                 <li class="synonym-item">
                     <span class="target-word">${item.id}. ${item.target} ${item.context}:</span>
@@ -448,7 +449,7 @@
         
         function normalizeInput(input) {
             // Trim, lower case, remove punctuation
-            return input.trim().toLowerCase().replace(/[.,!?'"]/g, '');
+            return input.trim().toLowerCase().replace(/[.,!?'"\/]/g, ''); // Slash für (to) entfernen
         }
 
         function generateFeedback(percentage) {
@@ -500,6 +501,7 @@
                 
                 inputElement.style.border = `2px solid #555`;
 
+                // Die Lösung kann auch ohne Klammern eingegeben werden, aber die Prüfung muss streng sein
                 if (userAnswer === correctAnswer) {
                     correctCount++;
                     inputElement.style.border = `2px solid var(--color-success)`;
@@ -543,13 +545,13 @@
             // Task 1 Lösungen
             const solutionSpansT1 = document.querySelectorAll('.matching-area .correct-answer');
             // Task 2 Lösungen
-            const inputElementsT2 = document.querySelectorAll('.synonym-input');
             const solutionSpansT2 = document.querySelectorAll('#task2 .correct-answer');
+            const inputElementsT2 = document.querySelectorAll('.synonym-input');
             
             const button = document.getElementById('solutionButton');
             
-            // Prüft, ob Lösungen aktuell versteckt sind
-            let isHidden = solutionSpansT1.length > 0 && (solutionSpansT1[0].style.display === 'none' || solutionSpansT1[0].style.display === '');
+            // Prüfen Sie den aktuellen Zustand basierend auf dem Button-Text, da die CSS-Anzeige nicht sichtbar ist.
+            const isHidden = button.textContent === 'Lösungen anzeigen';
 
             if (isHidden) {
                 // Anzeigen der Lösungen
@@ -563,7 +565,7 @@
                 
                 button.textContent = 'Lösungen verbergen';
             } else {
-                // Verstecken der Lösungen
+                // Verbergen der Lösungen
                 solutionSpansT1.forEach(span => span.style.display = 'none');
                 solutionSpansT2.forEach(span => span.style.display = 'none');
                 button.textContent = 'Lösungen anzeigen';
@@ -578,10 +580,8 @@
         window.onload = () => {
              renderMatching();
              renderSynonyms();
-             // Beim Start sicherstellen, dass die Lösungen verborgen sind
-             // (Obwohl sie jetzt nicht mehr in der HTML-Struktur sichtbar sind, falls CSS nicht geladen wurde)
-             // Wir rufen toggleSolutions() auf, um den Button-Text korrekt zu setzen.
-             toggleSolutions(); 
+             // WICHTIG: Die Lösungen sind jetzt standardmäßig per CSS verborgen. 
+             // Hier muss KEIN toggleSolutions() aufgerufen werden.
         }
     </script>
 </body>
