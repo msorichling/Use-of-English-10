@@ -1,0 +1,450 @@
+{
+  "id": "reading-artificial-intelligence",
+  "title": "Reading Comprehension: The AI Revolution in Healthcare",
+  "category": "Reading Comprehension",
+  "level": "B2 / Abschlussklasse",
+  "grade": "reading-comprehension",
+  "description": "Examine how artificial intelligence transforms medical diagnostics and patient care.",
+  "text": {
+    "title": "The AI Revolution in Healthcare",
+    "sections": [
+      {
+        "number": 1,
+        "label": "[1]",
+        "content": "In recent years, artificial intelligence has quietly revolutionized modern medicine. Hospitals worldwide are adopting machine-learning algorithms to scan diagnostic images, monitor patient vitals, and forecast outbreaks with astounding accuracy. While some skeptics feared automated systems would instantly make human physicians redundant, the reality looks quite different. Medical professionals are discovering that intelligent algorithms do not replace their clinical intuition, but rather serve as an indispensable ally in everyday diagnostic routines."
+      },
+      {
+        "number": 2,
+        "label": "[2]",
+        "content": "Consider diagnostic radiology: detecting malignant tumors in early scans often requires hours of painstaking examination. Even experienced doctors can overlook subtle anomalies due to visual exhaustion after long night shifts. AI models, on the other hand, can cross-examine tens of thousands of radiographic images in mere seconds. They flag irregularities with remarkable precision, allowing radiologists to allocate their valuable attention to the most ambiguous cases without losing precious time."
+      },
+      {
+        "number": 3,
+        "label": "[3]",
+        "content": "Moreover, algorithms excel at sifting through vast clinical records to pinpoint obscure connections that human analysts might miss. In pharmaceutical research, machine-learning frameworks predict molecular interactions in weeks—a process that previously took researchers decades of laborious trial and error. This capability allows scientists to formulate novel therapeutic drugs at a fraction of the traditional cost, offering new hope to patients suffering from rare conditions."
+      },
+      {
+        "number": 4,
+        "label": "[4]",
+        "content": "Despite these groundbreaking breakthroughs, integrating algorithmic decision-making into hospital wards has sparked fierce debate among bioethicists. A primary concern is the so-called 'black box' phenomenon: many deep neural networks yield accurate forecasts without providing an interpretable rationale for their conclusions. If a model recommends an aggressive therapy, practitioners must still grapple with ethical liability if something goes awry during treatment."
+      },
+      {
+        "number": 5,
+        "label": "[5]",
+        "content": "Data privacy poses another formidable obstacle. Medical datasets used to train these complex networks contain sensitive patient histories. Regulatory bodies insist that software vendors must anonymize health records rigorously to fend off malicious cyber intrusions. Unless hospitals can maintain ironclad security protocols, public mistrust could easily derail widespread adoption before its potential is fully realized."
+      },
+      {
+        "number": 6,
+        "label": "[6]",
+        "content": "Ultimately, the future of healthcare does not belong to machines alone, but to the synergy between artificial computation and human compassion. While algorithms process cold facts and identify microscopic patterns, only a dedicated physician can provide bedside empathy, communicate difficult diagnoses, and guide families through turbulent times. When used responsibly, artificial intelligence will not usurp the medical profession, but elevate it to unprecedented heights."
+      }
+    ]
+  },
+  "task1_matching": {
+    "instruction": "Match the expressions (A – F) as used in the text with their corresponding definitions (0 – 7). Be careful: There are two definitions that you do not need.",
+    "expressions": [
+      {
+        "id": "A",
+        "text": "make redundant",
+        "section": "Sec 1",
+        "answer": 2,
+        "acceptedAnswers": [
+          "2"
+        ],
+        "sectionNumber": 1
+      },
+      {
+        "id": "B",
+        "text": "cross-examine",
+        "section": "Sec 2",
+        "answer": 6,
+        "acceptedAnswers": [
+          "6"
+        ],
+        "sectionNumber": 2
+      },
+      {
+        "id": "C",
+        "text": "trial and error",
+        "section": "Sec 3",
+        "answer": 5,
+        "acceptedAnswers": [
+          "5"
+        ],
+        "sectionNumber": 3
+      },
+      {
+        "id": "D",
+        "text": "grapple with",
+        "section": "Sec 4",
+        "answer": 1,
+        "acceptedAnswers": [
+          "1"
+        ],
+        "sectionNumber": 4
+      },
+      {
+        "id": "E",
+        "text": "fend off",
+        "section": "Sec 5",
+        "answer": 4,
+        "acceptedAnswers": [
+          "4"
+        ],
+        "sectionNumber": 5
+      },
+      {
+        "id": "F",
+        "text": "ironclad security",
+        "section": "Sec 5",
+        "answer": 3,
+        "acceptedAnswers": [
+          "3"
+        ],
+        "sectionNumber": 5
+      }
+    ],
+    "definitions": [
+      {
+        "id": 0,
+        "text": "to permanently replace something without clinical consent.",
+        "isDistractor": true
+      },
+      {
+        "id": 1,
+        "text": "to struggle to deal with or overcome a difficult challenge or dilemma.",
+        "isDistractor": false,
+        "matchedBy": "D"
+      },
+      {
+        "id": 2,
+        "text": "to cause someone or something to no longer be needed or employed.",
+        "isDistractor": false,
+        "matchedBy": "A"
+      },
+      {
+        "id": 3,
+        "text": "protection or defense that is extremely strong, secure, and unbreakable.",
+        "isDistractor": false,
+        "matchedBy": "F"
+      },
+      {
+        "id": 4,
+        "text": "to repel, resist, or successfully defend against an attack or danger.",
+        "isDistractor": false,
+        "matchedBy": "E"
+      },
+      {
+        "id": 5,
+        "text": "a problem-solving method of trying various solutions until one succeeds.",
+        "isDistractor": false,
+        "matchedBy": "C"
+      },
+      {
+        "id": 6,
+        "text": "to inspect, analyze, or compare multiple details thoroughly.",
+        "isDistractor": false,
+        "matchedBy": "B"
+      },
+      {
+        "id": 7,
+        "text": "to formulate conclusions based entirely on emotional impulses.",
+        "isDistractor": true
+      }
+    ],
+    "solution_mapping": {
+      "A": 2,
+      "B": 6,
+      "C": 5,
+      "D": 1,
+      "E": 4,
+      "F": 3
+    }
+  },
+  "task2_vocabulary": {
+    "instruction": "Find a word or expression in the text that means the same as each of the following words (1 – 5). The section where the word is located is indicated.",
+    "items": [
+      {
+        "id": 1,
+        "prompt": "essential, absolutely necessary (adjective)",
+        "section": "Section 1",
+        "answer": "indispensable",
+        "acceptedAnswers": [
+          "indispensable"
+        ],
+        "sectionNumber": 1
+      },
+      {
+        "id": 2,
+        "prompt": "painstaking, extremely thorough and demanding great effort (adjective)",
+        "section": "Section 3",
+        "answer": "laborious",
+        "acceptedAnswers": [
+          "laborious"
+        ],
+        "sectionNumber": 3
+      },
+      {
+        "id": 3,
+        "prompt": "an underlying reason or logical explanation (noun)",
+        "section": "Section 4",
+        "answer": "rationale",
+        "acceptedAnswers": [
+          "rationale"
+        ],
+        "sectionNumber": 4
+      },
+      {
+        "id": 4,
+        "prompt": "daunting, imposing, difficult to overcome (adjective)",
+        "section": "Section 5",
+        "answer": "formidable",
+        "acceptedAnswers": [
+          "formidable"
+        ],
+        "sectionNumber": 5
+      },
+      {
+        "id": 5,
+        "prompt": "to take someone's place or position wrongfully or by force (verb)",
+        "section": "Section 6",
+        "answer": "usurp",
+        "acceptedAnswers": [
+          "usurp"
+        ],
+        "sectionNumber": 6
+      }
+    ]
+  },
+  "type": "reading-comprehension",
+  "exercises": [
+    {
+      "id": "reading-artificial-intelligence-main",
+      "title": "The AI Revolution in Healthcare – Task 1 (Matching) & Task 2 (Vocabulary)",
+      "type": "reading_comprehension",
+      "instruction": "Read the text 'The AI Revolution in Healthcare' ([1]–[6]) and complete Task 1 (Matching Expressions A–F with 0–7) and Task 2 (Find a Word or Expression 1–5).",
+      "sentences": [
+        {
+          "text": "A. make redundant [Sec 1] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "2"
+              ],
+              "solutions": [
+                "2"
+              ],
+              "acceptedAnswers": [
+                "2"
+              ],
+              "hint": "Sec 1",
+              "explanation": "A -> 2",
+              "answer": "2"
+            }
+          ]
+        },
+        {
+          "text": "B. cross-examine [Sec 2] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "6"
+              ],
+              "solutions": [
+                "6"
+              ],
+              "acceptedAnswers": [
+                "6"
+              ],
+              "hint": "Sec 2",
+              "explanation": "B -> 6",
+              "answer": "6"
+            }
+          ]
+        },
+        {
+          "text": "C. trial and error [Sec 3] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "5"
+              ],
+              "solutions": [
+                "5"
+              ],
+              "acceptedAnswers": [
+                "5"
+              ],
+              "hint": "Sec 3",
+              "explanation": "C -> 5",
+              "answer": "5"
+            }
+          ]
+        },
+        {
+          "text": "D. grapple with [Sec 4] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "1"
+              ],
+              "solutions": [
+                "1"
+              ],
+              "acceptedAnswers": [
+                "1"
+              ],
+              "hint": "Sec 4",
+              "explanation": "D -> 1",
+              "answer": "1"
+            }
+          ]
+        },
+        {
+          "text": "E. fend off [Sec 5] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "4"
+              ],
+              "solutions": [
+                "4"
+              ],
+              "acceptedAnswers": [
+                "4"
+              ],
+              "hint": "Sec 5",
+              "explanation": "E -> 4",
+              "answer": "4"
+            }
+          ]
+        },
+        {
+          "text": "F. ironclad security [Sec 5] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "3"
+              ],
+              "solutions": [
+                "3"
+              ],
+              "acceptedAnswers": [
+                "3"
+              ],
+              "hint": "Sec 5",
+              "explanation": "F -> 3",
+              "answer": "3"
+            }
+          ]
+        },
+        {
+          "text": "1. essential, absolutely necessary (adjective) () [Section 1] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "indispensable"
+              ],
+              "solutions": [
+                "indispensable"
+              ],
+              "acceptedAnswers": [
+                "indispensable"
+              ],
+              "hint": " · Section 1",
+              "explanation": "Gesuchtes Wort in [Section 1]: 'indispensable'.",
+              "answer": "indispensable"
+            }
+          ]
+        },
+        {
+          "text": "2. painstaking, extremely thorough and demanding great effort (adjective) () [Section 3] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "laborious"
+              ],
+              "solutions": [
+                "laborious"
+              ],
+              "acceptedAnswers": [
+                "laborious"
+              ],
+              "hint": " · Section 3",
+              "explanation": "Gesuchtes Wort in [Section 3]: 'laborious'.",
+              "answer": "laborious"
+            }
+          ]
+        },
+        {
+          "text": "3. an underlying reason or logical explanation (noun) () [Section 4] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "rationale"
+              ],
+              "solutions": [
+                "rationale"
+              ],
+              "acceptedAnswers": [
+                "rationale"
+              ],
+              "hint": " · Section 4",
+              "explanation": "Gesuchtes Wort in [Section 4]: 'rationale'.",
+              "answer": "rationale"
+            }
+          ]
+        },
+        {
+          "text": "4. daunting, imposing, difficult to overcome (adjective) () [Section 5] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "formidable"
+              ],
+              "solutions": [
+                "formidable"
+              ],
+              "acceptedAnswers": [
+                "formidable"
+              ],
+              "hint": " · Section 5",
+              "explanation": "Gesuchtes Wort in [Section 5]: 'formidable'.",
+              "answer": "formidable"
+            }
+          ]
+        },
+        {
+          "text": "5. to take someone's place or position wrongfully or by force (verb) () [Section 6] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "usurp"
+              ],
+              "solutions": [
+                "usurp"
+              ],
+              "acceptedAnswers": [
+                "usurp"
+              ],
+              "hint": " · Section 6",
+              "explanation": "Gesuchtes Wort in [Section 6]: 'usurp'.",
+              "answer": "usurp"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

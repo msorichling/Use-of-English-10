@@ -1,0 +1,1967 @@
+{
+  "id": "key-word-u2",
+  "title": "Key-Word Transformation – Unit 2",
+  "subtitle": "Tenses, Modals, Inversion & Cleft Structures",
+  "category": "Use of English & Grammar",
+  "level": "B2 / Abschlussklasse",
+  "grade": "key-word",
+  "format": "key-word",
+  "accentColor": "rose",
+  "icon": "🔑",
+  "description": "Cambridge B2 First (FCE) & Abschlussprüfung Key-Word Transformations – Unit 2: Tenses, Modals, Inversion & Cleft Structures.",
+  "instructions": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between TWO and FIVE words, including the word given.",
+  "rules": {
+    "title": "Key-Word Transformation – Unit 2 (Cambridge B2 Standard)",
+    "summary": "Forme den zweiten Satz so um, dass er dieselbe Bedeutung wie der erste Satz hat. Verwende dabei das vorgegebene Schlüsselwort (KEY WORD) unverändert in 2 bis 5 Wörtern.",
+    "sections": [
+      {
+        "heading": "Goldene Regeln (Cambridge B2 Standard)",
+        "Giveaway": "2 bis 5 Wörter inklusive KEY WORD",
+        "items": [
+          "Verwende zwingend zwischen **2 und 5 Wörtern** (inklusive des vorgegebenen Key Words).",
+          "Das **KEY WORD** darf in seiner Form **nicht verändert** werden.",
+          "Kontraktionen (z. B. *wasn't*, *didn't*, *I'd*) sowie ausgeschriebene Formen (*was not*, *did not*) und UK/US-Schreibweisen (*organising* / *organizing*) werden gleichermaßen akzeptiert."
+        ]
+      },
+      {
+        "heading": "Typische Transformationsmuster",
+        "items": [
+          "**Aktiv ↔ Passiv / Causative**: *have something done*, *is believed to have...*",
+          "**Conditionals & Wishes**: *If only I had...*, *had it not been for...*, *unless...*",
+          "**Inversion & Emphasis**: *Never before had...*, *Little did they know...*, *Only by...*",
+          "**Fixed Phrases & Phrasal Verbs**: *put up with*, *cut down on*, *come to terms with*"
+        ]
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "taskId": 1,
+      "level": "Beginner",
+      "exercises": [
+        {
+          "sentence1": "The management refused to consider the new proposal.",
+          "part1": "The new proposal",
+          "part2": "the management.",
+          "keyWord": "DOWN",
+          "answer": "was turned down by",
+          "acceptedAnswers": [
+            "was turned down by"
+          ]
+        },
+        {
+          "sentence1": "His dedication to his work is something I greatly admire.",
+          "part1": "I really",
+          "part2": "for his work ethic.",
+          "keyWord": "LOOK",
+          "answer": "look up to him",
+          "acceptedAnswers": [
+            "look up to him"
+          ]
+        },
+        {
+          "sentence1": "It's highly unlikely that she will change her mind now.",
+          "part1": "There",
+          "part2": "her changing her mind now.",
+          "keyWord": "LIKELIHOOD",
+          "answer": "is little likelihood of",
+          "acceptedAnswers": [
+            "is little likelihood of"
+          ]
+        },
+        {
+          "sentence1": "The storm was so violent that the damage was completely unexpected.",
+          "part1": "We",
+          "part2": "the violence of the storm.",
+          "keyWord": "TAKEN",
+          "answer": "were taken aback by",
+          "acceptedAnswers": [
+            "were taken aback by"
+          ]
+        },
+        {
+          "sentence1": "You must contact me immediately if you have any trouble.",
+          "part1": "You must",
+          "part2": "me immediately if you have any trouble.",
+          "keyWord": "TOUCH",
+          "answer": "get in touch with",
+          "acceptedAnswers": [
+            "get in touch with"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 2,
+      "level": "Beginner",
+      "exercises": [
+        {
+          "sentence1": "I hate it when people are late for important meetings.",
+          "part1": "I",
+          "part2": "late for important meetings.",
+          "keyWord": "STAND",
+          "answer": "cannot stand people being",
+          "acceptedAnswers": [
+            "cannot stand people being",
+            "can not stand people being",
+            "can't stand people being"
+          ]
+        },
+        {
+          "sentence1": "It's important that you sign the form before leaving the office.",
+          "part1": "You",
+          "part2": "to sign the form before leaving the office.",
+          "keyWord": "MUST",
+          "answer": "must remember",
+          "acceptedAnswers": [
+            "must remember"
+          ]
+        },
+        {
+          "sentence1": "She has been involved in the reform project since the beginning.",
+          "part1": "She",
+          "part2": "in the reform project since the beginning.",
+          "keyWord": "PART",
+          "answer": "has been taking part",
+          "acceptedAnswers": [
+            "has been taking part"
+          ]
+        },
+        {
+          "sentence1": "They offered him the job despite his lack of experience in the field.",
+          "part1": "They offered him the job",
+          "part2": "in the field.",
+          "keyWord": "SPITE",
+          "answer": "in spite of his",
+          "acceptedAnswers": [
+            "in spite of his"
+          ]
+        },
+        {
+          "sentence1": "The impressive nature of the discovery was recognized globally.",
+          "part1": "The discovery",
+          "part2": "that was recognized globally.",
+          "keyWord": "IMPRESSIVE",
+          "answer": "was an impressive",
+          "acceptedAnswers": [
+            "was an impressive"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 3,
+      "level": "Beginner",
+      "exercises": [
+        {
+          "sentence1": "We haven't received any impressive news from the capital yet.",
+          "part1": "There",
+          "part2": "news from the capital yet.",
+          "keyWord": "LITTLE",
+          "answer": "has been little",
+          "acceptedAnswers": [
+            "has been little"
+          ]
+        },
+        {
+          "sentence1": "We might visit the exhibition, depending on the opening hours.",
+          "part1": "Whether we visit the exhibition",
+          "part2": "the opening hours.",
+          "keyWord": "UP",
+          "answer": "is up to",
+          "acceptedAnswers": [
+            "is up to"
+          ]
+        },
+        {
+          "sentence1": "She is dedicated to her job, which everyone notices.",
+          "part1": "Everyone notices",
+          "part2": "job.",
+          "keyWord": "DEDICATION",
+          "answer": "her dedication to her",
+          "acceptedAnswers": [
+            "her dedication to her"
+          ]
+        },
+        {
+          "sentence1": "The construction of the new school should be finished by next spring.",
+          "part1": "The new school construction",
+          "part2": "by next spring.",
+          "keyWord": "HAVE",
+          "answer": "should have finished",
+          "acceptedAnswers": [
+            "should have finished"
+          ]
+        },
+        {
+          "sentence1": "It was a mistake for me to trust his commitment to the project.",
+          "part1": "",
+          "part2": "his commitment to the project.",
+          "keyWord": "SHOULD",
+          "answer": "I should not have trusted",
+          "acceptedAnswers": [
+            "I should not have trusted",
+            "I shouldn't have trusted"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 4,
+      "level": "Beginner",
+      "exercises": [
+        {
+          "sentence1": "The final decision will be made by the committee next week.",
+          "part1": "The committee will",
+          "part2": "next week.",
+          "keyWord": "MAKE",
+          "answer": "make the final decision",
+          "acceptedAnswers": [
+            "make the final decision",
+            "make a final decision",
+            "make its final decision"
+          ]
+        },
+        {
+          "sentence1": "We were completely unaware of the extent of his involvement.",
+          "part1": "We",
+          "part2": "his involvement.",
+          "keyWord": "KNEW",
+          "answer": "knew nothing about",
+          "acceptedAnswers": [
+            "knew nothing about"
+          ]
+        },
+        {
+          "sentence1": "They will probably accept your idea without any argument.",
+          "part1": "They",
+          "part2": "accept your idea without any argument.",
+          "keyWord": "LIKELY",
+          "answer": "are likely to",
+          "acceptedAnswers": [
+            "are likely to"
+          ]
+        },
+        {
+          "sentence1": "He rarely makes a promise that he doesn't keep.",
+          "part1": "It",
+          "part2": "that he makes a promise he doesn't keep.",
+          "keyWord": "SELDOM",
+          "answer": "is seldom",
+          "acceptedAnswers": [
+            "is seldom"
+          ]
+        },
+        {
+          "sentence1": "Could you please explain this concept to me more clearly?",
+          "part1": "Could you",
+          "part2": "this concept?",
+          "keyWord": "CLARIFICATION",
+          "answer": "give me clarification on",
+          "acceptedAnswers": [
+            "give me clarification on"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 5,
+      "level": "Intermediate",
+      "exercises": [
+        {
+          "sentence1": "His confidence meant he never hesitated when speaking in public.",
+          "part1": "He",
+          "part2": "confidence when speaking in public.",
+          "keyWord": "LACK",
+          "answer": "did not lack",
+          "acceptedAnswers": [
+            "did not lack",
+            "didn't lack"
+          ]
+        },
+        {
+          "sentence1": "I had to read the whole report to get an insight into the company's problems.",
+          "part1": "",
+          "part2": "the whole report did I get an insight into the company's problems.",
+          "keyWord": "ONLY",
+          "answer": "Only by reading",
+          "acceptedAnswers": [
+            "Only by reading",
+            "Only after reading",
+            "Only when I read"
+          ]
+        },
+        {
+          "sentence1": "I found the way he spoke rather impressive.",
+          "part1": "I",
+          "part2": "the way he spoke.",
+          "keyWord": "IMPRESSED",
+          "answer": "was impressed by",
+          "acceptedAnswers": [
+            "was impressed by"
+          ]
+        },
+        {
+          "sentence1": "The success of the experiment depends on the weather conditions.",
+          "part1": "The success of the experiment",
+          "part2": "the weather conditions.",
+          "keyWord": "UP",
+          "answer": "is up to",
+          "acceptedAnswers": [
+            "is up to"
+          ]
+        },
+        {
+          "sentence1": "I have no idea why she decided to give up her involvement in the group.",
+          "part1": "The",
+          "part2": "her decision to give up her involvement in the group is unknown.",
+          "keyWord": "BEHIND",
+          "answer": "reason behind",
+          "acceptedAnswers": [
+            "reason behind"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 6,
+      "level": "Intermediate",
+      "exercises": [
+        {
+          "sentence1": "It's been a long time since I last talked to her about the reform.",
+          "part1": "I",
+          "part2": "about the reform for a long time.",
+          "keyWord": "TOUCH",
+          "answer": "have not been in touch",
+          "acceptedAnswers": [
+            "have not been in touch",
+            "haven't been in touch"
+          ]
+        },
+        {
+          "sentence1": "They have postponed the meeting until next month.",
+          "part1": "The meeting",
+          "part2": "until next month.",
+          "keyWord": "OFF",
+          "answer": "has been put off",
+          "acceptedAnswers": [
+            "has been put off"
+          ]
+        },
+        {
+          "sentence1": "She started working on the construction project immediately after graduating.",
+          "part1": "She",
+          "part2": "the construction project immediately after graduating.",
+          "keyWord": "SET",
+          "answer": "set out on",
+          "acceptedAnswers": [
+            "set out on"
+          ]
+        },
+        {
+          "sentence1": "The only thing he committed to was writing the introduction.",
+          "part1": "He committed to",
+          "part2": "writing the introduction.",
+          "keyWord": "NOTHING",
+          "answer": "nothing but",
+          "acceptedAnswers": [
+            "nothing but"
+          ]
+        },
+        {
+          "sentence1": "You must accept the fact that your plans are unpredictable.",
+          "part1": "You must",
+          "part2": "the unpredictability of your plans.",
+          "keyWord": "COME",
+          "answer": "come to terms with",
+          "acceptedAnswers": [
+            "come to terms with"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 7,
+      "level": "Intermediate",
+      "exercises": [
+        {
+          "sentence1": "It is necessary for us to understand the gravity of the situation.",
+          "part1": "We",
+          "part2": "the gravity of the situation.",
+          "keyWord": "MUST",
+          "answer": "must understand",
+          "acceptedAnswers": [
+            "must understand"
+          ]
+        },
+        {
+          "sentence1": "I didn't expect the exhibition to be so full of impressive artwork.",
+          "part1": "The exhibition",
+          "part2": "I had expected.",
+          "keyWord": "MORE",
+          "answer": "was more impressive than",
+          "acceptedAnswers": [
+            "was more impressive than"
+          ]
+        },
+        {
+          "sentence1": "She wasn't able to achieve her goals without his commitment.",
+          "part1": "It was his commitment that",
+          "part2": "achieve her goals.",
+          "keyWord": "IT",
+          "answer": "made it possible to",
+          "acceptedAnswers": [
+            "made it possible to"
+          ]
+        },
+        {
+          "sentence1": "The manager insisted on all employees arriving on time for the meeting.",
+          "part1": "The manager",
+          "part2": "all employees arrived on time for the meeting.",
+          "keyWord": "INSISTED",
+          "answer": "insisted that",
+          "acceptedAnswers": [
+            "insisted that",
+            "insisted on ensuring that"
+          ]
+        },
+        {
+          "sentence1": "I find it easy to accept that I was wrong about the timetable.",
+          "part1": "I have",
+          "part2": "being wrong about the timetable.",
+          "keyWord": "TERMS",
+          "answer": "come to terms with",
+          "acceptedAnswers": [
+            "come to terms with"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 8,
+      "level": "Intermediate",
+      "exercises": [
+        {
+          "sentence1": "They are currently building a new commercial development near the harbour.",
+          "part1": "A new commercial development",
+          "part2": "near the harbour.",
+          "keyWord": "BEING",
+          "answer": "is being built",
+          "acceptedAnswers": [
+            "is being built"
+          ]
+        },
+        {
+          "sentence1": "They have officially accepted the invitation to the ceremony.",
+          "part1": "They have",
+          "part2": "the invitation to the ceremony.",
+          "keyWord": "ACCEPTANCE",
+          "answer": "given their acceptance of",
+          "acceptedAnswers": [
+            "given their acceptance of"
+          ]
+        },
+        {
+          "sentence1": "He said that he was unaware of the new safety regulations.",
+          "part1": "He said he",
+          "part2": "the new safety regulations.",
+          "keyWord": "KNEW",
+          "answer": "knew nothing about",
+          "acceptedAnswers": [
+            "knew nothing about"
+          ]
+        },
+        {
+          "sentence1": "I felt like I was being watched the whole time during the interview.",
+          "part1": "I",
+          "part2": "of being watched the whole time during the interview.",
+          "keyWord": "SENSE",
+          "answer": "had a sense",
+          "acceptedAnswers": [
+            "had a sense"
+          ]
+        },
+        {
+          "sentence1": "The unexpected snowfall meant we had to cancel the trip.",
+          "part1": "The trip was cancelled",
+          "part2": "the unexpected snowfall.",
+          "keyWord": "OF",
+          "answer": "on account of",
+          "acceptedAnswers": [
+            "on account of"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 9,
+      "level": "Expert",
+      "exercises": [
+        {
+          "sentence1": "We must ensure that the equipment is functional before the presentation.",
+          "part1": "We",
+          "part2": "the equipment is functional before the presentation.",
+          "keyWord": "MAKE",
+          "answer": "must make sure",
+          "acceptedAnswers": [
+            "must make sure"
+          ]
+        },
+        {
+          "sentence1": "He said the company would not accept the reform under any circumstances.",
+          "part1": "He said",
+          "part2": "would the company accept the reform.",
+          "keyWord": "TERMS",
+          "answer": "on no terms",
+          "acceptedAnswers": [
+            "on no terms"
+          ]
+        },
+        {
+          "sentence1": "The sudden failure of the power supply caused immediate chaos.",
+          "part1": "The sudden failure of the power supply",
+          "part2": "immediate chaos.",
+          "keyWord": "IN",
+          "answer": "resulted in",
+          "acceptedAnswers": [
+            "resulted in"
+          ]
+        },
+        {
+          "sentence1": "I think you should reconsider your involvement in the commercial project.",
+          "part1": "I think",
+          "part2": "reconsider your involvement in the commercial project.",
+          "keyWord": "BETTER",
+          "answer": "you had better",
+          "acceptedAnswers": [
+            "you had better",
+            "you'd better"
+          ]
+        },
+        {
+          "sentence1": "It seems that they didn't know about the cancellation until the last minute.",
+          "part1": "They",
+          "part2": "about the cancellation until the last minute.",
+          "keyWord": "UNAWARE",
+          "answer": "seemed to be unaware",
+          "acceptedAnswers": [
+            "seemed to be unaware"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 10,
+      "level": "Expert",
+      "exercises": [
+        {
+          "sentence1": "The sheer size of the construction project took us completely by surprise.",
+          "part1": "We",
+          "part2": "by the sheer size of the construction project.",
+          "keyWord": "TAKEN",
+          "answer": "were completely taken aback",
+          "acceptedAnswers": [
+            "were completely taken aback"
+          ]
+        },
+        {
+          "sentence1": "The politician managed to escape the interview without giving clarification.",
+          "part1": "The politician",
+          "part2": "giving clarification in the interview.",
+          "keyWord": "AWAY",
+          "answer": "got away without",
+          "acceptedAnswers": [
+            "got away without"
+          ]
+        },
+        {
+          "sentence1": "I only managed to fix the problem because of your advice.",
+          "part1": "I",
+          "part2": "the problem without your advice.",
+          "keyWord": "IT",
+          "answer": "could not have fixed it",
+          "acceptedAnswers": [
+            "could not have fixed it",
+            "couldn't have fixed it"
+          ]
+        },
+        {
+          "sentence1": "She is determined to get the job, no matter what.",
+          "part1": "She",
+          "part2": "on getting the job, no matter what.",
+          "keyWord": "HEART",
+          "answer": "has her heart set",
+          "acceptedAnswers": [
+            "has her heart set"
+          ]
+        },
+        {
+          "sentence1": "We found the amount of effort required to be unpredictable.",
+          "part1": "The amount of effort required",
+          "part2": "to be unpredictable.",
+          "keyWord": "UP",
+          "answer": "turned up",
+          "acceptedAnswers": [
+            "turned up"
+          ]
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-kw-u2-t1",
+      "title": "Task 1: Beginner",
+      "type": "key-word-transformation",
+      "instruction": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+      "sentences": [
+        {
+          "id": "kw-u2-t1-s1",
+          "lead": "The management refused to consider the new proposal.",
+          "sentence1": "The management refused to consider the new proposal.",
+          "part1": "The new proposal",
+          "part2": "the management.",
+          "keyWord": "DOWN",
+          "text": "The new proposal {{0}} the management.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: DOWN",
+              "keyWord": "DOWN",
+              "answer": "was turned down by",
+              "solutions": [
+                "was turned down by"
+              ],
+              "acceptedAnswers": [
+                "was turned down by"
+              ],
+              "hint": "Use 'DOWN' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'was turned down by'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t1-s2",
+          "lead": "His dedication to his work is something I greatly admire.",
+          "sentence1": "His dedication to his work is something I greatly admire.",
+          "part1": "I really",
+          "part2": "for his work ethic.",
+          "keyWord": "LOOK",
+          "text": "I really {{0}} for his work ethic.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: LOOK",
+              "keyWord": "LOOK",
+              "answer": "look up to him",
+              "solutions": [
+                "look up to him"
+              ],
+              "acceptedAnswers": [
+                "look up to him"
+              ],
+              "hint": "Use 'LOOK' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'look up to him'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t1-s3",
+          "lead": "It's highly unlikely that she will change her mind now.",
+          "sentence1": "It's highly unlikely that she will change her mind now.",
+          "part1": "There",
+          "part2": "her changing her mind now.",
+          "keyWord": "LIKELIHOOD",
+          "text": "There {{0}} her changing her mind now.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: LIKELIHOOD",
+              "keyWord": "LIKELIHOOD",
+              "answer": "is little likelihood of",
+              "solutions": [
+                "is little likelihood of"
+              ],
+              "acceptedAnswers": [
+                "is little likelihood of"
+              ],
+              "hint": "Use 'LIKELIHOOD' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'is little likelihood of'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t1-s4",
+          "lead": "The storm was so violent that the damage was completely unexpected.",
+          "sentence1": "The storm was so violent that the damage was completely unexpected.",
+          "part1": "We",
+          "part2": "the violence of the storm.",
+          "keyWord": "TAKEN",
+          "text": "We {{0}} the violence of the storm.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: TAKEN",
+              "keyWord": "TAKEN",
+              "answer": "were taken aback by",
+              "solutions": [
+                "were taken aback by"
+              ],
+              "acceptedAnswers": [
+                "were taken aback by"
+              ],
+              "hint": "Use 'TAKEN' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'were taken aback by'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t1-s5",
+          "lead": "You must contact me immediately if you have any trouble.",
+          "sentence1": "You must contact me immediately if you have any trouble.",
+          "part1": "You must",
+          "part2": "me immediately if you have any trouble.",
+          "keyWord": "TOUCH",
+          "text": "You must {{0}} me immediately if you have any trouble.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: TOUCH",
+              "keyWord": "TOUCH",
+              "answer": "get in touch with",
+              "solutions": [
+                "get in touch with"
+              ],
+              "acceptedAnswers": [
+                "get in touch with"
+              ],
+              "hint": "Use 'TOUCH' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'get in touch with'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-kw-u2-t2",
+      "title": "Task 2: Beginner",
+      "type": "key-word-transformation",
+      "instruction": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+      "sentences": [
+        {
+          "id": "kw-u2-t2-s1",
+          "lead": "I hate it when people are late for important meetings.",
+          "sentence1": "I hate it when people are late for important meetings.",
+          "part1": "I",
+          "part2": "late for important meetings.",
+          "keyWord": "STAND",
+          "text": "I {{0}} late for important meetings.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: STAND",
+              "keyWord": "STAND",
+              "answer": "cannot stand people being",
+              "solutions": [
+                "cannot stand people being",
+                "can not stand people being",
+                "can't stand people being"
+              ],
+              "acceptedAnswers": [
+                "cannot stand people being",
+                "can not stand people being",
+                "can't stand people being"
+              ],
+              "hint": "Use 'STAND' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'cannot stand people being'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t2-s2",
+          "lead": "It's important that you sign the form before leaving the office.",
+          "sentence1": "It's important that you sign the form before leaving the office.",
+          "part1": "You",
+          "part2": "to sign the form before leaving the office.",
+          "keyWord": "MUST",
+          "text": "You {{0}} to sign the form before leaving the office.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: MUST",
+              "keyWord": "MUST",
+              "answer": "must remember",
+              "solutions": [
+                "must remember"
+              ],
+              "acceptedAnswers": [
+                "must remember"
+              ],
+              "hint": "Use 'MUST' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'must remember'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t2-s3",
+          "lead": "She has been involved in the reform project since the beginning.",
+          "sentence1": "She has been involved in the reform project since the beginning.",
+          "part1": "She",
+          "part2": "in the reform project since the beginning.",
+          "keyWord": "PART",
+          "text": "She {{0}} in the reform project since the beginning.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: PART",
+              "keyWord": "PART",
+              "answer": "has been taking part",
+              "solutions": [
+                "has been taking part"
+              ],
+              "acceptedAnswers": [
+                "has been taking part"
+              ],
+              "hint": "Use 'PART' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'has been taking part'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t2-s4",
+          "lead": "They offered him the job despite his lack of experience in the field.",
+          "sentence1": "They offered him the job despite his lack of experience in the field.",
+          "part1": "They offered him the job",
+          "part2": "in the field.",
+          "keyWord": "SPITE",
+          "text": "They offered him the job {{0}} in the field.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: SPITE",
+              "keyWord": "SPITE",
+              "answer": "in spite of his",
+              "solutions": [
+                "in spite of his"
+              ],
+              "acceptedAnswers": [
+                "in spite of his"
+              ],
+              "hint": "Use 'SPITE' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'in spite of his'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t2-s5",
+          "lead": "The impressive nature of the discovery was recognized globally.",
+          "sentence1": "The impressive nature of the discovery was recognized globally.",
+          "part1": "The discovery",
+          "part2": "that was recognized globally.",
+          "keyWord": "IMPRESSIVE",
+          "text": "The discovery {{0}} that was recognized globally.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: IMPRESSIVE",
+              "keyWord": "IMPRESSIVE",
+              "answer": "was an impressive",
+              "solutions": [
+                "was an impressive"
+              ],
+              "acceptedAnswers": [
+                "was an impressive"
+              ],
+              "hint": "Use 'IMPRESSIVE' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'was an impressive'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-kw-u2-t3",
+      "title": "Task 3: Beginner",
+      "type": "key-word-transformation",
+      "instruction": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+      "sentences": [
+        {
+          "id": "kw-u2-t3-s1",
+          "lead": "We haven't received any impressive news from the capital yet.",
+          "sentence1": "We haven't received any impressive news from the capital yet.",
+          "part1": "There",
+          "part2": "news from the capital yet.",
+          "keyWord": "LITTLE",
+          "text": "There {{0}} news from the capital yet.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: LITTLE",
+              "keyWord": "LITTLE",
+              "answer": "has been little",
+              "solutions": [
+                "has been little"
+              ],
+              "acceptedAnswers": [
+                "has been little"
+              ],
+              "hint": "Use 'LITTLE' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'has been little'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t3-s2",
+          "lead": "We might visit the exhibition, depending on the opening hours.",
+          "sentence1": "We might visit the exhibition, depending on the opening hours.",
+          "part1": "Whether we visit the exhibition",
+          "part2": "the opening hours.",
+          "keyWord": "UP",
+          "text": "Whether we visit the exhibition {{0}} the opening hours.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: UP",
+              "keyWord": "UP",
+              "answer": "is up to",
+              "solutions": [
+                "is up to"
+              ],
+              "acceptedAnswers": [
+                "is up to"
+              ],
+              "hint": "Use 'UP' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'is up to'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t3-s3",
+          "lead": "She is dedicated to her job, which everyone notices.",
+          "sentence1": "She is dedicated to her job, which everyone notices.",
+          "part1": "Everyone notices",
+          "part2": "job.",
+          "keyWord": "DEDICATION",
+          "text": "Everyone notices {{0}} job.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: DEDICATION",
+              "keyWord": "DEDICATION",
+              "answer": "her dedication to her",
+              "solutions": [
+                "her dedication to her"
+              ],
+              "acceptedAnswers": [
+                "her dedication to her"
+              ],
+              "hint": "Use 'DEDICATION' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'her dedication to her'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t3-s4",
+          "lead": "The construction of the new school should be finished by next spring.",
+          "sentence1": "The construction of the new school should be finished by next spring.",
+          "part1": "The new school construction",
+          "part2": "by next spring.",
+          "keyWord": "HAVE",
+          "text": "The new school construction {{0}} by next spring.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: HAVE",
+              "keyWord": "HAVE",
+              "answer": "should have finished",
+              "solutions": [
+                "should have finished"
+              ],
+              "acceptedAnswers": [
+                "should have finished"
+              ],
+              "hint": "Use 'HAVE' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'should have finished'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t3-s5",
+          "lead": "It was a mistake for me to trust his commitment to the project.",
+          "sentence1": "It was a mistake for me to trust his commitment to the project.",
+          "part1": "",
+          "part2": "his commitment to the project.",
+          "keyWord": "SHOULD",
+          "text": "{{0}} his commitment to the project.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: SHOULD",
+              "keyWord": "SHOULD",
+              "answer": "I should not have trusted",
+              "solutions": [
+                "I should not have trusted",
+                "I shouldn't have trusted"
+              ],
+              "acceptedAnswers": [
+                "I should not have trusted",
+                "I shouldn't have trusted"
+              ],
+              "hint": "Use 'SHOULD' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'I should not have trusted'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-kw-u2-t4",
+      "title": "Task 4: Beginner",
+      "type": "key-word-transformation",
+      "instruction": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+      "sentences": [
+        {
+          "id": "kw-u2-t4-s1",
+          "lead": "The final decision will be made by the committee next week.",
+          "sentence1": "The final decision will be made by the committee next week.",
+          "part1": "The committee will",
+          "part2": "next week.",
+          "keyWord": "MAKE",
+          "text": "The committee will {{0}} next week.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: MAKE",
+              "keyWord": "MAKE",
+              "answer": "make the final decision",
+              "solutions": [
+                "make the final decision",
+                "make a final decision",
+                "make its final decision"
+              ],
+              "acceptedAnswers": [
+                "make the final decision",
+                "make a final decision",
+                "make its final decision"
+              ],
+              "hint": "Use 'MAKE' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'make the final decision'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t4-s2",
+          "lead": "We were completely unaware of the extent of his involvement.",
+          "sentence1": "We were completely unaware of the extent of his involvement.",
+          "part1": "We",
+          "part2": "his involvement.",
+          "keyWord": "KNEW",
+          "text": "We {{0}} his involvement.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: KNEW",
+              "keyWord": "KNEW",
+              "answer": "knew nothing about",
+              "solutions": [
+                "knew nothing about"
+              ],
+              "acceptedAnswers": [
+                "knew nothing about"
+              ],
+              "hint": "Use 'KNEW' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'knew nothing about'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t4-s3",
+          "lead": "They will probably accept your idea without any argument.",
+          "sentence1": "They will probably accept your idea without any argument.",
+          "part1": "They",
+          "part2": "accept your idea without any argument.",
+          "keyWord": "LIKELY",
+          "text": "They {{0}} accept your idea without any argument.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: LIKELY",
+              "keyWord": "LIKELY",
+              "answer": "are likely to",
+              "solutions": [
+                "are likely to"
+              ],
+              "acceptedAnswers": [
+                "are likely to"
+              ],
+              "hint": "Use 'LIKELY' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'are likely to'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t4-s4",
+          "lead": "He rarely makes a promise that he doesn't keep.",
+          "sentence1": "He rarely makes a promise that he doesn't keep.",
+          "part1": "It",
+          "part2": "that he makes a promise he doesn't keep.",
+          "keyWord": "SELDOM",
+          "text": "It {{0}} that he makes a promise he doesn't keep.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: SELDOM",
+              "keyWord": "SELDOM",
+              "answer": "is seldom",
+              "solutions": [
+                "is seldom"
+              ],
+              "acceptedAnswers": [
+                "is seldom"
+              ],
+              "hint": "Use 'SELDOM' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'is seldom'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t4-s5",
+          "lead": "Could you please explain this concept to me more clearly?",
+          "sentence1": "Could you please explain this concept to me more clearly?",
+          "part1": "Could you",
+          "part2": "this concept?",
+          "keyWord": "CLARIFICATION",
+          "text": "Could you {{0}} this concept?",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: CLARIFICATION",
+              "keyWord": "CLARIFICATION",
+              "answer": "give me clarification on",
+              "solutions": [
+                "give me clarification on"
+              ],
+              "acceptedAnswers": [
+                "give me clarification on"
+              ],
+              "hint": "Use 'CLARIFICATION' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'give me clarification on'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-kw-u2-t5",
+      "title": "Task 5: Intermediate",
+      "type": "key-word-transformation",
+      "instruction": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+      "sentences": [
+        {
+          "id": "kw-u2-t5-s1",
+          "lead": "His confidence meant he never hesitated when speaking in public.",
+          "sentence1": "His confidence meant he never hesitated when speaking in public.",
+          "part1": "He",
+          "part2": "confidence when speaking in public.",
+          "keyWord": "LACK",
+          "text": "He {{0}} confidence when speaking in public.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: LACK",
+              "keyWord": "LACK",
+              "answer": "did not lack",
+              "solutions": [
+                "did not lack",
+                "didn't lack"
+              ],
+              "acceptedAnswers": [
+                "did not lack",
+                "didn't lack"
+              ],
+              "hint": "Use 'LACK' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'did not lack'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t5-s2",
+          "lead": "I had to read the whole report to get an insight into the company's problems.",
+          "sentence1": "I had to read the whole report to get an insight into the company's problems.",
+          "part1": "",
+          "part2": "the whole report did I get an insight into the company's problems.",
+          "keyWord": "ONLY",
+          "text": "{{0}} the whole report did I get an insight into the company's problems.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: ONLY",
+              "keyWord": "ONLY",
+              "answer": "Only by reading",
+              "solutions": [
+                "Only by reading",
+                "Only after reading",
+                "Only when I read"
+              ],
+              "acceptedAnswers": [
+                "Only by reading",
+                "Only after reading",
+                "Only when I read"
+              ],
+              "hint": "Use 'ONLY' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'Only by reading'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t5-s3",
+          "lead": "I found the way he spoke rather impressive.",
+          "sentence1": "I found the way he spoke rather impressive.",
+          "part1": "I",
+          "part2": "the way he spoke.",
+          "keyWord": "IMPRESSED",
+          "text": "I {{0}} the way he spoke.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: IMPRESSED",
+              "keyWord": "IMPRESSED",
+              "answer": "was impressed by",
+              "solutions": [
+                "was impressed by"
+              ],
+              "acceptedAnswers": [
+                "was impressed by"
+              ],
+              "hint": "Use 'IMPRESSED' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'was impressed by'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t5-s4",
+          "lead": "The success of the experiment depends on the weather conditions.",
+          "sentence1": "The success of the experiment depends on the weather conditions.",
+          "part1": "The success of the experiment",
+          "part2": "the weather conditions.",
+          "keyWord": "UP",
+          "text": "The success of the experiment {{0}} the weather conditions.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: UP",
+              "keyWord": "UP",
+              "answer": "is up to",
+              "solutions": [
+                "is up to"
+              ],
+              "acceptedAnswers": [
+                "is up to"
+              ],
+              "hint": "Use 'UP' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'is up to'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t5-s5",
+          "lead": "I have no idea why she decided to give up her involvement in the group.",
+          "sentence1": "I have no idea why she decided to give up her involvement in the group.",
+          "part1": "The",
+          "part2": "her decision to give up her involvement in the group is unknown.",
+          "keyWord": "BEHIND",
+          "text": "The {{0}} her decision to give up her involvement in the group is unknown.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: BEHIND",
+              "keyWord": "BEHIND",
+              "answer": "reason behind",
+              "solutions": [
+                "reason behind"
+              ],
+              "acceptedAnswers": [
+                "reason behind"
+              ],
+              "hint": "Use 'BEHIND' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'reason behind'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-kw-u2-t6",
+      "title": "Task 6: Intermediate",
+      "type": "key-word-transformation",
+      "instruction": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+      "sentences": [
+        {
+          "id": "kw-u2-t6-s1",
+          "lead": "It's been a long time since I last talked to her about the reform.",
+          "sentence1": "It's been a long time since I last talked to her about the reform.",
+          "part1": "I",
+          "part2": "about the reform for a long time.",
+          "keyWord": "TOUCH",
+          "text": "I {{0}} about the reform for a long time.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: TOUCH",
+              "keyWord": "TOUCH",
+              "answer": "have not been in touch",
+              "solutions": [
+                "have not been in touch",
+                "haven't been in touch"
+              ],
+              "acceptedAnswers": [
+                "have not been in touch",
+                "haven't been in touch"
+              ],
+              "hint": "Use 'TOUCH' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'have not been in touch'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t6-s2",
+          "lead": "They have postponed the meeting until next month.",
+          "sentence1": "They have postponed the meeting until next month.",
+          "part1": "The meeting",
+          "part2": "until next month.",
+          "keyWord": "OFF",
+          "text": "The meeting {{0}} until next month.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: OFF",
+              "keyWord": "OFF",
+              "answer": "has been put off",
+              "solutions": [
+                "has been put off"
+              ],
+              "acceptedAnswers": [
+                "has been put off"
+              ],
+              "hint": "Use 'OFF' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'has been put off'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t6-s3",
+          "lead": "She started working on the construction project immediately after graduating.",
+          "sentence1": "She started working on the construction project immediately after graduating.",
+          "part1": "She",
+          "part2": "the construction project immediately after graduating.",
+          "keyWord": "SET",
+          "text": "She {{0}} the construction project immediately after graduating.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: SET",
+              "keyWord": "SET",
+              "answer": "set out on",
+              "solutions": [
+                "set out on"
+              ],
+              "acceptedAnswers": [
+                "set out on"
+              ],
+              "hint": "Use 'SET' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'set out on'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t6-s4",
+          "lead": "The only thing he committed to was writing the introduction.",
+          "sentence1": "The only thing he committed to was writing the introduction.",
+          "part1": "He committed to",
+          "part2": "writing the introduction.",
+          "keyWord": "NOTHING",
+          "text": "He committed to {{0}} writing the introduction.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: NOTHING",
+              "keyWord": "NOTHING",
+              "answer": "nothing but",
+              "solutions": [
+                "nothing but"
+              ],
+              "acceptedAnswers": [
+                "nothing but"
+              ],
+              "hint": "Use 'NOTHING' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'nothing but'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t6-s5",
+          "lead": "You must accept the fact that your plans are unpredictable.",
+          "sentence1": "You must accept the fact that your plans are unpredictable.",
+          "part1": "You must",
+          "part2": "the unpredictability of your plans.",
+          "keyWord": "COME",
+          "text": "You must {{0}} the unpredictability of your plans.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: COME",
+              "keyWord": "COME",
+              "answer": "come to terms with",
+              "solutions": [
+                "come to terms with"
+              ],
+              "acceptedAnswers": [
+                "come to terms with"
+              ],
+              "hint": "Use 'COME' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'come to terms with'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-kw-u2-t7",
+      "title": "Task 7: Intermediate",
+      "type": "key-word-transformation",
+      "instruction": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+      "sentences": [
+        {
+          "id": "kw-u2-t7-s1",
+          "lead": "It is necessary for us to understand the gravity of the situation.",
+          "sentence1": "It is necessary for us to understand the gravity of the situation.",
+          "part1": "We",
+          "part2": "the gravity of the situation.",
+          "keyWord": "MUST",
+          "text": "We {{0}} the gravity of the situation.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: MUST",
+              "keyWord": "MUST",
+              "answer": "must understand",
+              "solutions": [
+                "must understand"
+              ],
+              "acceptedAnswers": [
+                "must understand"
+              ],
+              "hint": "Use 'MUST' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'must understand'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t7-s2",
+          "lead": "I didn't expect the exhibition to be so full of impressive artwork.",
+          "sentence1": "I didn't expect the exhibition to be so full of impressive artwork.",
+          "part1": "The exhibition",
+          "part2": "I had expected.",
+          "keyWord": "MORE",
+          "text": "The exhibition {{0}} I had expected.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: MORE",
+              "keyWord": "MORE",
+              "answer": "was more impressive than",
+              "solutions": [
+                "was more impressive than"
+              ],
+              "acceptedAnswers": [
+                "was more impressive than"
+              ],
+              "hint": "Use 'MORE' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'was more impressive than'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t7-s3",
+          "lead": "She wasn't able to achieve her goals without his commitment.",
+          "sentence1": "She wasn't able to achieve her goals without his commitment.",
+          "part1": "It was his commitment that",
+          "part2": "achieve her goals.",
+          "keyWord": "IT",
+          "text": "It was his commitment that {{0}} achieve her goals.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: IT",
+              "keyWord": "IT",
+              "answer": "made it possible to",
+              "solutions": [
+                "made it possible to"
+              ],
+              "acceptedAnswers": [
+                "made it possible to"
+              ],
+              "hint": "Use 'IT' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'made it possible to'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t7-s4",
+          "lead": "The manager insisted on all employees arriving on time for the meeting.",
+          "sentence1": "The manager insisted on all employees arriving on time for the meeting.",
+          "part1": "The manager",
+          "part2": "all employees arrived on time for the meeting.",
+          "keyWord": "INSISTED",
+          "text": "The manager {{0}} all employees arrived on time for the meeting.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: INSISTED",
+              "keyWord": "INSISTED",
+              "answer": "insisted that",
+              "solutions": [
+                "insisted that",
+                "insisted on ensuring that"
+              ],
+              "acceptedAnswers": [
+                "insisted that",
+                "insisted on ensuring that"
+              ],
+              "hint": "Use 'INSISTED' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'insisted that'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t7-s5",
+          "lead": "I find it easy to accept that I was wrong about the timetable.",
+          "sentence1": "I find it easy to accept that I was wrong about the timetable.",
+          "part1": "I have",
+          "part2": "being wrong about the timetable.",
+          "keyWord": "TERMS",
+          "text": "I have {{0}} being wrong about the timetable.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: TERMS",
+              "keyWord": "TERMS",
+              "answer": "come to terms with",
+              "solutions": [
+                "come to terms with"
+              ],
+              "acceptedAnswers": [
+                "come to terms with"
+              ],
+              "hint": "Use 'TERMS' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'come to terms with'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-kw-u2-t8",
+      "title": "Task 8: Intermediate",
+      "type": "key-word-transformation",
+      "instruction": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+      "sentences": [
+        {
+          "id": "kw-u2-t8-s1",
+          "lead": "They are currently building a new commercial development near the harbour.",
+          "sentence1": "They are currently building a new commercial development near the harbour.",
+          "part1": "A new commercial development",
+          "part2": "near the harbour.",
+          "keyWord": "BEING",
+          "text": "A new commercial development {{0}} near the harbour.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: BEING",
+              "keyWord": "BEING",
+              "answer": "is being built",
+              "solutions": [
+                "is being built"
+              ],
+              "acceptedAnswers": [
+                "is being built"
+              ],
+              "hint": "Use 'BEING' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'is being built'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t8-s2",
+          "lead": "They have officially accepted the invitation to the ceremony.",
+          "sentence1": "They have officially accepted the invitation to the ceremony.",
+          "part1": "They have",
+          "part2": "the invitation to the ceremony.",
+          "keyWord": "ACCEPTANCE",
+          "text": "They have {{0}} the invitation to the ceremony.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: ACCEPTANCE",
+              "keyWord": "ACCEPTANCE",
+              "answer": "given their acceptance of",
+              "solutions": [
+                "given their acceptance of"
+              ],
+              "acceptedAnswers": [
+                "given their acceptance of"
+              ],
+              "hint": "Use 'ACCEPTANCE' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'given their acceptance of'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t8-s3",
+          "lead": "He said that he was unaware of the new safety regulations.",
+          "sentence1": "He said that he was unaware of the new safety regulations.",
+          "part1": "He said he",
+          "part2": "the new safety regulations.",
+          "keyWord": "KNEW",
+          "text": "He said he {{0}} the new safety regulations.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: KNEW",
+              "keyWord": "KNEW",
+              "answer": "knew nothing about",
+              "solutions": [
+                "knew nothing about"
+              ],
+              "acceptedAnswers": [
+                "knew nothing about"
+              ],
+              "hint": "Use 'KNEW' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'knew nothing about'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t8-s4",
+          "lead": "I felt like I was being watched the whole time during the interview.",
+          "sentence1": "I felt like I was being watched the whole time during the interview.",
+          "part1": "I",
+          "part2": "of being watched the whole time during the interview.",
+          "keyWord": "SENSE",
+          "text": "I {{0}} of being watched the whole time during the interview.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: SENSE",
+              "keyWord": "SENSE",
+              "answer": "had a sense",
+              "solutions": [
+                "had a sense"
+              ],
+              "acceptedAnswers": [
+                "had a sense"
+              ],
+              "hint": "Use 'SENSE' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'had a sense'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t8-s5",
+          "lead": "The unexpected snowfall meant we had to cancel the trip.",
+          "sentence1": "The unexpected snowfall meant we had to cancel the trip.",
+          "part1": "The trip was cancelled",
+          "part2": "the unexpected snowfall.",
+          "keyWord": "OF",
+          "text": "The trip was cancelled {{0}} the unexpected snowfall.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: OF",
+              "keyWord": "OF",
+              "answer": "on account of",
+              "solutions": [
+                "on account of"
+              ],
+              "acceptedAnswers": [
+                "on account of"
+              ],
+              "hint": "Use 'OF' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'on account of'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-kw-u2-t9",
+      "title": "Task 9: Expert",
+      "type": "key-word-transformation",
+      "instruction": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+      "sentences": [
+        {
+          "id": "kw-u2-t9-s1",
+          "lead": "We must ensure that the equipment is functional before the presentation.",
+          "sentence1": "We must ensure that the equipment is functional before the presentation.",
+          "part1": "We",
+          "part2": "the equipment is functional before the presentation.",
+          "keyWord": "MAKE",
+          "text": "We {{0}} the equipment is functional before the presentation.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: MAKE",
+              "keyWord": "MAKE",
+              "answer": "must make sure",
+              "solutions": [
+                "must make sure"
+              ],
+              "acceptedAnswers": [
+                "must make sure"
+              ],
+              "hint": "Use 'MAKE' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'must make sure'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t9-s2",
+          "lead": "He said the company would not accept the reform under any circumstances.",
+          "sentence1": "He said the company would not accept the reform under any circumstances.",
+          "part1": "He said",
+          "part2": "would the company accept the reform.",
+          "keyWord": "TERMS",
+          "text": "He said {{0}} would the company accept the reform.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: TERMS",
+              "keyWord": "TERMS",
+              "answer": "on no terms",
+              "solutions": [
+                "on no terms"
+              ],
+              "acceptedAnswers": [
+                "on no terms"
+              ],
+              "hint": "Use 'TERMS' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'on no terms'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t9-s3",
+          "lead": "The sudden failure of the power supply caused immediate chaos.",
+          "sentence1": "The sudden failure of the power supply caused immediate chaos.",
+          "part1": "The sudden failure of the power supply",
+          "part2": "immediate chaos.",
+          "keyWord": "IN",
+          "text": "The sudden failure of the power supply {{0}} immediate chaos.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: IN",
+              "keyWord": "IN",
+              "answer": "resulted in",
+              "solutions": [
+                "resulted in"
+              ],
+              "acceptedAnswers": [
+                "resulted in"
+              ],
+              "hint": "Use 'IN' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'resulted in'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t9-s4",
+          "lead": "I think you should reconsider your involvement in the commercial project.",
+          "sentence1": "I think you should reconsider your involvement in the commercial project.",
+          "part1": "I think",
+          "part2": "reconsider your involvement in the commercial project.",
+          "keyWord": "BETTER",
+          "text": "I think {{0}} reconsider your involvement in the commercial project.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: BETTER",
+              "keyWord": "BETTER",
+              "answer": "you had better",
+              "solutions": [
+                "you had better",
+                "you'd better"
+              ],
+              "acceptedAnswers": [
+                "you had better",
+                "you'd better"
+              ],
+              "hint": "Use 'BETTER' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'you had better'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t9-s5",
+          "lead": "It seems that they didn't know about the cancellation until the last minute.",
+          "sentence1": "It seems that they didn't know about the cancellation until the last minute.",
+          "part1": "They",
+          "part2": "about the cancellation until the last minute.",
+          "keyWord": "UNAWARE",
+          "text": "They {{0}} about the cancellation until the last minute.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: UNAWARE",
+              "keyWord": "UNAWARE",
+              "answer": "seemed to be unaware",
+              "solutions": [
+                "seemed to be unaware"
+              ],
+              "acceptedAnswers": [
+                "seemed to be unaware"
+              ],
+              "hint": "Use 'UNAWARE' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'seemed to be unaware'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-kw-u2-t10",
+      "title": "Task 10: Expert",
+      "type": "key-word-transformation",
+      "instruction": "Complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+      "sentences": [
+        {
+          "id": "kw-u2-t10-s1",
+          "lead": "The sheer size of the construction project took us completely by surprise.",
+          "sentence1": "The sheer size of the construction project took us completely by surprise.",
+          "part1": "We",
+          "part2": "by the sheer size of the construction project.",
+          "keyWord": "TAKEN",
+          "text": "We {{0}} by the sheer size of the construction project.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: TAKEN",
+              "keyWord": "TAKEN",
+              "answer": "were completely taken aback",
+              "solutions": [
+                "were completely taken aback"
+              ],
+              "acceptedAnswers": [
+                "were completely taken aback"
+              ],
+              "hint": "Use 'TAKEN' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'were completely taken aback'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t10-s2",
+          "lead": "The politician managed to escape the interview without giving clarification.",
+          "sentence1": "The politician managed to escape the interview without giving clarification.",
+          "part1": "The politician",
+          "part2": "giving clarification in the interview.",
+          "keyWord": "AWAY",
+          "text": "The politician {{0}} giving clarification in the interview.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: AWAY",
+              "keyWord": "AWAY",
+              "answer": "got away without",
+              "solutions": [
+                "got away without"
+              ],
+              "acceptedAnswers": [
+                "got away without"
+              ],
+              "hint": "Use 'AWAY' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'got away without'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t10-s3",
+          "lead": "I only managed to fix the problem because of your advice.",
+          "sentence1": "I only managed to fix the problem because of your advice.",
+          "part1": "I",
+          "part2": "the problem without your advice.",
+          "keyWord": "IT",
+          "text": "I {{0}} the problem without your advice.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: IT",
+              "keyWord": "IT",
+              "answer": "could not have fixed it",
+              "solutions": [
+                "could not have fixed it",
+                "couldn't have fixed it"
+              ],
+              "acceptedAnswers": [
+                "could not have fixed it",
+                "couldn't have fixed it"
+              ],
+              "hint": "Use 'IT' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'could not have fixed it'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t10-s4",
+          "lead": "She is determined to get the job, no matter what.",
+          "sentence1": "She is determined to get the job, no matter what.",
+          "part1": "She",
+          "part2": "on getting the job, no matter what.",
+          "keyWord": "HEART",
+          "text": "She {{0}} on getting the job, no matter what.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: HEART",
+              "keyWord": "HEART",
+              "answer": "has her heart set",
+              "solutions": [
+                "has her heart set"
+              ],
+              "acceptedAnswers": [
+                "has her heart set"
+              ],
+              "hint": "Use 'HEART' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'has her heart set'"
+            }
+          ]
+        },
+        {
+          "id": "kw-u2-t10-s5",
+          "lead": "We found the amount of effort required to be unpredictable.",
+          "sentence1": "We found the amount of effort required to be unpredictable.",
+          "part1": "The amount of effort required",
+          "part2": "to be unpredictable.",
+          "keyWord": "UP",
+          "text": "The amount of effort required {{0}} to be unpredictable.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "KEY WORD: UP",
+              "keyWord": "UP",
+              "answer": "turned up",
+              "solutions": [
+                "turned up"
+              ],
+              "acceptedAnswers": [
+                "turned up"
+              ],
+              "hint": "Use 'UP' unmodified (2 to 5 words).",
+              "explanation": "Target transformation: 'turned up'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

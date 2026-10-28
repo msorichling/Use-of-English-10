@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Comprehension: Memory Games</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* High-Tech / Neon Green Palette */
+        :root {
+            --color-primary: #39ff14; /* Neon Green */
+            --color-secondary: #22a30b; /* Darker Green */
+            --color-background: #1e1e1e; /* Dark Grey/Black */
+            --color-text: #f0f0f0; /* Off-White */
+            --color-success: #39ff14; /* Neon Green */
+            --color-error: #ff3914; /* Neon Red */
+            --color-card: #2c2c2c; /* Slightly Lighter Card Background */
+            --shadow: 0 0 15px rgba(57, 255, 20, 0.5); /* Neon Shadow */
+            --font-display: 'Orbitron', sans-serif;
+            --font-text: 'Roboto', sans-serif;
+        }
+        
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 20px;
+            font-family: var(--font-text);
+            background-color: var(--color-background);
+            color: var(--color-text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-container {
+            background: var(--color-card);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            max-width: 1000px; /* GEÄNDERT: Etwas breiter für bessere Lesbarkeit auf großen Bildschirmen */
+            width: 95%;
+            margin-top: 5vh;
+            border: 2px solid var(--color-primary);
+        }
+
+        .title {
+            font-family: var(--font-display);
+            font-size: 38px;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            text-align: center; 
+            border-bottom: 3px solid var(--color-secondary);
+            padding-bottom: 10px;
+            text-shadow: 0 0 5px rgba(57, 255, 20, 0.8);
+        }
+        
+        /* TEXT AREA STYLING */
+        .text-section {
+            border: 1px solid var(--color-secondary);
+            border-radius: 8px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            font-size: 15px;
+            background-color: #333;
+            padding: 20px; 
+            position: relative; 
+        }
+        
+        .text-section p {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            padding: 5px 0 5px 40px; /* GEÄNDERT: Linkes Padding für Marker-Platz */
+            border-bottom: 1px dotted #555;
+            position: relative;
+        }
+        
+        /* Der Marker wird jetzt in den Freiraum links positioniert */
+        .section-marker {
+            position: absolute;
+            left: 0; /* GEÄNDERT: Positioniert links im Padding-Bereich des P-Elements */
+            top: 5px;
+            font-family: var(--font-display);
+            color: var(--color-primary);
+            font-size: 1.1em;
+            width: 40px;
+            text-align: right;
+        }
+
+        .task-title {
+            font-family: var(--font-display);
+            color: var(--color-primary);
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--color-primary);
+            padding-left: 10px;
+        }
+        
+        .instructions {
+            margin-bottom: 20px;
+            line-height: 1.4;
+            padding: 5px;
+            border-left: 2px solid var(--color-secondary);
+            font-size: 0.9em;
+        }
+
+        /* --- TASK 1: MATCHING STYLING --- */
+        .expressions-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #3a3a3a;
+            border-radius: 5px;
+        }
+        
+        .expression-item {
+            padding: 5px 10px;
+            margin: 5px;
+            border: 1px solid var(--color-primary);
+            border-radius: 5px;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+        
+        .definitions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 15px 30px;
+            margin-bottom: 30px;
+        }
+        
+        .definition-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px;
+            background-color: #222;
+            border-radius: 5px;
+        }
+        
+        .def-number {
+            font-weight: bold;
+            color: var(--color-primary);
+            width: 30px;
+            flex-shrink: 0;
+            margin-right: 15px;
+            text-align: center;
+        }
+        
+        .matching-area {
+            background-color: #3a3a3a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .matching-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed #555;
+        }
+        
+        .matching-row:last-child {
+            border-bottom: none;
+        }
+
+        .matching-label {
+            font-weight: bold;
+            color: var(--color-text);
+            display: flex;
+            align-items: center;
+        }
+        
+        .matching-select {
+            padding: 5px;
+            border-radius: 5px;
+            border: 2px solid var(--color-secondary);
+            background-color: var(--color-card);
+            color: var(--color-text);
+            font-size: 1em;
+            width: 80px;
+            text-align: center;
+        }
+        
+        /* --- TASK 2: SYNONYM STYLING --- */
+        .synonym-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .synonym-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #555;
+        }
+        
+        .synonym-item:last-child {
+            border-bottom: none;
+        }
+
+        .target-word {
+            font-weight: bold;
+            color: var(--color-primary);
+            width: 300px; 
+            flex-shrink: 0;
+        }
+        
+        .synonym-input {
+            padding: 8px 12px;
+            border: 2px solid #555;
+            border-radius: 5px;
+            font-size: 1em;
+            background-color: var(--color-card);
+            color: var(--color-text);
+            transition: border-color 0.2s;
+            width: 300px;
+        }
+        
+        .synonym-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        /* CHECK BUTTON & FEEDBACK */
+        .controls {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            margin-top: 30px;
+        }
+
+        .check-button {
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            border: 2px solid var(--color-primary);
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 0 5px var(--color-primary);
+        }
+
+        .check-button:hover {
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            box-shadow: 0 0 15px var(--color-primary);
+        }
+        
+        .result-message {
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: 700;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid;
+            min-height: 60px; 
+        }
+
+        .result-message.success {
+            background-color: rgba(57, 255, 20, 0.1); 
+            color: var(--color-success);
+            border-color: var(--color-success);
+        }
+
+        .result-message.failure {
+            background-color: rgba(255, 57, 20, 0.1);
+            color: var(--color-error);
+            border-color: var(--color-error);
+        }
+
+        /* LÖSUNGSANZEIGE - STANDARDMÄSSIG VERSTECKT */
+        .correct-answer {
+            color: var(--color-success);
+            font-weight: bold;
+            margin-left: 10px;
+            display: none; /* GEÄNDERT: Standardmäßig versteckt */
+        }
+        
+        .show-solution {
+            text-decoration: underline;
+            color: var(--color-primary);
+            cursor: pointer;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="main-container">
+        <h1 class="title">Memory Games</h1>
+
+        <div class="text-section">
+            <!-- HINWEIS: Die span-Elemente für die Marker MÜSSEN direkt am Anfang des p-Tags stehen -->
+            <p><span class="section-marker">[1]</span> Most people have trouble remembering where they put their car keys, or if they turned their oven off. And yet an astonishing few can memorize entire decks of cards and long strings of random numbers. The documentary <em>Memory Games</em> offers a fascinating glimpse into the lives of these mind athletes as they compete for the title of World Memory Champion. The Post spoke with Nelson Cowan, a cognitive psychologist at the University of Missouri and two competitors profiled in the film – International Grandmaster of Memory Yanjaa Wintersoul, 30, and four-time USA Champion Nathan Dellis, 39 – for tips on how regular folks can improve their daily recall.</p>
+            <p><span class="section-marker">[2]</span> In high school Yanjaa Wintersoul would never have imagined that she would one day gain recognition for having one of the best memories in the world. She explains: “I almost didn’t graduate because I didn’t know how to make my knowledge of physics and chemistry stick. The moment when everything changed for me was several years later when I happened to pick up Joshua Foer’s bestseller on brain techniques. It delves into the science of what makes the human brain tick and helps ordinary people strengthen their memories. It was a revelation for me. I began using memorization rules while studying for my business degree in Stockholm and I finished in just two years.”</p>
+            <p><span class="section-marker">[3]</span> Nelson Cowan, who does research on how the brain works, says: “It’s not like each memory takes a neuron and then that cell is used up. Imagine you experience a situation or get some information. Your brain first keeps them short-term in a system known as ‘working memory’. Later, if the information stays relevant, our brain encodes it in specific combinations of neurons; the memory becomes long-term.” Our brain can do that an infinite amount of times. From a scientific point of view, the number of facts stored in those patterns is also endless. “If you fill up your 128-gigabyte phone with images, you run out of storage capacity. Our brain doesn’t work like that. The more ‘pictures you take’ and the more you try to remember, the more you will remember,” Cowan adds.</p>
+            <p><span class="section-marker">[4]</span> While Yanjaa Wintersoul began competing when barely out of her teens, Nathan Dellis came to the sport a little later in life. “I started listening to people more actively when they were talking about things,” he explains. “Being mindful and paying attention are key to processing the information effectively. There’s plenty of useful daily information worth remembering, which many forget. Every person you meet, try to memorize their name,” advises Dellis. Challenging your brain on a permanent basis will likely yield amazing results. For instance, he has made a habit of memorizing license plate numbers when stuck in the rush hour. Enough shut-eye is also essential.</p>
+            <p><span class="section-marker">[5]</span> Dellis, for example, attempts to get at least eight hours per night. When Wintersoul began making a name for herself in the world of competitions, reality shows also began calling. One day, a furniture giant wanted to hire her for an advertisement. They originally asked if she could remember their dining room collection in a week. “I said, ‘I think it would be fun if I learned your entire catalogue by heart.’ And I did, committing 328 pages to memory. Although I can’t recall every single item a year later, I do remember a good deal of it, particularly the pages featuring picture-perfect family scenes.</p>
+            <p><span class="section-marker">[6]</span> Such emotions stick best with me. I think that’s the key to everybody’s memory, you have to make things truly matter to yourself.” Cowan confirms that memories depend on specific contexts. In a renowned study, participants who learned lists while scuba diving had better recall when they were underwater than when they were on land. Underwater or not – want to stop the did-I-remember-to-turn-off-the-oven paranoia, or at least get a better handle on peoples’ names? Keep at it! Even if you aren’t born with remarkable talent, with the right strategies, you can become a memory champion too.</p>
+        </div>
+
+        <!-- TASK 1: MATCHING -->
+        <div id="task1">
+            <h2 class="task-title">Task 1: Matching Expressions (A-F with 0-7)</h2>
+            <p class="instructions">Match the expressions (A – F) as used in the text with their corresponding definitions (0 – 7). Write the correct numbers in the grid below. Be careful: There are two definitions that you do not need. One definition (0) has already been matched correctly.</p>
+            
+            <!-- Expressions for Overview -->
+            <div class="expressions-list">
+                <span class="expression-item">A. astonishing few [Sec 1]</span>
+                <span class="expression-item">B. gain recognition [Sec 2]</span>
+                <span class="expression-item">C. make my knowledge stick [Sec 2]</span>
+                <span class="expression-item">D. brain tick [Sec 2]</span>
+                <span class="expression-item">E. on a permanent basis [Sec 4]</span>
+                <span class="expression-item">F. shut-eye [Sec 4]</span>
+            </div>
+
+            <!-- Definitions -->
+            <div class="definitions-grid">
+                <div class="definition-item"><span class="def-number">0</span> to find an object after a long search. (Do not need)</div>
+                <div class="definition-item"><span class="def-number">1</span> to become publicly acknowledged for an achievement. (B)</div>
+                <div class="definition-item"><span class="def-number">2</span> to be understood or retained in memory. (C)</div>
+                <div class="definition-item"><span class="def-number">3</span> a surprisingly small number of people. (A)</div>
+                <div class="definition-item"><span class="def-number">4</span> sleep. (F)</div>
+                <div class="definition-item"><span class="def-number">5</span> to understand how the brain functions. (D)</div>
+                <div class="definition-item"><span class="def-number">6</span> continually or constantly. (E)</div>
+                <div class="definition-item"><span class="def-number">7</span> to remember something perfectly. (Do not need)</div>
+            </div>
+            
+            <!-- Matching Area -->
+            <div class="matching-area">
+                <div class="matching-row">
+                    <span class="matching-label">A. astonishing few:</span>
+                    <select id="match-A" class="matching-select"></select>
+                    <span id="solution-A" class="correct-answer">Korrekte Nummer: 3</span>
+                </div>
+                <div class="matching-row">
+                    <span class="matching-label">B. gain recognition:</span>
+                    <select id="match-B" class="matching-select"></select>
+                    <span id="solution-B" class="correct-answer">Korrekte Nummer: 1</span>
+                </div>
+                <div class="matching-row">
+                    <span class="matching-label">C. make my knowledge stick:</span>
+                    <select id="match-C" class="matching-select"></select>
+                    <span id="solution-C" class="correct-answer">Korrekte Nummer: 2</span>
+                </div>
+                <div class="matching-row">
+                    <span class="matching-label">D. brain tick:</span>
+                    <select id="match-D" class="matching-select"></select>
+                    <span id="solution-D" class="correct-answer">Korrekte Nummer: 5</span>
+                </div>
+                <div class="matching-row">
+                    <span class="matching-label">E. on a permanent basis:</span>
+                    <select id="match-E" class="matching-select"></select>
+                    <span id="solution-E" class="correct-answer">Korrekte Nummer: 6</span>
+                </div>
+                <div class="matching-row">
+                    <span class="matching-label">F. shut-eye:</span>
+                    <select id="match-F" class="matching-select"></select>
+                    <span id="solution-F" class="correct-answer">Korrekte Nummer: 4</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TASK 2: SYNONYM FINDING -->
+        <div id="task2">
+            <h2 class="task-title">Task 2: Find a Word or Expression</h2>
+            <p class="instructions">Find a word or expression in the text that means the same as each of the following words (1 – 5). The section where the word is located is indicated.</p>
+            
+            <ul class="synonym-list" id="synonymList">
+                <!-- List items generated by JS -->
+            </ul>
+        </div>
+        
+        <div class="controls">
+            <button class="check-button" onclick="checkAllTasks()">Prüfe beide Aufgaben</button>
+            <span class="show-solution" id="solutionButton" onclick="toggleSolutions()">Lösungen anzeigen</span>
+            <div class="result-message" id="resultMessage" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        // #######################################################
+        // 1. ÜBUNGSDATEN
+        // #######################################################
+        
+        // Task 1: Matching (Expression ID: Correct Definition Number)
+        const matchingData = {
+            'A': 3, 
+            'B': 1, 
+            'C': 2, 
+            'D': 5, 
+            'E': 6, 
+            'F': 4  
+        };
+        
+        // Task 2: Synonym Finding (Target Word: Correct Synonym from text, Answer is stored in data attribute)
+        const synonymData = [
+            { id: 1, target: "remembering (noun)", context: "[Section 1]", answer: "recall" },
+            { id: 2, target: "understand how it functions (verb)", context: "[Section 2]", answer: "tick" }, 
+            { id: 3, target: "limitless (adj)", context: "[Section 3]", answer: "infinite" },
+            { id: 4, target: "very good, talented (adj)", context: "[Section 6]", answer: "remarkable" },
+            { id: 5, target: "to be committed to (verb gerund form)", context: "[Section 5]", answer: "committing" } 
+        ];
+
+        const definitionNumbers = [0, 1, 2, 3, 4, 5, 6, 7];
+
+        // #######################################################
+        // 2. RENDERING
+        // #######################################################
+
+        function renderMatching() {
+            const selects = document.querySelectorAll('.matching-select');
+            selects.forEach(select => {
+                // Füllt die Dropdowns von 0 bis 7
+                select.innerHTML = '<option value="">- Wahl -</option>' + 
+                    definitionNumbers.map(num => `<option value="${num}">${num}</option>`).join('');
+            });
+        }
+
+        function renderSynonyms() {
+            const list = document.getElementById('synonymList');
+            // Die Lösung wird im data-attribute gespeichert.
+            list.innerHTML = synonymData.map(item => `
+                <li class="synonym-item">
+                    <span class="target-word">${item.id}. ${item.target} ${item.context}:</span>
+                    <input type="text" id="synonym-input-${item.id}" class="synonym-input" data-id="${item.id}" data-answer="${item.answer}">
+                    <span id="synonym-solution-${item.id}" class="correct-answer"></span>
+                </li>
+            `).join('');
+        }
+        
+        // #######################################################
+        // 3. LOGIK UND PRÜFUNG
+        // #######################################################
+        
+        function normalizeInput(input) {
+            // Trim, lower case, remove punctuation
+            return input.trim().toLowerCase().replace(/[.,!?'"\/]/g, ''); // Slash für (to) entfernen
+        }
+
+        function generateFeedback(percentage) {
+            const totalTasks = synonymData.length + Object.keys(matchingData).length;
+
+            if (percentage === 100) {
+                return `Fantastisch! Alle ${totalTasks} Antworten sind korrekt! Deine Beherrschung des Wortschatzes ist beeindruckend.`;
+            } else if (percentage >= 80) {
+                return "Sehr gut! Du hast einen Großteil der Aufgaben richtig gelöst. Nur noch kleine Details müssen gefestigt werden.";
+            } else if (percentage >= 60) {
+                return "Gut gemacht! Du bist auf dem richtigen Weg. Gehe die fehlerhaften Aufgaben noch einmal durch und schaue dir die Lösungen an.";
+            } else if (percentage >= 40) {
+                return "Motivierendes Ergebnis. Die Grundlagen sind da, aber konzentriere dich jetzt auf die spezifischen Vokabeln im Text. Nutze die Lösungen zum Lernen!";
+            } else {
+                return "Gib nicht auf! Das ist eine schwierige Aufgabe. Nutze die Lösungen, um zu lernen, und versuche es dann erneut. Jeder fängt klein an.";
+            }
+        }
+
+        function checkTask1() {
+            let correctCount = 0;
+            let totalCount = 0;
+
+            for (const expression in matchingData) {
+                totalCount++;
+                const selectElement = document.getElementById(`match-${expression}`);
+                const userAnswer = parseInt(selectElement.value);
+                const correctAnswer = matchingData[expression];
+                
+                selectElement.style.border = `2px solid var(--color-secondary)`;
+
+                if (userAnswer === correctAnswer) {
+                    correctCount++;
+                    selectElement.style.border = `2px solid var(--color-success)`;
+                } else if (selectElement.value) {
+                    selectElement.style.border = `2px solid var(--color-error)`;
+                }
+            }
+            return { correct: correctCount, total: totalCount, name: 'Task 1 (Matching)' };
+        }
+
+        function checkTask2() {
+            let correctCount = 0;
+            let totalCount = synonymData.length;
+
+            synonymData.forEach(item => {
+                const inputElement = document.getElementById(`synonym-input-${item.id}`);
+                const userAnswer = normalizeInput(inputElement.value);
+                const correctAnswer = normalizeInput(item.answer);
+                
+                inputElement.style.border = `2px solid #555`;
+
+                // Die Lösung kann auch ohne Klammern eingegeben werden, aber die Prüfung muss streng sein
+                if (userAnswer === correctAnswer) {
+                    correctCount++;
+                    inputElement.style.border = `2px solid var(--color-success)`;
+                } else if (inputElement.value) {
+                    inputElement.style.border = `2px solid var(--color-error)`;
+                }
+            });
+            return { correct: correctCount, total: totalCount, name: 'Task 2 (Synonyme)' };
+        }
+
+
+        function checkAllTasks() {
+            const result1 = checkTask1();
+            const result2 = checkTask2();
+            
+            const totalCorrect = result1.correct + result2.correct;
+            const totalTasks = result1.total + result2.total;
+            const scorePercentage = (totalCorrect / totalTasks) * 100;
+            
+            const resultMessage = document.getElementById('resultMessage');
+            resultMessage.style.display = 'block';
+
+            let messageContent = `
+                ${generateFeedback(scorePercentage)}<br><br>
+                **Detailergebnis:** ${totalCorrect} von ${totalTasks} (${scorePercentage.toFixed(0)}%) korrekt.<br>
+                ${result1.name}: ${result1.correct}/${result1.total} | ${result2.name}: ${result2.correct}/${result2.total}
+            `;
+            
+            // Setzt das passende CSS für Erfolg oder Misserfolg
+            if (totalCorrect === totalTasks) {
+                resultMessage.className = 'result-message success';
+            } else {
+                resultMessage.className = 'result-message failure';
+            }
+            
+            resultMessage.innerHTML = messageContent.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); // Markdown für Fettdruck
+
+        }
+        
+        function toggleSolutions() {
+            // Task 1 Lösungen
+            const solutionSpansT1 = document.querySelectorAll('.matching-area .correct-answer');
+            // Task 2 Lösungen
+            const solutionSpansT2 = document.querySelectorAll('#task2 .correct-answer');
+            const inputElementsT2 = document.querySelectorAll('.synonym-input');
+            
+            const button = document.getElementById('solutionButton');
+            
+            // Prüfen Sie den aktuellen Zustand basierend auf dem Button-Text, da die CSS-Anzeige nicht sichtbar ist.
+            const isHidden = button.textContent === 'Lösungen anzeigen';
+
+            if (isHidden) {
+                // Anzeigen der Lösungen
+                solutionSpansT1.forEach(span => span.style.display = 'inline-block');
+                
+                inputElementsT2.forEach((input, index) => {
+                    const answer = input.getAttribute('data-answer');
+                    solutionSpansT2[index].textContent = `(Korrekte Antwort: ${answer})`;
+                    solutionSpansT2[index].style.display = 'inline-block';
+                });
+                
+                button.textContent = 'Lösungen verbergen';
+            } else {
+                // Verbergen der Lösungen
+                solutionSpansT1.forEach(span => span.style.display = 'none');
+                solutionSpansT2.forEach(span => span.style.display = 'none');
+                button.textContent = 'Lösungen anzeigen';
+            }
+        }
+
+
+        // #######################################################
+        // 4. INITIALISIERUNG
+        // #######################################################
+        
+        window.onload = () => {
+             renderMatching();
+             renderSynonyms();
+             // WICHTIG: Die Lösungen sind jetzt standardmäßig per CSS verborgen. 
+             // Hier muss KEIN toggleSolutions() aufgerufen werden.
+        }
+    </script>
+</body>
+</html>

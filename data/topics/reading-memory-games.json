@@ -1,0 +1,498 @@
+{
+  "id": "reading-memory-games",
+  "title": "Reading Comprehension: Memory Games",
+  "category": "Reading Comprehension",
+  "level": "B2 / Abschlussklasse",
+  "grade": "reading-comprehension",
+  "format": "reading-comprehension",
+  "type": "reading-comprehension",
+  "accentColor": "emerald",
+  "icon": "📖",
+  "description": "Interactive B2 Reading Comprehension ('Memory Games'): Matching Expressions (A–F with 0–7) & Finding Synonyms in Context (1–5).",
+  "instructions": "Read the article 'Memory Games' ([1]–[6]) and complete Task 1 (Matching Expressions A–F) and Task 2 (Find a Word or Expression 1–5).",
+  "rules": {
+    "title": "Reading Comprehension Strategy (B2 Exam Prep)",
+    "summary": "Lies zuerst den jeweiligen Abschnitt ([1]–[6]), auf den die Aufgabe verweist, und prüfe den genauen Satzkontext sowie die geforderte Wortart.",
+    "sections": [
+      {
+        "heading": "Strategie für Task 1 & Task 2",
+        "items": [
+          "**1. Task 1 (Matching Expressions A–F)**: Suche den Ausdruck im angegebenen Paragraphen (`[Sec 1]`–`[Sec 4]`) und gleiche die Bedeutung im Kontext mit den Definitionen `0–7` ab (Achtung: 2 Distraktoren werden nicht benötigt).",
+          "**2. Task 2 (Find a Word or Expression 1–5)**: Achte strikt auf die geforderte Wortart in Klammern (*noun, verb, adj, verb gerund form*) und übernimm das Wort exakt aus dem angegebenen Abschnitt."
+        ]
+      }
+    ]
+  },
+  "text": {
+    "title": "Memory Games",
+    "sections": [
+      {
+        "id": 1,
+        "marker": "[1]",
+        "content": "Most people have trouble remembering where they put their car keys, or if they turned their oven off. And yet an astonishing few can memorize entire decks of cards and long strings of random numbers. The documentary Memory Games offers a fascinating glimpse into the lives of these mind athletes as they compete for the title of World Memory Champion. The Post spoke with Nelson Cowan, a cognitive psychologist at the University of Missouri and two competitors profiled in the film – International Grandmaster of Memory Yanjaa Wintersoul, 30, and four-time USA Champion Nathan Dellis, 39 – for tips on how regular folks can improve their daily recall.",
+        "html": "Most people have trouble remembering where they put their car keys, or if they turned their oven off. And yet an astonishing few can memorize entire decks of cards and long strings of random numbers. The documentary <em>Memory Games</em> offers a fascinating glimpse into the lives of these mind athletes as they compete for the title of World Memory Champion. The Post spoke with Nelson Cowan, a cognitive psychologist at the University of Missouri and two competitors profiled in the film – International Grandmaster of Memory Yanjaa Wintersoul, 30, and four-time USA Champion Nathan Dellis, 39 – for tips on how regular folks can improve their daily recall."
+      },
+      {
+        "id": 2,
+        "marker": "[2]",
+        "content": "In high school Yanjaa Wintersoul would never have imagined that she would one day gain recognition for having one of the best memories in the world. She explains: “I almost didn’t graduate because I didn’t know how to make my knowledge of physics and chemistry stick. The moment when everything changed for me was several years later when I happened to pick up Joshua Foer’s bestseller on brain techniques. It delves into the science of what makes the human brain tick and helps ordinary people strengthen their memories. It was a revelation for me. I began using memorization rules while studying for my business degree in Stockholm and I finished in just two years.”",
+        "html": "In high school Yanjaa Wintersoul would never have imagined that she would one day gain recognition for having one of the best memories in the world. She explains: “I almost didn’t graduate because I didn’t know how to make my knowledge of physics and chemistry stick. The moment when everything changed for me was several years later when I happened to pick up Joshua Foer’s bestseller on brain techniques. It delves into the science of what makes the human brain tick and helps ordinary people strengthen their memories. It was a revelation for me. I began using memorization rules while studying for my business degree in Stockholm and I finished in just two years.”"
+      },
+      {
+        "id": 3,
+        "marker": "[3]",
+        "content": "Nelson Cowan, who does research on how the brain works, says: “It’s not like each memory takes a neuron and then that cell is used up. Imagine you experience a situation or get some information. Your brain first keeps them short-term in a system known as ‘working memory’. Later, if the information stays relevant, our brain encodes it in specific combinations of neurons; the memory becomes long-term.” Our brain can do that an infinite amount of times. From a scientific point of view, the number of facts stored in those patterns is also endless. “If you fill up your 128-gigabyte phone with images, you run out of storage capacity. Our brain doesn’t work like that. The more ‘pictures you take’ and the more you try to remember, the more you will remember,” Cowan adds.",
+        "html": "Nelson Cowan, who does research on how the brain works, says: “It’s not like each memory takes a neuron and then that cell is used up. Imagine you experience a situation or get some information. Your brain first keeps them short-term in a system known as ‘working memory’. Later, if the information stays relevant, our brain encodes it in specific combinations of neurons; the memory becomes long-term.” Our brain can do that an infinite amount of times. From a scientific point of view, the number of facts stored in those patterns is also endless. “If you fill up your 128-gigabyte phone with images, you run out of storage capacity. Our brain doesn’t work like that. The more ‘pictures you take’ and the more you try to remember, the more you will remember,” Cowan adds."
+      },
+      {
+        "id": 4,
+        "marker": "[4]",
+        "content": "While Yanjaa Wintersoul began competing when barely out of her teens, Nathan Dellis came to the sport a little later in life. “I started listening to people more actively when they were talking about things,” he explains. “Being mindful and paying attention are key to processing the information effectively. There’s plenty of useful daily information worth remembering, which many forget. Every person you meet, try to memorize their name,” advises Dellis. Challenging your brain on a permanent basis will likely yield amazing results. For instance, he has made a habit of memorizing license plate numbers when stuck in the rush hour. Enough shut-eye is also essential.",
+        "html": "While Yanjaa Wintersoul began competing when barely out of her teens, Nathan Dellis came to the sport a little later in life. “I started listening to people more actively when they were talking about things,” he explains. “Being mindful and paying attention are key to processing the information effectively. There’s plenty of useful daily information worth remembering, which many forget. Every person you meet, try to memorize their name,” advises Dellis. Challenging your brain on a permanent basis will likely yield amazing results. For instance, he has made a habit of memorizing license plate numbers when stuck in the rush hour. Enough shut-eye is also essential."
+      },
+      {
+        "id": 5,
+        "marker": "[5]",
+        "content": "Dellis, for example, attempts to get at least eight hours per night. When Wintersoul began making a name for herself in the world of competitions, reality shows also began calling. One day, a furniture giant wanted to hire her for an advertisement. They originally asked if she could remember their dining room collection in a week. “I said, ‘I think it would be fun if I learned your entire catalogue by heart.’ And I did, committing 328 pages to memory. Although I can’t recall every single item a year later, I do remember a good deal of it, particularly the pages featuring picture-perfect family scenes.",
+        "html": "Dellis, for example, attempts to get at least eight hours per night. When Wintersoul began making a name for herself in the world of competitions, reality shows also began calling. One day, a furniture giant wanted to hire her for an advertisement. They originally asked if she could remember their dining room collection in a week. “I said, ‘I think it would be fun if I learned your entire catalogue by heart.’ And I did, committing 328 pages to memory. Although I can’t recall every single item a year later, I do remember a good deal of it, particularly the pages featuring picture-perfect family scenes."
+      },
+      {
+        "id": 6,
+        "marker": "[6]",
+        "content": "Such emotions stick best with me. I think that’s the key to everybody’s memory, you have to make things truly matter to yourself.” Cowan confirms that memories depend on specific contexts. In a renowned study, participants who learned lists while scuba diving had better recall when they were underwater than when they were on land. Underwater or not – want to stop the did-I-remember-to-turn-off-the-oven paranoia, or at least get a better handle on people’s names? Keep at it! Even if you aren’t born with remarkable talent, with the right strategies, you can become a memory champion too.",
+        "html": "Such emotions stick best with me. I think that’s the key to everybody’s memory, you have to make things truly matter to yourself.” Cowan confirms that memories depend on specific contexts. In a renowned study, participants who learned lists while scuba diving had better recall when they were underwater than when they were on land. Underwater or not – want to stop the did-I-remember-to-turn-off-the-oven paranoia, or at least get a better handle on people’s names? Keep at it! Even if you aren’t born with remarkable talent, with the right strategies, you can become a memory champion too."
+      }
+    ]
+  },
+  "task1_matching": {
+    "title": "Task 1: Matching Expressions (A-F with 0-7)",
+    "instruction": "Match the expressions (A – F) as used in the text with their corresponding definitions (0 – 7). Be careful: There are two definitions that you do not need.",
+    "expressions": [
+      {
+        "id": "A",
+        "label": "A. astonishing few [Sec 1]",
+        "shortLabel": "A. astonishing few",
+        "section": 1,
+        "answer": 3,
+        "acceptedAnswers": [
+          "3"
+        ],
+        "sectionNumber": 1
+      },
+      {
+        "id": "B",
+        "label": "B. gain recognition [Sec 2]",
+        "shortLabel": "B. gain recognition",
+        "section": 2,
+        "answer": 1,
+        "acceptedAnswers": [
+          "1"
+        ],
+        "sectionNumber": 2
+      },
+      {
+        "id": "C",
+        "label": "C. make my knowledge stick [Sec 2]",
+        "shortLabel": "C. make my knowledge stick",
+        "section": 2,
+        "answer": 2,
+        "acceptedAnswers": [
+          "2"
+        ],
+        "sectionNumber": 2
+      },
+      {
+        "id": "D",
+        "label": "D. brain tick [Sec 2]",
+        "shortLabel": "D. brain tick",
+        "section": 2,
+        "answer": 5,
+        "acceptedAnswers": [
+          "5"
+        ],
+        "sectionNumber": 2
+      },
+      {
+        "id": "E",
+        "label": "E. on a permanent basis [Sec 4]",
+        "shortLabel": "E. on a permanent basis",
+        "section": 4,
+        "answer": 6,
+        "acceptedAnswers": [
+          "6"
+        ],
+        "sectionNumber": 4
+      },
+      {
+        "id": "F",
+        "label": "F. shut-eye [Sec 4]",
+        "shortLabel": "F. shut-eye",
+        "section": 4,
+        "answer": 4,
+        "acceptedAnswers": [
+          "4"
+        ],
+        "sectionNumber": 4
+      }
+    ],
+    "definitions": [
+      {
+        "number": 0,
+        "text": "to find an object after a long search.",
+        "isDistractor": true,
+        "note": "Do not need"
+      },
+      {
+        "number": 1,
+        "text": "to become publicly acknowledged for an achievement.",
+        "isDistractor": false,
+        "matchedBy": "B"
+      },
+      {
+        "number": 2,
+        "text": "to be understood or retained in memory.",
+        "isDistractor": false,
+        "matchedBy": "C"
+      },
+      {
+        "number": 3,
+        "text": "a surprisingly small number of people.",
+        "isDistractor": false,
+        "matchedBy": "A"
+      },
+      {
+        "number": 4,
+        "text": "sleep.",
+        "isDistractor": false,
+        "matchedBy": "F"
+      },
+      {
+        "number": 5,
+        "text": "to understand how the brain functions.",
+        "isDistractor": false,
+        "matchedBy": "D"
+      },
+      {
+        "number": 6,
+        "text": "continually or constantly.",
+        "isDistractor": false,
+        "matchedBy": "E"
+      },
+      {
+        "number": 7,
+        "text": "to remember something perfectly.",
+        "isDistractor": true,
+        "note": "Do not need"
+      }
+    ],
+    "solution_mapping": {
+      "A": 3,
+      "B": 1,
+      "C": 2,
+      "D": 5,
+      "E": 6,
+      "F": 4
+    },
+    "distractors": [
+      0,
+      7
+    ]
+  },
+  "task2_vocabulary": {
+    "title": "Task 2: Find a Word or Expression",
+    "instruction": "Find a word or expression in the text that means the same as each of the following words (1 – 5). The section where the word is located is indicated.",
+    "items": [
+      {
+        "id": 1,
+        "prompt": "1. remembering (noun) [Section 1]",
+        "target": "remembering (noun)",
+        "context": "[Section 1]",
+        "section": 1,
+        "answer": "recall",
+        "acceptedAnswers": [
+          "recall",
+          "daily recall"
+        ],
+        "sectionNumber": 1
+      },
+      {
+        "id": 2,
+        "prompt": "2. understand how it functions (verb) [Section 2]",
+        "target": "understand how it functions (verb)",
+        "context": "[Section 2]",
+        "section": 2,
+        "answer": "tick",
+        "acceptedAnswers": [
+          "tick",
+          "to tick"
+        ],
+        "sectionNumber": 2
+      },
+      {
+        "id": 3,
+        "prompt": "3. limitless (adj) [Section 3]",
+        "target": "limitless (adj)",
+        "context": "[Section 3]",
+        "section": 3,
+        "answer": "infinite",
+        "acceptedAnswers": [
+          "infinite",
+          "endless"
+        ],
+        "sectionNumber": 3
+      },
+      {
+        "id": 4,
+        "prompt": "4. very good, talented (adj) [Section 6]",
+        "target": "very good, talented (adj)",
+        "context": "[Section 6]",
+        "section": 6,
+        "answer": "remarkable",
+        "acceptedAnswers": [
+          "remarkable"
+        ],
+        "sectionNumber": 6
+      },
+      {
+        "id": 5,
+        "prompt": "5. to be committed to (verb gerund form) [Section 5]",
+        "target": "to be committed to (verb gerund form)",
+        "context": "[Section 5]",
+        "section": 5,
+        "answer": "committing",
+        "acceptedAnswers": [
+          "committing",
+          "committing to memory"
+        ],
+        "sectionNumber": 5
+      }
+    ]
+  },
+  "exercises": [
+    {
+      "id": "reading-memory-games-main",
+      "title": "Memory Games – Task 1 (Matching) & Task 2 (Vocabulary)",
+      "type": "reading_comprehension",
+      "instruction": "Read the text 'Memory Games' ([1]–[6]) and complete Task 1 (Matching Expressions A–F with 0–7) and Task 2 (Find a Word or Expression 1–5).",
+      "sentences": [
+        {
+          "id": "t1_A",
+          "sentence": "A. astonishing few [Sec 1] → Definition {gap}",
+          "text": "A. astonishing few [Sec 1] → Definition {{0}}",
+          "gaps": [
+            {
+              "id": "match_A",
+              "prompt": "A. astonishing few [Sec 1]",
+              "answer": "3",
+              "acceptedAnswers": [
+                "3"
+              ],
+              "solutions": [
+                "3"
+              ],
+              "explanation": "Korrekte Zuordnung für A. astonishing few: Nummer 3"
+            }
+          ]
+        },
+        {
+          "id": "t1_B",
+          "sentence": "B. gain recognition [Sec 2] → Definition {gap}",
+          "text": "B. gain recognition [Sec 2] → Definition {{0}}",
+          "gaps": [
+            {
+              "id": "match_B",
+              "prompt": "B. gain recognition [Sec 2]",
+              "answer": "1",
+              "acceptedAnswers": [
+                "1"
+              ],
+              "solutions": [
+                "1"
+              ],
+              "explanation": "Korrekte Zuordnung für B. gain recognition: Nummer 1"
+            }
+          ]
+        },
+        {
+          "id": "t1_C",
+          "sentence": "C. make my knowledge stick [Sec 2] → Definition {gap}",
+          "text": "C. make my knowledge stick [Sec 2] → Definition {{0}}",
+          "gaps": [
+            {
+              "id": "match_C",
+              "prompt": "C. make my knowledge stick [Sec 2]",
+              "answer": "2",
+              "acceptedAnswers": [
+                "2"
+              ],
+              "solutions": [
+                "2"
+              ],
+              "explanation": "Korrekte Zuordnung für C. make my knowledge stick: Nummer 2"
+            }
+          ]
+        },
+        {
+          "id": "t1_D",
+          "sentence": "D. brain tick [Sec 2] → Definition {gap}",
+          "text": "D. brain tick [Sec 2] → Definition {{0}}",
+          "gaps": [
+            {
+              "id": "match_D",
+              "prompt": "D. brain tick [Sec 2]",
+              "answer": "5",
+              "acceptedAnswers": [
+                "5"
+              ],
+              "solutions": [
+                "5"
+              ],
+              "explanation": "Korrekte Zuordnung für D. brain tick: Nummer 5"
+            }
+          ]
+        },
+        {
+          "id": "t1_E",
+          "sentence": "E. on a permanent basis [Sec 4] → Definition {gap}",
+          "text": "E. on a permanent basis [Sec 4] → Definition {{0}}",
+          "gaps": [
+            {
+              "id": "match_E",
+              "prompt": "E. on a permanent basis [Sec 4]",
+              "answer": "6",
+              "acceptedAnswers": [
+                "6"
+              ],
+              "solutions": [
+                "6"
+              ],
+              "explanation": "Korrekte Zuordnung für E. on a permanent basis: Nummer 6"
+            }
+          ]
+        },
+        {
+          "id": "t1_F",
+          "sentence": "F. shut-eye [Sec 4] → Definition {gap}",
+          "text": "F. shut-eye [Sec 4] → Definition {{0}}",
+          "gaps": [
+            {
+              "id": "match_F",
+              "prompt": "F. shut-eye [Sec 4]",
+              "answer": "4",
+              "acceptedAnswers": [
+                "4"
+              ],
+              "solutions": [
+                "4"
+              ],
+              "explanation": "Korrekte Zuordnung für F. shut-eye: Nummer 4"
+            }
+          ]
+        },
+        {
+          "id": "t2_1",
+          "sentence": "1. remembering (noun) [Section 1]: {gap}",
+          "text": "1. remembering (noun) [Section 1]: {{0}}",
+          "gaps": [
+            {
+              "id": "syn_1",
+              "prompt": "1. remembering (noun) [Section 1]",
+              "answer": "recall",
+              "acceptedAnswers": [
+                "recall",
+                "daily recall"
+              ],
+              "solutions": [
+                "recall",
+                "daily recall"
+              ],
+              "explanation": "Gesuchtes Wort im Text ([Section 1]): recall"
+            }
+          ]
+        },
+        {
+          "id": "t2_2",
+          "sentence": "2. understand how it functions (verb) [Section 2]: {gap}",
+          "text": "2. understand how it functions (verb) [Section 2]: {{0}}",
+          "gaps": [
+            {
+              "id": "syn_2",
+              "prompt": "2. understand how it functions (verb) [Section 2]",
+              "answer": "tick",
+              "acceptedAnswers": [
+                "tick",
+                "to tick"
+              ],
+              "solutions": [
+                "tick",
+                "to tick"
+              ],
+              "explanation": "Gesuchtes Wort im Text ([Section 2]): tick"
+            }
+          ]
+        },
+        {
+          "id": "t2_3",
+          "sentence": "3. limitless (adj) [Section 3]: {gap}",
+          "text": "3. limitless (adj) [Section 3]: {{0}}",
+          "gaps": [
+            {
+              "id": "syn_3",
+              "prompt": "3. limitless (adj) [Section 3]",
+              "answer": "infinite",
+              "acceptedAnswers": [
+                "infinite",
+                "endless"
+              ],
+              "solutions": [
+                "infinite",
+                "endless"
+              ],
+              "explanation": "Gesuchtes Wort im Text ([Section 3]): infinite"
+            }
+          ]
+        },
+        {
+          "id": "t2_4",
+          "sentence": "4. very good, talented (adj) [Section 6]: {gap}",
+          "text": "4. very good, talented (adj) [Section 6]: {{0}}",
+          "gaps": [
+            {
+              "id": "syn_4",
+              "prompt": "4. very good, talented (adj) [Section 6]",
+              "answer": "remarkable",
+              "acceptedAnswers": [
+                "remarkable"
+              ],
+              "solutions": [
+                "remarkable"
+              ],
+              "explanation": "Gesuchtes Wort im Text ([Section 6]): remarkable"
+            }
+          ]
+        },
+        {
+          "id": "t2_5",
+          "sentence": "5. to be committed to (verb gerund form) [Section 5]: {gap}",
+          "text": "5. to be committed to (verb gerund form) [Section 5]: {{0}}",
+          "gaps": [
+            {
+              "id": "syn_5",
+              "prompt": "5. to be committed to (verb gerund form) [Section 5]",
+              "answer": "committing",
+              "acceptedAnswers": [
+                "committing",
+                "committing to memory"
+              ],
+              "solutions": [
+                "committing",
+                "committing to memory"
+              ],
+              "explanation": "Gesuchtes Wort im Text ([Section 5]): committing"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

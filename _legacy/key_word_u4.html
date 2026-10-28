@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key-Word Transformation (Unit 4)</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Futuristische/Stylische Rosa-Palette (Unit 4) */
+        :root {
+            --color-primary: #FF6B7C; /* Leuchtendes Koralle-Pink */
+            --color-secondary: #C43D53; /* Dunklere Akzentfarbe */
+            --color-background: #fffafa; /* Sehr helles Weiß-Rosa */
+            --color-text: #263238; /* Dunkelgrau */
+            --color-success: #43a047; /* Grün für Korrekt */
+            --color-error: #e53935; /* Rot für Fehler */
+            --color-card: #ffffff; /* Weiße Kartenbasis */
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 20px;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, var(--color-background) 0%, var(--color-primary) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-container {
+            background: var(--color-card);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            width: 95%;
+            margin-top: 5vh;
+            border: 1px solid var(--color-secondary);
+        }
+
+        .title {
+            font-family: 'Caveat', cursive;
+            font-size: 38px;
+            font-weight: 600;
+            color: var(--color-secondary);
+            margin-bottom: 10px;
+            text-align: center; 
+            border-bottom: 2px solid var(--color-secondary);
+            padding-bottom: 10px;
+        }
+
+        .instructions {
+            text-align: center;
+            font-size: 14px;
+            color: var(--color-text);
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        
+        /* MENU STYLING */
+        #menuScreen {
+            text-align: center;
+        }
+
+        .difficulty-group {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            background-color: var(--color-background);
+        }
+
+        .difficulty-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .menu-buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+
+        .task-button {
+            background-color: var(--color-secondary);
+            color: white;
+            border: none;
+            padding: 15px 5px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-button:hover {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        /* AUFGABEN-STYLING (TASK SCREEN) */
+        #taskScreen {
+            display: none;
+        }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .task-title-detail {
+            font-size: 1.6em;
+            color: var(--color-secondary);
+            font-weight: 700;
+        }
+
+        .back-button {
+            background-color: #9e9e9e; /* Grau */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        /* LÜCKENTEXT STYLING */
+        .exercise-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exercise-item {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 0;
+            border-bottom: 1px dashed #ccc;
+            text-align: left;
+        }
+        
+        .exercise-item:last-child {
+            border-bottom: none;
+        }
+
+        .number {
+            font-weight: bold;
+            color: var(--color-secondary);
+            font-size: 1.2em;
+            width: 30px;
+            flex-shrink: 0;
+            margin-bottom: 10px;
+        }
+
+        .original-sentence {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .transformation {
+            display: flex;
+            align-items: center;
+        }
+
+        .transformation span:first-child {
+             padding-right: 5px; /* Abstand vor dem Input */
+        }
+        
+        .transformation span:last-child {
+             padding-left: 5px; /* Abstand nach dem Input */
+        }
+
+        .gap-input {
+            width: 350px; 
+            padding: 8px 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.2s;
+            margin-right: 5px;
+            margin-left: 5px;
+            text-align: center;
+        }
+        .gap-input:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            box-shadow: 0 0 5px rgba(196, 61, 83, 0.5);
+        }
+        
+        .hint {
+            font-weight: bold;
+            color: var(--color-secondary);
+            font-size: 1.1em;
+            width: 120px;
+            flex-shrink: 0;
+            text-align: right;
+            margin-left: 10px;
+        }
+
+        /* CHECK BUTTON & FEEDBACK */
+        .controls {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .check-button {
+            background-color: var(--color-secondary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .check-button:hover {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        .result-message {
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: 700;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .result-message.success {
+            background-color: #e8f5e9; 
+            color: var(--color-success);
+        }
+
+        .result-message.failure {
+            background-color: #fbe9e7;
+            color: var(--color-error);
+        }
+
+        /* LÖSUNGSANZEIGE */
+        .show-solution {
+            text-decoration: underline;
+            color: var(--color-secondary);
+            cursor: pointer;
+            margin-left: 15px;
+        }
+        
+        .correct-answer {
+            color: var(--color-success);
+            font-weight: bold;
+            margin-left: 10px;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="main-container">
+        <h1 class="title">Key-Word Transformation Challenge – Unit 4</h1>
+        <p class="instructions">Complete the second sentence so that it has a similar meaning to the first, using the KEY WORD given. Use between **two and five words** including the key word. The key word must **not** be changed.</p>
+
+        <!-- MENU SCREEN -->
+        <div id="menuScreen">
+            
+            <div class="difficulty-group">
+                <div class="difficulty-title">Beginner (Tasks 1-4)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(1)">Task 1</button>
+                    <button class="task-button" onclick="loadTask(2)">Task 2</button>
+                    <button class="task-button" onclick="loadTask(3)">Task 3</button>
+                    <button class="task-button" onclick="loadTask(4)">Task 4</button>
+                </div>
+            </div>
+
+            <div class="difficulty-group">
+                <div class="difficulty-title">Intermediate (Tasks 5-8)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(5)">Task 5</button>
+                    <button class="task-button" onclick="loadTask(6)">Task 6</button>
+                    <button class="task-button" onclick="loadTask(7)">Task 7</button>
+                    <button class="task-button" onclick="loadTask(8)">Task 8</button>
+                </div>
+            </div>
+
+            <div class="difficulty-group">
+                <div class="difficulty-title">Expert (Tasks 9-10)</div>
+                <div class="menu-buttons-grid">
+                    <button class="task-button" onclick="loadTask(9)">Task 9</button>
+                    <button class="task-button" onclick="loadTask(10)">Task 10</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- TASK SCREEN -->
+        <div id="taskScreen">
+            <div class="task-header">
+                <button class="back-button" onclick="showMenu()">← Zurück zur Auswahl</button>
+                <div class="task-title-detail" id="currentTaskTitle">Task X - Level Y</div>
+            </div>
+
+            <ul class="exercise-list" id="exerciseList">
+                <!-- Exercises will be generated here -->
+            </ul>
+
+            <div class="controls">
+                <button class="check-button" onclick="checkAllAnswers()">Prüfen</button>
+                <span class="show-solution" id="solutionButton" onclick="toggleSolutions()">Lösungen anzeigen</span>
+                <div class="result-message" id="resultMessage" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // #######################################################
+        // 1. ÜBUNGSDATEN (10 Tasks à 5 Sätze = 50 Transformationen für Unit 4)
+        // KORRIGIERTE STRUKTUR
+        // #######################################################
+        const allTasks = {
+            // --- BEGINNER TASKS (1-4) ---
+            1: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence1: "The doctor examined the patient's knee very carefully.", sentence2_part1: "The doctor carried", sentence2_part2: "the patient's knee.", key_word: "EXAMINATION", answer: "out a careful examination of" }, // 5 words
+                    { id: 2, sentence1: "They decided not to participate in the local election.", sentence2_part1: "They decided", sentence2_part2: "the local election.", key_word: "PART", answer: "not to take part in" }, // 5 words
+                    { id: 3, sentence1: "The manager intends to transform the office space soon.", sentence2_part1: "The manager", sentence2_part2: "to transform the office space soon.", key_word: "IS", answer: "is intending" }, // 2 words
+                    { id: 4, sentence1: "The amount of toxic waste was more than we had anticipated.", sentence2_part1: "The amount of toxic waste", sentence2_part2: "anticipated.", key_word: "GREATER", answer: "was greater than" }, // 3 words
+                    { id: 5, sentence1: "The company will reduce the number of employees next month.", sentence2_part1: "The company will", sentence2_part2: "the number of employees next month.", key_word: "DOWN", answer: "cut down on" } // 3 words
+                ]
+            },
+            2: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence1: "The military leader said he would not surrender his command easily.", sentence2_part1: "The military leader said he would not", sentence2_part2: "his command easily.", key_word: "DOWN", answer: "back down" }, // 2 words
+                    { id: 2, sentence1: "We must unite now, otherwise we will lose the battle.", sentence2_part1: "We will lose the battle", sentence2_part2: "we unite now.", key_word: "UNLESS", answer: "unless" }, // 1 word
+                    { id: 3, sentence1: "They don't often show such enthusiasm for a new project.", sentence2_part1: "", sentence2_part2: "they show such enthusiasm for a new project.", key_word: "RARELY", answer: "Rarely do" }, // 2 words
+                    { id: 4, sentence1: "I wish I had been more active in the climate movement.", sentence2_part1: "I wish I", sentence2_part2: "the climate movement.", key_word: "PART", answer: "had taken part in" }, // 4 words
+                    { id: 5, sentence1: "The environmental damage was very intense and required immediate action.", sentence2_part1: "The environmental damage was a", sentence2_part2: "and required immediate action.", key_word: "MAJOR", answer: "major issue" } // 2 words
+                ]
+            },
+            3: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence1: "She has the ability to organize everything systematically and logically.", sentence2_part1: "She can", sentence2_part2: "everything systematically and logically.", key_word: "SYSTEMATIC", answer: "organize" }, // 1 word
+                    { id: 2, sentence1: "The mayor promised to take action immediately to tackle the problem.", sentence2_part1: "The mayor promised to", sentence2_part2: "immediately to tackle the problem.", key_word: "MEASURES", answer: "take measures" }, // 2 words
+                    { id: 3, sentence1: "The old warehouse is believed to have been renovated last year.", sentence2_part1: "It", sentence2_part2: "the old warehouse was renovated last year.", key_word: "IS", answer: "is believed that" }, // 3 words
+                    { id: 4, sentence1: "It's obvious that the project manager exaggerates the difficulties.", sentence2_part1: "It", sentence2_part2: "that the project manager exaggerates the difficulties.", key_word: "CLEAR", answer: "is clear" }, // 2 words
+                    { id: 5, sentence1: "I regret not having invested in solar power years ago.", sentence2_part1: "", sentence2_part2: "I had invested in solar power years ago.", key_word: "WISH", answer: "I wish" } // 2 words
+                ]
+            },
+            4: {
+                level: "Beginner",
+                exercises: [
+                    { id: 1, sentence1: "The police searched the entire area to find evidence of the crime.", sentence2_part1: "The police searched the entire area to", sentence2_part2: "the crime.", key_word: "INVESTIGATE", answer: "investigate" }, // 1 word
+                    { id: 2, sentence1: "He said the final decision was his own and was not open to question.", sentence2_part1: "He said the decision was", sentence2_part2: "and was not open to question.", key_word: "FINAL", answer: "final" }, // 1 word
+                    { id: 3, sentence1: "She has been a loyal member of the general assembly for five years.", sentence2_part1: "She has", sentence2_part2: "the general assembly for five years.", key_word: "MEMBER", answer: "been a member of" }, // 4 words
+                    { id: 4, sentence1: "He always tries to get involved in the discussion about green energy.", sentence2_part1: "He always tries to", sentence2_part2: "in the discussion about green energy.", key_word: "PART", answer: "take part" }, // 2 words
+                    { id: 5, sentence1: "The two organizations worked together to achieve a great outcome.", sentence2_part1: "The two organizations worked", sentence2_part2: "to achieve a great outcome.", key_word: "COOPERATION", answer: "in cooperation" } // 2 words
+                ]
+            },
+            
+            // --- INTERMEDIATE TASKS (5-8) ---
+            5: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence1: "The lawyer was able to prove the client's innocence.", sentence2_part1: "The lawyer was", sentence2_part2: "to prove the client's innocence.", key_word: "EVIDENCE", answer: "able to find evidence" }, // 4 words
+                    { id: 2, sentence1: "The amount of carbon dioxide in the air has steadily increased.", sentence2_part1: "There has been a steady", sentence2_part2: "the amount of carbon dioxide in the air.", key_word: "RISE", answer: "rise in" }, // 2 words
+                    { id: 3, sentence1: "Only after the negotiations did they approve the budget.", sentence2_part1: "They", sentence2_part2: "approve the budget until after the negotiations.", key_word: "NOT", answer: "did not" }, // 2 words
+                    { id: 4, sentence1: "I wish I could have witnessed the transition to democracy.", sentence2_part1: "", sentence2_part2: "I could have witnessed the transition to democracy.", key_word: "COULD", answer: "If only" }, // 2 words
+                    { id: 5, sentence1: "The construction team was able to navigate the difficult terrain without any problems.", sentence2_part1: "The construction team", sentence2_part2: "navigating the difficult terrain.", key_word: "DIFFICULTY", answer: "had no difficulty" } // 3 words
+                ]
+            },
+            6: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence1: "The old man was too weak to lift the heavy shoebox.", sentence2_part1: "The old man", sentence2_part2: "to lift the heavy shoebox.", key_word: "STRENGTH", answer: "did not have the strength" }, // 5 words
+                    { id: 2, sentence1: "The manager's intention was to transform the office into an open space.", sentence2_part1: "The manager's plan", sentence2_part2: "transforming the office into an open space.", key_word: "AIMED", answer: "was aimed at" }, // 3 words
+                    { id: 3, sentence1: "We must accept that the old process is now irrelevant.", sentence2_part1: "We must", sentence2_part2: "the irrelevance of the old process.", key_word: "TERMS", answer: "come to terms with" }, // 4 words
+                    { id: 4, sentence1: "The news of the scandal came as a great shock to all the activists.", sentence2_part1: "All the activists", sentence2_part2: "by the news of the scandal.", key_word: "TAKEN", answer: "were taken aback" }, // 3 words
+                    { id: 5, sentence1: "They finally made a compromise on the details of the agreement.", sentence2_part1: "They finally made a", sentence2_part2: "on the details of the agreement.", key_word: "TRADE", answer: "trade-off" } // 2 words
+                ]
+            },
+            7: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence1: "I regret not having been open-minded about her proposal.", sentence2_part1: "", sentence2_part2: "I had been open-minded about her proposal.", key_word: "ONLY", answer: "If only" }, // 2 words
+                    { id: 2, sentence1: "He rarely makes a mistake when transcribing data.", sentence2_part1: "It is", sentence2_part2: "that he makes a mistake when transcribing data.", key_word: "SELDOM", answer: "seldom" }, // 1 word
+                    { id: 3, sentence1: "I think you should reconsider your intention to quit the job.", sentence2_part1: "I think", sentence2_part2: "reconsider your intention to quit the job.", key_word: "BETTER", answer: "you had better" }, // 3 words
+                    { id: 4, sentence1: "He said the sheer volume of toxic waste was hard to tackle.", sentence2_part1: "He said it was hard work", sentence2_part2: "the sheer volume of toxic waste.", key_word: "TACKLING", answer: "tackling" }, // 1 word
+                    { id: 5, sentence1: "They will not approve the funds unless all the candidates are examined.", sentence2_part1: "They will not approve the funds", sentence2_part2: "all the candidates are examined.", key_word: "IF", answer: "if" } // 1 word
+                ]
+            },
+            8: {
+                level: "Intermediate",
+                exercises: [
+                    { id: 1, sentence1: "It's possible that the colony will be successful, but it's doubtful.", sentence2_part1: "There", sentence2_part2: "of the colony's success, but it's doubtful.", key_word: "LIKELIHOOD", answer: "is little likelihood" }, // 3 words
+                    { id: 2, sentence1: "They said the new measure was effective, and what's more, eco-friendly.", sentence2_part1: "The new measure was effective,", sentence2_part2: "eco-friendly.", key_word: "AND", answer: "and also" }, // 2 words
+                    { id: 3, sentence1: "The team's manager is the person who will lead the transformation.", sentence2_part1: "The team's manager is the person", sentence2_part2: "charge of the transformation.", key_word: "IN", answer: "in" }, // 1 word
+                    { id: 4, sentence1: "We must preserve all the information from the initial examination.", sentence2_part1: "All the information from the initial examination", sentence2_part2: "preserved.", key_word: "MUST", answer: "must be" }, // 2 words
+                    { id: 5, sentence1: "The scientist was accused of exaggerating the amount of damage.", sentence2_part1: "The scientist faced the", sentence2_part2: "of exaggerating the amount of damage.", key_word: "ACCUSATION", answer: "accusation" } // 1 word
+                ]
+            },
+
+            // --- EXPERT TASKS (9-10) ---
+            9: {
+                level: "Expert",
+                exercises: [
+                    { id: 1, sentence1: "The politician failed to accept that the project was completely meaningless.", sentence2_part1: "The politician failed to accept the", sentence2_part2: "of the project.", key_word: "MEANING", answer: "lack of meaning" }, // 3 words
+                    { id: 2, sentence1: "I regret not having been able to visit the research laboratory earlier.", sentence2_part1: "", sentence2_part2: "I could have visited the research laboratory earlier.", key_word: "ONLY", answer: "If only" }, // 2 words
+                    { id: 3, sentence1: "They had no choice but to accept the unjust conditions of the contract.", sentence2_part1: "They", sentence2_part2: "to accept the unjust conditions of the contract.", key_word: "HAD", answer: "had no option but" }, // 4 words
+                    { id: 4, sentence1: "The new eco-friendly policy is now being systematically implemented.", sentence2_part1: "The new eco-friendly policy", sentence2_part2: "out systematically.", key_word: "CARRIED", answer: "is now being carried" }, // 4 words
+                    { id: 5, sentence1: "The only thing he was able to recover was the small hard hat.", sentence2_part1: "He was able to recover", sentence2_part2: "the small hard hat.", key_word: "BUT", answer: "nothing but" } // 2 words
+                ]
+            },
+            10: {
+                level: "Expert",
+                exercises: [
+                    { id: 1, sentence1: "The sheer volume of floodwater was greater than anyone had prepared for.", sentence2_part1: "The sheer volume of floodwater was greater", sentence2_part2: "anyone had prepared for.", key_word: "ACCOUNT", answer: "on account of" }, // 3 words
+                    { id: 2, sentence1: "The team will probably not succeed without additional funding.", sentence2_part1: "The team will not succeed", sentence2_part2: "they receive additional funding.", key_word: "UNLESS", answer: "unless" }, // 1 word
+                    { id: 3, sentence1: "His new role involves leading the entire logistics department.", sentence2_part1: "His new role involves him", sentence2_part2: "the entire logistics department.", key_word: "IN", answer: "in leading" }, // 2 words
+                    { id: 4, sentence1: "It's possible that the new measure will be approved next week.", sentence2_part1: "There", sentence2_part2: "the new measure being approved next week.", key_word: "POSSIBILITY", answer: "is a possibility of" }, // 4 words
+                    { id: 5, sentence1: "The old man was too weak to manoeuvre the heavy machinery.", sentence2_part1: "The old man did", sentence2_part2: "to manoeuvre the heavy machinery.", key_word: "STRENGTH", answer: "not have the strength" } // 4 words
+                ]
+            }
+        };
+
+        let currentTaskData = [];
+        let currentTaskID = 0;
+        
+        const menuScreen = document.getElementById('menuScreen');
+        const taskScreen = document.getElementById('taskScreen');
+        const exerciseList = document.getElementById('exerciseList');
+        const currentTaskTitle = document.getElementById('currentTaskTitle');
+        const resultMessage = document.getElementById('resultMessage');
+
+        // #######################################################
+        // 2. STEUERUNG
+        // #######################################################
+        
+        function showMenu() {
+            menuScreen.style.display = 'block';
+            taskScreen.style.display = 'none';
+            resultMessage.style.display = 'none';
+        }
+
+        function loadTask(taskID) {
+            currentTaskID = taskID;
+            const task = allTasks[taskID];
+            currentTaskData = task.exercises;
+            
+            // Bestimmt das Level für die Anzeige
+            let level;
+            if (taskID >= 1 && taskID <= 4) level = "Beginner";
+            else if (taskID >= 5 && taskID <= 8) level = "Intermediate";
+            else level = "Expert";
+
+            currentTaskTitle.textContent = `Task ${taskID} - ${level}`;
+            
+            // RENDERING MIT NEUER DREI-TEILIGER SATZSTRUKTUR
+            exerciseList.innerHTML = currentTaskData.map(ex => {
+                return `
+                    <li class="exercise-item">
+                        <span class="number">${ex.id}.</span>
+                        <span class="original-sentence">${ex.sentence1}</span>
+                        <div class="transformation">
+                            <span>${ex.sentence2_part1}</span>
+                            <input type="text" id="input-${ex.id}" class="gap-input" data-id="${ex.id}" placeholder="${ex.key_word} muss enthalten sein">
+                            <span>${ex.sentence2_part2}</span>
+                            <span class="hint">(${ex.key_word})</span>
+                        </div>
+                        <span id="solution-${ex.id}" class="correct-answer">Lösung: ${ex.answer.split(' ').length} Wörter, inkl. KEY WORD. Korrekt: ${ex.answer}</span>
+                    </li>
+                `;
+            }).join('');
+
+            // Ansicht wechseln und Lösungen verstecken
+            menuScreen.style.display = 'none';
+            taskScreen.style.display = 'block';
+            toggleSolutions(true); // Versteckt Lösungen beim Start des Tasks
+            resultMessage.style.display = 'none';
+        }
+
+        // #######################################################
+        // 3. LOGIK UND PRÜFUNG
+        // #######################################################
+
+        function checkAllAnswers() {
+            let correctCount = 0;
+            const totalCount = currentTaskData.length;
+            const rootStyles = getComputedStyle(document.documentElement);
+            const varColorSuccess = rootStyles.getPropertyValue('--color-success');
+            const varColorError = rootStyles.getPropertyValue('--color-error');
+
+            currentTaskData.forEach(ex => {
+                const inputElement = document.getElementById(`input-${ex.id}`);
+                const userAnswer = inputElement.value.trim().toLowerCase();
+                const correctAnswer = ex.answer.toLowerCase();
+                
+                // Styling zurücksetzen
+                inputElement.style.borderColor = '#ccc';
+
+                const isCorrect = (userAnswer === correctAnswer); 
+
+                if (isCorrect) {
+                    correctCount++;
+                    inputElement.style.borderColor = varColorSuccess;
+                } else if (userAnswer.length > 0) {
+                    inputElement.style.borderColor = varColorError;
+                }
+            });
+
+            // Ergebnis anzeigen
+            resultMessage.style.display = 'block';
+            resultMessage.textContent = `Ergebnis für Task ${currentTaskID}: ${correctCount} von ${totalCount} korrekt.`;
+
+            if (correctCount === totalCount) {
+                resultMessage.className = 'result-message success';
+                resultMessage.textContent = `Perfekt! Task ${currentTaskID} vollständig korrekt gelöst.`;
+            } else {
+                resultMessage.className = 'result-message failure';
+            }
+        }
+        
+        function toggleSolutions(hideOnly = false) {
+            const solutionSpans = document.querySelectorAll('.correct-answer');
+            const button = document.getElementById('solutionButton');
+            
+            let isHidden = solutionSpans.length > 0 && (solutionSpans[0].style.display === 'none' || solutionSpans[0].style.display === '');
+
+            if (hideOnly) {
+                solutionSpans.forEach(span => span.style.display = 'none');
+                button.textContent = 'Lösungen anzeigen';
+                return;
+            }
+
+            if (isHidden) {
+                solutionSpans.forEach(span => span.style.display = 'block');
+                button.textContent = 'Lösungen verbergen';
+            } else {
+                solutionSpans.forEach(span => span.style.display = 'none');
+                button.textContent = 'Lösungen anzeigen';
+            }
+        }
+
+        // #######################################################
+        // 4. INITIALISIERUNG
+        // #######################################################
+        
+        window.onload = () => {
+             showMenu();
+        }
+    </script>
+</body>
+</html>

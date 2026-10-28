@@ -1,0 +1,450 @@
+{
+  "id": "reading-extreme-sports",
+  "title": "Reading Comprehension: Pushing the Limits",
+  "category": "Reading Comprehension",
+  "level": "B2 / Abschlussklasse",
+  "grade": "reading-comprehension",
+  "description": "Explore the psychological motivation and meticulous preparation behind extreme sports athletes.",
+  "text": {
+    "title": "Pushing the Limits: The Psychology of Extreme Sports",
+    "sections": [
+      {
+        "number": 1,
+        "label": "[1]",
+        "content": "From scaling sheer vertical cliffs without ropes to leaping off mountain peaks in wingsuits, extreme athletes regularly court danger in ways that baffle the average observer. Popular culture frequently stereotypes these individuals as reckless thrill-seekers with an uncontrollable death wish. However, sports psychologists who study high-risk disciplines paint a radically different picture: far from acting on impulse, elite performers operate with exceptional discipline, emotional composure, and analytical rigor."
+      },
+      {
+        "number": 2,
+        "label": "[2]",
+        "content": "Neurological research reveals that the urge to engage in risky pursuits is partly hardwired. Sensation seekers often possess neurotransmitter systems that process dopamine differently, which means routine daily activities rarely provide them with mental stimulation. Yet neurochemistry alone cannot explain why someone would willingly ascend hazardous terrain. Athletes describe entering an intense psychological state known as 'flow'—a condition where conscious doubt vanishes and hyper-focused concentration takes over completely."
+      },
+      {
+        "number": 3,
+        "label": "[3]",
+        "content": "Crucially, successful athletes do not simply plunge blindly into lethal environments. Months of meticulous preparation precede every expedition. Climbers spend hours memorizing rock formations, checking weather telemetry, and inspecting carabiners for micro-fractures. For them, survival hinges on eliminating unnecessary variables and leaving nothing to chance. What looks like reckless audacity from below is, in truth, an exercise in calculated risk management."
+      },
+      {
+        "number": 4,
+        "label": "[4]",
+        "content": "Fear is an inevitable companion in extreme sports, but top athletes learn to harness fear rather than succumb to panic. When dangling thousands of feet above the valley floor, an uncontrolled surge of adrenaline can cause muscle tremors and fatal missteps. Veteran athletes practice cognitive reframing: they interpret rapid heartbeats and heightened senses not as impending doom, but as vital biological signals priming their bodies for peak execution."
+      },
+      {
+        "number": 5,
+        "label": "[5]",
+        "content": "The mental toll of such dedication can be heavy. Athletes must confront the harsh reality that even minor errors can lead to catastrophic consequences or fatal trauma. Many endure the loss of close companions over the course of their careers. Coping with grief while maintaining the resolve to return to the mountain requires immense psychological resilience, forcing athletes to reflect deeply on their personal values and mortality."
+      },
+      {
+        "number": 6,
+        "label": "[6]",
+        "content": "Ultimately, extreme sports are less about conquering nature and more about exploring human boundaries. By venturing into unforgiving environments, practitioners strip away superficial distractions and discover what they are genuinely capable of achieving. In confronting the raw elements, they achieve a profound clarity and peace of mind that everyday existence seldom offers."
+      }
+    ]
+  },
+  "task1_matching": {
+    "instruction": "Match the expressions (A – F) as used in the text with their corresponding definitions (0 – 7). Be careful: There are two definitions that you do not need.",
+    "expressions": [
+      {
+        "id": "A",
+        "text": "court danger",
+        "section": "Sec 1",
+        "answer": 1,
+        "acceptedAnswers": [
+          "1"
+        ],
+        "sectionNumber": 1
+      },
+      {
+        "id": "B",
+        "text": "hardwired",
+        "section": "Sec 2",
+        "answer": 5,
+        "acceptedAnswers": [
+          "5"
+        ],
+        "sectionNumber": 2
+      },
+      {
+        "id": "C",
+        "text": "hinges on",
+        "section": "Sec 3",
+        "answer": 2,
+        "acceptedAnswers": [
+          "2"
+        ],
+        "sectionNumber": 3
+      },
+      {
+        "id": "D",
+        "text": "leaving nothing to chance",
+        "section": "Sec 3",
+        "answer": 6,
+        "acceptedAnswers": [
+          "6"
+        ],
+        "sectionNumber": 3
+      },
+      {
+        "id": "E",
+        "text": "succumb to",
+        "section": "Sec 4",
+        "answer": 4,
+        "acceptedAnswers": [
+          "4"
+        ],
+        "sectionNumber": 4
+      },
+      {
+        "id": "F",
+        "text": "strip away",
+        "section": "Sec 6",
+        "answer": 3,
+        "acceptedAnswers": [
+          "3"
+        ],
+        "sectionNumber": 6
+      }
+    ],
+    "definitions": [
+      {
+        "id": 0,
+        "text": "to deliberately avoid hazardous athletic situations.",
+        "isDistractor": true
+      },
+      {
+        "id": 1,
+        "text": "to act in a way that is likely to cause risk, harm, or misfortune.",
+        "isDistractor": false,
+        "matchedBy": "A"
+      },
+      {
+        "id": 2,
+        "text": "to depend completely on something as the essential deciding factor.",
+        "isDistractor": false,
+        "matchedBy": "C"
+      },
+      {
+        "id": 3,
+        "text": "to remove unnecessary, superficial, or distracting layers.",
+        "isDistractor": false,
+        "matchedBy": "F"
+      },
+      {
+        "id": 4,
+        "text": "to fail to resist pressure, temptation, or negative emotions.",
+        "isDistractor": false,
+        "matchedBy": "E"
+      },
+      {
+        "id": 5,
+        "text": "inborn, innate, or genetically determined in behavioral design.",
+        "isDistractor": false,
+        "matchedBy": "B"
+      },
+      {
+        "id": 6,
+        "text": "to prepare so thoroughly that no aspect is left unplanned or uncontrolled.",
+        "isDistractor": false,
+        "matchedBy": "D"
+      },
+      {
+        "id": 7,
+        "text": "to abandon high-altitude routes due to severe storms.",
+        "isDistractor": true
+      }
+    ],
+    "solution_mapping": {
+      "A": 1,
+      "B": 5,
+      "C": 2,
+      "D": 6,
+      "E": 4,
+      "F": 3
+    }
+  },
+  "task2_vocabulary": {
+    "instruction": "Find a word or expression in the text that means the same as each of the following words (1 – 5). The section where the word is located is indicated.",
+    "items": [
+      {
+        "id": 1,
+        "prompt": "confuse, perplex, mystify completely (verb)",
+        "section": "Section 1",
+        "answer": "baffle",
+        "acceptedAnswers": [
+          "baffle"
+        ],
+        "sectionNumber": 1
+      },
+      {
+        "id": 2,
+        "prompt": "daring boldness, fearless willingness to take risks (noun)",
+        "section": "Section 3",
+        "answer": "audacity",
+        "acceptedAnswers": [
+          "audacity"
+        ],
+        "sectionNumber": 3
+      },
+      {
+        "id": 3,
+        "prompt": "approaching, about to happen very soon (adjective)",
+        "section": "Section 4",
+        "answer": "impending",
+        "acceptedAnswers": [
+          "impending"
+        ],
+        "sectionNumber": 4
+      },
+      {
+        "id": 4,
+        "prompt": "firm determination, steadfast purpose (noun)",
+        "section": "Section 5",
+        "answer": "resolve",
+        "acceptedAnswers": [
+          "resolve"
+        ],
+        "sectionNumber": 5
+      },
+      {
+        "id": 5,
+        "prompt": "harsh, relentless, showing no mercy (adjective)",
+        "section": "Section 6",
+        "answer": "unforgiving",
+        "acceptedAnswers": [
+          "unforgiving"
+        ],
+        "sectionNumber": 6
+      }
+    ]
+  },
+  "type": "reading-comprehension",
+  "exercises": [
+    {
+      "id": "reading-extreme-sports-main",
+      "title": "Pushing the Limits: The Psychology of Extreme Sports – Task 1 (Matching) & Task 2 (Vocabulary)",
+      "type": "reading_comprehension",
+      "instruction": "Read the text 'Pushing the Limits: The Psychology of Extreme Sports' ([1]–[6]) and complete Task 1 (Matching Expressions A–F with 0–7) and Task 2 (Find a Word or Expression 1–5).",
+      "sentences": [
+        {
+          "text": "A. court danger [Sec 1] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "1"
+              ],
+              "solutions": [
+                "1"
+              ],
+              "acceptedAnswers": [
+                "1"
+              ],
+              "hint": "Sec 1",
+              "explanation": "A -> 1",
+              "answer": "1"
+            }
+          ]
+        },
+        {
+          "text": "B. hardwired [Sec 2] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "5"
+              ],
+              "solutions": [
+                "5"
+              ],
+              "acceptedAnswers": [
+                "5"
+              ],
+              "hint": "Sec 2",
+              "explanation": "B -> 5",
+              "answer": "5"
+            }
+          ]
+        },
+        {
+          "text": "C. hinges on [Sec 3] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "2"
+              ],
+              "solutions": [
+                "2"
+              ],
+              "acceptedAnswers": [
+                "2"
+              ],
+              "hint": "Sec 3",
+              "explanation": "C -> 2",
+              "answer": "2"
+            }
+          ]
+        },
+        {
+          "text": "D. leaving nothing to chance [Sec 3] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "6"
+              ],
+              "solutions": [
+                "6"
+              ],
+              "acceptedAnswers": [
+                "6"
+              ],
+              "hint": "Sec 3",
+              "explanation": "D -> 6",
+              "answer": "6"
+            }
+          ]
+        },
+        {
+          "text": "E. succumb to [Sec 4] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "4"
+              ],
+              "solutions": [
+                "4"
+              ],
+              "acceptedAnswers": [
+                "4"
+              ],
+              "hint": "Sec 4",
+              "explanation": "E -> 4",
+              "answer": "4"
+            }
+          ]
+        },
+        {
+          "text": "F. strip away [Sec 6] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "3"
+              ],
+              "solutions": [
+                "3"
+              ],
+              "acceptedAnswers": [
+                "3"
+              ],
+              "hint": "Sec 6",
+              "explanation": "F -> 3",
+              "answer": "3"
+            }
+          ]
+        },
+        {
+          "text": "1. confuse, perplex, mystify completely (verb) () [Section 1] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "baffle"
+              ],
+              "solutions": [
+                "baffle"
+              ],
+              "acceptedAnswers": [
+                "baffle"
+              ],
+              "hint": " · Section 1",
+              "explanation": "Gesuchtes Wort in [Section 1]: 'baffle'.",
+              "answer": "baffle"
+            }
+          ]
+        },
+        {
+          "text": "2. daring boldness, fearless willingness to take risks (noun) () [Section 3] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "audacity"
+              ],
+              "solutions": [
+                "audacity"
+              ],
+              "acceptedAnswers": [
+                "audacity"
+              ],
+              "hint": " · Section 3",
+              "explanation": "Gesuchtes Wort in [Section 3]: 'audacity'.",
+              "answer": "audacity"
+            }
+          ]
+        },
+        {
+          "text": "3. approaching, about to happen very soon (adjective) () [Section 4] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "impending"
+              ],
+              "solutions": [
+                "impending"
+              ],
+              "acceptedAnswers": [
+                "impending"
+              ],
+              "hint": " · Section 4",
+              "explanation": "Gesuchtes Wort in [Section 4]: 'impending'.",
+              "answer": "impending"
+            }
+          ]
+        },
+        {
+          "text": "4. firm determination, steadfast purpose (noun) () [Section 5] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "resolve"
+              ],
+              "solutions": [
+                "resolve"
+              ],
+              "acceptedAnswers": [
+                "resolve"
+              ],
+              "hint": " · Section 5",
+              "explanation": "Gesuchtes Wort in [Section 5]: 'resolve'.",
+              "answer": "resolve"
+            }
+          ]
+        },
+        {
+          "text": "5. harsh, relentless, showing no mercy (adjective) () [Section 6] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "unforgiving"
+              ],
+              "solutions": [
+                "unforgiving"
+              ],
+              "acceptedAnswers": [
+                "unforgiving"
+              ],
+              "hint": " · Section 6",
+              "explanation": "Gesuchtes Wort in [Section 6]: 'unforgiving'.",
+              "answer": "unforgiving"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

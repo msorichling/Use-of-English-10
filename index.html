@@ -1,588 +1,1228 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reading Comprehension: Memory Games</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Use of English · Exam Prep &amp; Skills (B2 Abschlussprüfung)</title>
+  <link rel="stylesheet" href="shared-gamification.css">
+  <!-- Synchrones Laden des Katalog-Bundles als Fallback für file:// Protokoll -->
+  <script src="data/topics-bundle.js"></script>
+  <script src="modules/standalone-runtime.js"></script>
+  <style>
+    /* 2026 Dark Aesthetic Hub Layout */
+    .gm-hub-container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 20px 72px;
+    }
 
-    <style>
-        /* High-Tech / Neon Green Palette */
-        :root {
-            --color-primary: #39ff14; /* Neon Green */
-            --color-secondary: #22a30b; /* Darker Green */
-            --color-background: #1e1e1e; /* Dark Grey/Black */
-            --color-text: #f0f0f0; /* Off-White */
-            --color-success: #39ff14; /* Neon Green */
-            --color-error: #ff3914; /* Neon Red */
-            --color-card: #2c2c2c; /* Slightly Lighter Card Background */
-            --shadow: 0 0 15px rgba(57, 255, 20, 0.5); /* Neon Shadow */
-            --font-display: 'Orbitron', sans-serif;
-            --font-text: 'Roboto', sans-serif;
-        }
-        
-        body {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 20px;
-            font-family: var(--font-text);
-            background-color: var(--color-background);
-            color: var(--color-text);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    /* Einziger, sauberer Nav-Container mit reinem Flexbox-Layout */
+    .app-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      background: rgba(3, 7, 18, 0.88);
+      border-bottom: 1px solid var(--glass-border);
+      width: 100%;
+    }
 
-        .main-container {
-            background: var(--color-card);
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: var(--shadow);
-            max-width: 1000px; /* GEÄNDERT: Etwas breiter für bessere Lesbarkeit auf großen Bildschirmen */
-            width: 95%;
-            margin-top: 5vh;
-            border: 2px solid var(--color-primary);
-        }
+    .app-header .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-        .title {
-            font-family: var(--font-display);
-            font-size: 38px;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 20px;
-            text-align: center; 
-            border-bottom: 3px solid var(--color-secondary);
-            padding-bottom: 10px;
-            text-shadow: 0 0 5px rgba(57, 255, 20, 0.8);
-        }
-        
-        /* TEXT AREA STYLING */
-        .text-section {
-            border: 1px solid var(--color-secondary);
-            border-radius: 8px;
-            margin-bottom: 30px;
-            line-height: 1.6;
-            font-size: 15px;
-            background-color: #333;
-            padding: 20px; 
-            position: relative; 
-        }
-        
-        .text-section p {
-            margin-top: 1em;
-            margin-bottom: 1em;
-            padding: 5px 0 5px 40px; /* GEÄNDERT: Linkes Padding für Marker-Platz */
-            border-bottom: 1px dotted #555;
-            position: relative;
-        }
-        
-        /* Der Marker wird jetzt in den Freiraum links positioniert */
-        .section-marker {
-            position: absolute;
-            left: 0; /* GEÄNDERT: Positioniert links im Padding-Bereich des P-Elements */
-            top: 5px;
-            font-family: var(--font-display);
-            color: var(--color-primary);
-            font-size: 1.1em;
-            width: 40px;
-            text-align: right;
-        }
+    .app-header .header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-        .task-title {
-            font-family: var(--font-display);
-            color: var(--color-primary);
-            font-size: 1.5em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-left: 5px solid var(--color-primary);
-            padding-left: 10px;
-        }
-        
-        .instructions {
-            margin-bottom: 20px;
-            line-height: 1.4;
-            padding: 5px;
-            border-left: 2px solid var(--color-secondary);
-            font-size: 0.9em;
-        }
+    /* Hero Header */
+    .gm-hub-hero {
+      text-align: center;
+      max-width: 760px;
+      margin: 8px auto 32px;
+    }
 
-        /* --- TASK 1: MATCHING STYLING --- */
-        .expressions-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #3a3a3a;
-            border-radius: 5px;
-        }
-        
-        .expression-item {
-            padding: 5px 10px;
-            margin: 5px;
-            border: 1px solid var(--color-primary);
-            border-radius: 5px;
-            font-weight: bold;
-            color: var(--color-primary);
-        }
-        
-        .definitions-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 15px 30px;
-            margin-bottom: 30px;
-        }
-        
-        .definition-item {
-            display: flex;
-            align-items: flex-start;
-            padding: 10px;
-            background-color: #222;
-            border-radius: 5px;
-        }
-        
-        .def-number {
-            font-weight: bold;
-            color: var(--color-primary);
-            width: 30px;
-            flex-shrink: 0;
-            margin-right: 15px;
-            text-align: center;
-        }
-        
-        .matching-area {
-            background-color: #3a3a3a;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
+    .gm-school-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--glass-border-strong);
+      color: var(--color-text-secondary);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
 
-        .matching-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 0;
-            border-bottom: 1px dashed #555;
-        }
-        
-        .matching-row:last-child {
-            border-bottom: none;
-        }
+    .gm-hub-title {
+      font-size: clamp(2.3rem, 5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-bottom: 12px;
+    }
 
-        .matching-label {
-            font-weight: bold;
-            color: var(--color-text);
-            display: flex;
-            align-items: center;
-        }
-        
-        .matching-select {
-            padding: 5px;
-            border-radius: 5px;
-            border: 2px solid var(--color-secondary);
-            background-color: var(--color-card);
-            color: var(--color-text);
-            font-size: 1em;
-            width: 80px;
-            text-align: center;
-        }
-        
-        /* --- TASK 2: SYNONYM STYLING --- */
-        .synonym-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .synonym-item {
-            display: flex;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px dashed #555;
-        }
-        
-        .synonym-item:last-child {
-            border-bottom: none;
-        }
+    .gm-text-gradient {
+      background: linear-gradient(135deg, #93c5fd 0%, #c4b5fd 50%, #6ee7b7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-        .target-word {
-            font-weight: bold;
-            color: var(--color-primary);
-            width: 300px; 
-            flex-shrink: 0;
-        }
-        
-        .synonym-input {
-            padding: 8px 12px;
-            border: 2px solid #555;
-            border-radius: 5px;
-            font-size: 1em;
-            background-color: var(--color-card);
-            color: var(--color-text);
-            transition: border-color 0.2s;
-            width: 300px;
-        }
-        
-        .synonym-input:focus {
-            outline: none;
-            border-color: var(--color-primary);
-        }
+    .gm-hub-subtitle {
+      font-size: 1.05rem;
+      color: var(--color-text-secondary);
+      margin: 0 auto;
+    }
 
-        /* CHECK BUTTON & FEEDBACK */
-        .controls {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #444;
-            margin-top: 30px;
-        }
+    /* Profile & Stats Bento Banner */
+    .gm-profile-bento {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 20px;
+      background: var(--color-bg-surface);
+      border: 1px solid var(--glass-border-strong);
+      border-radius: 24px;
+      padding: 24px 28px;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      margin-bottom: 28px;
+    }
 
-        .check-button {
-            background-color: var(--color-secondary);
-            color: var(--color-text);
-            border: 2px solid var(--color-primary);
-            padding: 12px 30px;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 0 5px var(--color-primary);
-        }
+    .gm-profile-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
 
-        .check-button:hover {
-            background-color: var(--color-primary);
-            color: var(--color-background);
-            box-shadow: 0 0 15px var(--color-primary);
-        }
-        
-        .result-message {
-            margin-top: 20px;
-            font-size: 1.1em;
-            font-weight: 700;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid;
-            min-height: 60px; 
-        }
+    .gm-avatar-orb {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(139, 92, 246, 0.25));
+      border: 1px solid rgba(147, 197, 253, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.22);
+    }
 
-        .result-message.success {
-            background-color: rgba(57, 255, 20, 0.1); 
-            color: var(--color-success);
-            border-color: var(--color-success);
-        }
+    .gm-profile-meta {
+      flex: 1;
+      min-width: 0;
+    }
 
-        .result-message.failure {
-            background-color: rgba(255, 57, 20, 0.1);
-            color: var(--color-error);
-            border-color: var(--color-error);
-        }
+    .gm-profile-rank {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-text-main);
+      margin-bottom: 6px;
+    }
 
-        /* LÖSUNGSANZEIGE - STANDARDMÄSSIG VERSTECKT */
-        .correct-answer {
-            color: var(--color-success);
-            font-weight: bold;
-            margin-left: 10px;
-            display: none; /* GEÄNDERT: Standardmäßig versteckt */
-        }
-        
-        .show-solution {
-            text-decoration: underline;
-            color: var(--color-primary);
-            cursor: pointer;
-            margin-left: 15px;
-            font-size: 14px;
-        }
+    .gm-xp-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-    </style>
+    .gm-xp-bar-track {
+      flex: 1;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    .gm-xp-bar-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6, #10b981);
+      transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .gm-xp-bar-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      white-space: nowrap;
+    }
+
+    .gm-profile-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .gm-stat-tile {
+      background: rgba(2, 6, 23, 0.55);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+      padding: 12px 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .gm-stat-tile-val {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 800;
+    }
+
+    .gm-stat-tile-lbl {
+      font-size: 0.68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-text-muted);
+      margin-top: 2px;
+    }
+
+    /* Klickbare Klassenstufen-Kacheln (Overview Grid) */
+    .gm-grade-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .gm-grade-kachel {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid var(--glass-border-strong);
+      color: var(--color-text-main);
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gm-grade-kachel:hover {
+      transform: translateY(-2px);
+      background: rgba(30, 41, 59, 0.85);
+      border-color: rgba(147, 197, 253, 0.5);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .gm-grade-kachel.is-active {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.28), rgba(79, 70, 229, 0.28));
+      border-color: #60a5fa;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.28);
+    }
+
+    .gm-grade-kachel-icon {
+      font-size: 1.55rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .gm-grade-kachel-info {
+      min-width: 0;
+    }
+
+    .gm-grade-kachel-title {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--color-text-main);
+      line-height: 1.2;
+    }
+
+    .gm-grade-kachel-sub {
+      font-size: 0.73rem;
+      color: var(--color-text-muted);
+      font-weight: 600;
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Filter & Search Toolbar */
+    .gm-hub-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .gm-grade-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .gm-grade-tab {
+      padding: 9px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--glass-border);
+      background: rgba(15, 23, 42, 0.6);
+      color: var(--color-text-secondary);
+      font-family: var(--font-heading);
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .gm-grade-tab:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--color-text-main);
+    }
+
+    .gm-grade-tab.is-active {
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      border-color: rgba(147, 197, 253, 0.45);
+      color: #ffffff;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.32);
+    }
+
+    .gm-search-wrapper {
+      position: relative;
+      min-width: 260px;
+      flex: 1;
+      max-width: 340px;
+    }
+
+    .gm-search-input {
+      width: 100%;
+      height: 42px;
+      padding: 0 14px 0 38px;
+      border-radius: 12px;
+      border: 1px solid var(--glass-border-strong);
+      background: rgba(15, 23, 42, 0.75);
+      color: var(--color-text-main);
+      font-family: var(--font-body);
+      font-size: 16px;
+    }
+
+    .gm-search-input:focus {
+      outline: none;
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18);
+    }
+
+    .gm-search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    /* Grade Section & Topic Cards Grid */
+    .gm-grade-section {
+      margin-bottom: 40px;
+    }
+
+    .gm-grade-section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .gm-grade-section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .gm-grade-section-sub {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      font-weight: 600;
+    }
+
+    .gm-topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 18px;
+    }
+
+    /* Modern 2026 Topic Card */
+    .gm-topic-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(15, 23, 42, 0.68);
+      border: 1px solid var(--glass-border-strong);
+      text-decoration: none;
+      color: var(--color-text-main);
+      cursor: pointer;
+      transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.22s ease, box-shadow 0.22s ease;
+      overflow: hidden;
+    }
+
+    .gm-topic-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--card-accent, #3b82f6);
+      opacity: 0.85;
+    }
+
+    .gm-topic-card[data-color="blue"] { --card-accent: #3b82f6; --card-glow: rgba(59, 130, 246, 0.25); }
+    .gm-topic-card[data-color="violet"] { --card-accent: #8b5cf6; --card-glow: rgba(139, 92, 246, 0.25); }
+    .gm-topic-card[data-color="emerald"] { --card-accent: #10b981; --card-glow: rgba(16, 185, 129, 0.25); }
+    .gm-topic-card[data-color="amber"] { --card-accent: #f59e0b; --card-glow: rgba(245, 158, 11, 0.25); }
+    .gm-topic-card[data-color="rose"] { --card-accent: #f43f5e; --card-glow: rgba(244, 63, 94, 0.25); }
+
+    .gm-topic-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-accent, #3b82f6);
+      box-shadow: 0 16px 36px -6px var(--card-glow, rgba(59, 130, 246, 0.25));
+    }
+
+    .gm-topic-card.is-mastered {
+      border-color: rgba(251, 191, 36, 0.45);
+    }
+
+    .gm-topic-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .gm-topic-badges {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .gm-card-tag {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--color-text-secondary);
+    }
+
+    .gm-card-tag.is-engine {
+      background: rgba(16, 185, 129, 0.15);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+    }
+
+    .gm-card-tag.is-mastered {
+      background: rgba(251, 191, 36, 0.18);
+      color: #fde68a;
+      border: 1px solid rgba(251, 191, 36, 0.45);
+    }
+
+    .gm-topic-icon {
+      font-size: 1.85rem;
+      line-height: 1;
+    }
+
+    .gm-topic-card-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      margin: 0 0 8px;
+      color: var(--color-text-main);
+    }
+
+    .gm-topic-card-desc {
+      font-size: 0.87rem;
+      color: var(--color-text-secondary);
+      margin: 0 0 18px;
+      line-height: 1.5;
+    }
+
+    .gm-topic-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--glass-border);
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    .gm-topic-cta {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--color-text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .gm-topic-card:hover .gm-topic-cta {
+      color: #93c5fd;
+    }
+
+    /* Irregular Verbs Banner */
+    .gm-irregular-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 28px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(15, 23, 42, 0.85));
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      text-decoration: none;
+      color: var(--color-text-main);
+      margin-top: 12px;
+      margin-bottom: 36px;
+      transition: all 0.22s ease;
+    }
+
+    .gm-irregular-banner:hover {
+      transform: translateY(-3px);
+      border-color: rgba(6, 182, 212, 0.65);
+      box-shadow: 0 14px 34px rgba(6, 182, 212, 0.2);
+    }
+
+    @media (max-width: 820px) {
+      .gm-profile-bento {
+        grid-template-columns: 1fr;
+      }
+      .gm-irregular-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .gm-search-wrapper {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
-<body>
-    
-    <div class="main-container">
-        <h1 class="title">Memory Games</h1>
+<body data-accent="blue">
 
-        <div class="text-section">
-            <!-- HINWEIS: Die span-Elemente für die Marker MÜSSEN direkt am Anfang des p-Tags stehen -->
-            <p><span class="section-marker">[1]</span> Most people have trouble remembering where they put their car keys, or if they turned their oven off. And yet an astonishing few can memorize entire decks of cards and long strings of random numbers. The documentary <em>Memory Games</em> offers a fascinating glimpse into the lives of these mind athletes as they compete for the title of World Memory Champion. The Post spoke with Nelson Cowan, a cognitive psychologist at the University of Missouri and two competitors profiled in the film – International Grandmaster of Memory Yanjaa Wintersoul, 30, and four-time USA Champion Nathan Dellis, 39 – for tips on how regular folks can improve their daily recall.</p>
-            <p><span class="section-marker">[2]</span> In high school Yanjaa Wintersoul would never have imagined that she would one day gain recognition for having one of the best memories in the world. She explains: “I almost didn’t graduate because I didn’t know how to make my knowledge of physics and chemistry stick. The moment when everything changed for me was several years later when I happened to pick up Joshua Foer’s bestseller on brain techniques. It delves into the science of what makes the human brain tick and helps ordinary people strengthen their memories. It was a revelation for me. I began using memorization rules while studying for my business degree in Stockholm and I finished in just two years.”</p>
-            <p><span class="section-marker">[3]</span> Nelson Cowan, who does research on how the brain works, says: “It’s not like each memory takes a neuron and then that cell is used up. Imagine you experience a situation or get some information. Your brain first keeps them short-term in a system known as ‘working memory’. Later, if the information stays relevant, our brain encodes it in specific combinations of neurons; the memory becomes long-term.” Our brain can do that an infinite amount of times. From a scientific point of view, the number of facts stored in those patterns is also endless. “If you fill up your 128-gigabyte phone with images, you run out of storage capacity. Our brain doesn’t work like that. The more ‘pictures you take’ and the more you try to remember, the more you will remember,” Cowan adds.</p>
-            <p><span class="section-marker">[4]</span> While Yanjaa Wintersoul began competing when barely out of her teens, Nathan Dellis came to the sport a little later in life. “I started listening to people more actively when they were talking about things,” he explains. “Being mindful and paying attention are key to processing the information effectively. There’s plenty of useful daily information worth remembering, which many forget. Every person you meet, try to memorize their name,” advises Dellis. Challenging your brain on a permanent basis will likely yield amazing results. For instance, he has made a habit of memorizing license plate numbers when stuck in the rush hour. Enough shut-eye is also essential.</p>
-            <p><span class="section-marker">[5]</span> Dellis, for example, attempts to get at least eight hours per night. When Wintersoul began making a name for herself in the world of competitions, reality shows also began calling. One day, a furniture giant wanted to hire her for an advertisement. They originally asked if she could remember their dining room collection in a week. “I said, ‘I think it would be fun if I learned your entire catalogue by heart.’ And I did, committing 328 pages to memory. Although I can’t recall every single item a year later, I do remember a good deal of it, particularly the pages featuring picture-perfect family scenes.</p>
-            <p><span class="section-marker">[6]</span> Such emotions stick best with me. I think that’s the key to everybody’s memory, you have to make things truly matter to yourself.” Cowan confirms that memories depend on specific contexts. In a renowned study, participants who learned lists while scuba diving had better recall when they were underwater than when they were on land. Underwater or not – want to stop the did-I-remember-to-turn-off-the-oven paranoia, or at least get a better handle on peoples’ names? Keep at it! Even if you aren’t born with remarkable talent, with the right strategies, you can become a memory champion too.</p>
-        </div>
-
-        <!-- TASK 1: MATCHING -->
-        <div id="task1">
-            <h2 class="task-title">Task 1: Matching Expressions (A-F with 0-7)</h2>
-            <p class="instructions">Match the expressions (A – F) as used in the text with their corresponding definitions (0 – 7). Write the correct numbers in the grid below. Be careful: There are two definitions that you do not need. One definition (0) has already been matched correctly.</p>
-            
-            <!-- Expressions for Overview -->
-            <div class="expressions-list">
-                <span class="expression-item">A. astonishing few [Sec 1]</span>
-                <span class="expression-item">B. gain recognition [Sec 2]</span>
-                <span class="expression-item">C. make my knowledge stick [Sec 2]</span>
-                <span class="expression-item">D. brain tick [Sec 2]</span>
-                <span class="expression-item">E. on a permanent basis [Sec 4]</span>
-                <span class="expression-item">F. shut-eye [Sec 4]</span>
-            </div>
-
-            <!-- Definitions -->
-            <div class="definitions-grid">
-                <div class="definition-item"><span class="def-number">0</span> to find an object after a long search. (Do not need)</div>
-                <div class="definition-item"><span class="def-number">1</span> to become publicly acknowledged for an achievement. (B)</div>
-                <div class="definition-item"><span class="def-number">2</span> to be understood or retained in memory. (C)</div>
-                <div class="definition-item"><span class="def-number">3</span> a surprisingly small number of people. (A)</div>
-                <div class="definition-item"><span class="def-number">4</span> sleep. (F)</div>
-                <div class="definition-item"><span class="def-number">5</span> to understand how the brain functions. (D)</div>
-                <div class="definition-item"><span class="def-number">6</span> continually or constantly. (E)</div>
-                <div class="definition-item"><span class="def-number">7</span> to remember something perfectly. (Do not need)</div>
-            </div>
-            
-            <!-- Matching Area -->
-            <div class="matching-area">
-                <div class="matching-row">
-                    <span class="matching-label">A. astonishing few:</span>
-                    <select id="match-A" class="matching-select"></select>
-                    <span id="solution-A" class="correct-answer">Korrekte Nummer: 3</span>
-                </div>
-                <div class="matching-row">
-                    <span class="matching-label">B. gain recognition:</span>
-                    <select id="match-B" class="matching-select"></select>
-                    <span id="solution-B" class="correct-answer">Korrekte Nummer: 1</span>
-                </div>
-                <div class="matching-row">
-                    <span class="matching-label">C. make my knowledge stick:</span>
-                    <select id="match-C" class="matching-select"></select>
-                    <span id="solution-C" class="correct-answer">Korrekte Nummer: 2</span>
-                </div>
-                <div class="matching-row">
-                    <span class="matching-label">D. brain tick:</span>
-                    <select id="match-D" class="matching-select"></select>
-                    <span id="solution-D" class="correct-answer">Korrekte Nummer: 5</span>
-                </div>
-                <div class="matching-row">
-                    <span class="matching-label">E. on a permanent basis:</span>
-                    <select id="match-E" class="matching-select"></select>
-                    <span id="solution-E" class="correct-answer">Korrekte Nummer: 6</span>
-                </div>
-                <div class="matching-row">
-                    <span class="matching-label">F. shut-eye:</span>
-                    <select id="match-F" class="matching-select"></select>
-                    <span id="solution-F" class="correct-answer">Korrekte Nummer: 4</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- TASK 2: SYNONYM FINDING -->
-        <div id="task2">
-            <h2 class="task-title">Task 2: Find a Word or Expression</h2>
-            <p class="instructions">Find a word or expression in the text that means the same as each of the following words (1 – 5). The section where the word is located is indicated.</p>
-            
-            <ul class="synonym-list" id="synonymList">
-                <!-- List items generated by JS -->
-            </ul>
-        </div>
-        
-        <div class="controls">
-            <button class="check-button" onclick="checkAllTasks()">Prüfe beide Aufgaben</button>
-            <span class="show-solution" id="solutionButton" onclick="toggleSolutions()">Lösungen anzeigen</span>
-            <div class="result-message" id="resultMessage" style="display: none;"></div>
-        </div>
+  <!-- EINZIGER, SAUBERER NAV-CONTAINER IM NORMALEN DOKUMENTFLUSS -->
+  <header class="app-header">
+    <div class="header-left">
+      <a href="index.html" class="gm-brand-link">
+        <span aria-hidden="true">🎯</span>
+        <span>Use of English</span>
+      </a>
     </div>
+    <div class="header-right">
+      <div class="gm-pill-stat is-streak" title="Tägliche Lernserie">
+        <span aria-hidden="true">🔥</span>
+        <span id="hub-top-streak">0</span>
+      </div>
+      <div class="gm-pill-stat is-xp" title="Gesamte Erfahrungspunkte">
+        <span aria-hidden="true">⭐</span>
+        <span id="hub-top-xp">0</span>
+        <span>XP</span>
+      </div>
+      <div class="gm-pill-stat is-level" title="Aktuelles Level">
+        <span aria-hidden="true">🏆</span>
+        <span id="hub-top-level">Lvl 1</span>
+      </div>
+    </div>
+  </header>
 
-    <script>
-        // #######################################################
-        // 1. ÜBUNGSDATEN
-        // #######################################################
-        
-        // Task 1: Matching (Expression ID: Correct Definition Number)
-        const matchingData = {
-            'A': 3, 
-            'B': 1, 
-            'C': 2, 
-            'D': 5, 
-            'E': 6, 
-            'F': 4  
-        };
-        
-        // Task 2: Synonym Finding (Target Word: Correct Synonym from text, Answer is stored in data attribute)
-        const synonymData = [
-            { id: 1, target: "remembering (noun)", context: "[Section 1]", answer: "recall" },
-            { id: 2, target: "understand how it functions (verb)", context: "[Section 2]", answer: "tick" }, 
-            { id: 3, target: "limitless (adj)", context: "[Section 3]", answer: "infinite" },
-            { id: 4, target: "very good, talented (adj)", context: "[Section 6]", answer: "remarkable" },
-            { id: 5, target: "to be committed to (verb gerund form)", context: "[Section 5]", answer: "committing" } 
-        ];
+  <div class="gm-hub-container">
 
-        const definitionNumbers = [0, 1, 2, 3, 4, 5, 6, 7];
+                                    <!-- HERO SECTION -->
+    <section class="gm-hub-hero">
+      <div class="gm-school-badge">
+        <span>Ignaz-Reder-Realschule</span>
+        <span>•</span>
+        <span>Klasse 10 / B2 Exam Prep</span>
+      </div>
+      <h1 class="gm-hub-title">
+        Use of <span class="gm-text-gradient">English</span>
+      </h1>
+      <p class="gm-hub-subtitle">
+        Use of English – Exam Prep &amp; Skills (B2 Abschlussprüfung) · Word Formation, Key-Word Transformation &amp; Reading Comprehension.
+      </p>
+    </section>
 
-        // #######################################################
-        // 2. RENDERING
-        // #######################################################
+    <!-- GAMIFICATION PROFILE BENTO -->
+    <section class="gm-profile-bento" aria-label="Dein Lernfortschritt">
+      <div class="gm-profile-left">
+        <div class="gm-avatar-orb" id="hub-rank-icon">🌱</div>
+        <div class="gm-profile-meta">
+          <div class="gm-profile-rank" id="hub-rank-title">Level 1: Tense Novice</div>
+          <div class="gm-xp-bar-row">
+            <div class="gm-xp-bar-track">
+              <div class="gm-xp-bar-fill" id="hub-xp-fill"></div>
+            </div>
+            <span class="gm-xp-bar-label" id="hub-xp-progress-text">0 / 150 XP</span>
+          </div>
+        </div>
+      </div>
 
-        function renderMatching() {
-            const selects = document.querySelectorAll('.matching-select');
-            selects.forEach(select => {
-                // Füllt die Dropdowns von 0 bis 7
-                select.innerHTML = '<option value="">- Wahl -</option>' + 
-                    definitionNumbers.map(num => `<option value="${num}">${num}</option>`).join('');
+      <div class="gm-profile-stats-grid">
+        <div class="gm-stat-tile">
+          <div class="gm-stat-tile-val" style="color: #fb7185;">🔥 <span id="hub-stat-streak">0</span></div>
+          <div class="gm-stat-tile-lbl">Tage Serie</div>
+        </div>
+        <div class="gm-stat-tile">
+          <div class="gm-stat-tile-val" style="color: #fbbf24;">⭐ <span id="hub-stat-xp">0</span></div>
+          <div class="gm-stat-tile-lbl">Gesamt XP</div>
+        </div>
+        <div class="gm-stat-tile">
+          <div class="gm-stat-tile-val" style="color: #34d399;">🏅 <span id="hub-stat-mastered">0</span></div>
+          <div class="gm-stat-tile-lbl">Mastered</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KLASSENSTUFEN-KACHELN (Direktwähler für Klasse 5 bis 10 & Challenges) -->
+    <section aria-label="Klassenstufen-Auswahl">
+                                                            <div class="gm-grade-cards-grid" id="hub-grade-kacheln">
+        <button type="button" class="gm-grade-kachel" data-grade="word-formation">
+          <span class="gm-grade-kachel-icon">🧩</span>
+          <div class="gm-grade-kachel-info">
+            <div class="gm-grade-kachel-title">Word Formation</div>
+            <div class="gm-grade-kachel-sub">Vocabulary &amp; Word Building (Units 1–4)</div>
+          </div>
+        </button>
+        <button type="button" class="gm-grade-kachel" data-grade="key-word">
+          <span class="gm-grade-kachel-icon">🔑</span>
+          <div class="gm-grade-kachel-info">
+            <div class="gm-grade-kachel-title">Key-Word Transformation</div>
+            <div class="gm-grade-kachel-sub">Cambridge B2 Standard (Units 1–4)</div>
+          </div>
+        </button>
+        <button type="button" class="gm-grade-kachel" data-grade="reading-comprehension">
+          <span class="gm-grade-kachel-icon">📖</span>
+          <div class="gm-grade-kachel-info">
+            <div class="gm-grade-kachel-title">Reading Comprehension</div>
+            <div class="gm-grade-kachel-sub">B2 Text Analysis &amp; Vocabulary in Context (5 Units)</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- FILTER TABS & INSTANT SEARCH -->
+    <section class="gm-hub-toolbar" aria-label="Themen filtern">
+                                                            <div class="gm-grade-tabs" id="hub-grade-tabs" role="tablist">
+        <button type="button" class="gm-grade-tab is-active" data-grade="all">Alle Formate</button>
+        <button type="button" class="gm-grade-tab" data-grade="word-formation">🧩 Word Formation</button>
+        <button type="button" class="gm-grade-tab" data-grade="key-word">🔑 Key-Word Transformation</button>
+        <button type="button" class="gm-grade-tab" data-grade="reading-comprehension">📖 Reading Comprehension</button>
+      </div>
+
+      <div class="gm-search-wrapper">
+        <span class="gm-search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="search"
+          id="hub-search-input"
+          class="gm-search-input"
+          placeholder="Einheit suchen (z. B. Word Formation, Key-Word)..."
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          aria-label="Grammatik-Thema suchen"
+        >
+      </div>
+    </section>
+
+    <!-- DYNAMIC TOPIC CARDS CONTAINER (wird vorab gerendert & dynamisch gefiltert) -->
+    <main id="hub-topics-root" aria-live="polite">
+      <section class="gm-grade-section" data-grade-section="word-formation">
+        <div class="gm-grade-section-header">
+          <h2 class="gm-grade-section-title"><span>🧩</span><span>Word Formation</span></h2>
+          <span class="gm-grade-section-sub">Vocabulary &amp; Word Building · B2 / Abschlussklasse (Units 1–4 · 280 Items)</span>
+        </div>
+        <div class="gm-topics-grid">
+          <a href="exercise.html?topic=word-formation-u1" class="gm-topic-card" data-topic-id="word-formation-u1" data-color="violet">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Vocabulary &amp; Word Building</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">🧩</span>
+              </div>
+              <h3 class="gm-topic-card-title">Word Formation – Unit 1</h3>
+              <p class="gm-topic-card-desc">Prefixes, Suffixes &amp; High-Frequency Word Families (10 Tasks · 70 Items).</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>10 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+          <a href="exercise.html?topic=word-formation-u2" class="gm-topic-card" data-topic-id="word-formation-u2" data-color="violet">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Vocabulary &amp; Word Building</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">🧩</span>
+              </div>
+              <h3 class="gm-topic-card-title">Word Formation – Unit 2</h3>
+              <p class="gm-topic-card-desc">Abstract Nouns, Negative Prefixes &amp; Adverbials (10 Tasks · 70 Items).</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>10 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+          <a href="exercise.html?topic=word-formation-u3" class="gm-topic-card" data-topic-id="word-formation-u3" data-color="violet">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Vocabulary &amp; Word Building</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">🧩</span>
+              </div>
+              <h3 class="gm-topic-card-title">Word Formation – Unit 3</h3>
+              <p class="gm-topic-card-desc">Academic Vocabulary, Compounding &amp; Internal Stem Changes (10 Tasks · 70 Items).</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>10 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+          <a href="exercise.html?topic=word-formation-u4" class="gm-topic-card" data-topic-id="word-formation-u4" data-color="violet">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Vocabulary &amp; Word Building</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">🧩</span>
+              </div>
+              <h3 class="gm-topic-card-title">Word Formation – Unit 4</h3>
+              <p class="gm-topic-card-desc">Advanced B2/C1 Derivatives &amp; Exam-Level Contexts (10 Tasks · 70 Items).</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>10 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="gm-grade-section" data-grade-section="key-word">
+        <div class="gm-grade-section-header">
+          <h2 class="gm-grade-section-title"><span>🔑</span><span>Key-Word Transformation</span></h2>
+          <span class="gm-grade-section-sub">Use of English &amp; Grammar · Cambridge B2 Standard (Units 1–4 · 200 Transformations)</span>
+        </div>
+        <div class="gm-topics-grid">
+          <a href="exercise.html?topic=key-word-u1" class="gm-topic-card" data-topic-id="key-word-u1" data-color="rose">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Use of English &amp; Grammar</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">🔑</span>
+              </div>
+              <h3 class="gm-topic-card-title">Key-Word Transformation – Unit 1</h3>
+              <p class="gm-topic-card-desc">Core Grammar, Conditionals, Passives &amp; Phrasal Expressions (10 Tasks · 50 Transformations).</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>10 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+          <a href="exercise.html?topic=key-word-u2" class="gm-topic-card" data-topic-id="key-word-u2" data-color="rose">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Use of English &amp; Grammar</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">🔑</span>
+              </div>
+              <h3 class="gm-topic-card-title">Key-Word Transformation – Unit 2</h3>
+              <p class="gm-topic-card-desc">Tenses, Modals, Inversion &amp; Cleft Structures (10 Tasks · 50 Transformations).</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>10 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+          <a href="exercise.html?topic=key-word-u3" class="gm-topic-card" data-topic-id="key-word-u3" data-color="rose">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Use of English &amp; Grammar</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">🔑</span>
+              </div>
+              <h3 class="gm-topic-card-title">Key-Word Transformation – Unit 3</h3>
+              <p class="gm-topic-card-desc">Reported Speech, Causatives, Subjunctive &amp; Idioms (10 Tasks · 50 Transformations).</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>10 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+          <a href="exercise.html?topic=key-word-u4" class="gm-topic-card" data-topic-id="key-word-u4" data-color="rose">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Use of English &amp; Grammar</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">🔑</span>
+              </div>
+              <h3 class="gm-topic-card-title">Key-Word Transformation – Unit 4</h3>
+              <p class="gm-topic-card-desc">Advanced B2/C1 Register, Collocations &amp; Complex Syntax (10 Tasks · 50 Transformations).</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>10 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="gm-grade-section" data-grade-section="reading-comprehension">
+        <div class="gm-grade-section-header">
+          <h2 class="gm-grade-section-title"><span>📖</span><span>Reading Comprehension</span></h2>
+          <span class="gm-grade-section-sub">B2 Reading &amp; Vocabulary in Context · Text Analysis, Matching &amp; Synonym Finding (5 Units · 55 Items)</span>
+        </div>
+        <div class="gm-topics-grid">
+          <a href="exercise.html?topic=reading-memory-games" class="gm-topic-card" data-topic-id="reading-memory-games" data-color="emerald">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Reading Comprehension</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">📖</span>
+              </div>
+              <h3 class="gm-topic-card-title">Reading Comprehension: Memory Games</h3>
+              <p class="gm-topic-card-desc">Interactive B2 Reading Comprehension (&#x27;Memory Games&#x27;): Matching Expressions (A–F with 0–7) &amp; Finding Synonyms in Context (1–5).</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>2 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+          <a href="exercise.html?topic=reading-artificial-intelligence" class="gm-topic-card" data-topic-id="reading-artificial-intelligence" data-color="emerald">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Reading Comprehension</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">📖</span>
+              </div>
+              <h3 class="gm-topic-card-title">Reading Comprehension: The AI Revolution in Healthcare</h3>
+              <p class="gm-topic-card-desc">Examine how artificial intelligence transforms medical diagnostics and patient care.</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>2 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+          <a href="exercise.html?topic=reading-extreme-sports" class="gm-topic-card" data-topic-id="reading-extreme-sports" data-color="emerald">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Reading Comprehension</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">📖</span>
+              </div>
+              <h3 class="gm-topic-card-title">Reading Comprehension: Pushing the Limits</h3>
+              <p class="gm-topic-card-desc">Explore the psychological motivation and meticulous preparation behind extreme sports athletes.</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>2 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+          <a href="exercise.html?topic=reading-urban-farming" class="gm-topic-card" data-topic-id="reading-urban-farming" data-color="emerald">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Reading Comprehension</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">📖</span>
+              </div>
+              <h3 class="gm-topic-card-title">Reading Comprehension: Cultivating the Concrete Jungle</h3>
+              <p class="gm-topic-card-desc">Investigate how modern vertical farms and hydroponics reimagine sustainable city living.</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>2 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+          <a href="exercise.html?topic=reading-ocean-exploration" class="gm-topic-card" data-topic-id="reading-ocean-exploration" data-color="emerald">
+            <div>
+              <div class="gm-topic-card-top">
+                <div class="gm-topic-badges">
+                  <span class="gm-card-tag">Reading Comprehension</span>
+                  <span class="gm-card-tag is-engine">B2 / Abschlussklasse</span>
+                </div>
+                <span class="gm-topic-icon" aria-hidden="true">📖</span>
+              </div>
+              <h3 class="gm-topic-card-title">Reading Comprehension: Into the Abyss</h3>
+              <p class="gm-topic-card-desc">Discover the mysteries, technological feats, and ecological perils of deep-sea exploration.</p>
+            </div>
+            <div class="gm-topic-card-footer">
+              <span>2 Tasks · B2 Exam Prep</span>
+              <span class="gm-topic-cta">Starten →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    
+
+    <!-- TROPHY CABINET -->
+    <section class="gm-glass-card" style="padding: 28px;">
+      <h2 style="font-size: 1.35rem; margin-bottom: 4px;">🏆 Dein Trophäenschrank</h2>
+      <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-top: 0; margin-bottom: 18px;">
+        Meistere Übungen, halte deine tägliche Serie aufrecht und schalte alle Auszeichnungen frei.
+      </p>
+      <div class="gm-trophy-grid" id="hub-trophy-grid"></div>
+    </section>
+
+    <footer style="margin-top: 48px; text-align: center; color: var(--color-text-muted); font-size: 0.84rem;">
+      <p style="margin: 0;">&copy; 2026 Use of English – Exam Prep &amp; Skills (B2 Abschlussprüfung) · Ignaz-Reder-Realschule</p>
+      <p style="margin: 4px 0 0; opacity: 0.65;">Single-Engine Architecture v2.1 · 100% DSGVO-konform im Browser</p>
+    </footer>
+
+  </div>
+
+  <!-- Universelles Hub-Skript (funktioniert sowohl über HTTP/HTTPS als auch direkt via file://) -->
+  <script>
+    (function () {
+      var catalog = window.GM_CATALOG || null;
+      var activeGradeFilter = 'all';
+      var searchQuery = '';
+
+      function escapeHtml(str) {
+        if (str === null || str === undefined) return '';
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function getTopicProgress(topicId, legacyMasteryKey) {
+        if (window.GM_Gamification && typeof window.GM_Gamification.getTopicProgress === 'function') {
+          return window.GM_Gamification.getTopicProgress(topicId, legacyMasteryKey);
+        }
+        try {
+          var raw = localStorage.getItem('gm_topic_progress_v2');
+          var map = raw ? JSON.parse(raw) : {};
+          var entry = map[topicId] || { solvedExercises: [], mastered: false };
+          if (legacyMasteryKey && localStorage.getItem(legacyMasteryKey) === 'true') {
+            entry.mastered = true;
+          }
+          return entry;
+        } catch (e) {
+          return { solvedExercises: [], mastered: false };
+        }
+      }
+
+      function syncProfileUI(stats) {
+        if (!stats) return;
+        var elStreakTop = document.getElementById('hub-top-streak');
+        var elXpTop = document.getElementById('hub-top-xp');
+        var elLvlTop = document.getElementById('hub-top-level');
+        var elRankIcon = document.getElementById('hub-rank-icon');
+        var elRankTitle = document.getElementById('hub-rank-title');
+        var elXpFill = document.getElementById('hub-xp-fill');
+        var elXpText = document.getElementById('hub-xp-progress-text');
+        var elStatStreak = document.getElementById('hub-stat-streak');
+        var elStatXp = document.getElementById('hub-stat-xp');
+
+        if (elStreakTop) elStreakTop.textContent = stats.streak;
+        if (elXpTop) elXpTop.textContent = stats.xp;
+        if (elLvlTop) elLvlTop.textContent = 'Lvl ' + stats.level;
+        if (elRankIcon) elRankIcon.textContent = stats.rankIcon;
+        if (elRankTitle) elRankTitle.textContent = 'Level ' + stats.level + ': ' + stats.rankTitle;
+        if (elXpFill) elXpFill.style.width = stats.progressPercent + '%';
+        if (elXpText) elXpText.textContent = stats.xpInCurrentLvl + ' / ' + stats.pointsPerLevel + ' XP';
+        if (elStatStreak) elStatStreak.textContent = stats.streak;
+        if (elStatXp) elStatXp.textContent = stats.xp;
+
+        renderTrophies(stats.unlockedBadges || []);
+      }
+
+      function renderTrophies(unlockedIds) {
+        var grid = document.getElementById('hub-trophy-grid');
+        var badges = window.GM_TROPHY_BADGES || [];
+        if (!grid || !badges.length) return;
+
+        grid.innerHTML = badges
+          .map(function (b) {
+            var isUnlocked = unlockedIds.indexOf(b.id) !== -1;
+            return (
+              '<div class="gm-trophy-badge ' +
+              (isUnlocked ? 'unlocked' : '') +
+              '">' +
+              '<div class="gm-trophy-icon">' +
+              b.icon +
+              '</div>' +
+              '<div class="gm-trophy-label">' +
+              escapeHtml(b.label) +
+              '</div>' +
+              '<div class="gm-trophy-desc">' +
+              escapeHtml(b.desc) +
+              '</div>' +
+              '</div>'
+            );
+          })
+          .join('');
+      }
+
+      function updateFilterButtonStates() {
+        document.querySelectorAll('#hub-grade-tabs .gm-grade-tab').forEach(function (btn) {
+          btn.classList.toggle('is-active', btn.getAttribute('data-grade') === activeGradeFilter);
+        });
+        document.querySelectorAll('#hub-grade-kacheln .gm-grade-kachel').forEach(function (kachel) {
+          kachel.classList.toggle('is-active', kachel.getAttribute('data-grade') === activeGradeFilter);
+        });
+      }
+
+      function setGradeFilter(gradeValue) {
+        if (activeGradeFilter === gradeValue && gradeValue !== 'all') {
+          activeGradeFilter = 'all';
+        } else {
+          activeGradeFilter = gradeValue || 'all';
+        }
+        updateFilterButtonStates();
+        renderHub();
+      }
+
+      function renderHub() {
+        var root = document.getElementById('hub-topics-root');
+        if (!root || !catalog) return;
+
+        var topics = catalog.topics || [];
+        var masteredTotal = 0;
+
+        topics.forEach(function (t) {
+          var prog = getTopicProgress(t.id, t.legacyMasteryKey || t.legacyMasteredKey);
+          if (prog.mastered) masteredTotal += 1;
+        });
+
+                                                        var masteredEl = document.getElementById('hub-stat-mastered');
+        if (masteredEl) masteredEl.textContent = String(masteredTotal);
+
+        var q = searchQuery.trim().toLowerCase();
+        var filteredTopics = topics.filter(function (t) {
+          var matchesGrade =
+            activeGradeFilter === 'all' || String(t.grade) === String(activeGradeFilter);
+          var matchesQuery =
+            !q ||
+            t.title.toLowerCase().indexOf(q) !== -1 ||
+            t.description.toLowerCase().indexOf(q) !== -1 ||
+            (t.category && t.category.toLowerCase().indexOf(q) !== -1);
+          return matchesGrade && matchesQuery;
+        });
+
+        if (filteredTopics.length === 0) {
+          root.innerHTML =
+            '<div class="gm-glass-card" style="padding: 36px; text-align: center; margin-bottom: 32px;">' +
+            '<div style="font-size: 2.4rem; margin-bottom: 8px;">🔎</div>' +
+            '<h3 style="margin-bottom: 6px;">Keine Themen gefunden</h3>' +
+            '<p style="color: var(--color-text-muted); margin: 0;">' +
+            'Passe deinen Suchbegriff an oder wähle "Alle Formate".' +
+            '</p>' +
+            '</div>';
+          return;
+        }
+
+        var gradesMeta = catalog.grades || [];
+        var groupedGrades =
+          activeGradeFilter === 'all'
+            ? gradesMeta
+            : gradesMeta.filter(function (g) {
+                return String(g.grade) === String(activeGradeFilter);
+              });
+
+        root.innerHTML = groupedGrades
+          .map(function (gMeta) {
+            var items = filteredTopics.filter(function (t) {
+              return String(t.grade) === String(gMeta.grade);
             });
+            if (!items.length) return '';
+
+            var cardsHtml = items
+              .map(function (topic) {
+                var prog = getTopicProgress(topic.id, topic.legacyMasteryKey || topic.legacyMasteredKey);
+                var solvedCount = (prog.solvedExercises || []).length;
+                var targetHref = 'exercise.html?topic=' + encodeURIComponent(topic.id);
+                var color = escapeHtml(topic.accentColor || gMeta.accentColor || 'blue');
+
+                return (
+                  '<a href="' +
+                  targetHref +
+                  '" class="gm-topic-card ' +
+                  (prog.mastered ? 'is-mastered' : '') +
+                  '" data-topic-id="' +
+                  escapeHtml(topic.id) +
+                  '" data-color="' +
+                  color +
+                  '">' +
+                  '<div>' +
+                  '<div class="gm-topic-card-top">' +
+                  '<div class="gm-topic-badges">' +
+                  '<span class="gm-card-tag">' +
+                  escapeHtml(topic.category || gMeta.label) +
+                  '</span>' +
+                  (topic.hasJson
+                    ? '<span class="gm-card-tag is-engine">⚡ 2026 Engine</span>'
+                    : '') +
+                  (prog.mastered
+                    ? '<span class="gm-card-tag is-mastered">★ Mastered</span>'
+                    : '') +
+                  '</div>' +
+                  '<span class="gm-topic-icon" aria-hidden="true">' +
+                  (topic.icon || '📘') +
+                  '</span>' +
+                  '</div>' +
+                  '<h3 class="gm-topic-card-title">' +
+                  escapeHtml(topic.title) +
+                  '</h3>' +
+                  '<p class="gm-topic-card-desc">' +
+                  escapeHtml(topic.description) +
+                  '</p>' +
+                  '</div>' +
+                  '<div class="gm-topic-card-footer">' +
+                  '<span>' +
+                  (solvedCount > 0
+                    ? '✓ ' + solvedCount + '/' + topic.exerciseCount + ' gelöst'
+                    : topic.exerciseCount + ' Tasks · B2 Exam Prep') +
+                  '</span>' +
+                  '<span class="gm-topic-cta">Starten →</span>' +
+                  '</div>' +
+                  '</a>'
+                );
+              })
+              .join('');
+
+            return (
+              '<section class="gm-grade-section" data-grade-section="' +
+              escapeHtml(gMeta.grade) +
+              '">' +
+              '<div class="gm-grade-section-header">' +
+              '<h2 class="gm-grade-section-title">' +
+              '<span>' +
+              gMeta.icon +
+              '</span>' +
+              '<span>' +
+              escapeHtml(gMeta.label) +
+              '</span>' +
+              '</h2>' +
+              '<span class="gm-grade-section-sub">' +
+              escapeHtml(gMeta.subtitle || '') +
+              '</span>' +
+              '</div>' +
+              '<div class="gm-topics-grid">' +
+              cardsHtml +
+              '</div>' +
+              '</section>'
+            );
+          })
+          .join('');
+      }
+
+      async function loadCatalog() {
+        if (window.GM_CATALOG) {
+          catalog = window.GM_CATALOG;
+          renderHub();
+        }
+        try {
+          var res = await fetch('data/topics-catalog.json', { cache: 'no-cache' });
+          if (res.ok) {
+            catalog = await res.json();
+            renderHub();
+          }
+        } catch (err) {
+          if (!catalog && window.GM_CATALOG) {
+            catalog = window.GM_CATALOG;
+            renderHub();
+          }
+        }
+      }
+
+      function initHub() {
+        if (window.GM_Gamification) {
+          window.GM_Gamification.updateStreak();
+          window.GM_Gamification.subscribe(function (stats) {
+            syncProfileUI(stats);
+          });
         }
 
-        function renderSynonyms() {
-            const list = document.getElementById('synonymList');
-            // Die Lösung wird im data-attribute gespeichert.
-            list.innerHTML = synonymData.map(item => `
-                <li class="synonym-item">
-                    <span class="target-word">${item.id}. ${item.target} ${item.context}:</span>
-                    <input type="text" id="synonym-input-${item.id}" class="synonym-input" data-id="${item.id}" data-answer="${item.answer}">
-                    <span id="synonym-solution-${item.id}" class="correct-answer"></span>
-                </li>
-            `).join('');
-        }
-        
-        // #######################################################
-        // 3. LOGIK UND PRÜFUNG
-        // #######################################################
-        
-        function normalizeInput(input) {
-            // Trim, lower case, remove punctuation
-            return input.trim().toLowerCase().replace(/[.,!?'"\/]/g, ''); // Slash für (to) entfernen
-        }
+        document.querySelectorAll('#hub-grade-tabs .gm-grade-tab').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            setGradeFilter(btn.getAttribute('data-grade') || 'all');
+          });
+        });
 
-        function generateFeedback(percentage) {
-            const totalTasks = synonymData.length + Object.keys(matchingData).length;
+        document.querySelectorAll('#hub-grade-kacheln .gm-grade-kachel').forEach(function (kachel) {
+          kachel.addEventListener('click', function () {
+            setGradeFilter(kachel.getAttribute('data-grade') || 'all');
+          });
+        });
 
-            if (percentage === 100) {
-                return `Fantastisch! Alle ${totalTasks} Antworten sind korrekt! Deine Beherrschung des Wortschatzes ist beeindruckend.`;
-            } else if (percentage >= 80) {
-                return "Sehr gut! Du hast einen Großteil der Aufgaben richtig gelöst. Nur noch kleine Details müssen gefestigt werden.";
-            } else if (percentage >= 60) {
-                return "Gut gemacht! Du bist auf dem richtigen Weg. Gehe die fehlerhaften Aufgaben noch einmal durch und schaue dir die Lösungen an.";
-            } else if (percentage >= 40) {
-                return "Motivierendes Ergebnis. Die Grundlagen sind da, aber konzentriere dich jetzt auf die spezifischen Vokabeln im Text. Nutze die Lösungen zum Lernen!";
-            } else {
-                return "Gib nicht auf! Das ist eine schwierige Aufgabe. Nutze die Lösungen, um zu lernen, und versuche es dann erneut. Jeder fängt klein an.";
-            }
+        var searchInput = document.getElementById('hub-search-input');
+        if (searchInput) {
+          searchInput.addEventListener('input', function (e) {
+            searchQuery = e.target.value || '';
+            renderHub();
+          });
         }
 
-        function checkTask1() {
-            let correctCount = 0;
-            let totalCount = 0;
+        loadCatalog();
+      }
 
-            for (const expression in matchingData) {
-                totalCount++;
-                const selectElement = document.getElementById(`match-${expression}`);
-                const userAnswer = parseInt(selectElement.value);
-                const correctAnswer = matchingData[expression];
-                
-                selectElement.style.border = `2px solid var(--color-secondary)`;
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHub);
+      } else {
+        initHub();
+      }
+    })();
+  </script>
 
-                if (userAnswer === correctAnswer) {
-                    correctCount++;
-                    selectElement.style.border = `2px solid var(--color-success)`;
-                } else if (selectElement.value) {
-                    selectElement.style.border = `2px solid var(--color-error)`;
-                }
-            }
-            return { correct: correctCount, total: totalCount, name: 'Task 1 (Matching)' };
-        }
-
-        function checkTask2() {
-            let correctCount = 0;
-            let totalCount = synonymData.length;
-
-            synonymData.forEach(item => {
-                const inputElement = document.getElementById(`synonym-input-${item.id}`);
-                const userAnswer = normalizeInput(inputElement.value);
-                const correctAnswer = normalizeInput(item.answer);
-                
-                inputElement.style.border = `2px solid #555`;
-
-                // Die Lösung kann auch ohne Klammern eingegeben werden, aber die Prüfung muss streng sein
-                if (userAnswer === correctAnswer) {
-                    correctCount++;
-                    inputElement.style.border = `2px solid var(--color-success)`;
-                } else if (inputElement.value) {
-                    inputElement.style.border = `2px solid var(--color-error)`;
-                }
-            });
-            return { correct: correctCount, total: totalCount, name: 'Task 2 (Synonyme)' };
-        }
-
-
-        function checkAllTasks() {
-            const result1 = checkTask1();
-            const result2 = checkTask2();
-            
-            const totalCorrect = result1.correct + result2.correct;
-            const totalTasks = result1.total + result2.total;
-            const scorePercentage = (totalCorrect / totalTasks) * 100;
-            
-            const resultMessage = document.getElementById('resultMessage');
-            resultMessage.style.display = 'block';
-
-            let messageContent = `
-                ${generateFeedback(scorePercentage)}<br><br>
-                **Detailergebnis:** ${totalCorrect} von ${totalTasks} (${scorePercentage.toFixed(0)}%) korrekt.<br>
-                ${result1.name}: ${result1.correct}/${result1.total} | ${result2.name}: ${result2.correct}/${result2.total}
-            `;
-            
-            // Setzt das passende CSS für Erfolg oder Misserfolg
-            if (totalCorrect === totalTasks) {
-                resultMessage.className = 'result-message success';
-            } else {
-                resultMessage.className = 'result-message failure';
-            }
-            
-            resultMessage.innerHTML = messageContent.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); // Markdown für Fettdruck
-
-        }
-        
-        function toggleSolutions() {
-            // Task 1 Lösungen
-            const solutionSpansT1 = document.querySelectorAll('.matching-area .correct-answer');
-            // Task 2 Lösungen
-            const solutionSpansT2 = document.querySelectorAll('#task2 .correct-answer');
-            const inputElementsT2 = document.querySelectorAll('.synonym-input');
-            
-            const button = document.getElementById('solutionButton');
-            
-            // Prüfen Sie den aktuellen Zustand basierend auf dem Button-Text, da die CSS-Anzeige nicht sichtbar ist.
-            const isHidden = button.textContent === 'Lösungen anzeigen';
-
-            if (isHidden) {
-                // Anzeigen der Lösungen
-                solutionSpansT1.forEach(span => span.style.display = 'inline-block');
-                
-                inputElementsT2.forEach((input, index) => {
-                    const answer = input.getAttribute('data-answer');
-                    solutionSpansT2[index].textContent = `(Korrekte Antwort: ${answer})`;
-                    solutionSpansT2[index].style.display = 'inline-block';
-                });
-                
-                button.textContent = 'Lösungen verbergen';
-            } else {
-                // Verbergen der Lösungen
-                solutionSpansT1.forEach(span => span.style.display = 'none');
-                solutionSpansT2.forEach(span => span.style.display = 'none');
-                button.textContent = 'Lösungen anzeigen';
-            }
-        }
-
-
-        // #######################################################
-        // 4. INITIALISIERUNG
-        // #######################################################
-        
-        window.onload = () => {
-             renderMatching();
-             renderSynonyms();
-             // WICHTIG: Die Lösungen sind jetzt standardmäßig per CSS verborgen. 
-             // Hier muss KEIN toggleSolutions() aufgerufen werden.
-        }
-    </script>
 </body>
 </html>

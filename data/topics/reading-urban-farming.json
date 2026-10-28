@@ -1,0 +1,450 @@
+{
+  "id": "reading-urban-farming",
+  "title": "Reading Comprehension: Cultivating the Concrete Jungle",
+  "category": "Reading Comprehension",
+  "level": "B2 / Abschlussklasse",
+  "grade": "reading-comprehension",
+  "description": "Investigate how modern vertical farms and hydroponics reimagine sustainable city living.",
+  "text": {
+    "title": "Cultivating the Concrete Jungle: The Rise of Vertical Farming",
+    "sections": [
+      {
+        "number": 1,
+        "label": "[1]",
+        "content": "By 2050, the United Nations projects that nearly seventy percent of the world's population will dwell in metropolitan hubs. Feeding billions of urban dwellers poses an immense logistical challenge that conventional agriculture struggles to meet. Arable farmland is dwindling due to soil erosion, desertification, and urban sprawl, while transporting produce across continents generates immense carbon footprints. To tackle this crisis, agronomists are championing a radical concept: moving agriculture directly into the heart of cities."
+      },
+      {
+        "number": 2,
+        "label": "[2]",
+        "content": "Rather than expanding horizontally across vast rural plains, vertical farms stack crops in climate-controlled indoor towers. Abandoned warehouses, disused shipping containers, and skyscrapers are transformed into lush agrarian hubs. By relying on advanced hydroponic and aeroponic systems, plants absorb nutrients dissolved in recycled water mist, eliminating the need for conventional dirt altogether. This controlled environment shields harvests from devastating droughts, floods, and invasive insect pests."
+      },
+      {
+        "number": 3,
+        "label": "[3]",
+        "content": "The ecological payoffs are impressive. Indoor agricultural facilities consume up to ninety-five percent less water than conventional outdoor farms because moisture is continuously captured and recirculated. Furthermore, because indoor crops are grown in sterile, contained atmospheres, growers can completely dispense with synthetic pesticides and herbicides. Crops can be harvested within miles of local supermarkets, slashing transit times and keeping fresh greens crisp for days longer."
+      },
+      {
+        "number": 4,
+        "label": "[4]",
+        "content": "Nonetheless, the vertical farming sector is not without its detractors. Critics frequently point out that the energy demands of artificial LED lighting and climate regulation systems remain astronomical. When facilities draw power from fossil-fueled grids, their ecological benefits are quickly compromised. Unless urban farm enterprises can tap into cheap renewable power sources, the operational costs can quickly spin out of control, resulting in exorbitant prices for consumers."
+      },
+      {
+        "number": 5,
+        "label": "[5]",
+        "content": "Beyond high-tech automated facilities, urban agriculture is also flourishing at the grassroots level. Community rooftop gardens transform bleak asphalt rooftops into vibrant social hubs where residents cultivate heirloom vegetables and bond with neighbors. These decentralized initiatives enhance local biodiversity, provide natural habitats for pollinators like bees, and mitigate the oppressive 'urban heat island' effect that plagues modern metropolises during sweltering summers."
+      },
+      {
+        "number": 6,
+        "label": "[6]",
+        "content": "Moving forward, vertical and communal farming will not render traditional rural agriculture obsolete, but rather complement it in meaningful ways. Grain and staple crops will still thrive best in open fields, while cities take responsibility for cultivating perishable leafy greens, berries, and herbs locally. By weaving food production into architectural planning, urban areas can take an important stride toward ecological self-sufficiency and food security."
+      }
+    ]
+  },
+  "task1_matching": {
+    "instruction": "Match the expressions (A – F) as used in the text with their corresponding definitions (0 – 7). Be careful: There are two definitions that you do not need.",
+    "expressions": [
+      {
+        "id": "A",
+        "text": "urban sprawl",
+        "section": "Sec 1",
+        "answer": 2,
+        "acceptedAnswers": [
+          "2"
+        ],
+        "sectionNumber": 1
+      },
+      {
+        "id": "B",
+        "text": "dispense with",
+        "section": "Sec 3",
+        "answer": 6,
+        "acceptedAnswers": [
+          "6"
+        ],
+        "sectionNumber": 3
+      },
+      {
+        "id": "C",
+        "text": "slashing transit times",
+        "section": "Sec 3",
+        "answer": 5,
+        "acceptedAnswers": [
+          "5"
+        ],
+        "sectionNumber": 3
+      },
+      {
+        "id": "D",
+        "text": "spin out of control",
+        "section": "Sec 4",
+        "answer": 7,
+        "acceptedAnswers": [
+          "7"
+        ],
+        "sectionNumber": 4
+      },
+      {
+        "id": "E",
+        "text": "at the grassroots level",
+        "section": "Sec 5",
+        "answer": 4,
+        "acceptedAnswers": [
+          "4"
+        ],
+        "sectionNumber": 5
+      },
+      {
+        "id": "F",
+        "text": "render obsolete",
+        "section": "Sec 6",
+        "answer": 1,
+        "acceptedAnswers": [
+          "1"
+        ],
+        "sectionNumber": 6
+      }
+    ],
+    "definitions": [
+      {
+        "id": 0,
+        "text": "to convert farmland into synthetic sports facilities.",
+        "isDistractor": true
+      },
+      {
+        "id": 1,
+        "text": "to make something no longer useful, valid, or relevant because something newer exists.",
+        "isDistractor": false,
+        "matchedBy": "F"
+      },
+      {
+        "id": 2,
+        "text": "the uncontrolled and unplanned expansion of urban areas into rural land.",
+        "isDistractor": false,
+        "matchedBy": "A"
+      },
+      {
+        "id": 3,
+        "text": "to increase operational transport costs without notice.",
+        "isDistractor": true
+      },
+      {
+        "id": 4,
+        "text": "involving ordinary people at a local, community foundation rather than top authorities.",
+        "isDistractor": false,
+        "matchedBy": "E"
+      },
+      {
+        "id": 5,
+        "text": "to dramatically and swiftly reduce travel and shipping durations.",
+        "isDistractor": false,
+        "matchedBy": "C"
+      },
+      {
+        "id": 6,
+        "text": "to manage without, get rid of, or stop using something no longer required.",
+        "isDistractor": false,
+        "matchedBy": "B"
+      },
+      {
+        "id": 7,
+        "text": "to develop rapidly in an chaotic, unregulated, and unmanageable manner.",
+        "isDistractor": false,
+        "matchedBy": "D"
+      }
+    ],
+    "solution_mapping": {
+      "A": 2,
+      "B": 6,
+      "C": 5,
+      "D": 7,
+      "E": 4,
+      "F": 1
+    }
+  },
+  "task2_vocabulary": {
+    "instruction": "Find a word or expression in the text that means the same as each of the following words (1 – 5). The section where the word is located is indicated.",
+    "items": [
+      {
+        "id": 1,
+        "prompt": "diminishing, gradually becoming smaller or less (verb participle)",
+        "section": "Section 1",
+        "answer": "dwindling",
+        "acceptedAnswers": [
+          "dwindling"
+        ],
+        "sectionNumber": 1
+      },
+      {
+        "id": 2,
+        "prompt": "farming, agricultural, related to cultivated land (adjective)",
+        "section": "Section 2",
+        "answer": "agrarian",
+        "acceptedAnswers": [
+          "agrarian"
+        ],
+        "sectionNumber": 2
+      },
+      {
+        "id": 3,
+        "prompt": "critics, people who disparage or oppose a concept (noun plural)",
+        "section": "Section 4",
+        "answer": "detractors",
+        "acceptedAnswers": [
+          "detractors"
+        ],
+        "sectionNumber": 4
+      },
+      {
+        "id": 4,
+        "prompt": "excessively high, outrageously expensive (adjective)",
+        "section": "Section 4",
+        "answer": "exorbitant",
+        "acceptedAnswers": [
+          "exorbitant"
+        ],
+        "sectionNumber": 4
+      },
+      {
+        "id": 5,
+        "prompt": "to alleviate, reduce the severity of, lessen (verb)",
+        "section": "Section 5",
+        "answer": "mitigate",
+        "acceptedAnswers": [
+          "mitigate"
+        ],
+        "sectionNumber": 5
+      }
+    ]
+  },
+  "type": "reading-comprehension",
+  "exercises": [
+    {
+      "id": "reading-urban-farming-main",
+      "title": "Cultivating the Concrete Jungle: The Rise of Vertical Farming – Task 1 (Matching) & Task 2 (Vocabulary)",
+      "type": "reading_comprehension",
+      "instruction": "Read the text 'Cultivating the Concrete Jungle: The Rise of Vertical Farming' ([1]–[6]) and complete Task 1 (Matching Expressions A–F with 0–7) and Task 2 (Find a Word or Expression 1–5).",
+      "sentences": [
+        {
+          "text": "A. urban sprawl [Sec 1] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "2"
+              ],
+              "solutions": [
+                "2"
+              ],
+              "acceptedAnswers": [
+                "2"
+              ],
+              "hint": "Sec 1",
+              "explanation": "A -> 2",
+              "answer": "2"
+            }
+          ]
+        },
+        {
+          "text": "B. dispense with [Sec 3] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "6"
+              ],
+              "solutions": [
+                "6"
+              ],
+              "acceptedAnswers": [
+                "6"
+              ],
+              "hint": "Sec 3",
+              "explanation": "B -> 6",
+              "answer": "6"
+            }
+          ]
+        },
+        {
+          "text": "C. slashing transit times [Sec 3] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "5"
+              ],
+              "solutions": [
+                "5"
+              ],
+              "acceptedAnswers": [
+                "5"
+              ],
+              "hint": "Sec 3",
+              "explanation": "C -> 5",
+              "answer": "5"
+            }
+          ]
+        },
+        {
+          "text": "D. spin out of control [Sec 4] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "7"
+              ],
+              "solutions": [
+                "7"
+              ],
+              "acceptedAnswers": [
+                "7"
+              ],
+              "hint": "Sec 4",
+              "explanation": "D -> 7",
+              "answer": "7"
+            }
+          ]
+        },
+        {
+          "text": "E. at the grassroots level [Sec 5] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "4"
+              ],
+              "solutions": [
+                "4"
+              ],
+              "acceptedAnswers": [
+                "4"
+              ],
+              "hint": "Sec 5",
+              "explanation": "E -> 4",
+              "answer": "4"
+            }
+          ]
+        },
+        {
+          "text": "F. render obsolete [Sec 6] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "1"
+              ],
+              "solutions": [
+                "1"
+              ],
+              "acceptedAnswers": [
+                "1"
+              ],
+              "hint": "Sec 6",
+              "explanation": "F -> 1",
+              "answer": "1"
+            }
+          ]
+        },
+        {
+          "text": "1. diminishing, gradually becoming smaller or less (verb participle) () [Section 1] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "dwindling"
+              ],
+              "solutions": [
+                "dwindling"
+              ],
+              "acceptedAnswers": [
+                "dwindling"
+              ],
+              "hint": " · Section 1",
+              "explanation": "Gesuchtes Wort in [Section 1]: 'dwindling'.",
+              "answer": "dwindling"
+            }
+          ]
+        },
+        {
+          "text": "2. farming, agricultural, related to cultivated land (adjective) () [Section 2] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "agrarian"
+              ],
+              "solutions": [
+                "agrarian"
+              ],
+              "acceptedAnswers": [
+                "agrarian"
+              ],
+              "hint": " · Section 2",
+              "explanation": "Gesuchtes Wort in [Section 2]: 'agrarian'.",
+              "answer": "agrarian"
+            }
+          ]
+        },
+        {
+          "text": "3. critics, people who disparage or oppose a concept (noun plural) () [Section 4] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "detractors"
+              ],
+              "solutions": [
+                "detractors"
+              ],
+              "acceptedAnswers": [
+                "detractors"
+              ],
+              "hint": " · Section 4",
+              "explanation": "Gesuchtes Wort in [Section 4]: 'detractors'.",
+              "answer": "detractors"
+            }
+          ]
+        },
+        {
+          "text": "4. excessively high, outrageously expensive (adjective) () [Section 4] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "exorbitant"
+              ],
+              "solutions": [
+                "exorbitant"
+              ],
+              "acceptedAnswers": [
+                "exorbitant"
+              ],
+              "hint": " · Section 4",
+              "explanation": "Gesuchtes Wort in [Section 4]: 'exorbitant'.",
+              "answer": "exorbitant"
+            }
+          ]
+        },
+        {
+          "text": "5. to alleviate, reduce the severity of, lessen (verb) () [Section 5] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "mitigate"
+              ],
+              "solutions": [
+                "mitigate"
+              ],
+              "acceptedAnswers": [
+                "mitigate"
+              ],
+              "hint": " · Section 5",
+              "explanation": "Gesuchtes Wort in [Section 5]: 'mitigate'.",
+              "answer": "mitigate"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,454 @@
+{
+  "id": "reading-ocean-exploration",
+  "title": "Reading Comprehension: Into the Abyss",
+  "category": "Reading Comprehension",
+  "level": "B2 / Abschlussklasse",
+  "grade": "reading-comprehension",
+  "description": "Discover the mysteries, technological feats, and ecological perils of deep-sea exploration.",
+  "text": {
+    "title": "Into the Abyss: Exploring Earth's Final Frontier",
+    "sections": [
+      {
+        "number": 1,
+        "label": "[1]",
+        "content": "It is a stunning paradox of modern science that we possess far more detailed maps of the surfaces of Mars and the Moon than of our own ocean floor. Covering more than seventy percent of our planet, the oceans harbor ecosystems of staggering biodiversity, yet over eighty percent of this watery expanse remains unmapped and unexplored. Descending into the deep ocean trenches means entering an alien realm characterized by perpetual darkness, near-freezing temperatures, and immense hydrostatic pressure."
+      },
+      {
+        "number": 2,
+        "label": "[2]",
+        "content": "To endure these hostile conditions, marine scientists rely on cutting-edge deep-submergence vehicles and autonomous underwater robots. At depths exceeding six thousand meters, the crushing weight of the water column easily pulverizes ordinary machinery. Submersibles engineered with thick titanium hulls and specialized syntactic foam enable researchers to cross uncharted thresholds and document life forms that thrive without sunlight, drawing energy from hydrothermal vents through chemosynthesis."
+      },
+      {
+        "number": 3,
+        "label": "[3]",
+        "content": "These abyssal ecosystems have yielded scientific discoveries that overturned long-held biological dogmas. Organisms dwelling around boiling deep-sea vents thrive in acidic, mineral-laden water that would prove toxic to terrestrial creatures. Biologists have isolated unique enzymes from these extremophiles that exhibit remarkable resilience, offering revolutionary applications for modern medicine, cancer therapies, and sustainable industrial catalysis."
+      },
+      {
+        "number": 4,
+        "label": "[4]",
+        "content": "However, this pristine wilderness is now caught in the crosshairs of global commercial interests. The deep ocean floor is blanketed with vast deposits of polymetallic nodules—potato-sized mineral formations rich in nickel, cobalt, and rare earth elements that are crucial for electric vehicle batteries. Mining corporations are eager to dredge these deposits, claiming deep-sea extraction carries a lower human cost than controversial terrestrial mines."
+      },
+      {
+        "number": 5,
+        "label": "[5]",
+        "content": "Marine ecologists strongly dispute this narrative, sounding the alarm over irreversible ecological destruction. Deep-sea ecosystems develop at a glacial pace; sediment plumes kicked up by heavy extraction machinery could choke fragile filter feeders and disrupt ocean food chains for centuries. Because abyssal species reproduce slowly and inhabit narrow geographical niches, widespread seabed mining could drive unique organisms to extinction before science has even chronicled their existence."
+      },
+      {
+        "number": 6,
+        "label": "[6]",
+        "content": "Protecting the abyss requires concerted international governance. The high seas lie beyond the jurisdiction of individual nations, creating a precarious legal vacuum. If humanity prioritizes quick industrial gains over conservation, we risk devastating the planet's largest habitat. The mystery of the deep sea should inspire humble stewardship rather than unchecked exploitation."
+      }
+    ]
+  },
+  "task1_matching": {
+    "instruction": "Match the expressions (A – F) as used in the text with their corresponding definitions (0 – 7). Be careful: There are two definitions that you do not need.",
+    "expressions": [
+      {
+        "id": "A",
+        "text": "cross uncharted thresholds",
+        "section": "Sec 2",
+        "answer": 4,
+        "acceptedAnswers": [
+          "4"
+        ],
+        "sectionNumber": 2
+      },
+      {
+        "id": "B",
+        "text": "caught in the crosshairs",
+        "section": "Sec 4",
+        "answer": 3,
+        "acceptedAnswers": [
+          "3"
+        ],
+        "sectionNumber": 4
+      },
+      {
+        "id": "C",
+        "text": "sounding the alarm",
+        "section": "Sec 5",
+        "answer": 6,
+        "acceptedAnswers": [
+          "6"
+        ],
+        "sectionNumber": 5
+      },
+      {
+        "id": "D",
+        "text": "at a glacial pace",
+        "section": "Sec 5",
+        "answer": 1,
+        "acceptedAnswers": [
+          "1"
+        ],
+        "sectionNumber": 5
+      },
+      {
+        "id": "E",
+        "text": "beyond the jurisdiction",
+        "section": "Sec 6",
+        "answer": 2,
+        "acceptedAnswers": [
+          "2"
+        ],
+        "sectionNumber": 6
+      },
+      {
+        "id": "F",
+        "text": "humble stewardship",
+        "section": "Sec 6",
+        "answer": 5,
+        "acceptedAnswers": [
+          "5"
+        ],
+        "sectionNumber": 6
+      }
+    ],
+    "definitions": [
+      {
+        "id": 0,
+        "text": "to extract mineral deposits using autonomous underwater lasers.",
+        "isDistractor": true
+      },
+      {
+        "id": 1,
+        "text": "extremely slowly, advancing with minimal perceptible movement over time.",
+        "isDistractor": false,
+        "matchedBy": "D"
+      },
+      {
+        "id": 2,
+        "text": "outside the official legal authority or territory of a particular governing body.",
+        "isDistractor": false,
+        "matchedBy": "E"
+      },
+      {
+        "id": 3,
+        "text": "targeted, singled out, or threatened by focused attention or criticism.",
+        "isDistractor": false,
+        "matchedBy": "B"
+      },
+      {
+        "id": 4,
+        "text": "to enter entirely new, unexplored, or previously inaccessible territories.",
+        "isDistractor": false,
+        "matchedBy": "A"
+      },
+      {
+        "id": 5,
+        "text": "responsible, careful, and modest protection of nature and resources.",
+        "isDistractor": false,
+        "matchedBy": "F"
+      },
+      {
+        "id": 6,
+        "text": "warning the public or authorities about an urgent danger or threat.",
+        "isDistractor": false,
+        "matchedBy": "C"
+      },
+      {
+        "id": 7,
+        "text": "to conduct biological research without international permits.",
+        "isDistractor": true
+      }
+    ],
+    "solution_mapping": {
+      "A": 4,
+      "B": 3,
+      "C": 6,
+      "D": 1,
+      "E": 2,
+      "F": 5
+    }
+  },
+  "task2_vocabulary": {
+    "instruction": "Find a word or expression in the text that means the same as each of the following words (1 – 5). The section where the word is located is indicated.",
+    "items": [
+      {
+        "id": 1,
+        "prompt": "crushes, grinds into dust or tiny fragments (verb)",
+        "section": "Section 2",
+        "answer": "pulverizes",
+        "acceptedAnswers": [
+          "pulverizes",
+          "pulverises"
+        ],
+        "sectionNumber": 2
+      },
+      {
+        "id": 2,
+        "prompt": "unspoiled, untouched, in original perfect condition (adjective)",
+        "section": "Section 4",
+        "answer": "pristine",
+        "acceptedAnswers": [
+          "pristine"
+        ],
+        "sectionNumber": 4
+      },
+      {
+        "id": 3,
+        "prompt": "clouds or columns of floating particles in water/air (noun plural)",
+        "section": "Section 5",
+        "answer": "plumes",
+        "acceptedAnswers": [
+          "plumes"
+        ],
+        "sectionNumber": 5
+      },
+      {
+        "id": 4,
+        "prompt": "recorded, documented in detail over time (verb participle)",
+        "section": "Section 5",
+        "answer": "chronicled",
+        "acceptedAnswers": [
+          "chronicled"
+        ],
+        "sectionNumber": 5
+      },
+      {
+        "id": 5,
+        "prompt": "fragile, dangerously insecure, unstable (adjective)",
+        "section": "Section 6",
+        "answer": "precarious",
+        "acceptedAnswers": [
+          "precarious"
+        ],
+        "sectionNumber": 6
+      }
+    ]
+  },
+  "type": "reading-comprehension",
+  "exercises": [
+    {
+      "id": "reading-ocean-exploration-main",
+      "title": "Into the Abyss: Exploring Earth's Final Frontier – Task 1 (Matching) & Task 2 (Vocabulary)",
+      "type": "reading_comprehension",
+      "instruction": "Read the text 'Into the Abyss: Exploring Earth's Final Frontier' ([1]–[6]) and complete Task 1 (Matching Expressions A–F with 0–7) and Task 2 (Find a Word or Expression 1–5).",
+      "sentences": [
+        {
+          "text": "A. cross uncharted thresholds [Sec 2] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "4"
+              ],
+              "solutions": [
+                "4"
+              ],
+              "acceptedAnswers": [
+                "4"
+              ],
+              "hint": "Sec 2",
+              "explanation": "A -> 4",
+              "answer": "4"
+            }
+          ]
+        },
+        {
+          "text": "B. caught in the crosshairs [Sec 4] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "3"
+              ],
+              "solutions": [
+                "3"
+              ],
+              "acceptedAnswers": [
+                "3"
+              ],
+              "hint": "Sec 4",
+              "explanation": "B -> 3",
+              "answer": "3"
+            }
+          ]
+        },
+        {
+          "text": "C. sounding the alarm [Sec 5] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "6"
+              ],
+              "solutions": [
+                "6"
+              ],
+              "acceptedAnswers": [
+                "6"
+              ],
+              "hint": "Sec 5",
+              "explanation": "C -> 6",
+              "answer": "6"
+            }
+          ]
+        },
+        {
+          "text": "D. at a glacial pace [Sec 5] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "1"
+              ],
+              "solutions": [
+                "1"
+              ],
+              "acceptedAnswers": [
+                "1"
+              ],
+              "hint": "Sec 5",
+              "explanation": "D -> 1",
+              "answer": "1"
+            }
+          ]
+        },
+        {
+          "text": "E. beyond the jurisdiction [Sec 6] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "2"
+              ],
+              "solutions": [
+                "2"
+              ],
+              "acceptedAnswers": [
+                "2"
+              ],
+              "hint": "Sec 6",
+              "explanation": "E -> 2",
+              "answer": "2"
+            }
+          ]
+        },
+        {
+          "text": "F. humble stewardship [Sec 6] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "5"
+              ],
+              "solutions": [
+                "5"
+              ],
+              "acceptedAnswers": [
+                "5"
+              ],
+              "hint": "Sec 6",
+              "explanation": "F -> 5",
+              "answer": "5"
+            }
+          ]
+        },
+        {
+          "text": "1. crushes, grinds into dust or tiny fragments (verb) () [Section 2] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "pulverizes",
+                "pulverises"
+              ],
+              "solutions": [
+                "pulverizes",
+                "pulverises"
+              ],
+              "acceptedAnswers": [
+                "pulverizes",
+                "pulverises"
+              ],
+              "hint": " · Section 2",
+              "explanation": "Gesuchtes Wort in [Section 2]: 'pulverizes'.",
+              "answer": "pulverizes"
+            }
+          ]
+        },
+        {
+          "text": "2. unspoiled, untouched, in original perfect condition (adjective) () [Section 4] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "pristine"
+              ],
+              "solutions": [
+                "pristine"
+              ],
+              "acceptedAnswers": [
+                "pristine"
+              ],
+              "hint": " · Section 4",
+              "explanation": "Gesuchtes Wort in [Section 4]: 'pristine'.",
+              "answer": "pristine"
+            }
+          ]
+        },
+        {
+          "text": "3. clouds or columns of floating particles in water/air (noun plural) () [Section 5] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "plumes"
+              ],
+              "solutions": [
+                "plumes"
+              ],
+              "acceptedAnswers": [
+                "plumes"
+              ],
+              "hint": " · Section 5",
+              "explanation": "Gesuchtes Wort in [Section 5]: 'plumes'.",
+              "answer": "plumes"
+            }
+          ]
+        },
+        {
+          "text": "4. recorded, documented in detail over time (verb participle) () [Section 5] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "chronicled"
+              ],
+              "solutions": [
+                "chronicled"
+              ],
+              "acceptedAnswers": [
+                "chronicled"
+              ],
+              "hint": " · Section 5",
+              "explanation": "Gesuchtes Wort in [Section 5]: 'chronicled'.",
+              "answer": "chronicled"
+            }
+          ]
+        },
+        {
+          "text": "5. fragile, dangerously insecure, unstable (adjective) () [Section 6] — {gap}",
+          "gaps": [
+            {
+              "id": 1,
+              "correct": [
+                "precarious"
+              ],
+              "solutions": [
+                "precarious"
+              ],
+              "acceptedAnswers": [
+                "precarious"
+              ],
+              "hint": " · Section 6",
+              "explanation": "Gesuchtes Wort in [Section 6]: 'precarious'.",
+              "answer": "precarious"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

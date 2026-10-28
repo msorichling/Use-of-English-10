@@ -1,0 +1,2417 @@
+{
+  "id": "word-formation-u3",
+  "title": "Word Formation – Unit 3",
+  "subtitle": "Academic Vocabulary, Compounding & Internal Stem Changes",
+  "category": "Vocabulary & Word Building",
+  "level": "B2 / Abschlussklasse",
+  "grade": "word-formation",
+  "format": "word-formation",
+  "accentColor": "violet",
+  "icon": "🧩",
+  "description": "Cambridge B2 First (FCE) & Abschlussprüfung Word Formation – Unit 3: Academic Vocabulary, Compounding & Internal Stem Changes.",
+  "instructions": "Use the word given in capitals to form a word that fits grammatically and lexically into the gap in the sentence.",
+  "rules": {
+    "title": "Word Formation – Unit 3 (B2 / Exam Prep)",
+    "summary": "Bilde aus dem in Großbuchstaben angegebenen Stammwort (BASE WORD) die grammatikalisch und inhaltlich passende Wortform (Nomen, Verb, Adjektiv oder Adverb).",
+    "sections": [
+      {
+        "heading": "Strategie zur Wortbildung",
+        "items": [
+          "**1. Wortart bestimmen**: Braucht die Lücke ein Nomen (*-tion, -ment, -ness, -ity*), ein Adjektiv (*-able, -ive, -ous, -ful*), ein Adverb (*-ly*) oder ein Verb (*en-, -ify, -ise/-ize*)?",
+          "**2. Negativpräfixe prüfen**: Verlangt der Satzkontext ein negatives Präfix (*un-, in-, im-, il-, ir-, dis-, mis-*)?",
+          "**3. Plural / Zeitform beachten**: Bei zählbaren Nomen prüfen, ob Singular oder Plural benötigt wird."
+        ]
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "taskId": 1,
+      "level": "Beginner",
+      "exercises": [
+        {
+          "sentence": "The charity relies on the financial {gap} of its members.",
+          "hint": "ASSIST",
+          "baseWord": "ASSIST",
+          "answer": "assistance",
+          "acceptedAnswers": [
+            "assistance"
+          ]
+        },
+        {
+          "sentence": "The {gap} of a large project requires careful planning and oversight.",
+          "hint": "MANAGE",
+          "baseWord": "MANAGE",
+          "answer": "management",
+          "acceptedAnswers": [
+            "management"
+          ]
+        },
+        {
+          "sentence": "The new system is designed to be completely {gap} friendly.",
+          "hint": "ECOLOGY",
+          "baseWord": "ECOLOGY",
+          "answer": "ecological",
+          "acceptedAnswers": [
+            "ecological"
+          ]
+        },
+        {
+          "sentence": "You must be {gap} if you want to run your own business successfully.",
+          "hint": "PRACTICE",
+          "baseWord": "PRACTICE",
+          "answer": "practical",
+          "acceptedAnswers": [
+            "practical"
+          ]
+        },
+        {
+          "sentence": "The old house is in urgent need of a full {gap}.",
+          "hint": "RENOVATE",
+          "baseWord": "RENOVATE",
+          "answer": "renovation",
+          "acceptedAnswers": [
+            "renovation"
+          ]
+        },
+        {
+          "sentence": "The teacher stressed the {gap} of regular exercise for mental health.",
+          "hint": "IMPORTANT",
+          "baseWord": "IMPORTANT",
+          "answer": "importance",
+          "acceptedAnswers": [
+            "importance"
+          ]
+        },
+        {
+          "sentence": "We live in an era of rapid technological {gap}.",
+          "hint": "INNOVATE",
+          "baseWord": "INNOVATE",
+          "answer": "innovation",
+          "acceptedAnswers": [
+            "innovation"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 2,
+      "level": "Beginner",
+      "exercises": [
+        {
+          "sentence": "She spoke very {gap} about her future career plans.",
+          "hint": "CONFIDENT",
+          "baseWord": "CONFIDENT",
+          "answer": "confidently",
+          "acceptedAnswers": [
+            "confidently"
+          ]
+        },
+        {
+          "sentence": "The government issued a strong warning about the potential dangers facing {gap} species.",
+          "hint": "ENDANGER",
+          "baseWord": "ENDANGER",
+          "answer": "endangered",
+          "acceptedAnswers": [
+            "endangered"
+          ]
+        },
+        {
+          "sentence": "His {gap} approach to his finances meant he never ran out of money.",
+          "hint": "BUDGET",
+          "baseWord": "BUDGET",
+          "answer": "budgeting",
+          "acceptedAnswers": [
+            "budgeting"
+          ]
+        },
+        {
+          "sentence": "The children were tired but in good spirits after the {gap} hike through the mountains.",
+          "hint": "EXHAUST",
+          "baseWord": "EXHAUST",
+          "answer": "exhausting",
+          "acceptedAnswers": [
+            "exhausting"
+          ]
+        },
+        {
+          "sentence": "The documentary provided an {gap} look at the history of the island.",
+          "hint": "INFORM",
+          "baseWord": "INFORM",
+          "answer": "informative",
+          "acceptedAnswers": [
+            "informative"
+          ]
+        },
+        {
+          "sentence": "It is often thought that money cannot buy {gap}.",
+          "hint": "HAPPIER",
+          "baseWord": "HAPPIER",
+          "answer": "happiness",
+          "acceptedAnswers": [
+            "happiness"
+          ]
+        },
+        {
+          "sentence": "The team showed great {gap} in overcoming the initial technical difficulties.",
+          "hint": "RESOLVE",
+          "baseWord": "RESOLVE",
+          "answer": "resolution",
+          "acceptedAnswers": [
+            "resolution",
+            "resoluteness"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 3,
+      "level": "Beginner",
+      "exercises": [
+        {
+          "sentence": "The charity helps children from {gap} backgrounds to get a good start in life.",
+          "hint": "ADVANTAGE",
+          "baseWord": "ADVANTAGE",
+          "answer": "disadvantaged",
+          "acceptedAnswers": [
+            "disadvantaged"
+          ]
+        },
+        {
+          "sentence": "He is a highly {gap} individual who focuses entirely on his goals.",
+          "hint": "MOTIVATE",
+          "baseWord": "MOTIVATE",
+          "answer": "motivated",
+          "acceptedAnswers": [
+            "motivated"
+          ]
+        },
+        {
+          "sentence": "The building required extensive {gap} work before it could be inhabited.",
+          "hint": "CONSTRUCT",
+          "baseWord": "CONSTRUCT",
+          "answer": "construction",
+          "acceptedAnswers": [
+            "construction"
+          ]
+        },
+        {
+          "sentence": "The team's success was due to the {gap} of all its members.",
+          "hint": "COOPERATE",
+          "baseWord": "COOPERATE",
+          "answer": "cooperation",
+          "acceptedAnswers": [
+            "cooperation"
+          ]
+        },
+        {
+          "sentence": "The process of {gap} to a new life in a foreign country can be challenging.",
+          "hint": "ADAPT",
+          "baseWord": "ADAPT",
+          "answer": "adaptation",
+          "acceptedAnswers": [
+            "adaptation"
+          ]
+        },
+        {
+          "sentence": "The school offers additional {gap} for students who want to improve their grades.",
+          "hint": "TUTOR",
+          "baseWord": "TUTOR",
+          "answer": "tutoring",
+          "acceptedAnswers": [
+            "tutoring"
+          ]
+        },
+        {
+          "sentence": "Despite the obstacles, her {gap} to the project remained strong.",
+          "hint": "COMMIT",
+          "baseWord": "COMMIT",
+          "answer": "commitment",
+          "acceptedAnswers": [
+            "commitment"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 4,
+      "level": "Beginner",
+      "exercises": [
+        {
+          "sentence": "The local government provided a full list of all {gap} in the affected area.",
+          "hint": "RESIDE",
+          "baseWord": "RESIDE",
+          "answer": "residents",
+          "acceptedAnswers": [
+            "residents"
+          ]
+        },
+        {
+          "sentence": "The team needs a clear {gap} on how to proceed with the final phase.",
+          "hint": "INSTRUCT",
+          "baseWord": "INSTRUCT",
+          "answer": "instruction",
+          "acceptedAnswers": [
+            "instruction"
+          ]
+        },
+        {
+          "sentence": "It is {gap} that you verify all sources before publishing the article.",
+          "hint": "ESSENCE",
+          "baseWord": "ESSENCE",
+          "answer": "essential",
+          "acceptedAnswers": [
+            "essential"
+          ]
+        },
+        {
+          "sentence": "The politician made a clear statement on the {gap} of the new policy.",
+          "hint": "RELEVANT",
+          "baseWord": "RELEVANT",
+          "answer": "relevance",
+          "acceptedAnswers": [
+            "relevance"
+          ]
+        },
+        {
+          "sentence": "The university checks the {gap} of all certificates before granting admission.",
+          "hint": "VALID",
+          "baseWord": "VALID",
+          "answer": "validity",
+          "acceptedAnswers": [
+            "validity"
+          ]
+        },
+        {
+          "sentence": "The documentary provided much food for thought regarding the future of {gap} energy.",
+          "hint": "RENEW",
+          "baseWord": "RENEW",
+          "answer": "renewable",
+          "acceptedAnswers": [
+            "renewable"
+          ]
+        },
+        {
+          "sentence": "We must ensure the safety and {gap} of the workers.",
+          "hint": "WELL",
+          "baseWord": "WELL",
+          "answer": "wellbeing",
+          "acceptedAnswers": [
+            "wellbeing"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 5,
+      "level": "Intermediate",
+      "exercises": [
+        {
+          "sentence": "She officially announced her {gap} for the upcoming presidential election.",
+          "hint": "CANDIDATE",
+          "baseWord": "CANDIDATE",
+          "answer": "candidacy",
+          "acceptedAnswers": [
+            "candidacy",
+            "candidature"
+          ]
+        },
+        {
+          "sentence": "The sudden lack of rain led to the {gap} of water supplies.",
+          "hint": "SHORT",
+          "baseWord": "SHORT",
+          "answer": "shortage",
+          "acceptedAnswers": [
+            "shortage"
+          ]
+        },
+        {
+          "sentence": "She has the {gap} to manage a team of over fifty people.",
+          "hint": "CAPABLE",
+          "baseWord": "CAPABLE",
+          "answer": "capability",
+          "acceptedAnswers": [
+            "capability"
+          ]
+        },
+        {
+          "sentence": "The document requires careful {gap} before it is legally binding.",
+          "hint": "SCRIBE",
+          "baseWord": "SCRIBE",
+          "answer": "transcription",
+          "acceptedAnswers": [
+            "transcription"
+          ]
+        },
+        {
+          "sentence": "The government aims to significantly {gap} the country's defense capabilities.",
+          "hint": "STRONG",
+          "baseWord": "STRONG",
+          "answer": "strengthen",
+          "acceptedAnswers": [
+            "strengthen"
+          ]
+        },
+        {
+          "sentence": "His initial plans were far too {gap} and had to be drastically revised.",
+          "hint": "AMBITION",
+          "baseWord": "AMBITION",
+          "answer": "ambitious",
+          "acceptedAnswers": [
+            "ambitious"
+          ]
+        },
+        {
+          "sentence": "The final cost of the project proved to be {gap} more than initially budgeted.",
+          "hint": "SUBSTANCE",
+          "baseWord": "SUBSTANCE",
+          "answer": "substantially",
+          "acceptedAnswers": [
+            "substantially"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 6,
+      "level": "Intermediate",
+      "exercises": [
+        {
+          "sentence": "The public reaction to the announcement was entirely {gap}.",
+          "hint": "PREDICT",
+          "baseWord": "PREDICT",
+          "answer": "unpredictable",
+          "acceptedAnswers": [
+            "unpredictable"
+          ]
+        },
+        {
+          "sentence": "Despite the setback, the team showed great {gap} and managed to bounce back.",
+          "hint": "RESILIENT",
+          "baseWord": "RESILIENT",
+          "answer": "resilience",
+          "acceptedAnswers": [
+            "resilience"
+          ]
+        },
+        {
+          "sentence": "The local community held a passionate debate about the {gap} of the new motorway.",
+          "hint": "PROPOSE",
+          "baseWord": "PROPOSE",
+          "answer": "proposal",
+          "acceptedAnswers": [
+            "proposal"
+          ]
+        },
+        {
+          "sentence": "It is extremely {gap} that the company will reach its targets this quarter.",
+          "hint": "DOUBT",
+          "baseWord": "DOUBT",
+          "answer": "doubtful",
+          "acceptedAnswers": [
+            "doubtful"
+          ]
+        },
+        {
+          "sentence": "The two sides managed to find a successful {gap} between speed and quality.",
+          "hint": "TRADE",
+          "baseWord": "TRADE",
+          "answer": "trade-off",
+          "acceptedAnswers": [
+            "trade-off"
+          ]
+        },
+        {
+          "sentence": "The company’s decision was deeply {gap} by their history of ethical failures.",
+          "hint": "INFLUENCE",
+          "baseWord": "INFLUENCE",
+          "answer": "influenced",
+          "acceptedAnswers": [
+            "influenced"
+          ]
+        },
+        {
+          "sentence": "We need a more {gap} way to measure the impact of the changes.",
+          "hint": "SCIENCE",
+          "baseWord": "SCIENCE",
+          "answer": "scientific",
+          "acceptedAnswers": [
+            "scientific"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 7,
+      "level": "Intermediate",
+      "exercises": [
+        {
+          "sentence": "The new report contains {gap} information about the potential risks.",
+          "hint": "ADD",
+          "baseWord": "ADD",
+          "answer": "additional",
+          "acceptedAnswers": [
+            "additional"
+          ]
+        },
+        {
+          "sentence": "The organization is dedicated to the {gap} of historic buildings in the city center.",
+          "hint": "RESTORE",
+          "baseWord": "RESTORE",
+          "answer": "restoration",
+          "acceptedAnswers": [
+            "restoration"
+          ]
+        },
+        {
+          "sentence": "His {gap} with the local authorities has been very constructive.",
+          "hint": "COOPERATE",
+          "baseWord": "COOPERATE",
+          "answer": "cooperation",
+          "acceptedAnswers": [
+            "cooperation"
+          ]
+        },
+        {
+          "sentence": "The company failed to comply with the new safety {gap}.",
+          "hint": "REQUIRE",
+          "baseWord": "REQUIRE",
+          "answer": "requirements",
+          "acceptedAnswers": [
+            "requirements"
+          ]
+        },
+        {
+          "sentence": "The environmental group is dedicated to preventing the {gap} of natural resources.",
+          "hint": "EXHAUST",
+          "baseWord": "EXHAUST",
+          "answer": "exhaustion",
+          "acceptedAnswers": [
+            "exhaustion"
+          ]
+        },
+        {
+          "sentence": "She approached the problem with a great deal of {gap} and skill.",
+          "hint": "CONFIDENT",
+          "baseWord": "CONFIDENT",
+          "answer": "confidence",
+          "acceptedAnswers": [
+            "confidence"
+          ]
+        },
+        {
+          "sentence": "The politician was accused of being completely {gap} to the needs of his constituents.",
+          "hint": "SENSITIVE",
+          "baseWord": "SENSITIVE",
+          "answer": "insensitive",
+          "acceptedAnswers": [
+            "insensitive"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 8,
+      "level": "Intermediate",
+      "exercises": [
+        {
+          "sentence": "The process of {gap} to university life can be quite difficult for some students.",
+          "hint": "TRANSITION",
+          "baseWord": "TRANSITION",
+          "answer": "transitioning",
+          "acceptedAnswers": [
+            "transitioning"
+          ]
+        },
+        {
+          "sentence": "It is sometimes {gap} to accept that mistakes are simply unavoidable.",
+          "hint": "UNDERSTAND",
+          "baseWord": "UNDERSTAND",
+          "answer": "understandable",
+          "acceptedAnswers": [
+            "understandable"
+          ]
+        },
+        {
+          "sentence": "He showed great {gap} in dealing with the demanding clients.",
+          "hint": "PATIENT",
+          "baseWord": "PATIENT",
+          "answer": "patience",
+          "acceptedAnswers": [
+            "patience"
+          ]
+        },
+        {
+          "sentence": "The sheer {gap} of the problem requires a global effort to solve it.",
+          "hint": "LARGE",
+          "baseWord": "LARGE",
+          "answer": "largeness",
+          "acceptedAnswers": [
+            "largeness"
+          ]
+        },
+        {
+          "sentence": "The project's initial failure was clearly due to poor {gap} and planning.",
+          "hint": "MANAGE",
+          "baseWord": "MANAGE",
+          "answer": "management",
+          "acceptedAnswers": [
+            "management"
+          ]
+        },
+        {
+          "sentence": "The new report provides strong {gap} for the claims made by the opposition.",
+          "hint": "JUSTIFY",
+          "baseWord": "JUSTIFY",
+          "answer": "justification",
+          "acceptedAnswers": [
+            "justification"
+          ]
+        },
+        {
+          "sentence": "The team worked {gap} to finish the presentation before the deadline.",
+          "hint": "ENTHUSIASM",
+          "baseWord": "ENTHUSIASM",
+          "answer": "enthusiastically",
+          "acceptedAnswers": [
+            "enthusiastically"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 9,
+      "level": "Expert",
+      "exercises": [
+        {
+          "sentence": "The court ruled that the contract was legally {gap}.",
+          "hint": "VALIDATE",
+          "baseWord": "VALIDATE",
+          "answer": "invalid",
+          "acceptedAnswers": [
+            "invalid"
+          ]
+        },
+        {
+          "sentence": "The final decision was made on the basis of political rather than ethical {gap}.",
+          "hint": "CONSIDER",
+          "baseWord": "CONSIDER",
+          "answer": "considerations",
+          "acceptedAnswers": [
+            "considerations"
+          ]
+        },
+        {
+          "sentence": "The company's swift {gap} to the market changes ensured its survival.",
+          "hint": "ADAPT",
+          "baseWord": "ADAPT",
+          "answer": "adaptability",
+          "acceptedAnswers": [
+            "adaptability"
+          ]
+        },
+        {
+          "sentence": "She has the {gap} to always know exactly what is going on.",
+          "hint": "ACUTE",
+          "baseWord": "ACUTE",
+          "answer": "acuity",
+          "acceptedAnswers": [
+            "acuity"
+          ]
+        },
+        {
+          "sentence": "The novel is based on the {gap} that humans can be brought back from the dead.",
+          "hint": "ASSUME",
+          "baseWord": "ASSUME",
+          "answer": "assumption",
+          "acceptedAnswers": [
+            "assumption"
+          ]
+        },
+        {
+          "sentence": "Despite the low wages, her {gap} to the charity work was commendable.",
+          "hint": "DETERMINE",
+          "baseWord": "DETERMINE",
+          "answer": "determination",
+          "acceptedAnswers": [
+            "determination"
+          ]
+        },
+        {
+          "sentence": "The author has compiled a {gap} report covering every single detail of the case.",
+          "hint": "VOLUME",
+          "baseWord": "VOLUME",
+          "answer": "voluminous",
+          "acceptedAnswers": [
+            "voluminous"
+          ]
+        }
+      ]
+    },
+    {
+      "taskId": 10,
+      "level": "Expert",
+      "exercises": [
+        {
+          "sentence": "The new policy is widely regarded as completely {gap} and will face massive opposition.",
+          "hint": "ACCEPT",
+          "baseWord": "ACCEPT",
+          "answer": "unacceptable",
+          "acceptedAnswers": [
+            "unacceptable"
+          ]
+        },
+        {
+          "sentence": "The judge demanded absolute {gap} in the reporting of the trial proceedings.",
+          "hint": "PRECISE",
+          "baseWord": "PRECISE",
+          "answer": "precision",
+          "acceptedAnswers": [
+            "precision"
+          ]
+        },
+        {
+          "sentence": "The politician lacked the necessary {gap} to withstand the media pressure.",
+          "hint": "MENTAL",
+          "baseWord": "MENTAL",
+          "answer": "mentality",
+          "acceptedAnswers": [
+            "mentality"
+          ]
+        },
+        {
+          "sentence": "The {gap} of a successful business often comes down to careful budgeting.",
+          "hint": "SURVIVE",
+          "baseWord": "SURVIVE",
+          "answer": "survival",
+          "acceptedAnswers": [
+            "survival"
+          ]
+        },
+        {
+          "sentence": "The final agreement was a direct {gap} of the intensive diplomatic negotiations.",
+          "hint": "COME",
+          "baseWord": "COME",
+          "answer": "outcome",
+          "acceptedAnswers": [
+            "outcome"
+          ]
+        },
+        {
+          "sentence": "The two witnesses gave completely {gap} accounts of what happened that night.",
+          "hint": "CONFLICT",
+          "baseWord": "CONFLICT",
+          "answer": "conflicting",
+          "acceptedAnswers": [
+            "conflicting"
+          ]
+        },
+        {
+          "sentence": "The government has repeatedly ignored the voices of the {gap}.",
+          "hint": "OPPOSE",
+          "baseWord": "OPPOSE",
+          "answer": "opposition",
+          "acceptedAnswers": [
+            "opposition"
+          ]
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "ex-wf-u3-t1",
+      "title": "Task 1: Beginner",
+      "type": "word-formation",
+      "instruction": "Use the word given in capitals for each gap to form a word that fits in the space in the same line.",
+      "sentences": [
+        {
+          "id": "wf-u3-t1-s1",
+          "sentence": "The charity relies on the financial {gap} of its members.",
+          "hint": "ASSIST",
+          "baseWord": "ASSIST",
+          "text": "The charity relies on the financial {{0}} of its members.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ASSIST",
+              "baseWord": "ASSIST",
+              "hint": "ASSIST",
+              "answer": "assistance",
+              "solutions": [
+                "assistance"
+              ],
+              "acceptedAnswers": [
+                "assistance"
+              ],
+              "explanation": "Base word: ASSIST → assistance"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t1-s2",
+          "sentence": "The {gap} of a large project requires careful planning and oversight.",
+          "hint": "MANAGE",
+          "baseWord": "MANAGE",
+          "text": "The {{0}} of a large project requires careful planning and oversight.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "MANAGE",
+              "baseWord": "MANAGE",
+              "hint": "MANAGE",
+              "answer": "management",
+              "solutions": [
+                "management"
+              ],
+              "acceptedAnswers": [
+                "management"
+              ],
+              "explanation": "Base word: MANAGE → management"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t1-s3",
+          "sentence": "The new system is designed to be completely {gap} friendly.",
+          "hint": "ECOLOGY",
+          "baseWord": "ECOLOGY",
+          "text": "The new system is designed to be completely {{0}} friendly.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ECOLOGY",
+              "baseWord": "ECOLOGY",
+              "hint": "ECOLOGY",
+              "answer": "ecological",
+              "solutions": [
+                "ecological"
+              ],
+              "acceptedAnswers": [
+                "ecological"
+              ],
+              "explanation": "Base word: ECOLOGY → ecological"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t1-s4",
+          "sentence": "You must be {gap} if you want to run your own business successfully.",
+          "hint": "PRACTICE",
+          "baseWord": "PRACTICE",
+          "text": "You must be {{0}} if you want to run your own business successfully.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "PRACTICE",
+              "baseWord": "PRACTICE",
+              "hint": "PRACTICE",
+              "answer": "practical",
+              "solutions": [
+                "practical"
+              ],
+              "acceptedAnswers": [
+                "practical"
+              ],
+              "explanation": "Base word: PRACTICE → practical"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t1-s5",
+          "sentence": "The old house is in urgent need of a full {gap}.",
+          "hint": "RENOVATE",
+          "baseWord": "RENOVATE",
+          "text": "The old house is in urgent need of a full {{0}}.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "RENOVATE",
+              "baseWord": "RENOVATE",
+              "hint": "RENOVATE",
+              "answer": "renovation",
+              "solutions": [
+                "renovation"
+              ],
+              "acceptedAnswers": [
+                "renovation"
+              ],
+              "explanation": "Base word: RENOVATE → renovation"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t1-s6",
+          "sentence": "The teacher stressed the {gap} of regular exercise for mental health.",
+          "hint": "IMPORTANT",
+          "baseWord": "IMPORTANT",
+          "text": "The teacher stressed the {{0}} of regular exercise for mental health.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "IMPORTANT",
+              "baseWord": "IMPORTANT",
+              "hint": "IMPORTANT",
+              "answer": "importance",
+              "solutions": [
+                "importance"
+              ],
+              "acceptedAnswers": [
+                "importance"
+              ],
+              "explanation": "Base word: IMPORTANT → importance"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t1-s7",
+          "sentence": "We live in an era of rapid technological {gap}.",
+          "hint": "INNOVATE",
+          "baseWord": "INNOVATE",
+          "text": "We live in an era of rapid technological {{0}}.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "INNOVATE",
+              "baseWord": "INNOVATE",
+              "hint": "INNOVATE",
+              "answer": "innovation",
+              "solutions": [
+                "innovation"
+              ],
+              "acceptedAnswers": [
+                "innovation"
+              ],
+              "explanation": "Base word: INNOVATE → innovation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-wf-u3-t2",
+      "title": "Task 2: Beginner",
+      "type": "word-formation",
+      "instruction": "Use the word given in capitals for each gap to form a word that fits in the space in the same line.",
+      "sentences": [
+        {
+          "id": "wf-u3-t2-s1",
+          "sentence": "She spoke very {gap} about her future career plans.",
+          "hint": "CONFIDENT",
+          "baseWord": "CONFIDENT",
+          "text": "She spoke very {{0}} about her future career plans.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "CONFIDENT",
+              "baseWord": "CONFIDENT",
+              "hint": "CONFIDENT",
+              "answer": "confidently",
+              "solutions": [
+                "confidently"
+              ],
+              "acceptedAnswers": [
+                "confidently"
+              ],
+              "explanation": "Base word: CONFIDENT → confidently"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t2-s2",
+          "sentence": "The government issued a strong warning about the potential dangers facing {gap} species.",
+          "hint": "ENDANGER",
+          "baseWord": "ENDANGER",
+          "text": "The government issued a strong warning about the potential dangers facing {{0}} species.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ENDANGER",
+              "baseWord": "ENDANGER",
+              "hint": "ENDANGER",
+              "answer": "endangered",
+              "solutions": [
+                "endangered"
+              ],
+              "acceptedAnswers": [
+                "endangered"
+              ],
+              "explanation": "Base word: ENDANGER → endangered"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t2-s3",
+          "sentence": "His {gap} approach to his finances meant he never ran out of money.",
+          "hint": "BUDGET",
+          "baseWord": "BUDGET",
+          "text": "His {{0}} approach to his finances meant he never ran out of money.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "BUDGET",
+              "baseWord": "BUDGET",
+              "hint": "BUDGET",
+              "answer": "budgeting",
+              "solutions": [
+                "budgeting"
+              ],
+              "acceptedAnswers": [
+                "budgeting"
+              ],
+              "explanation": "Base word: BUDGET → budgeting"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t2-s4",
+          "sentence": "The children were tired but in good spirits after the {gap} hike through the mountains.",
+          "hint": "EXHAUST",
+          "baseWord": "EXHAUST",
+          "text": "The children were tired but in good spirits after the {{0}} hike through the mountains.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "EXHAUST",
+              "baseWord": "EXHAUST",
+              "hint": "EXHAUST",
+              "answer": "exhausting",
+              "solutions": [
+                "exhausting"
+              ],
+              "acceptedAnswers": [
+                "exhausting"
+              ],
+              "explanation": "Base word: EXHAUST → exhausting"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t2-s5",
+          "sentence": "The documentary provided an {gap} look at the history of the island.",
+          "hint": "INFORM",
+          "baseWord": "INFORM",
+          "text": "The documentary provided an {{0}} look at the history of the island.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "INFORM",
+              "baseWord": "INFORM",
+              "hint": "INFORM",
+              "answer": "informative",
+              "solutions": [
+                "informative"
+              ],
+              "acceptedAnswers": [
+                "informative"
+              ],
+              "explanation": "Base word: INFORM → informative"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t2-s6",
+          "sentence": "It is often thought that money cannot buy {gap}.",
+          "hint": "HAPPIER",
+          "baseWord": "HAPPIER",
+          "text": "It is often thought that money cannot buy {{0}}.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "HAPPIER",
+              "baseWord": "HAPPIER",
+              "hint": "HAPPIER",
+              "answer": "happiness",
+              "solutions": [
+                "happiness"
+              ],
+              "acceptedAnswers": [
+                "happiness"
+              ],
+              "explanation": "Base word: HAPPIER → happiness"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t2-s7",
+          "sentence": "The team showed great {gap} in overcoming the initial technical difficulties.",
+          "hint": "RESOLVE",
+          "baseWord": "RESOLVE",
+          "text": "The team showed great {{0}} in overcoming the initial technical difficulties.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "RESOLVE",
+              "baseWord": "RESOLVE",
+              "hint": "RESOLVE",
+              "answer": "resolution",
+              "solutions": [
+                "resolution",
+                "resoluteness"
+              ],
+              "acceptedAnswers": [
+                "resolution",
+                "resoluteness"
+              ],
+              "explanation": "Base word: RESOLVE → resolution"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-wf-u3-t3",
+      "title": "Task 3: Beginner",
+      "type": "word-formation",
+      "instruction": "Use the word given in capitals for each gap to form a word that fits in the space in the same line.",
+      "sentences": [
+        {
+          "id": "wf-u3-t3-s1",
+          "sentence": "The charity helps children from {gap} backgrounds to get a good start in life.",
+          "hint": "ADVANTAGE",
+          "baseWord": "ADVANTAGE",
+          "text": "The charity helps children from {{0}} backgrounds to get a good start in life.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ADVANTAGE",
+              "baseWord": "ADVANTAGE",
+              "hint": "ADVANTAGE",
+              "answer": "disadvantaged",
+              "solutions": [
+                "disadvantaged"
+              ],
+              "acceptedAnswers": [
+                "disadvantaged"
+              ],
+              "explanation": "Base word: ADVANTAGE → disadvantaged"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t3-s2",
+          "sentence": "He is a highly {gap} individual who focuses entirely on his goals.",
+          "hint": "MOTIVATE",
+          "baseWord": "MOTIVATE",
+          "text": "He is a highly {{0}} individual who focuses entirely on his goals.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "MOTIVATE",
+              "baseWord": "MOTIVATE",
+              "hint": "MOTIVATE",
+              "answer": "motivated",
+              "solutions": [
+                "motivated"
+              ],
+              "acceptedAnswers": [
+                "motivated"
+              ],
+              "explanation": "Base word: MOTIVATE → motivated"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t3-s3",
+          "sentence": "The building required extensive {gap} work before it could be inhabited.",
+          "hint": "CONSTRUCT",
+          "baseWord": "CONSTRUCT",
+          "text": "The building required extensive {{0}} work before it could be inhabited.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "CONSTRUCT",
+              "baseWord": "CONSTRUCT",
+              "hint": "CONSTRUCT",
+              "answer": "construction",
+              "solutions": [
+                "construction"
+              ],
+              "acceptedAnswers": [
+                "construction"
+              ],
+              "explanation": "Base word: CONSTRUCT → construction"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t3-s4",
+          "sentence": "The team's success was due to the {gap} of all its members.",
+          "hint": "COOPERATE",
+          "baseWord": "COOPERATE",
+          "text": "The team's success was due to the {{0}} of all its members.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "COOPERATE",
+              "baseWord": "COOPERATE",
+              "hint": "COOPERATE",
+              "answer": "cooperation",
+              "solutions": [
+                "cooperation"
+              ],
+              "acceptedAnswers": [
+                "cooperation"
+              ],
+              "explanation": "Base word: COOPERATE → cooperation"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t3-s5",
+          "sentence": "The process of {gap} to a new life in a foreign country can be challenging.",
+          "hint": "ADAPT",
+          "baseWord": "ADAPT",
+          "text": "The process of {{0}} to a new life in a foreign country can be challenging.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ADAPT",
+              "baseWord": "ADAPT",
+              "hint": "ADAPT",
+              "answer": "adaptation",
+              "solutions": [
+                "adaptation"
+              ],
+              "acceptedAnswers": [
+                "adaptation"
+              ],
+              "explanation": "Base word: ADAPT → adaptation"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t3-s6",
+          "sentence": "The school offers additional {gap} for students who want to improve their grades.",
+          "hint": "TUTOR",
+          "baseWord": "TUTOR",
+          "text": "The school offers additional {{0}} for students who want to improve their grades.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "TUTOR",
+              "baseWord": "TUTOR",
+              "hint": "TUTOR",
+              "answer": "tutoring",
+              "solutions": [
+                "tutoring"
+              ],
+              "acceptedAnswers": [
+                "tutoring"
+              ],
+              "explanation": "Base word: TUTOR → tutoring"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t3-s7",
+          "sentence": "Despite the obstacles, her {gap} to the project remained strong.",
+          "hint": "COMMIT",
+          "baseWord": "COMMIT",
+          "text": "Despite the obstacles, her {{0}} to the project remained strong.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "COMMIT",
+              "baseWord": "COMMIT",
+              "hint": "COMMIT",
+              "answer": "commitment",
+              "solutions": [
+                "commitment"
+              ],
+              "acceptedAnswers": [
+                "commitment"
+              ],
+              "explanation": "Base word: COMMIT → commitment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-wf-u3-t4",
+      "title": "Task 4: Beginner",
+      "type": "word-formation",
+      "instruction": "Use the word given in capitals for each gap to form a word that fits in the space in the same line.",
+      "sentences": [
+        {
+          "id": "wf-u3-t4-s1",
+          "sentence": "The local government provided a full list of all {gap} in the affected area.",
+          "hint": "RESIDE",
+          "baseWord": "RESIDE",
+          "text": "The local government provided a full list of all {{0}} in the affected area.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "RESIDE",
+              "baseWord": "RESIDE",
+              "hint": "RESIDE",
+              "answer": "residents",
+              "solutions": [
+                "residents"
+              ],
+              "acceptedAnswers": [
+                "residents"
+              ],
+              "explanation": "Base word: RESIDE → residents"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t4-s2",
+          "sentence": "The team needs a clear {gap} on how to proceed with the final phase.",
+          "hint": "INSTRUCT",
+          "baseWord": "INSTRUCT",
+          "text": "The team needs a clear {{0}} on how to proceed with the final phase.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "INSTRUCT",
+              "baseWord": "INSTRUCT",
+              "hint": "INSTRUCT",
+              "answer": "instruction",
+              "solutions": [
+                "instruction"
+              ],
+              "acceptedAnswers": [
+                "instruction"
+              ],
+              "explanation": "Base word: INSTRUCT → instruction"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t4-s3",
+          "sentence": "It is {gap} that you verify all sources before publishing the article.",
+          "hint": "ESSENCE",
+          "baseWord": "ESSENCE",
+          "text": "It is {{0}} that you verify all sources before publishing the article.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ESSENCE",
+              "baseWord": "ESSENCE",
+              "hint": "ESSENCE",
+              "answer": "essential",
+              "solutions": [
+                "essential"
+              ],
+              "acceptedAnswers": [
+                "essential"
+              ],
+              "explanation": "Base word: ESSENCE → essential"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t4-s4",
+          "sentence": "The politician made a clear statement on the {gap} of the new policy.",
+          "hint": "RELEVANT",
+          "baseWord": "RELEVANT",
+          "text": "The politician made a clear statement on the {{0}} of the new policy.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "RELEVANT",
+              "baseWord": "RELEVANT",
+              "hint": "RELEVANT",
+              "answer": "relevance",
+              "solutions": [
+                "relevance"
+              ],
+              "acceptedAnswers": [
+                "relevance"
+              ],
+              "explanation": "Base word: RELEVANT → relevance"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t4-s5",
+          "sentence": "The university checks the {gap} of all certificates before granting admission.",
+          "hint": "VALID",
+          "baseWord": "VALID",
+          "text": "The university checks the {{0}} of all certificates before granting admission.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "VALID",
+              "baseWord": "VALID",
+              "hint": "VALID",
+              "answer": "validity",
+              "solutions": [
+                "validity"
+              ],
+              "acceptedAnswers": [
+                "validity"
+              ],
+              "explanation": "Base word: VALID → validity"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t4-s6",
+          "sentence": "The documentary provided much food for thought regarding the future of {gap} energy.",
+          "hint": "RENEW",
+          "baseWord": "RENEW",
+          "text": "The documentary provided much food for thought regarding the future of {{0}} energy.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "RENEW",
+              "baseWord": "RENEW",
+              "hint": "RENEW",
+              "answer": "renewable",
+              "solutions": [
+                "renewable"
+              ],
+              "acceptedAnswers": [
+                "renewable"
+              ],
+              "explanation": "Base word: RENEW → renewable"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t4-s7",
+          "sentence": "We must ensure the safety and {gap} of the workers.",
+          "hint": "WELL",
+          "baseWord": "WELL",
+          "text": "We must ensure the safety and {{0}} of the workers.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "WELL",
+              "baseWord": "WELL",
+              "hint": "WELL",
+              "answer": "wellbeing",
+              "solutions": [
+                "wellbeing"
+              ],
+              "acceptedAnswers": [
+                "wellbeing"
+              ],
+              "explanation": "Base word: WELL → wellbeing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-wf-u3-t5",
+      "title": "Task 5: Intermediate",
+      "type": "word-formation",
+      "instruction": "Use the word given in capitals for each gap to form a word that fits in the space in the same line.",
+      "sentences": [
+        {
+          "id": "wf-u3-t5-s1",
+          "sentence": "She officially announced her {gap} for the upcoming presidential election.",
+          "hint": "CANDIDATE",
+          "baseWord": "CANDIDATE",
+          "text": "She officially announced her {{0}} for the upcoming presidential election.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "CANDIDATE",
+              "baseWord": "CANDIDATE",
+              "hint": "CANDIDATE",
+              "answer": "candidacy",
+              "solutions": [
+                "candidacy",
+                "candidature"
+              ],
+              "acceptedAnswers": [
+                "candidacy",
+                "candidature"
+              ],
+              "explanation": "Base word: CANDIDATE → candidacy"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t5-s2",
+          "sentence": "The sudden lack of rain led to the {gap} of water supplies.",
+          "hint": "SHORT",
+          "baseWord": "SHORT",
+          "text": "The sudden lack of rain led to the {{0}} of water supplies.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "SHORT",
+              "baseWord": "SHORT",
+              "hint": "SHORT",
+              "answer": "shortage",
+              "solutions": [
+                "shortage"
+              ],
+              "acceptedAnswers": [
+                "shortage"
+              ],
+              "explanation": "Base word: SHORT → shortage"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t5-s3",
+          "sentence": "She has the {gap} to manage a team of over fifty people.",
+          "hint": "CAPABLE",
+          "baseWord": "CAPABLE",
+          "text": "She has the {{0}} to manage a team of over fifty people.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "CAPABLE",
+              "baseWord": "CAPABLE",
+              "hint": "CAPABLE",
+              "answer": "capability",
+              "solutions": [
+                "capability"
+              ],
+              "acceptedAnswers": [
+                "capability"
+              ],
+              "explanation": "Base word: CAPABLE → capability"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t5-s4",
+          "sentence": "The document requires careful {gap} before it is legally binding.",
+          "hint": "SCRIBE",
+          "baseWord": "SCRIBE",
+          "text": "The document requires careful {{0}} before it is legally binding.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "SCRIBE",
+              "baseWord": "SCRIBE",
+              "hint": "SCRIBE",
+              "answer": "transcription",
+              "solutions": [
+                "transcription"
+              ],
+              "acceptedAnswers": [
+                "transcription"
+              ],
+              "explanation": "Base word: SCRIBE → transcription"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t5-s5",
+          "sentence": "The government aims to significantly {gap} the country's defense capabilities.",
+          "hint": "STRONG",
+          "baseWord": "STRONG",
+          "text": "The government aims to significantly {{0}} the country's defense capabilities.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "STRONG",
+              "baseWord": "STRONG",
+              "hint": "STRONG",
+              "answer": "strengthen",
+              "solutions": [
+                "strengthen"
+              ],
+              "acceptedAnswers": [
+                "strengthen"
+              ],
+              "explanation": "Base word: STRONG → strengthen"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t5-s6",
+          "sentence": "His initial plans were far too {gap} and had to be drastically revised.",
+          "hint": "AMBITION",
+          "baseWord": "AMBITION",
+          "text": "His initial plans were far too {{0}} and had to be drastically revised.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "AMBITION",
+              "baseWord": "AMBITION",
+              "hint": "AMBITION",
+              "answer": "ambitious",
+              "solutions": [
+                "ambitious"
+              ],
+              "acceptedAnswers": [
+                "ambitious"
+              ],
+              "explanation": "Base word: AMBITION → ambitious"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t5-s7",
+          "sentence": "The final cost of the project proved to be {gap} more than initially budgeted.",
+          "hint": "SUBSTANCE",
+          "baseWord": "SUBSTANCE",
+          "text": "The final cost of the project proved to be {{0}} more than initially budgeted.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "SUBSTANCE",
+              "baseWord": "SUBSTANCE",
+              "hint": "SUBSTANCE",
+              "answer": "substantially",
+              "solutions": [
+                "substantially"
+              ],
+              "acceptedAnswers": [
+                "substantially"
+              ],
+              "explanation": "Base word: SUBSTANCE → substantially"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-wf-u3-t6",
+      "title": "Task 6: Intermediate",
+      "type": "word-formation",
+      "instruction": "Use the word given in capitals for each gap to form a word that fits in the space in the same line.",
+      "sentences": [
+        {
+          "id": "wf-u3-t6-s1",
+          "sentence": "The public reaction to the announcement was entirely {gap}.",
+          "hint": "PREDICT",
+          "baseWord": "PREDICT",
+          "text": "The public reaction to the announcement was entirely {{0}}.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "PREDICT",
+              "baseWord": "PREDICT",
+              "hint": "PREDICT",
+              "answer": "unpredictable",
+              "solutions": [
+                "unpredictable"
+              ],
+              "acceptedAnswers": [
+                "unpredictable"
+              ],
+              "explanation": "Base word: PREDICT → unpredictable"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t6-s2",
+          "sentence": "Despite the setback, the team showed great {gap} and managed to bounce back.",
+          "hint": "RESILIENT",
+          "baseWord": "RESILIENT",
+          "text": "Despite the setback, the team showed great {{0}} and managed to bounce back.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "RESILIENT",
+              "baseWord": "RESILIENT",
+              "hint": "RESILIENT",
+              "answer": "resilience",
+              "solutions": [
+                "resilience"
+              ],
+              "acceptedAnswers": [
+                "resilience"
+              ],
+              "explanation": "Base word: RESILIENT → resilience"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t6-s3",
+          "sentence": "The local community held a passionate debate about the {gap} of the new motorway.",
+          "hint": "PROPOSE",
+          "baseWord": "PROPOSE",
+          "text": "The local community held a passionate debate about the {{0}} of the new motorway.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "PROPOSE",
+              "baseWord": "PROPOSE",
+              "hint": "PROPOSE",
+              "answer": "proposal",
+              "solutions": [
+                "proposal"
+              ],
+              "acceptedAnswers": [
+                "proposal"
+              ],
+              "explanation": "Base word: PROPOSE → proposal"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t6-s4",
+          "sentence": "It is extremely {gap} that the company will reach its targets this quarter.",
+          "hint": "DOUBT",
+          "baseWord": "DOUBT",
+          "text": "It is extremely {{0}} that the company will reach its targets this quarter.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "DOUBT",
+              "baseWord": "DOUBT",
+              "hint": "DOUBT",
+              "answer": "doubtful",
+              "solutions": [
+                "doubtful"
+              ],
+              "acceptedAnswers": [
+                "doubtful"
+              ],
+              "explanation": "Base word: DOUBT → doubtful"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t6-s5",
+          "sentence": "The two sides managed to find a successful {gap} between speed and quality.",
+          "hint": "TRADE",
+          "baseWord": "TRADE",
+          "text": "The two sides managed to find a successful {{0}} between speed and quality.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "TRADE",
+              "baseWord": "TRADE",
+              "hint": "TRADE",
+              "answer": "trade-off",
+              "solutions": [
+                "trade-off"
+              ],
+              "acceptedAnswers": [
+                "trade-off"
+              ],
+              "explanation": "Base word: TRADE → trade-off"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t6-s6",
+          "sentence": "The company’s decision was deeply {gap} by their history of ethical failures.",
+          "hint": "INFLUENCE",
+          "baseWord": "INFLUENCE",
+          "text": "The company’s decision was deeply {{0}} by their history of ethical failures.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "INFLUENCE",
+              "baseWord": "INFLUENCE",
+              "hint": "INFLUENCE",
+              "answer": "influenced",
+              "solutions": [
+                "influenced"
+              ],
+              "acceptedAnswers": [
+                "influenced"
+              ],
+              "explanation": "Base word: INFLUENCE → influenced"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t6-s7",
+          "sentence": "We need a more {gap} way to measure the impact of the changes.",
+          "hint": "SCIENCE",
+          "baseWord": "SCIENCE",
+          "text": "We need a more {{0}} way to measure the impact of the changes.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "SCIENCE",
+              "baseWord": "SCIENCE",
+              "hint": "SCIENCE",
+              "answer": "scientific",
+              "solutions": [
+                "scientific"
+              ],
+              "acceptedAnswers": [
+                "scientific"
+              ],
+              "explanation": "Base word: SCIENCE → scientific"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-wf-u3-t7",
+      "title": "Task 7: Intermediate",
+      "type": "word-formation",
+      "instruction": "Use the word given in capitals for each gap to form a word that fits in the space in the same line.",
+      "sentences": [
+        {
+          "id": "wf-u3-t7-s1",
+          "sentence": "The new report contains {gap} information about the potential risks.",
+          "hint": "ADD",
+          "baseWord": "ADD",
+          "text": "The new report contains {{0}} information about the potential risks.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ADD",
+              "baseWord": "ADD",
+              "hint": "ADD",
+              "answer": "additional",
+              "solutions": [
+                "additional"
+              ],
+              "acceptedAnswers": [
+                "additional"
+              ],
+              "explanation": "Base word: ADD → additional"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t7-s2",
+          "sentence": "The organization is dedicated to the {gap} of historic buildings in the city center.",
+          "hint": "RESTORE",
+          "baseWord": "RESTORE",
+          "text": "The organization is dedicated to the {{0}} of historic buildings in the city center.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "RESTORE",
+              "baseWord": "RESTORE",
+              "hint": "RESTORE",
+              "answer": "restoration",
+              "solutions": [
+                "restoration"
+              ],
+              "acceptedAnswers": [
+                "restoration"
+              ],
+              "explanation": "Base word: RESTORE → restoration"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t7-s3",
+          "sentence": "His {gap} with the local authorities has been very constructive.",
+          "hint": "COOPERATE",
+          "baseWord": "COOPERATE",
+          "text": "His {{0}} with the local authorities has been very constructive.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "COOPERATE",
+              "baseWord": "COOPERATE",
+              "hint": "COOPERATE",
+              "answer": "cooperation",
+              "solutions": [
+                "cooperation"
+              ],
+              "acceptedAnswers": [
+                "cooperation"
+              ],
+              "explanation": "Base word: COOPERATE → cooperation"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t7-s4",
+          "sentence": "The company failed to comply with the new safety {gap}.",
+          "hint": "REQUIRE",
+          "baseWord": "REQUIRE",
+          "text": "The company failed to comply with the new safety {{0}}.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "REQUIRE",
+              "baseWord": "REQUIRE",
+              "hint": "REQUIRE",
+              "answer": "requirements",
+              "solutions": [
+                "requirements"
+              ],
+              "acceptedAnswers": [
+                "requirements"
+              ],
+              "explanation": "Base word: REQUIRE → requirements"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t7-s5",
+          "sentence": "The environmental group is dedicated to preventing the {gap} of natural resources.",
+          "hint": "EXHAUST",
+          "baseWord": "EXHAUST",
+          "text": "The environmental group is dedicated to preventing the {{0}} of natural resources.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "EXHAUST",
+              "baseWord": "EXHAUST",
+              "hint": "EXHAUST",
+              "answer": "exhaustion",
+              "solutions": [
+                "exhaustion"
+              ],
+              "acceptedAnswers": [
+                "exhaustion"
+              ],
+              "explanation": "Base word: EXHAUST → exhaustion"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t7-s6",
+          "sentence": "She approached the problem with a great deal of {gap} and skill.",
+          "hint": "CONFIDENT",
+          "baseWord": "CONFIDENT",
+          "text": "She approached the problem with a great deal of {{0}} and skill.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "CONFIDENT",
+              "baseWord": "CONFIDENT",
+              "hint": "CONFIDENT",
+              "answer": "confidence",
+              "solutions": [
+                "confidence"
+              ],
+              "acceptedAnswers": [
+                "confidence"
+              ],
+              "explanation": "Base word: CONFIDENT → confidence"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t7-s7",
+          "sentence": "The politician was accused of being completely {gap} to the needs of his constituents.",
+          "hint": "SENSITIVE",
+          "baseWord": "SENSITIVE",
+          "text": "The politician was accused of being completely {{0}} to the needs of his constituents.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "SENSITIVE",
+              "baseWord": "SENSITIVE",
+              "hint": "SENSITIVE",
+              "answer": "insensitive",
+              "solutions": [
+                "insensitive"
+              ],
+              "acceptedAnswers": [
+                "insensitive"
+              ],
+              "explanation": "Base word: SENSITIVE → insensitive"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-wf-u3-t8",
+      "title": "Task 8: Intermediate",
+      "type": "word-formation",
+      "instruction": "Use the word given in capitals for each gap to form a word that fits in the space in the same line.",
+      "sentences": [
+        {
+          "id": "wf-u3-t8-s1",
+          "sentence": "The process of {gap} to university life can be quite difficult for some students.",
+          "hint": "TRANSITION",
+          "baseWord": "TRANSITION",
+          "text": "The process of {{0}} to university life can be quite difficult for some students.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "TRANSITION",
+              "baseWord": "TRANSITION",
+              "hint": "TRANSITION",
+              "answer": "transitioning",
+              "solutions": [
+                "transitioning"
+              ],
+              "acceptedAnswers": [
+                "transitioning"
+              ],
+              "explanation": "Base word: TRANSITION → transitioning"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t8-s2",
+          "sentence": "It is sometimes {gap} to accept that mistakes are simply unavoidable.",
+          "hint": "UNDERSTAND",
+          "baseWord": "UNDERSTAND",
+          "text": "It is sometimes {{0}} to accept that mistakes are simply unavoidable.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "UNDERSTAND",
+              "baseWord": "UNDERSTAND",
+              "hint": "UNDERSTAND",
+              "answer": "understandable",
+              "solutions": [
+                "understandable"
+              ],
+              "acceptedAnswers": [
+                "understandable"
+              ],
+              "explanation": "Base word: UNDERSTAND → understandable"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t8-s3",
+          "sentence": "He showed great {gap} in dealing with the demanding clients.",
+          "hint": "PATIENT",
+          "baseWord": "PATIENT",
+          "text": "He showed great {{0}} in dealing with the demanding clients.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "PATIENT",
+              "baseWord": "PATIENT",
+              "hint": "PATIENT",
+              "answer": "patience",
+              "solutions": [
+                "patience"
+              ],
+              "acceptedAnswers": [
+                "patience"
+              ],
+              "explanation": "Base word: PATIENT → patience"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t8-s4",
+          "sentence": "The sheer {gap} of the problem requires a global effort to solve it.",
+          "hint": "LARGE",
+          "baseWord": "LARGE",
+          "text": "The sheer {{0}} of the problem requires a global effort to solve it.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "LARGE",
+              "baseWord": "LARGE",
+              "hint": "LARGE",
+              "answer": "largeness",
+              "solutions": [
+                "largeness"
+              ],
+              "acceptedAnswers": [
+                "largeness"
+              ],
+              "explanation": "Base word: LARGE → largeness"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t8-s5",
+          "sentence": "The project's initial failure was clearly due to poor {gap} and planning.",
+          "hint": "MANAGE",
+          "baseWord": "MANAGE",
+          "text": "The project's initial failure was clearly due to poor {{0}} and planning.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "MANAGE",
+              "baseWord": "MANAGE",
+              "hint": "MANAGE",
+              "answer": "management",
+              "solutions": [
+                "management"
+              ],
+              "acceptedAnswers": [
+                "management"
+              ],
+              "explanation": "Base word: MANAGE → management"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t8-s6",
+          "sentence": "The new report provides strong {gap} for the claims made by the opposition.",
+          "hint": "JUSTIFY",
+          "baseWord": "JUSTIFY",
+          "text": "The new report provides strong {{0}} for the claims made by the opposition.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "JUSTIFY",
+              "baseWord": "JUSTIFY",
+              "hint": "JUSTIFY",
+              "answer": "justification",
+              "solutions": [
+                "justification"
+              ],
+              "acceptedAnswers": [
+                "justification"
+              ],
+              "explanation": "Base word: JUSTIFY → justification"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t8-s7",
+          "sentence": "The team worked {gap} to finish the presentation before the deadline.",
+          "hint": "ENTHUSIASM",
+          "baseWord": "ENTHUSIASM",
+          "text": "The team worked {{0}} to finish the presentation before the deadline.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ENTHUSIASM",
+              "baseWord": "ENTHUSIASM",
+              "hint": "ENTHUSIASM",
+              "answer": "enthusiastically",
+              "solutions": [
+                "enthusiastically"
+              ],
+              "acceptedAnswers": [
+                "enthusiastically"
+              ],
+              "explanation": "Base word: ENTHUSIASM → enthusiastically"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-wf-u3-t9",
+      "title": "Task 9: Expert",
+      "type": "word-formation",
+      "instruction": "Use the word given in capitals for each gap to form a word that fits in the space in the same line.",
+      "sentences": [
+        {
+          "id": "wf-u3-t9-s1",
+          "sentence": "The court ruled that the contract was legally {gap}.",
+          "hint": "VALIDATE",
+          "baseWord": "VALIDATE",
+          "text": "The court ruled that the contract was legally {{0}}.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "VALIDATE",
+              "baseWord": "VALIDATE",
+              "hint": "VALIDATE",
+              "answer": "invalid",
+              "solutions": [
+                "invalid"
+              ],
+              "acceptedAnswers": [
+                "invalid"
+              ],
+              "explanation": "Base word: VALIDATE → invalid"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t9-s2",
+          "sentence": "The final decision was made on the basis of political rather than ethical {gap}.",
+          "hint": "CONSIDER",
+          "baseWord": "CONSIDER",
+          "text": "The final decision was made on the basis of political rather than ethical {{0}}.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "CONSIDER",
+              "baseWord": "CONSIDER",
+              "hint": "CONSIDER",
+              "answer": "considerations",
+              "solutions": [
+                "considerations"
+              ],
+              "acceptedAnswers": [
+                "considerations"
+              ],
+              "explanation": "Base word: CONSIDER → considerations"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t9-s3",
+          "sentence": "The company's swift {gap} to the market changes ensured its survival.",
+          "hint": "ADAPT",
+          "baseWord": "ADAPT",
+          "text": "The company's swift {{0}} to the market changes ensured its survival.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ADAPT",
+              "baseWord": "ADAPT",
+              "hint": "ADAPT",
+              "answer": "adaptability",
+              "solutions": [
+                "adaptability"
+              ],
+              "acceptedAnswers": [
+                "adaptability"
+              ],
+              "explanation": "Base word: ADAPT → adaptability"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t9-s4",
+          "sentence": "She has the {gap} to always know exactly what is going on.",
+          "hint": "ACUTE",
+          "baseWord": "ACUTE",
+          "text": "She has the {{0}} to always know exactly what is going on.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ACUTE",
+              "baseWord": "ACUTE",
+              "hint": "ACUTE",
+              "answer": "acuity",
+              "solutions": [
+                "acuity"
+              ],
+              "acceptedAnswers": [
+                "acuity"
+              ],
+              "explanation": "Base word: ACUTE → acuity"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t9-s5",
+          "sentence": "The novel is based on the {gap} that humans can be brought back from the dead.",
+          "hint": "ASSUME",
+          "baseWord": "ASSUME",
+          "text": "The novel is based on the {{0}} that humans can be brought back from the dead.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ASSUME",
+              "baseWord": "ASSUME",
+              "hint": "ASSUME",
+              "answer": "assumption",
+              "solutions": [
+                "assumption"
+              ],
+              "acceptedAnswers": [
+                "assumption"
+              ],
+              "explanation": "Base word: ASSUME → assumption"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t9-s6",
+          "sentence": "Despite the low wages, her {gap} to the charity work was commendable.",
+          "hint": "DETERMINE",
+          "baseWord": "DETERMINE",
+          "text": "Despite the low wages, her {{0}} to the charity work was commendable.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "DETERMINE",
+              "baseWord": "DETERMINE",
+              "hint": "DETERMINE",
+              "answer": "determination",
+              "solutions": [
+                "determination"
+              ],
+              "acceptedAnswers": [
+                "determination"
+              ],
+              "explanation": "Base word: DETERMINE → determination"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t9-s7",
+          "sentence": "The author has compiled a {gap} report covering every single detail of the case.",
+          "hint": "VOLUME",
+          "baseWord": "VOLUME",
+          "text": "The author has compiled a {{0}} report covering every single detail of the case.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "VOLUME",
+              "baseWord": "VOLUME",
+              "hint": "VOLUME",
+              "answer": "voluminous",
+              "solutions": [
+                "voluminous"
+              ],
+              "acceptedAnswers": [
+                "voluminous"
+              ],
+              "explanation": "Base word: VOLUME → voluminous"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ex-wf-u3-t10",
+      "title": "Task 10: Expert",
+      "type": "word-formation",
+      "instruction": "Use the word given in capitals for each gap to form a word that fits in the space in the same line.",
+      "sentences": [
+        {
+          "id": "wf-u3-t10-s1",
+          "sentence": "The new policy is widely regarded as completely {gap} and will face massive opposition.",
+          "hint": "ACCEPT",
+          "baseWord": "ACCEPT",
+          "text": "The new policy is widely regarded as completely {{0}} and will face massive opposition.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "ACCEPT",
+              "baseWord": "ACCEPT",
+              "hint": "ACCEPT",
+              "answer": "unacceptable",
+              "solutions": [
+                "unacceptable"
+              ],
+              "acceptedAnswers": [
+                "unacceptable"
+              ],
+              "explanation": "Base word: ACCEPT → unacceptable"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t10-s2",
+          "sentence": "The judge demanded absolute {gap} in the reporting of the trial proceedings.",
+          "hint": "PRECISE",
+          "baseWord": "PRECISE",
+          "text": "The judge demanded absolute {{0}} in the reporting of the trial proceedings.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "PRECISE",
+              "baseWord": "PRECISE",
+              "hint": "PRECISE",
+              "answer": "precision",
+              "solutions": [
+                "precision"
+              ],
+              "acceptedAnswers": [
+                "precision"
+              ],
+              "explanation": "Base word: PRECISE → precision"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t10-s3",
+          "sentence": "The politician lacked the necessary {gap} to withstand the media pressure.",
+          "hint": "MENTAL",
+          "baseWord": "MENTAL",
+          "text": "The politician lacked the necessary {{0}} to withstand the media pressure.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "MENTAL",
+              "baseWord": "MENTAL",
+              "hint": "MENTAL",
+              "answer": "mentality",
+              "solutions": [
+                "mentality"
+              ],
+              "acceptedAnswers": [
+                "mentality"
+              ],
+              "explanation": "Base word: MENTAL → mentality"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t10-s4",
+          "sentence": "The {gap} of a successful business often comes down to careful budgeting.",
+          "hint": "SURVIVE",
+          "baseWord": "SURVIVE",
+          "text": "The {{0}} of a successful business often comes down to careful budgeting.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "SURVIVE",
+              "baseWord": "SURVIVE",
+              "hint": "SURVIVE",
+              "answer": "survival",
+              "solutions": [
+                "survival"
+              ],
+              "acceptedAnswers": [
+                "survival"
+              ],
+              "explanation": "Base word: SURVIVE → survival"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t10-s5",
+          "sentence": "The final agreement was a direct {gap} of the intensive diplomatic negotiations.",
+          "hint": "COME",
+          "baseWord": "COME",
+          "text": "The final agreement was a direct {{0}} of the intensive diplomatic negotiations.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "COME",
+              "baseWord": "COME",
+              "hint": "COME",
+              "answer": "outcome",
+              "solutions": [
+                "outcome"
+              ],
+              "acceptedAnswers": [
+                "outcome"
+              ],
+              "explanation": "Base word: COME → outcome"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t10-s6",
+          "sentence": "The two witnesses gave completely {gap} accounts of what happened that night.",
+          "hint": "CONFLICT",
+          "baseWord": "CONFLICT",
+          "text": "The two witnesses gave completely {{0}} accounts of what happened that night.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "CONFLICT",
+              "baseWord": "CONFLICT",
+              "hint": "CONFLICT",
+              "answer": "conflicting",
+              "solutions": [
+                "conflicting"
+              ],
+              "acceptedAnswers": [
+                "conflicting"
+              ],
+              "explanation": "Base word: CONFLICT → conflicting"
+            }
+          ]
+        },
+        {
+          "id": "wf-u3-t10-s7",
+          "sentence": "The government has repeatedly ignored the voices of the {gap}.",
+          "hint": "OPPOSE",
+          "baseWord": "OPPOSE",
+          "text": "The government has repeatedly ignored the voices of the {{0}}.",
+          "gaps": [
+            {
+              "id": "g1",
+              "prompt": "OPPOSE",
+              "baseWord": "OPPOSE",
+              "hint": "OPPOSE",
+              "answer": "opposition",
+              "solutions": [
+                "opposition"
+              ],
+              "acceptedAnswers": [
+                "opposition"
+              ],
+              "explanation": "Base word: OPPOSE → opposition"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
